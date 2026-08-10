@@ -1,8 +1,10 @@
 import { ELEMENTS, TIERS, type Pal } from "../data/pals";
+import { SKILL_BY_ID } from "../data/skills";
 import { ELEMENT_COLOR, TIER_COLOR } from "../lib/elements";
 import { bestCounter, partySummary, type CounterPick } from "../lib/sets";
 import { partyMatchup, WEAK_TO } from "../lib/typechart";
 import { useOwned } from "../hooks/useOwned";
+import { useLoadouts } from "../hooks/useLoadouts";
 
 export function PartySummary({
   pals,
@@ -14,6 +16,7 @@ export function PartySummary({
   full: boolean;
 }) {
   const { owned } = useOwned();
+  const { getLoadout } = useLoadouts();
   const s = partySummary(pals);
   const missing = ELEMENTS.filter((e) => !s.elements.includes(e));
   const matchup = partyMatchup(pals);
@@ -38,6 +41,42 @@ export function PartySummary({
         <Stat label="Total ATK" value={s.totalAtk} />
         <Stat label="Total DEF" value={s.totalDef} />
       </div>
+
+      {pals.length > 0 && (
+        <>
+          <h4 className="coverage__minihead">Party abilities</h4>
+          <ul className="party__abils">
+            {pals.map((p) => {
+              const equipped = getLoadout(p.name)
+                .equipped.map((id) => SKILL_BY_ID.get(id))
+                .filter((sk) => sk !== undefined);
+              return (
+                <li key={p.name} className="party__abil">
+                  <img src={p.icon} alt="" loading="lazy" />
+                  <span className="party__abil-name">{p.name}</span>
+                  {equipped.length > 0 ? (
+                    <span className="party__abil-chips">
+                      {equipped.map((sk) => (
+                        <span
+                          key={sk!.id}
+                          className="abil-chip"
+                          style={{ borderColor: ELEMENT_COLOR[sk!.element] }}
+                          title={`${sk!.element} · ${sk!.category} · power ${sk!.power}`}
+                        >
+                          <i style={{ background: ELEMENT_COLOR[sk!.element] }} />
+                          {sk!.name}
+                        </span>
+                      ))}
+                    </span>
+                  ) : (
+                    <span className="party__abil-empty">no abilities set</span>
+                  )}
+                </li>
+              );
+            })}
+          </ul>
+        </>
+      )}
 
       <h4 className="coverage__minihead">Element coverage</h4>
       <div className="party__elements">

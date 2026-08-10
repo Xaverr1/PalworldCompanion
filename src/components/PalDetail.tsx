@@ -2,6 +2,7 @@ import { useEffect } from "react";
 import { WORK_TYPES, type Pal } from "../data/pals";
 import { ELEMENT_COLOR, TIER_COLOR } from "../lib/elements";
 import { useOwned } from "../hooks/useOwned";
+import { AbilitiesEditor } from "./AbilitiesEditor";
 
 export function PalDetail({ pal, onClose }: { pal: Pal; onClose: () => void }) {
   const { isOwned, toggle } = useOwned();
@@ -114,6 +115,17 @@ export function PalDetail({ pal, onClose }: { pal: Pal; onClose: () => void }) {
                 </span>
               ))}
             </div>
+          </section>
+        )}
+
+        {owned ? (
+          <AbilitiesEditor palName={pal.name} />
+        ) : (
+          <section>
+            <h3 className="detail__sub">Active Abilities</h3>
+            <p className="coverage__note">
+              Mark this pal as obtained to record its learned and equipped abilities.
+            </p>
           </section>
         )}
       </div>

@@ -1011,3 +1011,174 @@
   color: #4caf50;
   padding-left: 2px;
 }
+
+/* ---- Abilities editor (detail modal) ---- */
+.abilities {
+  margin-top: 4px;
+}
+.abil__learned {
+  list-style: none;
+  margin: 0 0 12px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+.abil__row {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 8px;
+  border-radius: 8px;
+  background: var(--social-bg);
+  font-size: 13px;
+}
+.abil__row--eq {
+  background: rgba(240, 180, 41, 0.12);
+}
+.abil__equip {
+  border: none;
+  background: none;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1;
+  padding: 0;
+  color: var(--text);
+}
+.abil__equip.is-on {
+  color: #f0b429;
+}
+.abil__equip:disabled {
+  opacity: 0.35;
+  cursor: not-allowed;
+}
+.abil__dot {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+.abil__name {
+  color: var(--text-h);
+  flex: 1;
+}
+.abil__meta {
+  font-family: var(--mono);
+  font-size: 11px;
+  color: var(--text);
+}
+.abil__remove {
+  border: none;
+  background: none;
+  color: var(--text);
+  font-size: 16px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 2px;
+}
+.abil__remove:hover {
+  color: #e0533a;
+}
+
+.abil__add {
+  display: flex;
+  gap: 8px;
+  margin-bottom: 8px;
+}
+.abil__add .search {
+  flex: 1;
+  max-width: none;
+  font-size: 14px;
+}
+.abil__add select {
+  font: inherit;
+  font-size: 13px;
+  padding: 0 10px;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg);
+  color: var(--text-h);
+}
+.abil__results {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  max-height: 220px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+}
+.abil__add-row {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 5px 8px;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  background: transparent;
+  font: inherit;
+  font-size: 13px;
+  color: var(--text-h);
+  cursor: pointer;
+}
+.abil__add-row:hover {
+  background: var(--social-bg);
+}
+.abil__plus {
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--accent);
+}
+
+/* ---- Party abilities (planner) ---- */
+.party__abils {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.party__abil {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+.party__abil img {
+  width: 30px;
+  height: 30px;
+  object-fit: contain;
+}
+.party__abil-name {
+  font-size: 13px;
+  color: var(--text-h);
+  min-width: 84px;
+}
+.party__abil-chips {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+}
+.abil-chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-size: 11px;
+  padding: 3px 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  color: var(--text-h);
+}
+.abil-chip i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.party__abil-empty {
+  font-size: 12px;
+  color: var(--text);
+  font-style: italic;
+}
