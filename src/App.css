@@ -1484,3 +1484,153 @@
   height: 56px;
   object-fit: contain;
 }
+
+/* ---- Owned count badge + instances ---- */
+.own-count {
+  font-family: var(--mono);
+  font-size: 11px;
+  font-weight: 600;
+  color: #4caf50;
+}
+
+.own-add {
+  font: inherit;
+  font-size: 12px;
+  margin-left: 10px;
+  padding: 3px 10px;
+  border: 1px solid var(--accent-border);
+  border-radius: 999px;
+  background: var(--accent-bg);
+  color: var(--accent);
+  cursor: pointer;
+}
+
+.owninst {
+  list-style: none;
+  margin: 0 0 22px;
+  padding: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.owninst__row {
+  display: grid;
+  grid-template-columns: 32px auto 1fr 24px;
+  align-items: center;
+  gap: 10px;
+}
+.owninst__idx {
+  font-family: var(--mono);
+  font-size: 12px;
+  color: var(--text);
+}
+.owninst__lvl {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 13px;
+  color: var(--text);
+}
+.owninst__lvl input {
+  width: 56px;
+  font: inherit;
+  font-size: 14px;
+  padding: 4px 6px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text-h);
+}
+.owninst__slider {
+  width: 100%;
+  accent-color: var(--accent);
+}
+.owninst__remove {
+  border: none;
+  background: none;
+  color: var(--text);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+}
+.owninst__remove:hover {
+  color: #e0533a;
+}
+
+/* ---- Export / import controls ---- */
+.datactl {
+  display: flex;
+  gap: 6px;
+}
+.datactl__btn {
+  font: inherit;
+  font-size: 13px;
+  padding: 8px 14px;
+  border-radius: 10px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+}
+.datactl__btn:hover {
+  border-color: var(--accent-border);
+  color: var(--text-h);
+}
+
+/* ---- Per-instance cards (detail modal) ---- */
+.owninst-card {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 12px;
+}
+.owninst-card .owninst__row {
+  grid-template-columns: 28px auto 1fr 24px;
+}
+.owninst__abiltoggle {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 8px;
+  padding: 6px 4px 0;
+  border: none;
+  border-top: 1px solid var(--border);
+  background: none;
+  color: var(--text-h);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+  text-align: left;
+}
+.owninst__abiltoggle > span:first-child {
+  color: var(--accent);
+  font-weight: 600;
+  white-space: nowrap;
+}
+.owninst__abilchips {
+  display: flex;
+  gap: 4px;
+  flex-wrap: wrap;
+  flex: 1;
+}
+.owninst-card .abilities {
+  margin-top: 12px;
+  border-top: 1px solid var(--border);
+  padding-top: 12px;
+}
+
+.upgrade__sellvl {
+  font-size: 11px;
+  color: var(--text);
+  font-family: var(--mono);
+}
+
+.party__abil-pick {
+  font: inherit;
+  font-size: 12px;
+  padding: 2px 6px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text-h);
+}

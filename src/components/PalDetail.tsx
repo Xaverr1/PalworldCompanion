@@ -1,13 +1,24 @@
-import { useEffect } from "react";
+import { useEffect, useState } from "react";
 import { WORK_TYPES, type Pal } from "../data/pals";
+import { SKILL_BY_ID } from "../data/skills";
 import { ELEMENT_COLOR, TIER_COLOR } from "../lib/elements";
-import { useOwned } from "../hooks/useOwned";
+import { MAX_LEVEL, useOwned, type OwnedPal } from "../hooks/useOwned";
+import { useLoadouts } from "../hooks/useLoadouts";
 import { WORK_ICON } from "../lib/work";
 import { AbilitiesEditor } from "./AbilitiesEditor";
 
 export function PalDetail({ pal, onClose }: { pal: Pal; onClose: () => void }) {
-  const { isOwned, toggle, isWished, toggleWish } = useOwned();
+  const {
+    isOwned,
+    instancesOf,
+    addInstance,
+    removeInstance,
+    setLevel,
+    isWished,
+    toggleWish,
+  } = useOwned();
   const owned = isOwned(pal.name);
+  const instances = instancesOf(pal.name);
   const wished = isWished(pal.name);
   // Close on Escape.
   useEffect(() => {
@@ -57,10 +68,9 @@ export function PalDetail({ pal, onClose }: { pal: Pal; onClose: () => void }) {
             <div className="detail__flags">
               <button
                 className={`own-btn ${owned ? "is-on" : ""}`}
-                aria-pressed={owned}
-                onClick={() => toggle(pal.name)}
+                onClick={() => addInstance(pal.name)}
               >
-                {owned ? "✓ Obtained" : "Mark obtained"}
+                {owned ? `✓ Obtained (${instances.length})` : "+ Add to obtained"}
               </button>
               <button
                 className={`wish-btn ${wished ? "is-on" : ""}`}
@@ -72,6 +82,29 @@ export function PalDetail({ pal, onClose }: { pal: Pal; onClose: () => void }) {
             </div>
           </div>
         </header>
+
+        {instances.length > 0 && (
+          <section>
+            <h3 className="detail__sub">
+              Your Pals · {instances.length}
+              <button className="own-add" onClick={() => addInstance(pal.name)}>
+                + Add another
+              </button>
+            </h3>
+            <ul className="owninst">
+              {instances.map((inst, i) => (
+                <InstanceEditor
+                  key={inst.id}
+                  pal={pal}
+                  instance={inst}
+                  index={i}
+                  onLevel={(lvl) => setLevel(inst.id, lvl)}
+                  onRemove={() => removeInstance(inst.id)}
+                />
+              ))}
+            </ul>
+          </section>
+        )}
 
         <section className="detail__stats">
           <Stat label="HP" value={pal.hp} />
@@ -132,13 +165,11 @@ export function PalDetail({ pal, onClose }: { pal: Pal; onClose: () => void }) {
           </section>
         )}
 
-        {owned ? (
-          <AbilitiesEditor palName={pal.name} />
-        ) : (
+        {!owned && (
           <section>
             <h3 className="detail__sub">Active Abilities</h3>
             <p className="coverage__note">
-              Mark this pal as obtained to record its learned and equipped abilities.
+              Add this pal to obtained to record each one's level and abilities.
             </p>
           </section>
         )}
@@ -153,5 +184,86 @@ function Stat({ label, value }: { label: string; value: number }) {
       <span className="detail__stat-label">{label}</span>
       <span className="detail__stat-value">{value}</span>
     </div>
+  );
+}
+
+/** One owned instance: level controls + its own collapsible abilities editor. */
+function InstanceEditor({
+  pal,
+  instance,
+  index,
+  onLevel,
+  onRemove,
+}: {
+  pal: Pal;
+  instance: OwnedPal;
+  index: number;
+  onLevel: (level: number) => void;
+  onRemove: () => void;
+}) {
+  const { getLoadout } = useLoadouts();
+  const [open, setOpen] = useState(false);
+  const equipped = getLoadout(instance.id)
+    .equipped.map((id) => SKILL_BY_ID.get(id))
+    .filter((s): s is NonNullable<typeof s> => s !== undefined);
+
+  return (
+    <li className="owninst-card">
+      <div className="owninst__row">
+        <span className="owninst__idx">#{index + 1}</span>
+        <label className="owninst__lvl">
+          Lv
+          <input
+            type="number"
+            min={1}
+            max={MAX_LEVEL}
+            value={instance.level}
+            onChange={(e) => onLevel(Number(e.target.value))}
+          />
+        </label>
+        <input
+          type="range"
+          min={1}
+          max={MAX_LEVEL}
+          value={instance.level}
+          onChange={(e) => onLevel(Number(e.target.value))}
+          className="owninst__slider"
+          aria-label={`Level of ${pal.name} #${index + 1}`}
+        />
+        <button
+          className="owninst__remove"
+          aria-label={`Remove this ${pal.name}`}
+          onClick={onRemove}
+        >
+          ×
+        </button>
+      </div>
+
+      <button
+        className="owninst__abiltoggle"
+        aria-expanded={open}
+        onClick={() => setOpen((o) => !o)}
+      >
+        <span>{open ? "▾" : "▸"} Abilities</span>
+        <span className="owninst__abilchips">
+          {equipped.length === 0 ? (
+            <span className="party__abil-empty">none equipped</span>
+          ) : (
+            equipped.map((sk) => (
+              <span
+                key={sk.id}
+                className="abil-chip"
+                style={{ borderColor: ELEMENT_COLOR[sk.element] }}
+              >
+                <i style={{ background: ELEMENT_COLOR[sk.element] }} />
+                {sk.name}
+              </span>
+            ))
+          )}
+        </span>
+      </button>
+
+      {open && <AbilitiesEditor instanceId={instance.id} />}
+    </li>
   );
 }

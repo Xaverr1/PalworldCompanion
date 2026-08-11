@@ -1,6 +1,8 @@
 import { useCallback, useEffect, useState } from "react";
 
-const STORAGE_KEY = "pwc.upgrades.v1";
+// Keyed by owned-pal instance id (v2). Migration from v1 (species-keyed)
+// happens in lib/migrate.ts at startup.
+const STORAGE_KEY = "pwc.upgrades.v2";
 
 export interface UpgradePlan {
   /** Pal Essence Condenser star target (0-4). */
@@ -36,20 +38,20 @@ export function useUpgradePlans() {
   }, [store]);
 
   const getPlan = useCallback(
-    (palName: string): UpgradePlan => store[palName] ?? EMPTY_PLAN,
+    (instanceId: string): UpgradePlan => store[instanceId] ?? EMPTY_PLAN,
     [store],
   );
 
-  const setPlan = useCallback((palName: string, patch: Partial<UpgradePlan>) => {
+  const setPlan = useCallback((instanceId: string, patch: Partial<UpgradePlan>) => {
     setStore((prev) => {
-      const next = { ...(prev[palName] ?? EMPTY_PLAN), ...patch };
+      const next = { ...(prev[instanceId] ?? EMPTY_PLAN), ...patch };
       if (isEmpty(next)) {
-        if (!prev[palName]) return prev;
+        if (!prev[instanceId]) return prev;
         const copy = { ...prev };
-        delete copy[palName];
+        delete copy[instanceId];
         return copy;
       }
-      return { ...prev, [palName]: next };
+      return { ...prev, [instanceId]: next };
     });
   }, []);
 

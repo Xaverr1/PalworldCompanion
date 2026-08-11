@@ -1,6 +1,6 @@
-import { useMemo, useState } from "react";
-import { PALS, type Pal } from "../data/pals";
-import { useOwned } from "../hooks/useOwned";
+import { useState } from "react";
+import { PALS } from "../data/pals";
+import { useOwned, type OwnedPal } from "../hooks/useOwned";
 import { useUpgradePlans } from "../hooks/useUpgradePlans";
 import {
   SOULS,
@@ -22,13 +22,20 @@ const PAL_BY_NAME = new Map(PALS.map((p) => [p.name, p]));
 const pct = (frac: number) => `${Math.round(frac * 100)}%`;
 
 export function UpgradePlanner() {
+  const { instances } = useOwned();
   const { getPlan, setPlan } = useUpgradePlans();
-  const [selectedName, setSelectedName] = useState<string | null>(null);
-  const pal = selectedName ? PAL_BY_NAME.get(selectedName) ?? null : null;
+  const [selectedId, setSelectedId] = useState<string | null>(null);
 
-  if (!pal) return <PalSelector onSelect={setSelectedName} />;
+  const instance = selectedId
+    ? instances.find((i) => i.id === selectedId) ?? null
+    : null;
+  const pal = instance ? PAL_BY_NAME.get(instance.species) ?? null : null;
 
-  const plan = getPlan(pal.name);
+  if (!instance || !pal) {
+    return <InstanceSelector instances={instances} onSelect={setSelectedId} />;
+  }
+
+  const plan = getPlan(instance.id);
   const soulTotals = SOUL_STATS.reduce(
     (acc, s) => addSoulTotals(acc, soulsForStatRank(plan[s])),
     emptySoulTotals(),
@@ -45,21 +52,19 @@ export function UpgradePlanner() {
       <header className="upgrade__head">
         <img className="upgrade__icon" src={pal.icon} alt="" />
         <div>
-          <span className="detail__dex">
-            {pal.paldex ? `#${pal.paldex}` : "Collab"}
-          </span>
+          <span className="detail__dex">Lv {instance.level}</span>
           <h2 className="detail__name">{pal.name}</h2>
           <span className="upgrade__base">
             Base {pal.hp} HP · {pal.atk} ATK · {pal.def} DEF
           </span>
         </div>
         <div className="upgrade__headbtns">
-          <button className="btn" onClick={() => setSelectedName(null)}>
+          <button className="btn" onClick={() => setSelectedId(null)}>
             Change pal
           </button>
           <button
             className="btn btn--danger"
-            onClick={() => setPlan(pal.name, { star: 0, hp: 0, atk: 0, def: 0, work: 0 })}
+            onClick={() => setPlan(instance.id, { star: 0, hp: 0, atk: 0, def: 0, work: 0 })}
           >
             Reset
           </button>
@@ -68,7 +73,6 @@ export function UpgradePlanner() {
 
       <div className="upgrade__body">
         <div className="upgrade__controls">
-          {/* Condenser */}
           <section className="upcard">
             <h3 className="detail__sub">Pal Essence Condenser</h3>
             <div className="stars">
@@ -76,7 +80,7 @@ export function UpgradePlanner() {
                 <button
                   key={i}
                   className={`star-btn ${plan.star === i ? "is-on" : ""}`}
-                  onClick={() => setPlan(pal.name, { star: i })}
+                  onClick={() => setPlan(instance.id, { star: i })}
                 >
                   {i === 0 ? "0" : "★".repeat(i)}
                 </button>
@@ -99,7 +103,6 @@ export function UpgradePlanner() {
             </p>
           </section>
 
-          {/* Statue of Power */}
           <section className="upcard">
             <h3 className="detail__sub">Statue of Power · souls</h3>
             {SOUL_STATS.map((stat) => (
@@ -111,7 +114,7 @@ export function UpgradePlanner() {
                   min={0}
                   max={MAX_SOUL_RANK}
                   value={plan[stat]}
-                  onChange={(e) => setPlan(pal.name, { [stat]: Number(e.target.value) })}
+                  onChange={(e) => setPlan(instance.id, { [stat]: Number(e.target.value) })}
                 />
                 <span className="soulrow__rank">
                   {plan[stat]}/{MAX_SOUL_RANK}
@@ -122,7 +125,6 @@ export function UpgradePlanner() {
           </section>
         </div>
 
-        {/* Totals */}
         <aside className="upgrade__totals">
           <h3 className="detail__sub">Total cost</h3>
           <div className="soultotals">
@@ -177,58 +179,58 @@ function ProjRow({ label, base, final }: { label: string; base: number; final: n
   return (
     <tr>
       <td>{label}</td>
-      <td className="projtable__arrow">
-        {base} →
-      </td>
+      <td className="projtable__arrow">{base} →</td>
       <td className={`projtable__final ${up ? "is-up" : ""}`}>{final}</td>
     </tr>
   );
 }
 
-function PalSelector({ onSelect }: { onSelect: (name: string) => void }) {
-  const { owned, isOwned } = useOwned();
-  const [query, setQuery] = useState("");
-
-  const results = useMemo(() => {
-    const q = query.trim().toLowerCase();
-    const base = q
-      ? PALS.filter(
-          (p) =>
-            p.name.toLowerCase().includes(q) ||
-            (p.paldex ?? "").toLowerCase().includes(q),
-        )
-      : // No query: show obtained pals first as quick picks.
-        PALS.filter((p) => isOwned(p.name));
-    return base.slice(0, 60);
-  }, [query, isOwned]);
+function InstanceSelector({
+  instances,
+  onSelect,
+}: {
+  instances: OwnedPal[];
+  onSelect: (id: string) => void;
+}) {
+  // Group by species so multiples of the same pal read clearly.
+  const bySpecies = new Map<string, OwnedPal[]>();
+  for (const inst of instances) {
+    const list = bySpecies.get(inst.species) ?? [];
+    list.push(inst);
+    bySpecies.set(inst.species, list);
+  }
 
   return (
     <div className="upgrade__select">
       <h2 className="upgrade__selecttitle">Plan a pal's upgrades</h2>
-      <input
-        className="search"
-        type="search"
-        placeholder="Search for a pal…"
-        value={query}
-        onChange={(e) => setQuery(e.target.value)}
-        autoFocus
-      />
-      {!query && (
+      {instances.length === 0 ? (
         <p className="coverage__note">
-          {owned.size > 0
-            ? "Your obtained pals — or search for any pal above."
-            : "Search for any pal above, or mark pals obtained to see them here."}
+          Add pals to your obtained collection (Browse → the ✓ on a card) to plan
+          their upgrades. Upgrade plans are per pal.
         </p>
+      ) : (
+        <div className="upgrade__selgrid">
+          {instances.map((inst) => {
+            const pal = PAL_BY_NAME.get(inst.species);
+            if (!pal) return null;
+            const many = (bySpecies.get(inst.species)?.length ?? 1) > 1;
+            return (
+              <button
+                key={inst.id}
+                className="upgrade__selpal"
+                onClick={() => onSelect(inst.id)}
+              >
+                <img src={pal.icon} alt="" loading="lazy" />
+                <span>{pal.name}</span>
+                <span className="upgrade__sellvl">
+                  Lv {inst.level}
+                  {many && " ·"}
+                </span>
+              </button>
+            );
+          })}
+        </div>
       )}
-      <div className="upgrade__selgrid">
-        {results.map((p: Pal) => (
-          <button key={p.name} className="upgrade__selpal" onClick={() => onSelect(p.name)}>
-            <img src={p.icon} alt="" loading="lazy" />
-            <span>{p.name}</span>
-          </button>
-        ))}
-        {results.length === 0 && <p className="empty">No pals match.</p>}
-      </div>
     </div>
   );
 }

@@ -4,6 +4,9 @@ import './index.css'
 import App from './App.tsx'
 import { OwnedProvider } from './hooks/useOwned.tsx'
 import { LoadoutProvider } from './hooks/useLoadouts.tsx'
+import { runMigrations } from './lib/migrate.ts'
+
+runMigrations()
 
 createRoot(document.getElementById('root')!).render(
   <StrictMode>

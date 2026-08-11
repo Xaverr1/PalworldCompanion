@@ -11,8 +11,9 @@ function sortedWorks(pal: Pal): [WorkType, number][] {
 }
 
 export function PalCard({ pal, onSelect }: { pal: Pal; onSelect: () => void }) {
-  const { isOwned, toggle, isWished, toggleWish } = useOwned();
+  const { isOwned, toggle, countOf, isWished, toggleWish } = useOwned();
   const owned = isOwned(pal.name);
+  const ownedCount = countOf(pal.name);
   const wished = isWished(pal.name);
 
   return (
@@ -41,6 +42,7 @@ export function PalCard({ pal, onSelect }: { pal: Pal; onSelect: () => void }) {
           >
             {owned ? "✓" : ""}
           </button>
+          {ownedCount > 1 && <span className="own-count">×{ownedCount}</span>}
           <button
             className={`wish-toggle ${wished ? "is-on" : ""}`}
             aria-pressed={wished}

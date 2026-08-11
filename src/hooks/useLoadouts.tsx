@@ -8,7 +8,9 @@ import {
   type ReactNode,
 } from "react";
 
-const STORAGE_KEY = "pwc.loadouts.v1";
+// Keyed by owned-pal instance id (v2). Migration from v1 (species-keyed)
+// happens in lib/migrate.ts at startup.
+const STORAGE_KEY = "pwc.loadouts.v2";
 
 /** Max active abilities a pal can have equipped at once (Palworld limit). */
 export const EQUIP_LIMIT = 3;
@@ -34,14 +36,14 @@ function load(): Store {
 }
 
 interface LoadoutsApi {
-  getLoadout: (palName: string) => Loadout;
-  toggleLearned: (palName: string, skillId: string) => void;
-  toggleEquipped: (palName: string, skillId: string) => void;
+  getLoadout: (instanceId: string) => Loadout;
+  toggleLearned: (instanceId: string, skillId: string) => void;
+  toggleEquipped: (instanceId: string, skillId: string) => void;
 }
 
 const LoadoutsContext = createContext<LoadoutsApi | null>(null);
 
-/** Per-pal active-ability loadouts (learned + equipped), persisted locally. */
+/** Per-instance active-ability loadouts (learned + equipped), persisted locally. */
 export function LoadoutProvider({ children }: { children: ReactNode }) {
   const [store, setStore] = useState<Store>(load);
 
@@ -50,25 +52,25 @@ export function LoadoutProvider({ children }: { children: ReactNode }) {
   }, [store]);
 
   const patch = useCallback(
-    (palName: string, fn: (l: Loadout) => Loadout) => {
+    (instanceId: string, fn: (l: Loadout) => Loadout) => {
       setStore((prev) => {
-        const next = fn(prev[palName] ?? EMPTY);
+        const next = fn(prev[instanceId] ?? EMPTY);
         // Drop empty loadouts so the store stays tidy.
         if (next.learned.length === 0 && next.equipped.length === 0) {
-          if (!prev[palName]) return prev;
+          if (!prev[instanceId]) return prev;
           const copy = { ...prev };
-          delete copy[palName];
+          delete copy[instanceId];
           return copy;
         }
-        return { ...prev, [palName]: next };
+        return { ...prev, [instanceId]: next };
       });
     },
     [],
   );
 
   const toggleLearned = useCallback(
-    (palName: string, skillId: string) =>
-      patch(palName, (l) => {
+    (instanceId: string, skillId: string) =>
+      patch(instanceId, (l) => {
         if (l.learned.includes(skillId)) {
           // Unlearning also unequips.
           return {
@@ -82,8 +84,8 @@ export function LoadoutProvider({ children }: { children: ReactNode }) {
   );
 
   const toggleEquipped = useCallback(
-    (palName: string, skillId: string) =>
-      patch(palName, (l) => {
+    (instanceId: string, skillId: string) =>
+      patch(instanceId, (l) => {
         if (l.equipped.includes(skillId)) {
           return { ...l, equipped: l.equipped.filter((id) => id !== skillId) };
         }
@@ -95,7 +97,7 @@ export function LoadoutProvider({ children }: { children: ReactNode }) {
 
   const value = useMemo<LoadoutsApi>(
     () => ({
-      getLoadout: (palName) => store[palName] ?? EMPTY,
+      getLoadout: (instanceId) => store[instanceId] ?? EMPTY,
       toggleLearned,
       toggleEquipped,
     }),

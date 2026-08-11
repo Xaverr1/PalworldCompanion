@@ -186,7 +186,7 @@ function ActiveSet({
           {set.kind === "base" ? (
             <BaseCoverage pals={pals} onAdd={onAddMember} full={full} />
           ) : (
-            <PartySummary pals={pals} onAdd={onAddMember} full={full} />
+            <PartySummary pals={pals} setId={set.id} onAdd={onAddMember} full={full} />
           )}
         </div>
       </div>

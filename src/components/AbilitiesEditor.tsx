@@ -4,9 +4,9 @@ import { SKILLS, SKILL_BY_ID, type Skill } from "../data/skills";
 import { ELEMENT_COLOR } from "../lib/elements";
 import { EQUIP_LIMIT, useLoadouts } from "../hooks/useLoadouts";
 
-export function AbilitiesEditor({ palName }: { palName: string }) {
+export function AbilitiesEditor({ instanceId }: { instanceId: string }) {
   const { getLoadout, toggleLearned, toggleEquipped } = useLoadouts();
-  const loadout = getLoadout(palName);
+  const loadout = getLoadout(instanceId);
   const [query, setQuery] = useState("");
   const [element, setElement] = useState<Element | "">("");
 
@@ -58,7 +58,7 @@ export function AbilitiesEditor({ palName }: { palName: string }) {
                         ? `Max ${EQUIP_LIMIT} equipped`
                         : "Equip"
                   }
-                  onClick={() => toggleEquipped(palName, s.id)}
+                  onClick={() => toggleEquipped(instanceId, s.id)}
                 >
                   {equipped ? "★" : "☆"}
                 </button>
@@ -76,7 +76,7 @@ export function AbilitiesEditor({ palName }: { palName: string }) {
                 <button
                   className="abil__remove"
                   aria-label={`Forget ${s.name}`}
-                  onClick={() => toggleLearned(palName, s.id)}
+                  onClick={() => toggleLearned(instanceId, s.id)}
                 >
                   ×
                 </button>
@@ -108,7 +108,7 @@ export function AbilitiesEditor({ palName }: { palName: string }) {
         <ul className="abil__results">
           {matches.map((s) => (
             <li key={s.id}>
-              <button className="abil__add-row" onClick={() => toggleLearned(palName, s.id)}>
+              <button className="abil__add-row" onClick={() => toggleLearned(instanceId, s.id)}>
                 <span
                   className="abil__dot"
                   style={{ background: ELEMENT_COLOR[s.element] }}

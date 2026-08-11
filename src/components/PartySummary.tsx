@@ -5,18 +5,22 @@ import { bestCounter, partySummary, type CounterPick } from "../lib/sets";
 import { partyMatchup, WEAK_TO } from "../lib/typechart";
 import { useOwned } from "../hooks/useOwned";
 import { useLoadouts } from "../hooks/useLoadouts";
+import { usePartyAssignments } from "../hooks/usePartyAssignments";
 
 export function PartySummary({
   pals,
+  setId,
   onAdd,
   full,
 }: {
   pals: Pal[];
+  setId: string;
   onAdd: (name: string) => void;
   full: boolean;
 }) {
-  const { owned } = useOwned();
+  const { owned, instancesOf } = useOwned();
   const { getLoadout } = useLoadouts();
+  const { getAssigned, assign } = usePartyAssignments();
   const s = partySummary(pals);
   const missing = ELEMENTS.filter((e) => !s.elements.includes(e));
   const matchup = partyMatchup(pals);
@@ -47,13 +51,34 @@ export function PartySummary({
           <h4 className="coverage__minihead">Party abilities</h4>
           <ul className="party__abils">
             {pals.map((p) => {
-              const equipped = getLoadout(p.name)
-                .equipped.map((id) => SKILL_BY_ID.get(id))
-                .filter((sk) => sk !== undefined);
+              const owns = instancesOf(p.name);
+              // Resolve the assigned instance for this slot (default: first owned).
+              const assignedId = getAssigned(setId, p.name);
+              const chosen =
+                owns.find((i) => i.id === assignedId) ?? owns[0] ?? null;
+              const equipped = chosen
+                ? getLoadout(chosen.id)
+                    .equipped.map((id) => SKILL_BY_ID.get(id))
+                    .filter((sk) => sk !== undefined)
+                : [];
               return (
                 <li key={p.name} className="party__abil">
                   <img src={p.icon} alt="" loading="lazy" />
                   <span className="party__abil-name">{p.name}</span>
+                  {owns.length > 1 && chosen && (
+                    <select
+                      className="party__abil-pick"
+                      value={chosen.id}
+                      onChange={(e) => assign(setId, p.name, e.target.value)}
+                      title="Which of your pals is in this slot"
+                    >
+                      {owns.map((inst, idx) => (
+                        <option key={inst.id} value={inst.id}>
+                          #{idx + 1} · Lv {inst.level}
+                        </option>
+                      ))}
+                    </select>
+                  )}
                   {equipped.length > 0 ? (
                     <span className="party__abil-chips">
                       {equipped.map((sk) => (
@@ -69,7 +94,9 @@ export function PartySummary({
                       ))}
                     </span>
                   ) : (
-                    <span className="party__abil-empty">no abilities set</span>
+                    <span className="party__abil-empty">
+                      {chosen ? "none equipped" : "not obtained"}
+                    </span>
                   )}
                 </li>
               );
