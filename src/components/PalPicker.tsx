@@ -83,7 +83,7 @@ export function PalPicker({
                 >
                   <img src={p.icon} alt="" loading="lazy" />
                   <span className="picker__name">
-                    {isOwned(p.name) && <span className="picker__owned" title="Obtained">★</span>}
+                    {isOwned(p.name) && <span className="picker__owned" title="Obtained">✓</span>}
                     {p.name}
                   </span>
                   <span className="picker__els">

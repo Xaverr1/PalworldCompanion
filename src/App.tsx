@@ -1,9 +1,10 @@
 import { useState } from "react";
 import { Browser } from "./components/Browser";
 import { Planner } from "./components/Planner";
+import { UpgradePlanner } from "./components/UpgradePlanner";
 import "./App.css";
 
-type View = "browse" | "planner";
+type View = "browse" | "planner" | "upgrades";
 
 function App() {
   const [view, setView] = useState<View>("browse");
@@ -27,10 +28,18 @@ function App() {
           >
             Planner
           </button>
+          <button
+            className={`tab ${view === "upgrades" ? "is-active" : ""}`}
+            onClick={() => setView("upgrades")}
+          >
+            Upgrades
+          </button>
         </nav>
       </header>
 
-      {view === "browse" ? <Browser /> : <Planner />}
+      {view === "browse" && <Browser />}
+      {view === "planner" && <Planner />}
+      {view === "upgrades" && <UpgradePlanner />}
     </>
   );
 }

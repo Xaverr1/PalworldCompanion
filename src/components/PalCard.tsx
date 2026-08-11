@@ -1,21 +1,23 @@
-import type { Pal } from "../data/pals";
+import type { Pal, WorkType } from "../data/pals";
 import { ELEMENT_COLOR, TIER_COLOR } from "../lib/elements";
+import { WORK_ICON } from "../lib/work";
 import { useOwned } from "../hooks/useOwned";
 
-/** Top work suitabilities to surface on the card, highest level first. */
-function topWorks(pal: Pal) {
-  return Object.entries(pal.works)
-    .sort((a, b) => b[1] - a[1])
-    .slice(0, 3);
+/** A pal's work suitabilities, highest level first. */
+function sortedWorks(pal: Pal): [WorkType, number][] {
+  return (Object.entries(pal.works) as [WorkType, number][]).sort(
+    (a, b) => b[1] - a[1],
+  );
 }
 
 export function PalCard({ pal, onSelect }: { pal: Pal; onSelect: () => void }) {
-  const { isOwned, toggle } = useOwned();
+  const { isOwned, toggle, isWished, toggleWish } = useOwned();
   const owned = isOwned(pal.name);
+  const wished = isWished(pal.name);
 
   return (
     <article
-      className={`pal-card ${owned ? "is-owned" : ""}`}
+      className={`pal-card ${owned ? "is-owned" : ""} ${wished ? "is-wished" : ""}`}
       role="button"
       tabIndex={0}
       onClick={onSelect}
@@ -29,7 +31,7 @@ export function PalCard({ pal, onSelect }: { pal: Pal; onSelect: () => void }) {
       <div className="pal-card__head">
         <span className="pal-card__dexwrap">
           <button
-            className={`own-toggle ${owned ? "is-on" : ""}`}
+            className={`check-toggle ${owned ? "is-on" : ""}`}
             aria-pressed={owned}
             title={owned ? "Obtained — click to unmark" : "Mark as obtained"}
             onClick={(e) => {
@@ -37,7 +39,18 @@ export function PalCard({ pal, onSelect }: { pal: Pal; onSelect: () => void }) {
               toggle(pal.name);
             }}
           >
-            {owned ? "★" : "☆"}
+            {owned ? "✓" : ""}
+          </button>
+          <button
+            className={`wish-toggle ${wished ? "is-on" : ""}`}
+            aria-pressed={wished}
+            title={wished ? "On wishlist — click to remove" : "Add to wishlist"}
+            onClick={(e) => {
+              e.stopPropagation();
+              toggleWish(pal.name);
+            }}
+          >
+            {wished ? "★" : "☆"}
           </button>
           <span className="pal-card__dex">
             {pal.paldex ? `#${pal.paldex}` : "Collab"}
@@ -83,13 +96,15 @@ export function PalCard({ pal, onSelect }: { pal: Pal; onSelect: () => void }) {
       </dl>
 
       <ul className="pal-card__works">
-        {topWorks(pal).map(([work, lvl]) => (
-          <li key={work}>
-            <span>{work}</span>
-            <b>{lvl}</b>
+        {sortedWorks(pal).map(([work, lvl]) => (
+          <li key={work} className="workicon" title={`${work} · Lv ${lvl}`}>
+            <img src={WORK_ICON[work]} alt={work} loading="lazy" />
+            <span className="workicon__lvl">{lvl}</span>
           </li>
         ))}
-        {topWorks(pal).length === 0 && <li className="muted">No work suitability</li>}
+        {sortedWorks(pal).length === 0 && (
+          <li className="muted">No work suitability</li>
+        )}
       </ul>
 
       <p className="pal-card__skill" title={pal.partnerSkill.desc}>

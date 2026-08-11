@@ -2,11 +2,13 @@ import { useEffect } from "react";
 import { WORK_TYPES, type Pal } from "../data/pals";
 import { ELEMENT_COLOR, TIER_COLOR } from "../lib/elements";
 import { useOwned } from "../hooks/useOwned";
+import { WORK_ICON } from "../lib/work";
 import { AbilitiesEditor } from "./AbilitiesEditor";
 
 export function PalDetail({ pal, onClose }: { pal: Pal; onClose: () => void }) {
-  const { isOwned, toggle } = useOwned();
+  const { isOwned, toggle, isWished, toggleWish } = useOwned();
   const owned = isOwned(pal.name);
+  const wished = isWished(pal.name);
   // Close on Escape.
   useEffect(() => {
     const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
@@ -52,13 +54,22 @@ export function PalDetail({ pal, onClose }: { pal: Pal; onClose: () => void }) {
                 Tier {pal.tier}
               </span>
             </div>
-            <button
-              className={`own-btn ${owned ? "is-on" : ""}`}
-              aria-pressed={owned}
-              onClick={() => toggle(pal.name)}
-            >
-              {owned ? "★ Obtained" : "☆ Mark obtained"}
-            </button>
+            <div className="detail__flags">
+              <button
+                className={`own-btn ${owned ? "is-on" : ""}`}
+                aria-pressed={owned}
+                onClick={() => toggle(pal.name)}
+              >
+                {owned ? "✓ Obtained" : "Mark obtained"}
+              </button>
+              <button
+                className={`wish-btn ${wished ? "is-on" : ""}`}
+                aria-pressed={wished}
+                onClick={() => toggleWish(pal.name)}
+              >
+                {wished ? "★ Wishlisted" : "☆ Wishlist"}
+              </button>
+            </div>
           </div>
         </header>
 
@@ -76,7 +87,10 @@ export function PalDetail({ pal, onClose }: { pal: Pal; onClose: () => void }) {
               const lvl = pal.works[w] ?? 0;
               return (
                 <li key={w} className={lvl ? "" : "worklist__off"}>
-                  <span>{w}</span>
+                  <span className="worklist__label">
+                    <img className="worklist__icon" src={WORK_ICON[w]} alt="" />
+                    {w}
+                  </span>
                   <span className="worklist__bar">
                     <span
                       className="worklist__fill"

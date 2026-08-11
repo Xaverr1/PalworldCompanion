@@ -1,15 +1,18 @@
 import { useState } from "react";
+import type { Pal } from "../data/pals";
 import { useSavedSets } from "../hooks/useSavedSets";
 import { SET_LIMIT, resolveMembers, type PalSet } from "../lib/sets";
 import { BaseCoverage } from "./BaseCoverage";
 import { PartySummary } from "./PartySummary";
 import { PalPicker } from "./PalPicker";
+import { PalDetail } from "./PalDetail";
 
 export function Planner() {
   const { sets, addSet, removeSet, renameSet, addMember, removeMember } =
     useSavedSets();
   const [activeId, setActiveId] = useState<string | null>(sets[0]?.id ?? null);
   const [pickerOpen, setPickerOpen] = useState(false);
+  const [detailPal, setDetailPal] = useState<Pal | null>(null);
 
   const active = sets.find((s) => s.id === activeId) ?? null;
 
@@ -76,6 +79,7 @@ export function Planner() {
             onOpenPicker={() => setPickerOpen(true)}
             onAddMember={(name) => addMember(active.id, name)}
             onRemoveMember={(name) => removeMember(active.id, name)}
+            onSelectPal={setDetailPal}
           />
         )}
       </section>
@@ -88,6 +92,10 @@ export function Planner() {
           onClose={() => setPickerOpen(false)}
         />
       )}
+
+      {detailPal && (
+        <PalDetail pal={detailPal} onClose={() => setDetailPal(null)} />
+      )}
     </div>
   );
 }
@@ -99,6 +107,7 @@ function ActiveSet({
   onOpenPicker,
   onAddMember,
   onRemoveMember,
+  onSelectPal,
 }: {
   set: PalSet;
   onRename: (name: string) => void;
@@ -106,6 +115,7 @@ function ActiveSet({
   onOpenPicker: () => void;
   onAddMember: (name: string) => void;
   onRemoveMember: (name: string) => void;
+  onSelectPal: (pal: Pal) => void;
 }) {
   const pals = resolveMembers(set);
   const limit = SET_LIMIT[set.kind];
@@ -133,11 +143,27 @@ function ActiveSet({
         <div className="roster">
           <div className="roster__grid">
             {pals.map((p) => (
-              <div key={p.name} className="roster__pal">
+              <div
+                key={p.name}
+                className="roster__pal"
+                role="button"
+                tabIndex={0}
+                title={`Edit ${p.name}`}
+                onClick={() => onSelectPal(p)}
+                onKeyDown={(e) => {
+                  if (e.key === "Enter" || e.key === " ") {
+                    e.preventDefault();
+                    onSelectPal(p);
+                  }
+                }}
+              >
                 <button
                   className="roster__remove"
                   aria-label={`Remove ${p.name}`}
-                  onClick={() => onRemoveMember(p.name)}
+                  onClick={(e) => {
+                    e.stopPropagation();
+                    onRemoveMember(p.name);
+                  }}
                 >
                   ×
                 </button>
