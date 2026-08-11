@@ -9,11 +9,14 @@ import type { Pal, WorkType } from "../data/pals";
 
 export type SoulTier = "small" | "medium" | "large" | "giant";
 
+// Base-aware so icons resolve under a subpath deploy (e.g. GitHub Pages).
+const B = import.meta.env.BASE_URL;
+
 export const SOULS: { tier: SoulTier; name: string; icon: string }[] = [
-  { tier: "small", name: "Small Pal Soul", icon: "/souls/small.webp" },
-  { tier: "medium", name: "Medium Pal Soul", icon: "/souls/medium.webp" },
-  { tier: "large", name: "Large Pal Soul", icon: "/souls/large.webp" },
-  { tier: "giant", name: "Giant Pal Soul", icon: "/souls/giant.webp" },
+  { tier: "small", name: "Small Pal Soul", icon: `${B}souls/small.webp` },
+  { tier: "medium", name: "Medium Pal Soul", icon: `${B}souls/medium.webp` },
+  { tier: "large", name: "Large Pal Soul", icon: `${B}souls/large.webp` },
+  { tier: "giant", name: "Giant Pal Soul", icon: `${B}souls/giant.webp` },
 ];
 
 /** Statue-of-Power stats each pal can enhance with souls. */
