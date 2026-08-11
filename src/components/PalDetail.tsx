@@ -6,6 +6,7 @@ import { MAX_LEVEL, useOwned, type OwnedPal } from "../hooks/useOwned";
 import { useLoadouts } from "../hooks/useLoadouts";
 import { WORK_ICON } from "../lib/work";
 import { AbilitiesEditor } from "./AbilitiesEditor";
+import { PassivesEditor } from "./PassivesEditor";
 
 export function PalDetail({ pal, onClose }: { pal: Pal; onClose: () => void }) {
   const {
@@ -263,7 +264,12 @@ function InstanceEditor({
         </span>
       </button>
 
-      {open && <AbilitiesEditor instanceId={instance.id} />}
+      {open && (
+        <>
+          <AbilitiesEditor instanceId={instance.id} />
+          <PassivesEditor instanceId={instance.id} />
+        </>
+      )}
     </li>
   );
 }

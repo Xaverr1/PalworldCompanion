@@ -14,17 +14,28 @@ const STORAGE_KEY = "pwc.loadouts.v2";
 
 /** Max active abilities a pal can have equipped at once (Palworld limit). */
 export const EQUIP_LIMIT = 3;
+/** Max passive skills a pal can have (Palworld limit). */
+export const PASSIVE_LIMIT = 4;
 
 export interface Loadout {
   /** Skill ids the player has taught this pal. */
   learned: string[];
   /** Skill ids currently equipped (subset of learned, up to EQUIP_LIMIT). */
   equipped: string[];
+  /** Passive skill ids on this pal (up to PASSIVE_LIMIT). */
+  passives: string[];
 }
 
 type Store = Record<string, Loadout>;
 
-const EMPTY: Loadout = { learned: [], equipped: [] };
+/** Normalize a stored loadout so older records without `passives` still work. */
+function normalize(l: Partial<Loadout> | undefined): Loadout {
+  return {
+    learned: l?.learned ?? [],
+    equipped: l?.equipped ?? [],
+    passives: l?.passives ?? [],
+  };
+}
 
 function load(): Store {
   try {
@@ -39,6 +50,7 @@ interface LoadoutsApi {
   getLoadout: (instanceId: string) => Loadout;
   toggleLearned: (instanceId: string, skillId: string) => void;
   toggleEquipped: (instanceId: string, skillId: string) => void;
+  togglePassive: (instanceId: string, passiveId: string) => void;
 }
 
 const LoadoutsContext = createContext<LoadoutsApi | null>(null);
@@ -54,9 +66,13 @@ export function LoadoutProvider({ children }: { children: ReactNode }) {
   const patch = useCallback(
     (instanceId: string, fn: (l: Loadout) => Loadout) => {
       setStore((prev) => {
-        const next = fn(prev[instanceId] ?? EMPTY);
+        const next = fn(normalize(prev[instanceId]));
         // Drop empty loadouts so the store stays tidy.
-        if (next.learned.length === 0 && next.equipped.length === 0) {
+        if (
+          next.learned.length === 0 &&
+          next.equipped.length === 0 &&
+          next.passives.length === 0
+        ) {
           if (!prev[instanceId]) return prev;
           const copy = { ...prev };
           delete copy[instanceId];
@@ -74,6 +90,7 @@ export function LoadoutProvider({ children }: { children: ReactNode }) {
         if (l.learned.includes(skillId)) {
           // Unlearning also unequips.
           return {
+            ...l,
             learned: l.learned.filter((id) => id !== skillId),
             equipped: l.equipped.filter((id) => id !== skillId),
           };
@@ -95,13 +112,26 @@ export function LoadoutProvider({ children }: { children: ReactNode }) {
     [patch],
   );
 
+  const togglePassive = useCallback(
+    (instanceId: string, passiveId: string) =>
+      patch(instanceId, (l) => {
+        if (l.passives.includes(passiveId)) {
+          return { ...l, passives: l.passives.filter((id) => id !== passiveId) };
+        }
+        if (l.passives.length >= PASSIVE_LIMIT) return l;
+        return { ...l, passives: [...l.passives, passiveId] };
+      }),
+    [patch],
+  );
+
   const value = useMemo<LoadoutsApi>(
     () => ({
-      getLoadout: (instanceId) => store[instanceId] ?? EMPTY,
+      getLoadout: (instanceId) => normalize(store[instanceId]),
       toggleLearned,
       toggleEquipped,
+      togglePassive,
     }),
-    [store, toggleLearned, toggleEquipped],
+    [store, toggleLearned, toggleEquipped, togglePassive],
   );
 
   return <LoadoutsContext.Provider value={value}>{children}</LoadoutsContext.Provider>;

@@ -1,5 +1,5 @@
 import type { Pal, WorkType } from "../data/pals";
-import { baseCoverage, bestForWork } from "../lib/sets";
+import { baseCoverage, bestForWork, type HumanWorker } from "../lib/sets";
 import { useOwned } from "../hooks/useOwned";
 
 interface GapFit {
@@ -10,15 +10,17 @@ interface GapFit {
 
 export function BaseCoverage({
   pals,
+  humans = [],
   onAdd,
   full,
 }: {
   pals: Pal[];
+  humans?: HumanWorker[];
   onAdd: (name: string) => void;
   full: boolean;
 }) {
   const { owned } = useOwned();
-  const coverage = baseCoverage(pals);
+  const coverage = baseCoverage(pals, humans);
   const gaps = coverage.filter((c) => c.maxLevel === 0);
   const exclude = new Set(pals.map((p) => p.name));
 
@@ -32,7 +34,7 @@ export function BaseCoverage({
     <div className="coverage">
       <div className="coverage__head">
         <h3 className="detail__sub">Work Coverage</h3>
-        {pals.length > 0 && (
+        {(pals.length > 0 || humans.length > 0) && (
           <span className={`coverage__flag ${gaps.length ? "is-gap" : "is-ok"}`}>
             {gaps.length
               ? `${gaps.length} gap${gaps.length > 1 ? "s" : ""}`

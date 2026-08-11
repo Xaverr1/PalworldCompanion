@@ -1,10 +1,16 @@
 import { useCallback, useEffect, useState } from "react";
+import type { WorkType } from "../data/pals";
 import {
   SET_LIMIT,
   createSet,
+  type HumanWorker,
   type PalSet,
   type SetKind,
 } from "../lib/sets";
+
+function newId(): string {
+  return crypto.randomUUID?.() ?? Math.random().toString(36).slice(2, 10);
+}
 
 const STORAGE_KEY = "pwc.sets.v1";
 
@@ -68,5 +74,60 @@ export function useSavedSets() {
     [patch],
   );
 
-  return { sets, addSet, removeSet, renameSet, addMember, removeMember };
+  const patchHumans = useCallback(
+    (id: string, fn: (humans: HumanWorker[]) => HumanWorker[]) =>
+      patch(id, (s) => ({
+        ...s,
+        humans: fn(s.humans ?? []),
+        updatedAt: Date.now(),
+      })),
+    [patch],
+  );
+
+  const addHuman = useCallback(
+    (id: string) =>
+      patchHumans(id, (humans) => [...humans, { id: newId(), level: 1, works: {} }]),
+    [patchHumans],
+  );
+
+  const removeHuman = useCallback(
+    (id: string, humanId: string) =>
+      patchHumans(id, (humans) => humans.filter((h) => h.id !== humanId)),
+    [patchHumans],
+  );
+
+  const setHumanLevel = useCallback(
+    (id: string, humanId: string, level: number) =>
+      patchHumans(id, (humans) =>
+        humans.map((h) => (h.id === humanId ? { ...h, level } : h)),
+      ),
+    [patchHumans],
+  );
+
+  const setHumanWork = useCallback(
+    (id: string, humanId: string, work: WorkType, level: number) =>
+      patchHumans(id, (humans) =>
+        humans.map((h) => {
+          if (h.id !== humanId) return h;
+          const works = { ...h.works };
+          if (level > 0) works[work] = level;
+          else delete works[work];
+          return { ...h, works };
+        }),
+      ),
+    [patchHumans],
+  );
+
+  return {
+    sets,
+    addSet,
+    removeSet,
+    renameSet,
+    addMember,
+    removeMember,
+    addHuman,
+    removeHuman,
+    setHumanLevel,
+    setHumanWork,
+  };
 }

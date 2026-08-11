@@ -1,15 +1,26 @@
 import { useState } from "react";
-import type { Pal } from "../data/pals";
+import type { Pal, WorkType } from "../data/pals";
 import { useSavedSets } from "../hooks/useSavedSets";
 import { SET_LIMIT, resolveMembers, type PalSet } from "../lib/sets";
 import { BaseCoverage } from "./BaseCoverage";
 import { PartySummary } from "./PartySummary";
 import { PalPicker } from "./PalPicker";
 import { PalDetail } from "./PalDetail";
+import { HumanWorkers } from "./HumanWorkers";
 
 export function Planner() {
-  const { sets, addSet, removeSet, renameSet, addMember, removeMember } =
-    useSavedSets();
+  const {
+    sets,
+    addSet,
+    removeSet,
+    renameSet,
+    addMember,
+    removeMember,
+    addHuman,
+    removeHuman,
+    setHumanLevel,
+    setHumanWork,
+  } = useSavedSets();
   const [activeId, setActiveId] = useState<string | null>(sets[0]?.id ?? null);
   const [pickerOpen, setPickerOpen] = useState(false);
   const [detailPal, setDetailPal] = useState<Pal | null>(null);
@@ -80,6 +91,10 @@ export function Planner() {
             onAddMember={(name) => addMember(active.id, name)}
             onRemoveMember={(name) => removeMember(active.id, name)}
             onSelectPal={setDetailPal}
+            onAddHuman={() => addHuman(active.id)}
+            onRemoveHuman={(hid) => removeHuman(active.id, hid)}
+            onSetHumanLevel={(hid, lvl) => setHumanLevel(active.id, hid, lvl)}
+            onSetHumanWork={(hid, w, lvl) => setHumanWork(active.id, hid, w, lvl)}
           />
         )}
       </section>
@@ -108,6 +123,10 @@ function ActiveSet({
   onAddMember,
   onRemoveMember,
   onSelectPal,
+  onAddHuman,
+  onRemoveHuman,
+  onSetHumanLevel,
+  onSetHumanWork,
 }: {
   set: PalSet;
   onRename: (name: string) => void;
@@ -116,8 +135,13 @@ function ActiveSet({
   onAddMember: (name: string) => void;
   onRemoveMember: (name: string) => void;
   onSelectPal: (pal: Pal) => void;
+  onAddHuman: () => void;
+  onRemoveHuman: (id: string) => void;
+  onSetHumanLevel: (id: string, level: number) => void;
+  onSetHumanWork: (id: string, work: WorkType, level: number) => void;
 }) {
   const pals = resolveMembers(set);
+  const humans = set.humans ?? [];
   const limit = SET_LIMIT[set.kind];
   const full = set.members.length >= limit;
 
@@ -180,11 +204,26 @@ function ActiveSet({
               {full ? "Full" : "+ Add pals"}
             </button>
           </div>
+
+          {set.kind === "base" && (
+            <HumanWorkers
+              humans={humans}
+              onAdd={onAddHuman}
+              onRemove={onRemoveHuman}
+              onLevel={onSetHumanLevel}
+              onWork={onSetHumanWork}
+            />
+          )}
         </div>
 
         <div className="setedit__summary">
           {set.kind === "base" ? (
-            <BaseCoverage pals={pals} onAdd={onAddMember} full={full} />
+            <BaseCoverage
+              pals={pals}
+              humans={humans}
+              onAdd={onAddMember}
+              full={full}
+            />
           ) : (
             <PartySummary pals={pals} setId={set.id} onAdd={onAddMember} full={full} />
           )}

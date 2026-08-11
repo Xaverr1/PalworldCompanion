@@ -1,0 +1,1922 @@
+[
+  {
+    "id": "WorldTree_CraftSpeed",
+    "name": "Demon’s Hand",
+    "description": "Work Speed +90.0% SAN dreceases +15.0% faster World Tree harvestables won't vanish when approached.",
+    "rank": 5
+  },
+  {
+    "id": "WorldTree_MoveSpeed",
+    "name": "Dimensional Leap",
+    "description": "Movement Speed +50.0% Increases Hunger depletion rate by +15.0% World Tree resources will not vanish when approached.",
+    "rank": 5
+  },
+  {
+    "id": "WorldTree_ATK_DEF",
+    "name": "God of Destruction",
+    "description": "Attack +40.0% Defense +20.0% Max Health -50.0% World Tree resources will not vanish when approached.",
+    "rank": 5
+  },
+  {
+    "id": "WorldTree_Sanity",
+    "name": "Hermit Sage",
+    "description": "SAN depletion rate -50.0% Work Speed -20.0% World Tree resources will not vanish when approached.",
+    "rank": 5
+  },
+  {
+    "id": "WorldTree_DEF",
+    "name": "Sanctified Meat Shield",
+    "description": "Defense +50.0% Attack -30.0% World Tree resources will not vanish when approached.",
+    "rank": 5
+  },
+  {
+    "id": "WorldTree_ATK",
+    "name": "Twin-Edged Holy Blade",
+    "description": "Attack +50.0% Defense -30.0% World Tree resources will not vanish when approached.",
+    "rank": 5
+  },
+  {
+    "id": "WorldTree_FullStomach",
+    "name": "World Tree Seedbed",
+    "description": "Decrease Hunger depletion rate by +50.0% HP -20.0% World Tree resources will not vanish when approached.",
+    "rank": 5
+  },
+  {
+    "id": "Attack_ACC_up4_Armor",
+    "name": "Attack Up (S) Lv. 4",
+    "description": "Attack +12.0%",
+    "rank": 4
+  },
+  {
+    "id": "Attack_ACC_up4",
+    "name": "Attack Up Lv. 4",
+    "description": "Attack +20.0%",
+    "rank": 4
+  },
+  {
+    "id": "MutationPal_Babysitter",
+    "name": "Babysitter",
+    "description": "While at a base, increases egg production speed by +30.0% and incubation speed by +30.0% for Pals assigned to a Breeding Farm.",
+    "rank": 4
+  },
+  {
+    "id": "OctaviaArmorVampire",
+    "name": "Blood Is Fuel",
+    "description": "Absorbs a portion of the damage dealt to restore Health. Does not sleep at night and continues to work.",
+    "rank": 4
+  },
+  {
+    "id": "ElementResist_Dark_4",
+    "name": "Dark Damage Reduction Lv. 4",
+    "description": "35.0% decrease in incoming Dark damage.",
+    "rank": 4
+  },
+  {
+    "id": "defense_ACC_up4",
+    "name": "Defense Up Lv. 4",
+    "description": "Defense +25.0%",
+    "rank": 4
+  },
+  {
+    "id": "PAL_ALLAttack_up3",
+    "name": "Demon God",
+    "description": "Attack +30.0% Defense +5.0%",
+    "rank": 4
+  },
+  {
+    "id": "Deffence_up3",
+    "name": "Diamond Body",
+    "description": "Defense +30.0% Immune to Flinch Immune to Knockback",
+    "rank": 4
+  },
+  {
+    "id": "ElementResist_Dragon_4",
+    "name": "Dragon Damage Reduction Lv. 4",
+    "description": "35.0% decrease in incoming Dragon damage.",
+    "rank": 4
+  },
+  {
+    "id": "ElementResist_Thunder_4",
+    "name": "Electric Damage Reduction Lv. 4",
+    "description": "35.0% decrease in incoming Lightning damage.",
+    "rank": 4
+  },
+  {
+    "id": "Stamina_Up_3",
+    "name": "Eternal Engine",
+    "description": "Max stamina +75.0% *This effect is only valid for rideable pals.",
+    "rank": 4
+  },
+  {
+    "id": "EternalFlame",
+    "name": "Eternal Flame",
+    "description": "30.0% increase to Fire attack damage. 30.0% increase to Lightning attack damage.",
+    "rank": 4
+  },
+  {
+    "id": "ElementResist_Fire_4",
+    "name": "Fire Damage Reduction Lv. 4",
+    "description": "35.0% decrease in incoming Fire damage.",
+    "rank": 4
+  },
+  {
+    "id": "ElementResist_Leaf_4",
+    "name": "Grass Damage Reduction Lv. 4",
+    "description": "35.0% decrease in incoming Grass damage.",
+    "rank": 4
+  },
+  {
+    "id": "ElementResist_Earth_4",
+    "name": "Ground Damage Reduction Lv. 4",
+    "description": "35.0% decrease in incoming Earth damage.",
+    "rank": 4
+  },
+  {
+    "id": "HP_ACC_up4",
+    "name": "Health Up Lv. 4",
+    "description": "Max Health +25.0%",
+    "rank": 4
+  },
+  {
+    "id": "PAL_Sanity_Down_3",
+    "name": "Heart of the Immovable King",
+    "description": "SAN drops +20.0% slower.",
+    "rank": 4
+  },
+  {
+    "id": "MutationPal_ExplosionResist",
+    "name": "Heavily Armored",
+    "description": "Immune to Explosion Damage",
+    "rank": 4
+  },
+  {
+    "id": "ElementResist_Ice_4",
+    "name": "Ice Damage Reduction Lv. 4",
+    "description": "35.0% decrease in incoming Ice damage.",
+    "rank": 4
+  },
+  {
+    "id": "MutationPal_Mutant",
+    "name": "Idiosyncratic",
+    "description": "Pal and Player Auto Health Regeneration Rate +50.0% Defense +25.0% Immune to Poison Damage Immune to Burn Damage",
+    "rank": 4
+  },
+  {
+    "id": "MutationPal_Immortal",
+    "name": "Immortality",
+    "description": "Life Steal +5.0% Pal Auto Health Regeneration Rate +100.0% Attack +15.0%",
+    "rank": 4
+  },
+  {
+    "id": "Invader",
+    "name": "Invader",
+    "description": "30.0% increase in Dark attack damage. 30.0% increase in Dragon attack damage.",
+    "rank": 4
+  },
+  {
+    "id": "SwimSpeed_up_3",
+    "name": "King of the Waves",
+    "description": "50.0% increase movement speed on water.",
+    "rank": 4
+  },
+  {
+    "id": "SelfDeathAddItemDrop_up_3",
+    "name": "Lavish Hospitality",
+    "description": "Your Dropped Items + 100.0%",
+    "rank": 4
+  },
+  {
+    "id": "Legend",
+    "name": "Legend",
+    "description": "Attack +20.0% Defense +20.0% Movement Speed increases 20.0%",
+    "rank": 4
+  },
+  {
+    "id": "RideJumpCount_Increase1",
+    "name": "Lightfooted",
+    "description": "Mounted Jump Count +1",
+    "rank": 4
+  },
+  {
+    "id": "WoodDrop_Boost_5",
+    "name": "Logging Yield Up Lv. 5",
+    "description": "Massively increases the drop amount of Wood.",
+    "rank": 4
+  },
+  {
+    "id": "Rare",
+    "name": "Lucky",
+    "description": "Attack +15.0% Defense +15.0% Work Speed +20.0%",
+    "rank": 4
+  },
+  {
+    "id": "Nushi",
+    "name": "Lunker",
+    "description": "20.0% increase to Water attack damage 20.0% increase to Ice attack damage 20.0% increase to defense.",
+    "rank": 4
+  },
+  {
+    "id": "PAL_FullStomach_Down_3",
+    "name": "Mastery of Fasting",
+    "description": "Hunger decreases +20.0% slower.",
+    "rank": 4
+  },
+  {
+    "id": "StonDrop_Boost_5",
+    "name": "Mining Yield Up Lv. 5",
+    "description": "Massively increases the drop amount of Stone and Ore.",
+    "rank": 4
+  },
+  {
+    "id": "ElementResist_Normal_4",
+    "name": "Neutral Damage Reduction Lv. 4",
+    "description": "35.0% decrease in incoming Neutral damage.",
+    "rank": 4
+  },
+  {
+    "id": "Attack_ACC_up4_Otomo_Only_Equip",
+    "name": "Pal Attack Up Lv. 4",
+    "description": "Attack +16.0%",
+    "rank": 4
+  },
+  {
+    "id": "ElementBoost_Dark_4_Otomo_Only_Equip",
+    "name": "Pal Dark Damage Enhancement Lv. 4",
+    "description": "20.0% increase in Dark attack damage.",
+    "rank": 4
+  },
+  {
+    "id": "Defense_ACC_up4_Otomo_Only_Equip",
+    "name": "Pal Defense Up Lv. 4",
+    "description": "Defense +20.0%",
+    "rank": 4
+  },
+  {
+    "id": "ElementBoost_Dragon_4_Otomo_Only_Equip",
+    "name": "Pal Dragon Damage Enhancement Lv. 4",
+    "description": "20.0% increase in Dragon attack damage.",
+    "rank": 4
+  },
+  {
+    "id": "ElementBoost_Electricity_4_Otomo_Only_Equip",
+    "name": "Pal Electric Damage Enhancement Lv. 4",
+    "description": "20.0% increase in Lightning attack damage.",
+    "rank": 4
+  },
+  {
+    "id": "ElementBoost_Fire_4_Otomo_Only_Equip",
+    "name": "Pal Fire Damage Enhancement Lv. 4",
+    "description": "20.0% increase in Fire attack damage.",
+    "rank": 4
+  },
+  {
+    "id": "ElementBoost_Leaf_4_Otomo_Only_Equip",
+    "name": "Pal Grass Damage Enhancement Lv. 4",
+    "description": "20.0% increase in Grass attack damage.",
+    "rank": 4
+  },
+  {
+    "id": "ElementBoost_Earth_4_Otomo_Only_Equip",
+    "name": "Pal Ground Damage Enhancement Lv. 4",
+    "description": "20.0% increase in Earth attack damage.",
+    "rank": 4
+  },
+  {
+    "id": "ElementBoost_Ice_4_Otomo_Only_Equip",
+    "name": "Pal Ice Damage Enhancement Lv. 4",
+    "description": "20.0% increase in Ice attack damage.",
+    "rank": 4
+  },
+  {
+    "id": "ElementBoost_Normal_4_Otomo_Only_Equip",
+    "name": "Pal Neutral Damage Enhancement Lv. 4",
+    "description": "20.0% increase in Neutral attack damage.",
+    "rank": 4
+  },
+  {
+    "id": "ElementBoost_Water_4_Otomo_Only_Equip",
+    "name": "Pal Water Damage Enhancement Lv. 4",
+    "description": "20.0% increase in Water attack damage.",
+    "rank": 4
+  },
+  {
+    "id": "WorkSuitabilityAddRank_MonsterFarm_2",
+    "name": "Ranch Master",
+    "description": "Farming's Work Suitability +2",
+    "rank": 4
+  },
+  {
+    "id": "CraftSpeed_up3",
+    "name": "Remarkable Craftsmanship",
+    "description": "Work Speed +75.0%",
+    "rank": 4
+  },
+  {
+    "id": "Salvation",
+    "name": "Savior",
+    "description": "30.0% increase in Neutral attack damage. 30.0% increase in Grass attack damage.",
+    "rank": 4
+  },
+  {
+    "id": "Witch",
+    "name": "Siren of the Void",
+    "description": "30.0% increase in Dark attack damage. 30.0% increase in Ice attack damage.",
+    "rank": 4
+  },
+  {
+    "id": "RideJumpCount_Increase2",
+    "name": "Skymarcher",
+    "description": "Mounted Jump Count +2",
+    "rank": 4
+  },
+  {
+    "id": "WorkSpeed_ACC_up4",
+    "name": "Speedy Worker Lv. 4",
+    "description": "Work Speed +25.0%",
+    "rank": 4
+  },
+  {
+    "id": "MoveSpeed_up_3",
+    "name": "Swift",
+    "description": "30.0% increase to movement speed.",
+    "rank": 4
+  },
+  {
+    "id": "CoolTimeReduction_Up_3",
+    "name": "Tempest Fury",
+    "description": "Active skill cooldown reduction 0.0% Attack +0.0%",
+    "rank": 4
+  },
+  {
+    "id": "Vampire",
+    "name": "Vampiric",
+    "description": "Absorbs a portion of the damage dealt to restore Health. Does not sleep at night and continues to work.",
+    "rank": 4
+  },
+  {
+    "id": "ElementResist_Aqua_4",
+    "name": "Water Damage Reduction Lv. 4",
+    "description": "35.0% decrease in incoming Water damage.",
+    "rank": 4
+  },
+  {
+    "id": "SwimSpeed_up_2",
+    "name": "Ace Swimmer",
+    "description": "40.0% increase movement speed on water.",
+    "rank": 3
+  },
+  {
+    "id": "CraftSpeed_up2",
+    "name": "Artisan",
+    "description": "Work Speed +50.0%",
+    "rank": 3
+  },
+  {
+    "id": "Attack_ACC_up3_Armor",
+    "name": "Attack Up (S) Lv. 3",
+    "description": "Attack +9.0%",
+    "rank": 3
+  },
+  {
+    "id": "Attack_ACC_up3",
+    "name": "Attack Up Lv. 3",
+    "description": "Attack +15.0%",
+    "rank": 3
+  },
+  {
+    "id": "GYM_NAME_Volcano",
+    "name": "Brothers of the Eternal Pyre Soul Leader",
+    "description": "Attack +20.0% MoveSpeed +10.0%",
+    "rank": 3
+  },
+  {
+    "id": "Deffence_up2",
+    "name": "Burly Body",
+    "description": "Defense +20.0% Immune to Flinch",
+    "rank": 3
+  },
+  {
+    "id": "ElementBoost_Normal_2_PAL",
+    "name": "Celestial Emperor",
+    "description": "30.0% increase in Neutral attack damage.",
+    "rank": 3
+  },
+  {
+    "id": "TemperatureResist_Cold3",
+    "name": "Cold Resistance Lv. 3",
+    "description": "TemperatureResist_Cold +3.0",
+    "rank": 3
+  },
+  {
+    "id": "ElementResist_Dark_3",
+    "name": "Dark Damage Reduction Lv. 3",
+    "description": "30.0% decrease in incoming Dark damage.",
+    "rank": 3
+  },
+  {
+    "id": "defense_ACC_up3",
+    "name": "Defense Up Lv. 3",
+    "description": "Defense +20.0%",
+    "rank": 3
+  },
+  {
+    "id": "PAL_FullStomach_Down_2",
+    "name": "Diet Lover",
+    "description": "Hunger decreases +15.0% slower.",
+    "rank": 3
+  },
+  {
+    "id": "ElementBoost_Dragon_2_PAL",
+    "name": "Divine Dragon",
+    "description": "30.0% increase in Dragon attack damage.",
+    "rank": 3
+  },
+  {
+    "id": "ElementResist_Dragon_3",
+    "name": "Dragon Damage Reduction Lv. 3",
+    "description": "30.0% decrease in incoming Dragon damage.",
+    "rank": 3
+  },
+  {
+    "id": "ElementResist_Earth_3",
+    "name": "Earth Damage Reduction Lv. 3",
+    "description": "30.0% decrease in incoming Earth damage.",
+    "rank": 3
+  },
+  {
+    "id": "ElementBoost_Earth_2_PAL",
+    "name": "Earth Emperor",
+    "description": "30.0% increase in Earth attack damage.",
+    "rank": 3
+  },
+  {
+    "id": "ElementResist_Thunder_3",
+    "name": "Electric Damage Reduction Lv. 3",
+    "description": "30.0% decrease in incoming Lightning damage.",
+    "rank": 3
+  },
+  {
+    "id": "WorkSuitabilityAddRank_MonsterFarm_1",
+    "name": "Farmhand",
+    "description": "Farming's Work Suitability +1",
+    "rank": 3
+  },
+  {
+    "id": "PAL_ALLAttack_up2",
+    "name": "Ferocious",
+    "description": "Attack +20.0%",
+    "rank": 3
+  },
+  {
+    "id": "ElementResist_Fire_3",
+    "name": "Fire Damage Reduction Lv. 3",
+    "description": "30.0% decrease in incoming Fire damage.",
+    "rank": 3
+  },
+  {
+    "id": "ElementBoost_Fire_2_PAL",
+    "name": "Flame Emperor",
+    "description": "30.0% increase in Fire attack damage.",
+    "rank": 3
+  },
+  {
+    "id": "GYM_NAME_Forest",
+    "name": "Free Pal Alliance Founder",
+    "description": "Attack +20.0% MoveSpeed +10.0%",
+    "rank": 3
+  },
+  {
+    "id": "ElementResist_Leaf_3",
+    "name": "Grass Damage Reduction Lv. 3",
+    "description": "30.0% decrease in incoming Grass damage.",
+    "rank": 3
+  },
+  {
+    "id": "AutoHPRegeneRate_Passive",
+    "name": "Healing Coach",
+    "description": "Player Auto Health Regeneration Rate +5.0%",
+    "rank": 3
+  },
+  {
+    "id": "HP_ACC_up3",
+    "name": "Health Up Lv. 3",
+    "description": "Max Health +20.0%",
+    "rank": 3
+  },
+  {
+    "id": "TemperatureResist_Heat3",
+    "name": "Heat Resistance Lv. 3",
+    "description": "TemperatureResist_Heat +3.0",
+    "rank": 3
+  },
+  {
+    "id": "TemperatureResist_Heat3Cold3",
+    "name": "Heat Resistance Lv. 3 / Cold Resistance Lv. 3",
+    "description": "TemperatureResist_Cold +3.0 TemperatureResist_Heat +3.0",
+    "rank": 3
+  },
+  {
+    "id": "ElementResist_Ice_3",
+    "name": "Ice Damage Reduction Lv. 3",
+    "description": "30.0% decrease in incoming Ice damage.",
+    "rank": 3
+  },
+  {
+    "id": "ElementBoost_Ice_2_PAL",
+    "name": "Ice Emperor",
+    "description": "30.0% increase in Ice attack damage.",
+    "rank": 3
+  },
+  {
+    "id": "Stamina_Up_1",
+    "name": "Infinite Stamina",
+    "description": "Max stamina +50.0% *This effect is only valid for rideable pals.",
+    "rank": 3
+  },
+  {
+    "id": "GYM_NAME_Viking",
+    "name": "Jarl of Feybreak",
+    "description": "Attack +20.0% MoveSpeed +10.0%",
+    "rank": 3
+  },
+  {
+    "id": "GYM_NAME_Sakurajima",
+    "name": "Leader of the Moonflowers",
+    "description": "Attack +20.0% MoveSpeed +10.0%",
+    "rank": 3
+  },
+  {
+    "id": "TrainerLogging_up1",
+    "name": "Logging Foreman",
+    "description": "25.0% increase in Player Logging Efficiency.",
+    "rank": 3
+  },
+  {
+    "id": "WoodDrop_Boost_3",
+    "name": "Logging Yield Up Lv. 3",
+    "description": "Greatly increases the drop amount of Wood.",
+    "rank": 3
+  },
+  {
+    "id": "WoodDrop_Boost_4",
+    "name": "Logging Yield Up Lv. 4",
+    "description": "Significantly increases the drop amount of Wood.",
+    "rank": 3
+  },
+  {
+    "id": "StonWoodDrop_Boost",
+    "name": "Logging/Mining Yield Up",
+    "description": "Significantly increases the drop amount of Wood, Stone, and Ore.",
+    "rank": 3
+  },
+  {
+    "id": "ElementBoost_Thunder_2_PAL",
+    "name": "Lord of Lightning",
+    "description": "30.0% increase in Lightning attack damage.",
+    "rank": 3
+  },
+  {
+    "id": "ElementBoost_Aqua_2_PAL",
+    "name": "Lord of the Sea",
+    "description": "30.0% increase in Water attack damage.",
+    "rank": 3
+  },
+  {
+    "id": "ElementBoost_Dark_2_PAL",
+    "name": "Lord of the Underworld",
+    "description": "30.0% increase in Dark attack damage.",
+    "rank": 3
+  },
+  {
+    "id": "MaxInventoryWeight_up3",
+    "name": "Max Carrying Capacity Lv. 3",
+    "description": "Carrying Capacity +200.0%",
+    "rank": 3
+  },
+  {
+    "id": "TrainerMining_up1",
+    "name": "Mine Foreman",
+    "description": "25.0% increase in Player Mining Efficiency.",
+    "rank": 3
+  },
+  {
+    "id": "StonDrop_Boost_3",
+    "name": "Mining Yield Up Lv. 3",
+    "description": "Greatly increases the drop amount of Stone and Ore.",
+    "rank": 3
+  },
+  {
+    "id": "StonDrop_Boost_4",
+    "name": "Mining Yield Up Lv. 4",
+    "description": "Significantly increases the drop amount of Stone and Ore.",
+    "rank": 3
+  },
+  {
+    "id": "TrainerWorkSpeed_UP_1",
+    "name": "Motivational Leader",
+    "description": "25.0% increase in Player Work Speed.",
+    "rank": 3
+  },
+  {
+    "id": "ElementResist_Normal_3",
+    "name": "Neutral Damage Reduction Lv. 3",
+    "description": "30.0% decrease in incoming Neutral damage.",
+    "rank": 3
+  },
+  {
+    "id": "SalePrice_Up_1",
+    "name": "Noble",
+    "description": "Increases the value of items when sold by +5.0%",
+    "rank": 3
+  },
+  {
+    "id": "Attack_ACC_up3_Otomo_Only_Equip",
+    "name": "Pal Attack Up Lv. 3",
+    "description": "Attack +12.0%",
+    "rank": 3
+  },
+  {
+    "id": "ElementBoost_Dark_3_Otomo_Only_Equip",
+    "name": "Pal Dark Damage Enhancement Lv. 3",
+    "description": "18.0% increase in Dark attack damage.",
+    "rank": 3
+  },
+  {
+    "id": "Defense_ACC_up3_Otomo_Only_Equip",
+    "name": "Pal Defense Up Lv. 3",
+    "description": "Defense +15.0%",
+    "rank": 3
+  },
+  {
+    "id": "ElementBoost_Dragon_3_Otomo_Only_Equip",
+    "name": "Pal Dragon Damage Enhancement Lv. 3",
+    "description": "18.0% increase in Dragon attack damage.",
+    "rank": 3
+  },
+  {
+    "id": "ElementBoost_Electricity_3_Otomo_Only_Equip",
+    "name": "Pal Electric Damage Enhancement Lv. 3",
+    "description": "18.0% increase in Lightning attack damage.",
+    "rank": 3
+  },
+  {
+    "id": "PalExp_Increase_3_Otomo_Only_Equip",
+    "name": "Pal EXP Up Lv. 3",
+    "description": "PalExp_Increase +50.0%",
+    "rank": 3
+  },
+  {
+    "id": "ElementBoost_Fire_3_Otomo_Only_Equip",
+    "name": "Pal Fire Damage Enhancement Lv. 3",
+    "description": "18.0% increase in Fire attack damage.",
+    "rank": 3
+  },
+  {
+    "id": "GYM_NAME_Snow",
+    "name": "PAL Genetic Research Unit Commander",
+    "description": "Attack +20.0% MoveSpeed +10.0%",
+    "rank": 3
+  },
+  {
+    "id": "ElementBoost_Leaf_3_Otomo_Only_Equip",
+    "name": "Pal Grass Damage Enhancement Lv. 3",
+    "description": "18.0% increase in Grass attack damage.",
+    "rank": 3
+  },
+  {
+    "id": "ElementBoost_Earth_3_Otomo_Only_Equip",
+    "name": "Pal Ground Damage Enhancement Lv. 3",
+    "description": "18.0% increase in Earth attack damage.",
+    "rank": 3
+  },
+  {
+    "id": "ElementBoost_Ice_3_Otomo_Only_Equip",
+    "name": "Pal Ice Damage Enhancement Lv. 3",
+    "description": "18.0% increase in Ice attack damage.",
+    "rank": 3
+  },
+  {
+    "id": "ElementBoost_Normal_3_Otomo_Only_Equip",
+    "name": "Pal Neutral Damage Enhancement Lv. 3",
+    "description": "18.0% increase in Neutral attack damage.",
+    "rank": 3
+  },
+  {
+    "id": "ElementBoost_Water_3_Otomo_Only_Equip",
+    "name": "Pal Water Damage Enhancement Lv. 3",
+    "description": "18.0% increase in Water attack damage.",
+    "rank": 3
+  },
+  {
+    "id": "Test_PalEgg_HatchingSpeed_Up",
+    "name": "Philanthropist",
+    "description": "When assigned to a Breeding Farm, breeding speed is increased by 100.0%.",
+    "rank": 3
+  },
+  {
+    "id": "GYM_NAME_Desert",
+    "name": "PIDF Commander",
+    "description": "Attack +20.0% MoveSpeed +10.0%",
+    "rank": 3
+  },
+  {
+    "id": "GYM_NAME_Meadow",
+    "name": "Rayne Syndicate Boss",
+    "description": "Attack +20.0% Movement Speed increases 10.0%",
+    "rank": 3
+  },
+  {
+    "id": "ReloadSpeedUp_Passive",
+    "name": "Reload Master",
+    "description": "Player Reload Speed +4.0%",
+    "rank": 3
+  },
+  {
+    "id": "MoveSpeed_up_2",
+    "name": "Runner",
+    "description": "20.0% increase to movement speed.",
+    "rank": 3
+  },
+  {
+    "id": "CoolTimeReduction_Up_1",
+    "name": "Serenity",
+    "description": "Active skill cooldown reduction 30.0% Attack +10.0%",
+    "rank": 3
+  },
+  {
+    "id": "SelfDeathAddItemDrop_up_2",
+    "name": "Service-Minded",
+    "description": "Your Dropped Items + 50.0%",
+    "rank": 3
+  },
+  {
+    "id": "WorkSpeed_ACC_up3",
+    "name": "Speedy Worker Lv. 3",
+    "description": "Work Speed +20.0%",
+    "rank": 3
+  },
+  {
+    "id": "ElementBoost_Leaf_2_PAL",
+    "name": "Spirit Emperor",
+    "description": "30.0% increase in Grass attack damage.",
+    "rank": 3
+  },
+  {
+    "id": "TrainerDEF_UP_1",
+    "name": "Stronghold Strategist",
+    "description": "10.0% increase in Player Defense.",
+    "rank": 3
+  },
+  {
+    "id": "TrainerATK_UP_1",
+    "name": "Vanguard",
+    "description": "10.0% increase in Player Attack.",
+    "rank": 3
+  },
+  {
+    "id": "ElementResist_Aqua_3",
+    "name": "Water Damage Reduction Lv. 3",
+    "description": "30.0% decrease in incoming Water damage.",
+    "rank": 3
+  },
+  {
+    "id": "PlayerSP_DecreaseRate_Passive",
+    "name": "Wellness Watcher",
+    "description": "Player Stamina Consumption -5.0%",
+    "rank": 3
+  },
+  {
+    "id": "MiniNushi",
+    "name": "Whopper",
+    "description": "5.0% increase to Water attack damage 5.0% increase to Ice attack damage 5.0% increase to defense.",
+    "rank": 3
+  },
+  {
+    "id": "PAL_Sanity_Down_2",
+    "name": "Workaholic",
+    "description": "SAN drops +15.0% slower.",
+    "rank": 3
+  },
+  {
+    "id": "Attack_ACC_up2_Armor",
+    "name": "Attack Up (S) Lv. 2",
+    "description": "Attack +6.0%",
+    "rank": 2
+  },
+  {
+    "id": "Attack_ACC_up2",
+    "name": "Attack Up Lv. 2",
+    "description": "Attack +10.0%",
+    "rank": 2
+  },
+  {
+    "id": "TemperatureResist_Cold2",
+    "name": "Cold Resistance Lv. 2",
+    "description": "TemperatureResist_Cold +2.0",
+    "rank": 2
+  },
+  {
+    "id": "ElementResist_Dark_2",
+    "name": "Dark Damage Reduction Lv. 2",
+    "description": "25.0% decrease in incoming Dark damage.",
+    "rank": 2
+  },
+  {
+    "id": "defense_ACC_up2",
+    "name": "Defense Up Lv. 2",
+    "description": "Defense +15.0%",
+    "rank": 2
+  },
+  {
+    "id": "ElementResist_Dragon_2",
+    "name": "Dragon Damage Reduction Lv. 2",
+    "description": "25.0% decrease in incoming Dragon damage.",
+    "rank": 2
+  },
+  {
+    "id": "ElementResist_Earth_2",
+    "name": "Earth Damage Reduction Lv. 2",
+    "description": "25.0% decrease in incoming Earth damage.",
+    "rank": 2
+  },
+  {
+    "id": "ElementResist_Thunder_2",
+    "name": "Electric Damage Reduction Lv. 2",
+    "description": "25.0% decrease in incoming Lightning damage.",
+    "rank": 2
+  },
+  {
+    "id": "ElementResist_Fire_2",
+    "name": "Fire Damage Reduction Lv. 2",
+    "description": "25.0% decrease in incoming Fire damage.",
+    "rank": 2
+  },
+  {
+    "id": "ElementResist_Leaf_2",
+    "name": "Grass Damage Reduction Lv. 2",
+    "description": "25.0% decrease in incoming Grass damage.",
+    "rank": 2
+  },
+  {
+    "id": "HP_ACC_up2",
+    "name": "Health Up Lv. 2",
+    "description": "Max Health +15.0%",
+    "rank": 2
+  },
+  {
+    "id": "TemperatureResist_Heat2",
+    "name": "Heat Resistance Lv. 2",
+    "description": "TemperatureResist_Heat +2.0",
+    "rank": 2
+  },
+  {
+    "id": "TemperatureResist_Heat2Cold2",
+    "name": "Heat Resistance Lv. 2 / Cold Resistance Lv. 2",
+    "description": "TemperatureResist_Cold +2.0 TemperatureResist_Heat +2.0",
+    "rank": 2
+  },
+  {
+    "id": "Deffence_up2_2",
+    "name": "Heavyweight",
+    "description": "Defense +20.0% Immune to Knockback",
+    "rank": 2
+  },
+  {
+    "id": "ElementResist_Ice_2",
+    "name": "Ice Damage Reduction Lv. 2",
+    "description": "25.0% decrease in incoming Ice damage.",
+    "rank": 2
+  },
+  {
+    "id": "Noukin",
+    "name": "Musclehead",
+    "description": "Attack +30.0% Work Speed -50.0%",
+    "rank": 2
+  },
+  {
+    "id": "ElementResist_Normal_2",
+    "name": "Neutral Damage Reduction Lv. 2",
+    "description": "25.0% decrease in incoming Neutral damage.",
+    "rank": 2
+  },
+  {
+    "id": "Attack_ACC_up2_Otomo_Only_Equip",
+    "name": "Pal Attack Up Lv. 2",
+    "description": "Attack +8.0%",
+    "rank": 2
+  },
+  {
+    "id": "ElementBoost_Dark_2_Otomo_Only_Equip",
+    "name": "Pal Dark Damage Enhancement Lv. 2",
+    "description": "12.0% increase in Dark attack damage.",
+    "rank": 2
+  },
+  {
+    "id": "Defense_ACC_up2_Otomo_Only_Equip",
+    "name": "Pal Defense Up Lv. 2",
+    "description": "Defense +10.0%",
+    "rank": 2
+  },
+  {
+    "id": "ElementBoost_Dragon_2_Otomo_Only_Equip",
+    "name": "Pal Dragon Damage Enhancement Lv. 2",
+    "description": "12.0% increase in Dragon attack damage.",
+    "rank": 2
+  },
+  {
+    "id": "ElementBoost_Electricity_2_Otomo_Only_Equip",
+    "name": "Pal Electric Damage Enhancement Lv. 2",
+    "description": "12.0% increase in Lightning attack damage.",
+    "rank": 2
+  },
+  {
+    "id": "PalExp_Increase_2_Otomo_Only_Equip",
+    "name": "Pal EXP Up Lv. 2",
+    "description": "PalExp_Increase +40.0%",
+    "rank": 2
+  },
+  {
+    "id": "ElementBoost_Fire_2_Otomo_Only_Equip",
+    "name": "Pal Fire Damage Enhancement Lv. 2",
+    "description": "12.0% increase in Fire attack damage.",
+    "rank": 2
+  },
+  {
+    "id": "ElementBoost_Leaf_2_Otomo_Only_Equip",
+    "name": "Pal Grass Damage Enhancement Lv. 2",
+    "description": "12.0% increase in Grass attack damage.",
+    "rank": 2
+  },
+  {
+    "id": "ElementBoost_Earth_2_Otomo_Only_Equip",
+    "name": "Pal Ground Damage Enhancement Lv. 2",
+    "description": "12.0% increase in Earth attack damage.",
+    "rank": 2
+  },
+  {
+    "id": "ElementBoost_Ice_2_Otomo_Only_Equip",
+    "name": "Pal Ice Damage Enhancement Lv. 2",
+    "description": "12.0% increase in Ice attack damage.",
+    "rank": 2
+  },
+  {
+    "id": "ElementBoost_Normal_2_Otomo_Only_Equip",
+    "name": "Pal Neutral Damage Enhancement Lv. 2",
+    "description": "12.0% increase in Neutral attack damage.",
+    "rank": 2
+  },
+  {
+    "id": "ElementBoost_Water_2_Otomo_Only_Equip",
+    "name": "Pal Water Damage Enhancement Lv. 2",
+    "description": "12.0% increase in Water attack damage.",
+    "rank": 2
+  },
+  {
+    "id": "WorkSpeed_ACC_up2",
+    "name": "Speedy Worker Lv. 2",
+    "description": "Work Speed +15.0%",
+    "rank": 2
+  },
+  {
+    "id": "ElementResist_Aqua_2",
+    "name": "Water Damage Reduction Lv. 2",
+    "description": "25.0% decrease in incoming Water damage.",
+    "rank": 2
+  },
+  {
+    "id": "ElementResist_Normal_1_PAL",
+    "name": "Abnormal",
+    "description": "10.0% decrease in incoming Neutral damage.",
+    "rank": 1
+  },
+  {
+    "id": "AirDash_1",
+    "name": "Aerial Dash +1",
+    "description": "Aerial Dash +1",
+    "rank": 1
+  },
+  {
+    "id": "AirDash_2",
+    "name": "Aerial Dash +2",
+    "description": "Aerial Dash +2",
+    "rank": 1
+  },
+  {
+    "id": "AirDash_3",
+    "name": "Aerial Dash +3",
+    "description": "Aerial Dash +3",
+    "rank": 1
+  },
+  {
+    "id": "AirDash_4",
+    "name": "Aerial Dash +4",
+    "description": "Aerial Dash +4",
+    "rank": 1
+  },
+  {
+    "id": "PAL_oraora",
+    "name": "Aggressive",
+    "description": "Attack +10.0% Defense -10.0%",
+    "rank": 1
+  },
+  {
+    "id": "Attack_ACC_up1_Armor",
+    "name": "Attack Up (S) Lv. 1",
+    "description": "Attack +3.0%",
+    "rank": 1
+  },
+  {
+    "id": "Attack_ACC_up1",
+    "name": "Attack Up Lv. 1",
+    "description": "Attack +5.0%",
+    "rank": 1
+  },
+  {
+    "id": "CollectItem_Berries",
+    "name": "Berry Picker",
+    "description": "",
+    "rank": 1
+  },
+  {
+    "id": "ElementBoost_Dragon_1_PAL",
+    "name": "Blood of the Dragon",
+    "description": "10.0% increase in Dragon attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "ElementResist_Leaf_1_PAL",
+    "name": "Botanical Barrier",
+    "description": "10.0% decrease in incoming Grass damage.",
+    "rank": 1
+  },
+  {
+    "id": "PAL_ALLAttack_up1",
+    "name": "Brave",
+    "description": "Attack +10.0%",
+    "rank": 1
+  },
+  {
+    "id": "ElementBoost_Thunder_1_PAL",
+    "name": "Capacitor",
+    "description": "10.0% increase in Lightning attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "CaptureLevel_Up_1",
+    "name": "Capture Strength +1",
+    "description": "Capture Power +1.0",
+    "rank": 1
+  },
+  {
+    "id": "CaptureLevel_Up_2",
+    "name": "Capture Strength +2",
+    "description": "Capture Power +2.0",
+    "rank": 1
+  },
+  {
+    "id": "CaptureLevel_Up_3",
+    "name": "Capture Strength +3",
+    "description": "Capture Power +3.0",
+    "rank": 1
+  },
+  {
+    "id": "CaptureLevel_Up_4",
+    "name": "Capture Strength +4",
+    "description": "Capture Power +4.0",
+    "rank": 1
+  },
+  {
+    "id": "CaptureLevel_Up_5",
+    "name": "Capture Strength +5",
+    "description": "Capture Power +5.0",
+    "rank": 1
+  },
+  {
+    "id": "CaptureLevel_Up_6",
+    "name": "Capture Strength +6",
+    "description": "Capture Power +6.0",
+    "rank": 1
+  },
+  {
+    "id": "ElementResist_Dark_1_PAL",
+    "name": "Cheery",
+    "description": "10.0% decrease in incoming Dark damage.",
+    "rank": 1
+  },
+  {
+    "id": "TemperatureResist_Cold1",
+    "name": "Cold Resistance Lv. 1",
+    "description": "TemperatureResist_Cold +1.0",
+    "rank": 1
+  },
+  {
+    "id": "ElementBoost_Ice_1_PAL",
+    "name": "Coldblooded",
+    "description": "10.0% increase in Ice attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "PAL_conceited",
+    "name": "Conceited",
+    "description": "Work Speed +10.0% Defense -10.0%",
+    "rank": 1
+  },
+  {
+    "id": "CollectItem_Sweets",
+    "name": "Confectioner",
+    "description": "",
+    "rank": 1
+  },
+  {
+    "id": "PAL_FullStomach_Down_1",
+    "name": "Dainty Eater",
+    "description": "Hunger decreases +10.0% slower.",
+    "rank": 1
+  },
+  {
+    "id": "ElementBoost_Dark_3_BossDefeat",
+    "name": "Dark Damage Enhancement (Large)",
+    "description": "3.0% increase in Dark attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "BossDefeatReward_GrassGolem_Dark",
+    "name": "Dark Damage Enhancement (Medium)",
+    "description": "2.0% increase in Dark attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "BossDefeatReward_AmaterasuWolf_Dark",
+    "name": "Dark Damage Enhancement (Small)",
+    "description": "1.0% increase in Dark attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "ElementResist_Dark_1",
+    "name": "Dark Damage Reduction Lv. 1",
+    "description": "15.0% decrease in incoming Dark damage.",
+    "rank": 1
+  },
+  {
+    "id": "defense_ACC_up1",
+    "name": "Defense Up Lv. 1",
+    "description": "Defense +10.0%",
+    "rank": 1
+  },
+  {
+    "id": "BossDefeatReward_DomeArmorDragon",
+    "name": "Dragon Damage Enhancement (Large)",
+    "description": "3.0% increase in Dragon attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "BossDefeatReward_BlackMetalDragon",
+    "name": "Dragon Damage Enhancement (Medium)",
+    "description": "2.0% increase in Dragon attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "BossDefeatReward_FairyDragon",
+    "name": "Dragon Damage Enhancement (Small)",
+    "description": "1.0% increase in Dragon attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "ElementResist_Dragon_1",
+    "name": "Dragon Damage Reduction Lv. 1",
+    "description": "15.0% decrease in incoming Dragon damage.",
+    "rank": 1
+  },
+  {
+    "id": "ElementResist_Dragon_1_PAL",
+    "name": "Dragonkiller",
+    "description": "10.0% decrease in incoming Dragon damage.",
+    "rank": 1
+  },
+  {
+    "id": "ElementResist_Earth_1",
+    "name": "Earth Damage Reduction Lv. 1",
+    "description": "15.0% decrease in incoming Earth damage.",
+    "rank": 1
+  },
+  {
+    "id": "ElementResist_Earth_1_PAL",
+    "name": "Earthquake Resistant",
+    "description": "10.0% decrease in incoming Earth damage.",
+    "rank": 1
+  },
+  {
+    "id": "CollectItem_Egg",
+    "name": "Egg Layer",
+    "description": "",
+    "rank": 1
+  },
+  {
+    "id": "ElementBoost_Electricity_3_BossDefeat",
+    "name": "Electric Damage Enhancement (Large)",
+    "description": "3.0% increase in Lightning attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "BossDefeatReward_BlueThunderHorse",
+    "name": "Electric Damage Enhancement (Medium)",
+    "description": "2.0% increase in Lightning attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "BossDefeatReward_ElecLizard",
+    "name": "Electric Damage Enhancement (Small)",
+    "description": "1.0% increase in Lightning attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "ElementResist_Thunder_1",
+    "name": "Electric Damage Reduction Lv. 1",
+    "description": "15.0% decrease in incoming Lightning damage.",
+    "rank": 1
+  },
+  {
+    "id": "Defuser_ExplosiveSpore_EquipSkill",
+    "name": "Explosion Immunity",
+    "description": "Defuser_ExplosiveSpore +1.0 ExplosionResist +100.0%",
+    "rank": 1
+  },
+  {
+    "id": "AvoidDurationUp_EquipSkill_2",
+    "name": "Extended Dodge Immunity",
+    "description": "AvoidDurationUp_EquipSkill +20.0%",
+    "rank": 1
+  },
+  {
+    "id": "SalePrice_Up_2",
+    "name": "Fine Furs",
+    "description": "Increases the value of items when sold by +3.0%",
+    "rank": 1
+  },
+  {
+    "id": "BossDefeatReward_IceNarwhal_Fire",
+    "name": "Fire Damage Enhancement (Large)",
+    "description": "3.0% increase in Fire attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "BossDefeatReward_FoxExorcist",
+    "name": "Fire Damage Enhancement (Medium)",
+    "description": "2.0% increase in Fire attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "BossDefeatReward_FireKirin",
+    "name": "Fire Damage Enhancement (Small)",
+    "description": "1.0% increase in Fire attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "ElementResist_Fire_1",
+    "name": "Fire Damage Reduction Lv. 1",
+    "description": "15.0% decrease in incoming Fire damage.",
+    "rank": 1
+  },
+  {
+    "id": "Stamina_Up_2",
+    "name": "Fit as a Fiddle",
+    "description": "Max stamina +25.0% *This effect is only valid for rideable pals.",
+    "rank": 1
+  },
+  {
+    "id": "ElementBoost_Leaf_1_PAL",
+    "name": "Fragrant Foliage",
+    "description": "10.0% increase in Grass attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "FullStomach_Down_1_BossDefeat",
+    "name": "FullStomach_Down_1_BossDefeat",
+    "description": "Hunger decreases +10.0% slower.",
+    "rank": 1
+  },
+  {
+    "id": "CollectItem_Money",
+    "name": "Gold Digger",
+    "description": "",
+    "rank": 1
+  },
+  {
+    "id": "BossDefeatReward_LilyQueen",
+    "name": "Grass Damage Enhancement (Large)",
+    "description": "3.0% increase in Grass attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "BossDefeatReward_BerryGoat_Dark",
+    "name": "Grass Damage Enhancement (Medium)",
+    "description": "2.0% increase in Grass attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "BossDefeatReward_CactusDoll",
+    "name": "Grass Damage Enhancement (Small)",
+    "description": "1.0% increase in Grass attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "ElementResist_Leaf_1",
+    "name": "Grass Damage Reduction Lv. 1",
+    "description": "15.0% decrease in incoming Grass damage.",
+    "rank": 1
+  },
+  {
+    "id": "ElementBoost_Earth_3_BossDefeat",
+    "name": "Ground Damage Enhancement (Large)",
+    "description": "3.0% increase in Earth attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "BossDefeatReward_GoldenHorse",
+    "name": "Ground Damage Enhancement (Medium)",
+    "description": "2.0% increase in Earth attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "BossDefeatReward_Anubis",
+    "name": "Ground Damage Enhancement (Small)",
+    "description": "1.0% increase in Earth attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "Deffence_up1",
+    "name": "Hard Skin",
+    "description": "Defense +10.0%",
+    "rank": 1
+  },
+  {
+    "id": "HP_ACC_up1",
+    "name": "Health Up Lv. 1",
+    "description": "Max Health +10.0%",
+    "rank": 1
+  },
+  {
+    "id": "TemperatureResist_Heat1",
+    "name": "Heat Resistance Lv. 1",
+    "description": "TemperatureResist_Heat +1.0",
+    "rank": 1
+  },
+  {
+    "id": "TemperatureResist_Heat1Cold1",
+    "name": "Heat Resistance Lv. 1 / Cold Resistance Lv. 1",
+    "description": "TemperatureResist_Cold +1.0 TemperatureResist_Heat +1.0",
+    "rank": 1
+  },
+  {
+    "id": "ElementResist_Ice_1_PAL",
+    "name": "Heated Body",
+    "description": "10.0% decrease in incoming Ice damage.",
+    "rank": 1
+  },
+  {
+    "id": "PAL_rude",
+    "name": "Hooligan",
+    "description": "Attack +15.0% Work Speed -10.0%",
+    "rank": 1
+  },
+  {
+    "id": "ElementBoost_Aqua_1_PAL",
+    "name": "Hydromaniac",
+    "description": "10.0% increase in Water attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "BossDefeatReward_IceHorse",
+    "name": "Ice Damage Enhancement (Large)",
+    "description": "3.0% increase in Ice attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "BossDefeatReward_KingAlpaca_Ice",
+    "name": "Ice Damage Enhancement (Medium)",
+    "description": "2.0% increase in Ice attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "BossDefeatReward_IceFox",
+    "name": "Ice Damage Enhancement (Small)",
+    "description": "1.0% increase in Ice attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "ElementResist_Ice_1",
+    "name": "Ice Damage Reduction Lv. 1",
+    "description": "15.0% decrease in incoming Ice damage.",
+    "rank": 1
+  },
+  {
+    "id": "CoolTimeReduction_Up_2",
+    "name": "Impatient",
+    "description": "Active skill cooldown reduction 15.0%",
+    "rank": 1
+  },
+  {
+    "id": "Nocturnal",
+    "name": "Insomnia",
+    "description": "Does not sleep and continues to work even at night.",
+    "rank": 1
+  },
+  {
+    "id": "ElementResist_Thunder_1_PAL",
+    "name": "Insulated Body",
+    "description": "10.0% decrease in incoming Lightning damage.",
+    "rank": 1
+  },
+  {
+    "id": "JumpCount_Increase1",
+    "name": "Jump Count Increase +1",
+    "description": "Jump Count Increase +1",
+    "rank": 1
+  },
+  {
+    "id": "JumpCount_Increase2",
+    "name": "Jump Count Increase +2",
+    "description": "Jump Count Increase +2",
+    "rank": 1
+  },
+  {
+    "id": "JumpCount_Increase3",
+    "name": "Jump Count Increase +3",
+    "description": "Jump Count Increase +3",
+    "rank": 1
+  },
+  {
+    "id": "JumpPower_Increase",
+    "name": "Jump Power Boost",
+    "description": "Jump Power Boost",
+    "rank": 1
+  },
+  {
+    "id": "WoodDrop_Boost_1",
+    "name": "Logging Yield Up Lv. 1",
+    "description": "Slightly increases the drop amount of Wood.",
+    "rank": 1
+  },
+  {
+    "id": "WoodDrop_Boost_2",
+    "name": "Logging Yield Up Lv. 2",
+    "description": "Increases the drop amount of Wood.",
+    "rank": 1
+  },
+  {
+    "id": "PAL_masochist",
+    "name": "Masochist",
+    "description": "Defense +15.0% Attack -15.0%",
+    "rank": 1
+  },
+  {
+    "id": "MaxInventoryWeight_up",
+    "name": "Max Carrying Capacity Lv. 1",
+    "description": "Carrying Capacity +50.0%",
+    "rank": 1
+  },
+  {
+    "id": "MaxInventoryWeight_up2",
+    "name": "Max Carrying Capacity Lv. 2",
+    "description": "Carrying Capacity +150.0%",
+    "rank": 1
+  },
+  {
+    "id": "CollectItem_Milk",
+    "name": "Milk Maker",
+    "description": "",
+    "rank": 1
+  },
+  {
+    "id": "StonDrop_Boost_1",
+    "name": "Mining Yield Up Lv. 1",
+    "description": "Slightly increases the drop amount of Stone and Ore.",
+    "rank": 1
+  },
+  {
+    "id": "StonDrop_Boost_2",
+    "name": "Mining Yield Up Lv. 2",
+    "description": "Increases the drop amount of Stone and Ore.",
+    "rank": 1
+  },
+  {
+    "id": "BossDefeatReward_SaintCentaur_1",
+    "name": "Neutral Damage Enhancement (Large)",
+    "description": "3.0% increase in Neutral attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "BossDefeatReward_CubeTurtle_Neutral",
+    "name": "Neutral Damage Enhancement (Medium)",
+    "description": "2.0% increase in Neutral attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "BossDefeatReward_FengyunDeeper",
+    "name": "Neutral Damage Enhancement (Small)",
+    "description": "1.0% increase in Neutral attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "ElementResist_Normal_1",
+    "name": "Neutral Damage Reduction Lv. 1",
+    "description": "15.0% decrease in incoming Neutral damage.",
+    "rank": 1
+  },
+  {
+    "id": "MoveSpeed_up_1",
+    "name": "Nimble",
+    "description": "10.0% increase to movement speed.",
+    "rank": 1
+  },
+  {
+    "id": "Alien",
+    "name": "Otherworldly Cells",
+    "description": "Attack +10.0% Fire damage reduction 15.0% Lightning damage reduction 15.0%",
+    "rank": 1
+  },
+  {
+    "id": "Attack_ACC_up1_Otomo_Only_Equip",
+    "name": "Pal Attack Up Lv. 1",
+    "description": "Attack +4.0%",
+    "rank": 1
+  },
+  {
+    "id": "ElementBoost_Dark_1_Otomo_Only_Equip",
+    "name": "Pal Dark Damage Enhancement Lv. 1",
+    "description": "6.0% increase in Dark attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "Defense_ACC_up1_Otomo_Only_Equip",
+    "name": "Pal Defense Up Lv. 1",
+    "description": "Defense +5.0%",
+    "rank": 1
+  },
+  {
+    "id": "ElementBoost_Dragon_1_Otomo_Only_Equip",
+    "name": "Pal Dragon Damage Enhancement Lv. 1",
+    "description": "6.0% increase in Dragon attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "ElementBoost_Electricity_1_Otomo_Only_Equip",
+    "name": "Pal Electric Damage Enhancement Lv. 1",
+    "description": "6.0% increase in Lightning attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "PalExp_Increase_1_Otomo_Only_Equip",
+    "name": "Pal EXP Up Lv. 1",
+    "description": "PalExp_Increase +30.0%",
+    "rank": 1
+  },
+  {
+    "id": "ElementBoost_Fire_1_Otomo_Only_Equip",
+    "name": "Pal Fire Damage Enhancement Lv. 1",
+    "description": "6.0% increase in Fire attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "ElementBoost_Leaf_1_Otomo_Only_Equip",
+    "name": "Pal Grass Damage Enhancement Lv. 1",
+    "description": "6.0% increase in Grass attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "ElementBoost_Earth_1_Otomo_Only_Equip",
+    "name": "Pal Ground Damage Enhancement Lv. 1",
+    "description": "6.0% increase in Earth attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "ElementBoost_Ice_1_Otomo_Only_Equip",
+    "name": "Pal Ice Damage Enhancement Lv. 1",
+    "description": "6.0% increase in Ice attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "ElementBoost_Normal_1_Otomo_Only_Equip",
+    "name": "Pal Neutral Damage Enhancement Lv. 1",
+    "description": "6.0% increase in Neutral attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "ElementBoost_Water_1_Otomo_Only_Equip",
+    "name": "Pal Water Damage Enhancement Lv. 1",
+    "description": "6.0% increase in Water attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "PAL_Sanity_Down_1",
+    "name": "Positive Thinker",
+    "description": "SAN drops +10.0% slower.",
+    "rank": 1
+  },
+  {
+    "id": "ElementBoost_Earth_1_PAL",
+    "name": "Power of Gaia",
+    "description": "10.0% increase in Earth attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "ElementBoost_Fire_1_PAL",
+    "name": "Pyromaniac",
+    "description": "10.0% increase in Fire attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "PAL_sadist",
+    "name": "Sadist",
+    "description": "Attack +15.0% Defense -15.0%",
+    "rank": 1
+  },
+  {
+    "id": "CraftSpeed_up1",
+    "name": "Serious",
+    "description": "Work Speed +20.0%",
+    "rank": 1
+  },
+  {
+    "id": "SelfDeathAddItemDrop_up_1",
+    "name": "Sharing is Caring",
+    "description": "Your Dropped Items + 15.0%",
+    "rank": 1
+  },
+  {
+    "id": "CollectItem_Wool_WhiteMoth",
+    "name": "Silk Spinner",
+    "description": "",
+    "rank": 1
+  },
+  {
+    "id": "SwimSpeed_up_1",
+    "name": "Sleek Stroke",
+    "description": "30.0% increase movement speed on water.",
+    "rank": 1
+  },
+  {
+    "id": "WorkSpeed_ACC_up1",
+    "name": "Speedy Worker Lv. 1",
+    "description": "Work Speed +10.0%",
+    "rank": 1
+  },
+  {
+    "id": "SphereModule_Curve",
+    "name": "Sphere Curve +1",
+    "description": "",
+    "rank": 1
+  },
+  {
+    "id": "SphereModule_Homing",
+    "name": "Sphere Homing",
+    "description": "",
+    "rank": 1
+  },
+  {
+    "id": "SphereModule_Sniper",
+    "name": "Sphere Range +1",
+    "description": "",
+    "rank": 1
+  },
+  {
+    "id": "SphereModule_Sniper2",
+    "name": "Sphere Range +2",
+    "description": "",
+    "rank": 1
+  },
+  {
+    "id": "SphereModule_Curve2",
+    "name": "Sphere Slider",
+    "description": "",
+    "rank": 1
+  },
+  {
+    "id": "SphereModule_Heavy",
+    "name": "Sphere Weight +1",
+    "description": "",
+    "rank": 1
+  },
+  {
+    "id": "ElementBoost_Normal_1_PAL",
+    "name": "Spirit of Zen",
+    "description": "10.0% increase in Neutral attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "ElementResist_Fire_1_PAL",
+    "name": "Suntan Lover",
+    "description": "10.0% decrease in incoming Fire damage.",
+    "rank": 1
+  },
+  {
+    "id": "Invalid_ToxicGas_EquipSkill",
+    "name": "Toxic Gas Immunity",
+    "description": "InvalidToxicGas",
+    "rank": 1
+  },
+  {
+    "id": "ElementBoost_Dark_1_PAL",
+    "name": "Veil of Darkness",
+    "description": "10.0% increase in Dark attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "BossDefeatReward_PoseidonOrca",
+    "name": "Water Damage Enhancement (Large)",
+    "description": "3.0% increase in Water attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "BossDefeatReward_Horus_Water",
+    "name": "Water Damage Enhancement (Medium)",
+    "description": "2.0% increase in Water attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "BossDefeatReward_BlueDragon",
+    "name": "Water Damage Enhancement (Small)",
+    "description": "1.0% increase in Water attack damage.",
+    "rank": 1
+  },
+  {
+    "id": "ElementResist_Aqua_1",
+    "name": "Water Damage Reduction Lv. 1",
+    "description": "15.0% decrease in incoming Water damage.",
+    "rank": 1
+  },
+  {
+    "id": "ElementResist_Aqua_1_PAL",
+    "name": "Waterproof",
+    "description": "10.0% decrease in incoming Water damage.",
+    "rank": 1
+  },
+  {
+    "id": "CollectItem_Wool_Alpaca",
+    "name": "Wool Maker",
+    "description": "",
+    "rank": 1
+  },
+  {
+    "id": "PAL_CorporateSlave",
+    "name": "Work Slave",
+    "description": "Work Speed +30.0% Attack -30.0%",
+    "rank": 1
+  },
+  {
+    "id": "CraftSpeed_down1",
+    "name": "Clumsy",
+    "description": "Work Speed -10.0%",
+    "rank": -1
+  },
+  {
+    "id": "PAL_ALLAttack_down1",
+    "name": "Coward",
+    "description": "Attack -10.0%",
+    "rank": -1
+  },
+  {
+    "id": "Deffence_down1",
+    "name": "Downtrodden",
+    "description": "Defense -10.0%",
+    "rank": -1
+  },
+  {
+    "id": "CoolTimeReduction_Down_1",
+    "name": "Easygoing",
+    "description": "Active skill cooldown extension -15.0%",
+    "rank": -1
+  },
+  {
+    "id": "PAL_FullStomach_Up_1",
+    "name": "Glutton",
+    "description": "Hunger decreases +10.0% faster.",
+    "rank": -1
+  },
+  {
+    "id": "YakushimaProtection_Equip",
+    "name": "Hallowed Guard",
+    "description": "ForYakushimaDefenceRate +30.0%",
+    "rank": -1
+  },
+  {
+    "id": "YakushimaDagameBoost_Melee_Equip",
+    "name": "Hallowed Power: Close Range",
+    "description": "DamageUpIfEquipped_YakushimaMeleeWeapon +20.0%",
+    "rank": -1
+  },
+  {
+    "id": "YakushimaDagameBoost_Magic_Equip",
+    "name": "Hallowed Power: Magic",
+    "description": "DamageUpIfEquipped_YakushimaMagicWeapon +20.0%",
+    "rank": -1
+  },
+  {
+    "id": "YakushimaDagameBoost_Ranged_Equip",
+    "name": "Hallowed Power: Ranged",
+    "description": "DamageUpIfEquipped_YakushimaRangedWeapon +20.0%",
+    "rank": -1
+  },
+  {
+    "id": "YakushimaDagameBoost_Summon_Equip",
+    "name": "Hallowed Power: Summon",
+    "description": "DamageUpIfEquipped_YakushimaSummonWeapon +20.0%",
+    "rank": -1
+  },
+  {
+    "id": "MaxInventoryWeight_up_Equip_1",
+    "name": "Max Carrying Capacity Lv. 1",
+    "description": "Carrying Capacity +50.0%",
+    "rank": -1
+  },
+  {
+    "id": "MaxInventoryWeight_up_Equip_2",
+    "name": "Max Carrying Capacity Lv. 2",
+    "description": "Carrying Capacity +100.0%",
+    "rank": -1
+  },
+  {
+    "id": "MaxInventoryWeight_up_Equip_3",
+    "name": "Max Carrying Capacity Lv. 3",
+    "description": "Carrying Capacity +200.0%",
+    "rank": -1
+  },
+  {
+    "id": "MaxInventoryWeight_up_Equip_4",
+    "name": "Max Carrying Capacity Lv. 4",
+    "description": "Carrying Capacity +300.0%",
+    "rank": -1
+  },
+  {
+    "id": "PAL_SpiritualInst",
+    "name": "Mentally unstable",
+    "description": "Work Speed -10.0% Defense -10.0%",
+    "rank": -1
+  },
+  {
+    "id": "NonKilling",
+    "name": "Mercy Hit",
+    "description": "Pacifist. Will not reduce the target's Health below 1.",
+    "rank": -1
+  },
+  {
+    "id": "NightOwl",
+    "name": "Night Owl",
+    "description": "Tends to nap through the day, due to being nocturnal.",
+    "rank": -1
+  },
+  {
+    "id": "FriendshipPoint_Increase_EquipSkill",
+    "name": "Party Pals Bond Boost",
+    "description": "Trust +50.0%",
+    "rank": -1
+  },
+  {
+    "id": "SalePrice_Down_1",
+    "name": "Shabby",
+    "description": "Decrease the value of items when sold by -10.0%",
+    "rank": -1
+  },
+  {
+    "id": "Stamina_Down_1",
+    "name": "Sickly",
+    "description": "Max Stamina -25.0% *This effect is only valid for rideable pals.",
+    "rank": -1
+  },
+  {
+    "id": "PAL_Sanity_Up_1",
+    "name": "Unstable",
+    "description": "SAN drops +10.0% faster.",
+    "rank": -1
+  },
+  {
+    "id": "PAL_FullStomach_Up_2",
+    "name": "Bottomless Stomach",
+    "description": "Hunger decreases +15.0% faster.",
+    "rank": -2
+  },
+  {
+    "id": "PAL_Sanity_Up_2",
+    "name": "Destructive",
+    "description": "SAN drops +15.0% faster.",
+    "rank": -2
+  },
+  {
+    "id": "Deffence_down2",
+    "name": "Brittle",
+    "description": "Defense -20.0%",
+    "rank": -3
+  },
+  {
+    "id": "PAL_ALLAttack_down2",
+    "name": "Pacifist",
+    "description": "Attack -20.0%",
+    "rank": -3
+  },
+  {
+    "id": "CraftSpeed_down2",
+    "name": "Slacker",
+    "description": "Work Speed -30.0%",
+    "rank": -3
+  }
+]

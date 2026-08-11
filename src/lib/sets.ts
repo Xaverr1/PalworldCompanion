@@ -17,12 +17,24 @@ export const SET_LIMIT: Record<SetKind, number> = {
   party: 5,
 };
 
+/**
+ * A caught human assigned to a base. Humans are near-uniform low-tier workers,
+ * so rather than list all ~130, each one carries manually-set work levels.
+ */
+export interface HumanWorker {
+  id: string;
+  level: number;
+  works: Partial<Record<WorkType, number>>;
+}
+
 export interface PalSet {
   id: string;
   name: string;
   kind: SetKind;
   /** Pal names (unique across the dex) making up the roster. */
   members: string[];
+  /** Human workers assigned to this base (base sets only). */
+  humans?: HumanWorker[];
   createdAt: number;
   updatedAt: number;
 }
@@ -44,18 +56,19 @@ export interface WorkCoverage {
   contributors: number;
 }
 
-/** Per-work-type coverage for a base roster. */
-export function baseCoverage(pals: Pal[]): WorkCoverage[] {
+/** Per-work-type coverage for a base roster, including any human workers. */
+export function baseCoverage(pals: Pal[], humans: HumanWorker[] = []): WorkCoverage[] {
   return WORK_TYPES.map((work) => {
     let maxLevel = 0;
     let contributors = 0;
-    for (const p of pals) {
-      const lvl = p.works[work] ?? 0;
+    const tally = (lvl: number) => {
       if (lvl > 0) {
         contributors++;
         if (lvl > maxLevel) maxLevel = lvl;
       }
-    }
+    };
+    for (const p of pals) tally(p.works[work] ?? 0);
+    for (const h of humans) tally(h.works[work] ?? 0);
     return { work, maxLevel, contributors };
   });
 }
