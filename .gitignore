@@ -22,3 +22,8 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Palworld save extraction outputs (personal data)
+scripts/pals-export.json
+scripts/sample-pals.json
+scripts/tools/

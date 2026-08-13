@@ -6,7 +6,7 @@ import { BaseCoverage } from "./BaseCoverage";
 import { PartySummary } from "./PartySummary";
 import { PalPicker } from "./PalPicker";
 import { PalDetail } from "./PalDetail";
-import { HumanWorkers } from "./HumanWorkers";
+import { HumanAddSelect, HumanTile, HumanEditor } from "./HumanWorkers";
 
 export function Planner() {
   const {
@@ -91,7 +91,7 @@ export function Planner() {
             onAddMember={(name) => addMember(active.id, name)}
             onRemoveMember={(name) => removeMember(active.id, name)}
             onSelectPal={setDetailPal}
-            onAddHuman={() => addHuman(active.id)}
+            onAddHuman={(typeId) => addHuman(active.id, typeId)}
             onRemoveHuman={(hid) => removeHuman(active.id, hid)}
             onSetHumanLevel={(hid, lvl) => setHumanLevel(active.id, hid, lvl)}
             onSetHumanWork={(hid, w, lvl) => setHumanWork(active.id, hid, w, lvl)}
@@ -135,7 +135,7 @@ function ActiveSet({
   onAddMember: (name: string) => void;
   onRemoveMember: (name: string) => void;
   onSelectPal: (pal: Pal) => void;
-  onAddHuman: () => void;
+  onAddHuman: (typeId: string) => void;
   onRemoveHuman: (id: string) => void;
   onSetHumanLevel: (id: string, level: number) => void;
   onSetHumanWork: (id: string, work: WorkType, level: number) => void;
@@ -144,6 +144,8 @@ function ActiveSet({
   const humans = set.humans ?? [];
   const limit = SET_LIMIT[set.kind];
   const full = set.members.length >= limit;
+  const [selectedHuman, setSelectedHuman] = useState<string | null>(null);
+  const editing = humans.find((h) => h.id === selectedHuman) ?? null;
 
   return (
     <>
@@ -195,6 +197,23 @@ function ActiveSet({
                 <span>{p.name}</span>
               </div>
             ))}
+
+            {set.kind === "base" &&
+              humans.map((h) => (
+                <HumanTile
+                  key={h.id}
+                  human={h}
+                  selected={h.id === selectedHuman}
+                  onSelect={() =>
+                    setSelectedHuman((id) => (id === h.id ? null : h.id))
+                  }
+                  onRemove={() => {
+                    onRemoveHuman(h.id);
+                    if (selectedHuman === h.id) setSelectedHuman(null);
+                  }}
+                />
+              ))}
+
             <button
               className="roster__add"
               onClick={onOpenPicker}
@@ -203,15 +222,14 @@ function ActiveSet({
             >
               {full ? "Full" : "+ Add pals"}
             </button>
+            {set.kind === "base" && <HumanAddSelect onAdd={onAddHuman} />}
           </div>
 
-          {set.kind === "base" && (
-            <HumanWorkers
-              humans={humans}
-              onAdd={onAddHuman}
-              onRemove={onRemoveHuman}
-              onLevel={onSetHumanLevel}
-              onWork={onSetHumanWork}
+          {set.kind === "base" && editing && (
+            <HumanEditor
+              human={editing}
+              onLevel={(lvl) => onSetHumanLevel(editing.id, lvl)}
+              onWork={(w, lvl) => onSetHumanWork(editing.id, w, lvl)}
             />
           )}
         </div>

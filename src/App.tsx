@@ -3,6 +3,8 @@ import { Browser } from "./components/Browser";
 import { Planner } from "./components/Planner";
 import { UpgradePlanner } from "./components/UpgradePlanner";
 import { downloadBackup, importData } from "./lib/backup";
+import { parseSaveExport } from "./lib/saveImport";
+import { useOwned } from "./hooks/useOwned";
 import "./App.css";
 
 type View = "browse" | "planner" | "upgrades";
@@ -10,6 +12,8 @@ type View = "browse" | "planner" | "upgrades";
 function App() {
   const [view, setView] = useState<View>("browse");
   const fileRef = useRef<HTMLInputElement>(null);
+  const saveRef = useRef<HTMLInputElement>(null);
+  const { importInstances } = useOwned();
 
   function handleImport(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
@@ -20,6 +24,35 @@ function App() {
       try {
         importData(String(reader.result));
         window.location.reload();
+      } catch (err) {
+        window.alert(`Import failed: ${(err as Error).message}`);
+      }
+    };
+    reader.readAsText(file);
+  }
+
+  function handleSaveImport(e: React.ChangeEvent<HTMLInputElement>) {
+    const file = e.target.files?.[0];
+    e.target.value = "";
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = () => {
+      try {
+        const { instances, matched, skipped } = parseSaveExport(String(reader.result));
+        if (matched === 0) {
+          window.alert("No pals in that export matched a known species.");
+          return;
+        }
+        const ok = window.confirm(
+          `Import ${matched} pals from your save? This replaces your current ` +
+            `obtained list (wishlist is kept).`,
+        );
+        if (!ok) return;
+        importInstances(instances);
+        const note = skipped.length
+          ? `\n${skipped.length} entries skipped (caught humans / unknown).`
+          : "";
+        window.alert(`Imported ${matched} pals.${note}`);
       } catch (err) {
         window.alert(`Import failed: ${(err as Error).message}`);
       }
@@ -54,13 +87,20 @@ function App() {
           </button>
         </nav>
         <div className="datactl">
-          <button className="datactl__btn" onClick={downloadBackup} title="Download a save file">
+          <button
+            className="datactl__btn datactl__btn--accent"
+            onClick={() => saveRef.current?.click()}
+            title="Populate obtained pals from a Palworld save export (scripts/extract-pals.py)"
+          >
+            Import Pals
+          </button>
+          <button className="datactl__btn" onClick={downloadBackup} title="Download a companion backup">
             Export
           </button>
           <button
             className="datactl__btn"
             onClick={() => fileRef.current?.click()}
-            title="Load a save file"
+            title="Load a companion backup"
           >
             Import
           </button>
@@ -70,6 +110,13 @@ function App() {
             accept="application/json,.json"
             hidden
             onChange={handleImport}
+          />
+          <input
+            ref={saveRef}
+            type="file"
+            accept="application/json,.json"
+            hidden
+            onChange={handleSaveImport}
           />
         </div>
       </header>

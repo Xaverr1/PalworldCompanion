@@ -1,5 +1,6 @@
 import { useCallback, useEffect, useState } from "react";
 import type { WorkType } from "../data/pals";
+import { HUMAN_TYPE_BY_ID } from "../data/humans";
 import {
   SET_LIMIT,
   createSet,
@@ -85,8 +86,21 @@ export function useSavedSets() {
   );
 
   const addHuman = useCallback(
-    (id: string) =>
-      patchHumans(id, (humans) => [...humans, { id: newId(), level: 1, works: {} }]),
+    (id: string, typeId: string) =>
+      patchHumans(id, (humans) => {
+        const type = HUMAN_TYPE_BY_ID.get(typeId);
+        return [
+          ...humans,
+          {
+            id: newId(),
+            level: 1,
+            works: { ...(type?.works ?? {}) },
+            typeId,
+            name: type?.name,
+            merchant: type?.merchant,
+          },
+        ];
+      }),
     [patchHumans],
   );
 

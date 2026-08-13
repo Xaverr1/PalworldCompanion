@@ -18,13 +18,21 @@ export const SET_LIMIT: Record<SetKind, number> = {
 };
 
 /**
- * A caught human assigned to a base. Humans are near-uniform low-tier workers,
- * so rather than list all ~130, each one carries manually-set work levels.
+ * A caught human assigned to a base. Added from a preset archetype (see
+ * src/data/humans.ts) that pre-fills its work suitabilities; work levels stay
+ * editable afterward. `typeId`/`name`/`merchant` are optional for humans saved
+ * before presets existed.
  */
 export interface HumanWorker {
   id: string;
   level: number;
   works: Partial<Record<WorkType, number>>;
+  /** Preset archetype key this worker was created from. */
+  typeId?: string;
+  /** Display label, e.g. "Pal Merchant". */
+  name?: string;
+  /** Deployable as a base shop. */
+  merchant?: boolean;
 }
 
 export interface PalSet {

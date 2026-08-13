@@ -2,9 +2,10 @@ import { useEffect, useState } from "react";
 import { WORK_TYPES, type Pal } from "../data/pals";
 import { SKILL_BY_ID } from "../data/skills";
 import { ELEMENT_COLOR, TIER_COLOR } from "../lib/elements";
-import { MAX_LEVEL, useOwned, type OwnedPal } from "../hooks/useOwned";
+import { MAX_LEVEL, useOwned, type OwnedPal, type OwnedIVs } from "../hooks/useOwned";
 import { useLoadouts } from "../hooks/useLoadouts";
 import { WORK_ICON } from "../lib/work";
+import { scaledStats } from "../lib/stats";
 import { AbilitiesEditor } from "./AbilitiesEditor";
 import { PassivesEditor } from "./PassivesEditor";
 
@@ -107,35 +108,11 @@ export function PalDetail({ pal, onClose }: { pal: Pal; onClose: () => void }) {
           </section>
         )}
 
-        <section className="detail__stats">
-          <Stat label="HP" value={pal.hp} />
-          <Stat label="Attack" value={pal.atk} />
-          <Stat label="Defense" value={pal.def} />
-          <Stat label="Food" value={pal.food} />
-        </section>
+        {instances.length === 0 && <BrowseStats pal={pal} />}
 
         <section>
           <h3 className="detail__sub">Work Suitability</h3>
-          <ul className="worklist">
-            {WORK_TYPES.map((w) => {
-              const lvl = pal.works[w] ?? 0;
-              return (
-                <li key={w} className={lvl ? "" : "worklist__off"}>
-                  <span className="worklist__label">
-                    <img className="worklist__icon" src={WORK_ICON[w]} alt="" />
-                    {w}
-                  </span>
-                  <span className="worklist__bar">
-                    <span
-                      className="worklist__fill"
-                      style={{ width: `${(lvl / 10) * 100}%` }}
-                    />
-                  </span>
-                  <b>{lvl || "—"}</b>
-                </li>
-              );
-            })}
-          </ul>
+          <WorkPills pal={pal} />
         </section>
 
         <section>
@@ -183,8 +160,71 @@ function Stat({ label, value }: { label: string; value: number }) {
   return (
     <div className="detail__stat">
       <span className="detail__stat-label">{label}</span>
-      <span className="detail__stat-value">{value}</span>
+      <span className="detail__stat-value">{value.toLocaleString()}</span>
     </div>
+  );
+}
+
+/** Only the work types a pal can do, highest level first, as compact badges. */
+function WorkPills({ pal }: { pal: Pal }) {
+  const works = WORK_TYPES.map((w) => [w, pal.works[w] ?? 0] as const)
+    .filter(([, lvl]) => lvl > 0)
+    .sort((a, b) => b[1] - a[1]);
+
+  if (works.length === 0) {
+    return <p className="coverage__note">No work suitability.</p>;
+  }
+  return (
+    <ul className="workpills">
+      {works.map(([w, lvl]) => (
+        <li key={w} className="workpill" title={`${w} · Lv ${lvl}`}>
+          <img className="workpill__icon" src={WORK_ICON[w]} alt="" />
+          <span className="workpill__name">{w}</span>
+          <span className="workpill__lvl">{lvl}</span>
+        </li>
+      ))}
+    </ul>
+  );
+}
+
+/** HP/Attack/Defense scaled to `level`, plus the pal's fixed Food value. */
+function StatBlock({ pal, level, ivs }: { pal: Pal; level: number; ivs?: OwnedIVs }) {
+  const s = scaledStats(pal, level, ivs ? { talents: ivs } : undefined);
+  return (
+    <div className="detail__stats">
+      <Stat label="HP" value={s.hp} />
+      <Stat label="Attack" value={s.atk} />
+      <Stat label="Defense" value={s.def} />
+      <Stat label="Food" value={pal.food} />
+    </div>
+  );
+}
+
+/** Stats for a pal you don't own yet: pick a level to compare against. */
+function BrowseStats({ pal }: { pal: Pal }) {
+  const [level, setLevel] = useState(Math.min(50, MAX_LEVEL));
+  return (
+    <section>
+      <h3 className="detail__sub detail__sub--row">
+        <span>Stats</span>
+        <label className="stats__lvl">
+          Lv
+          <input
+            type="number"
+            min={1}
+            max={MAX_LEVEL}
+            value={level}
+            onChange={(e) =>
+              setLevel(
+                Math.min(MAX_LEVEL, Math.max(1, Math.round(Number(e.target.value)))),
+              )
+            }
+          />
+        </label>
+      </h3>
+      <StatBlock pal={pal} level={level} />
+      <p className="stats__note">Baseline — 0 IV, no souls or condensing.</p>
+    </section>
   );
 }
 
@@ -239,6 +279,8 @@ function InstanceEditor({
           ×
         </button>
       </div>
+
+      <StatBlock pal={pal} level={instance.level} ivs={instance.ivs} />
 
       <button
         className="owninst__abiltoggle"

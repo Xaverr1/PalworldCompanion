@@ -16,11 +16,27 @@ const WISH_KEY = "pwc.wishlist.v1";
 export const MAX_LEVEL = 80;
 export const DEFAULT_LEVEL = 1;
 
+/** Per-stat IVs ("talents"), each 0–100, imported from a save. */
+export interface OwnedIVs {
+  hp: number;
+  shot: number;
+  defense: number;
+}
+
 /** One obtained pal instance — a specific pal the player owns. */
 export interface OwnedPal {
   id: string;
   species: string;
   level: number;
+  /** Real IVs, present only for save-imported pals. */
+  ivs?: OwnedIVs;
+}
+
+/** A pal to import from a save: species name + level (+ optional IVs). */
+export interface ImportPal {
+  species: string;
+  level: number;
+  ivs?: OwnedIVs;
 }
 
 function newId(): string {
@@ -74,6 +90,8 @@ interface OwnedApi {
   addInstance: (name: string, level?: number) => void;
   removeInstance: (id: string) => void;
   setLevel: (id: string, level: number) => void;
+  /** Replace all obtained instances (used by save import). */
+  importInstances: (pals: ImportPal[]) => void;
   // Wishlist.
   wished: Set<string>;
   isWished: (name: string) => boolean;
@@ -115,6 +133,17 @@ export function OwnedProvider({ children }: { children: ReactNode }) {
 
   const removeInstance = useCallback((id: string) => {
     setInstances((prev) => prev.filter((i) => i.id !== id));
+  }, []);
+
+  const importInstances = useCallback((pals: ImportPal[]) => {
+    setInstances(
+      pals.map((p) => ({
+        id: newId(),
+        species: p.species,
+        level: clampLevel(p.level),
+        ...(p.ivs ? { ivs: p.ivs } : {}),
+      })),
+    );
   }, []);
 
   const setLevel = useCallback((id: string, level: number) => {
@@ -164,12 +193,13 @@ export function OwnedProvider({ children }: { children: ReactNode }) {
       addInstance,
       removeInstance,
       setLevel,
+      importInstances,
       wished,
       isWished: (n) => wished.has(n),
       toggleWish,
       wishCount: wished.size,
     }),
-    [owned, instances, wished, toggle, addInstance, removeInstance, setLevel, toggleWish],
+    [owned, instances, wished, toggle, addInstance, removeInstance, setLevel, importInstances, toggleWish],
   );
 
   return <OwnedContext.Provider value={value}>{children}</OwnedContext.Provider>;
