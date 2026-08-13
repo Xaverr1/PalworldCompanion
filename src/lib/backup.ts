@@ -7,6 +7,7 @@ const KEYS = [
   "pwc.loadouts.v2",
   "pwc.upgrades.v2",
   "pwc.partyAssign.v1",
+  "pwc.build.v1",
 ] as const;
 
 export function exportData(): string {

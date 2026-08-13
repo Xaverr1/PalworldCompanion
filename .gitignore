@@ -27,3 +27,6 @@ dist-ssr
 scripts/pals-export.json
 scripts/sample-pals.json
 scripts/tools/
+
+# Scraper HTML cache (build-structures.mjs)
+scripts/.cache/

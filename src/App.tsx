@@ -2,12 +2,13 @@ import { useRef, useState } from "react";
 import { Browser } from "./components/Browser";
 import { Planner } from "./components/Planner";
 import { UpgradePlanner } from "./components/UpgradePlanner";
+import { BuildQueue } from "./components/BuildQueue";
 import { downloadBackup, importData } from "./lib/backup";
 import { parseSaveExport } from "./lib/saveImport";
 import { useOwned } from "./hooks/useOwned";
 import "./App.css";
 
-type View = "browse" | "planner" | "upgrades";
+type View = "browse" | "planner" | "upgrades" | "build";
 
 function App() {
   const [view, setView] = useState<View>("browse");
@@ -85,6 +86,12 @@ function App() {
           >
             Upgrades
           </button>
+          <button
+            className={`tab ${view === "build" ? "is-active" : ""}`}
+            onClick={() => setView("build")}
+          >
+            Build
+          </button>
         </nav>
         <div className="datactl">
           <button
@@ -124,6 +131,7 @@ function App() {
       {view === "browse" && <Browser />}
       {view === "planner" && <Planner />}
       {view === "upgrades" && <UpgradePlanner />}
+      {view === "build" && <BuildQueue />}
     </>
   );
 }
