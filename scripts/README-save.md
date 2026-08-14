@@ -1,8 +1,16 @@
 # Importing your pals from a Palworld save
 
+**The easy way (no setup):** in the app, click **Import Pals** and pick your
+`Level.sav` directly. It's decompressed and parsed entirely in your browser
+(Oodle via `ooz-wasm`, GVAS via `src/lib/saveParse.ts`) — nothing is uploaded,
+and it works on any OS. This script is only needed as a fallback.
+
+---
+
 `extract-pals.py` reads a Palworld `Level.sav` and writes a small
-`pals-export.json` that the companion loads via the **Import Pals** button. It
-populates every obtained pal with its real level and IVs.
+`pals-export.json` that the companion also accepts via **Import Pals**. It
+populates every obtained pal with its real level and IVs. (The in-app path
+above does the same thing without Python.)
 
 ## Why this needs setup
 

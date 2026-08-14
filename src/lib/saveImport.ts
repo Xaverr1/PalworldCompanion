@@ -1,5 +1,7 @@
 import { PALS } from "../data/pals";
 import type { ImportPal } from "../hooks/useOwned";
+import { decompressSave } from "./saveDecompress";
+import { extractPals } from "./saveParse";
 
 /** One pal as written by scripts/extract-pals.py. */
 export interface SavePal {
@@ -44,6 +46,25 @@ export function resolveSpecies(code: string): string | null {
   );
 }
 
+/** Map save pals to importable instances, dropping unknown species. */
+export function summarizeSavePals(pals: SavePal[]): ImportSummary {
+  const instances: ImportPal[] = [];
+  const skipped: string[] = [];
+  for (const p of pals) {
+    const species = resolveSpecies(p.code);
+    if (!species) {
+      skipped.push(p.code);
+      continue;
+    }
+    instances.push({
+      species,
+      level: p.level,
+      ...(p.ivs ? { ivs: p.ivs } : {}),
+    });
+  }
+  return { instances, matched: instances.length, skipped };
+}
+
 /** Parse the JSON produced by extract-pals.py into importable instances. */
 export function parseSaveExport(text: string): ImportSummary {
   let data: SaveExport;
@@ -57,20 +78,21 @@ export function parseSaveExport(text: string): ImportSummary {
       "Not a Palworld save export. Generate one with scripts/extract-pals.py.",
     );
   }
+  return summarizeSavePals(data.pals);
+}
 
-  const instances: ImportPal[] = [];
-  const skipped: string[] = [];
-  for (const p of data.pals) {
-    const species = resolveSpecies(p.code);
-    if (!species) {
-      skipped.push(p.code);
-      continue;
-    }
-    instances.push({
-      species,
-      level: p.level,
-      ...(p.ivs ? { ivs: p.ivs } : {}),
-    });
-  }
-  return { instances, matched: instances.length, skipped };
+/**
+ * Turn a picked file into an import summary — either a raw Palworld `.sav`
+ * (decompressed + parsed in-browser) or the legacy extract-pals.py JSON.
+ */
+export async function readSaveFile(file: File): Promise<ImportSummary> {
+  const buf = new Uint8Array(await file.arrayBuffer());
+  // The legacy export is JSON text ('{'); real saves are compressed binaries.
+  const isJson = file.name.toLowerCase().endsWith(".json") || buf[0] === 0x7b;
+  if (isJson) return parseSaveExport(new TextDecoder().decode(buf));
+
+  const gvas = await decompressSave(buf);
+  const { pals } = extractPals(gvas);
+  if (pals.length === 0) throw new Error("No pals found in that save file.");
+  return summarizeSavePals(pals);
 }
