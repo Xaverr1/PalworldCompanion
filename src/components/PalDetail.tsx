@@ -1,10 +1,11 @@
-import { useEffect, useState } from "react";
+import { useEffect, useState, type ReactNode } from "react";
 import { WORK_TYPES, type Pal } from "../data/pals";
 import { SKILL_BY_ID } from "../data/skills";
 import { ELEMENT_COLOR, TIER_COLOR } from "../lib/elements";
 import { MAX_LEVEL, useOwned, type OwnedPal, type OwnedIVs } from "../hooks/useOwned";
 import { useLoadouts } from "../hooks/useLoadouts";
 import { WORK_ICON } from "../lib/work";
+import { LOCATION_BY_SLUG, type RegionSpot } from "../data/locations";
 import { scaledStats } from "../lib/stats";
 import { AbilitiesEditor } from "./AbilitiesEditor";
 import { PassivesEditor } from "./PassivesEditor";
@@ -115,6 +116,8 @@ export function PalDetail({ pal, onClose }: { pal: Pal; onClose: () => void }) {
           <WorkPills pal={pal} />
         </section>
 
+        <Habitat pal={pal} />
+
         <section>
           <h3 className="detail__sub">
             Partner Skill · <span className="detail__skill">{pal.partnerSkill.name}</span>
@@ -184,6 +187,193 @@ function WorkPills({ pal }: { pal: Pal }) {
         </li>
       ))}
     </ul>
+  );
+}
+
+function lvlLabel(r: { min: number | null; max: number | null } | null) {
+  if (!r || r.min == null) return null;
+  return r.min === r.max ? `Lv ${r.min}` : `Lv ${r.min}–${r.max}`;
+}
+
+/** One "when → where · level" line in the habitat card. */
+function HabitatRow({
+  kind,
+  icon,
+  when,
+  where,
+  lvl,
+}: {
+  kind: string;
+  icon: ReactNode;
+  when: string;
+  where: ReactNode;
+  lvl: string | null;
+}) {
+  return (
+    <li className={`habitat__row habitat__row--${kind}`}>
+      {icon}
+      <span className="habitat__when">{when}</span>
+      <span className="habitat__where">
+        {where}
+        {lvl && <span className="habitat__lvl">{lvl}</span>}
+      </span>
+    </li>
+  );
+}
+
+/** Named regions as chips, each with its in-game map coordinate. */
+function Regions({ spots }: { spots: RegionSpot[] }) {
+  return (
+    <>
+      {spots.map((s) => (
+        <span key={s.name} className="habitat__region">
+          {s.name}
+          <span className="habitat__coord">
+            {s.x}, {s.y}
+          </span>
+        </span>
+      ))}
+    </>
+  );
+}
+
+/** Where a pal is found in the wild: day/night regions + dungeons. */
+function Habitat({ pal }: { pal: Pal }) {
+  const loc = LOCATION_BY_SLUG[pal.slug];
+  if (!loc) return null;
+
+  const owLv = lvlLabel(loc.overworld);
+  const hasField = Boolean(loc.day || loc.night);
+
+  return (
+    <section>
+      <h3 className="detail__sub">Where to Find</h3>
+      <ul className="habitat">
+        {loc.day && (
+          <HabitatRow
+            kind="day"
+            icon={<SunIcon />}
+            when="Day"
+            where={<Regions spots={loc.day} />}
+            lvl={owLv}
+          />
+        )}
+        {loc.night && (
+          <HabitatRow
+            kind="night"
+            icon={<MoonIcon />}
+            when="Night"
+            where={<Regions spots={loc.night} />}
+            lvl={owLv}
+          />
+        )}
+        {loc.dungeons && (
+          <HabitatRow
+            kind="dungeon"
+            icon={<CaveIcon />}
+            when="Dungeons"
+            where={
+              loc.dungeons.names.length
+                ? loc.dungeons.names.join(", ")
+                : "Location unmarked"
+            }
+            lvl={lvlLabel(loc.dungeons)}
+          />
+        )}
+        {loc.boss && (
+          <HabitatRow
+            kind="boss"
+            icon={<CrownIcon />}
+            when="Alpha"
+            where={<Regions spots={[loc.boss]} />}
+            lvl={loc.boss.lv ? `Lv ${loc.boss.lv}` : null}
+          />
+        )}
+      </ul>
+      {!hasField && loc.dungeons && (
+        <p className="coverage__note">Only found underground, in dungeons.</p>
+      )}
+      {loc.worldTree && (
+        <p className="coverage__note">Also spawns on The World Tree.</p>
+      )}
+      <p className="habitat__hint">Coordinates match the in-game map.</p>
+    </section>
+  );
+}
+
+function SunIcon() {
+  return (
+    <svg
+      className="habitat__icon"
+      viewBox="0 0 24 24"
+      width="16"
+      height="16"
+      aria-hidden="true"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+    >
+      <circle cx="12" cy="12" r="4" />
+      <path d="M12 2v2M12 20v2M2 12h2M20 12h2M4.9 4.9l1.4 1.4M17.7 17.7l1.4 1.4M19.1 4.9l-1.4 1.4M6.3 17.7l-1.4 1.4" />
+    </svg>
+  );
+}
+
+function MoonIcon() {
+  return (
+    <svg
+      className="habitat__icon"
+      viewBox="0 0 24 24"
+      width="16"
+      height="16"
+      aria-hidden="true"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M21 12.8A9 9 0 1 1 11.2 3a7 7 0 0 0 9.8 9.8z" />
+    </svg>
+  );
+}
+
+function CaveIcon() {
+  return (
+    <svg
+      className="habitat__icon"
+      viewBox="0 0 24 24"
+      width="16"
+      height="16"
+      aria-hidden="true"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M3 20h18M5 20v-8a7 7 0 0 1 14 0v8M9 20v-3a3 3 0 0 1 6 0v3" />
+    </svg>
+  );
+}
+
+function CrownIcon() {
+  return (
+    <svg
+      className="habitat__icon"
+      viewBox="0 0 24 24"
+      width="16"
+      height="16"
+      aria-hidden="true"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="M3 7l4 4 5-7 5 7 4-4-2 13H5L3 7z" />
+    </svg>
   );
 }
 

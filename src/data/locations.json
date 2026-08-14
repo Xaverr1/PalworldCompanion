@@ -1,0 +1,9255 @@
+{
+  "Lamball": {
+    "day": [
+      {
+        "name": "Eastern Wild Island",
+        "x": 481,
+        "y": -159
+      },
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      },
+      {
+        "name": "Flying Fish Coast",
+        "x": 154,
+        "y": -541
+      }
+    ],
+    "night": [
+      {
+        "name": "Eastern Wild Island",
+        "x": 481,
+        "y": -159
+      },
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      },
+      {
+        "name": "Flying Fish Coast",
+        "x": 154,
+        "y": -541
+      }
+    ],
+    "overworld": {
+      "min": 1,
+      "max": 5
+    },
+    "dungeons": {
+      "names": [
+        "Hillside Cavern",
+        "Isolated Island Cavern"
+      ],
+      "min": 6,
+      "max": 9
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Cattiva": {
+    "day": [
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      },
+      {
+        "name": "Isle of Murmurs",
+        "x": -303,
+        "y": 12
+      },
+      {
+        "name": "Flying Fish Coast",
+        "x": 154,
+        "y": -541
+      }
+    ],
+    "night": [
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      },
+      {
+        "name": "Isle of Murmurs",
+        "x": -303,
+        "y": 12
+      },
+      {
+        "name": "Flying Fish Coast",
+        "x": 154,
+        "y": -541
+      }
+    ],
+    "overworld": {
+      "min": 1,
+      "max": 5
+    },
+    "dungeons": {
+      "names": [
+        "Hillside Cavern",
+        "Isolated Island Cavern"
+      ],
+      "min": 6,
+      "max": 9
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Chikipi": {
+    "day": [
+      {
+        "name": "Eastern Wild Island",
+        "x": 481,
+        "y": -159
+      },
+      {
+        "name": "Flying Fish Coast",
+        "x": 154,
+        "y": -541
+      },
+      {
+        "name": "Fortress Ruins",
+        "x": 194,
+        "y": -353
+      }
+    ],
+    "night": [
+      {
+        "name": "Eastern Wild Island",
+        "x": 481,
+        "y": -159
+      },
+      {
+        "name": "Flying Fish Coast",
+        "x": 154,
+        "y": -541
+      },
+      {
+        "name": "Fortress Ruins",
+        "x": 194,
+        "y": -353
+      }
+    ],
+    "overworld": {
+      "min": 1,
+      "max": 5
+    },
+    "dungeons": {
+      "names": [
+        "Hillside Cavern",
+        "Isolated Island Cavern"
+      ],
+      "min": 6,
+      "max": 9
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Lifmunk": {
+    "day": [
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      },
+      {
+        "name": "Isle of Murmurs",
+        "x": -303,
+        "y": 12
+      },
+      {
+        "name": "Fortress Ruins",
+        "x": 194,
+        "y": -353
+      }
+    ],
+    "night": [
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      },
+      {
+        "name": "Isle of Murmurs",
+        "x": -303,
+        "y": 12
+      },
+      {
+        "name": "Fortress Ruins",
+        "x": 194,
+        "y": -353
+      }
+    ],
+    "overworld": {
+      "min": 1,
+      "max": 14
+    },
+    "dungeons": {
+      "names": [
+        "Hillside Cavern",
+        "Isolated Island Cavern"
+      ],
+      "min": 6,
+      "max": 9
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Fuack": {
+    "day": [
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      },
+      {
+        "name": "Ancient Ritual Site",
+        "x": -17,
+        "y": -265
+      }
+    ],
+    "night": [
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      },
+      {
+        "name": "Ancient Ritual Site",
+        "x": -17,
+        "y": -265
+      }
+    ],
+    "overworld": {
+      "min": 10,
+      "max": 14
+    },
+    "dungeons": {
+      "names": [
+        "Hillside Cavern",
+        "Isolated Island Cavern"
+      ],
+      "min": 6,
+      "max": 9
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Fuack_Ignis": {
+    "day": [
+      {
+        "name": "Dry Sandy Beach",
+        "x": -606,
+        "y": -667
+      },
+      {
+        "name": "Phantom Isle",
+        "x": -908,
+        "y": -198
+      },
+      {
+        "name": "Mount Obsidian",
+        "x": -587,
+        "y": -484
+      }
+    ],
+    "night": [
+      {
+        "name": "Dry Sandy Beach",
+        "x": -606,
+        "y": -667
+      },
+      {
+        "name": "Phantom Isle",
+        "x": -908,
+        "y": -198
+      },
+      {
+        "name": "Mount Obsidian",
+        "x": -587,
+        "y": -484
+      }
+    ],
+    "overworld": {
+      "min": 32,
+      "max": 36
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Vixy": {
+    "day": [
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      },
+      {
+        "name": "Fortress Ruins",
+        "x": 194,
+        "y": -353
+      },
+      {
+        "name": "Windswept Island",
+        "x": 114,
+        "y": -487
+      }
+    ],
+    "night": [
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      },
+      {
+        "name": "Fortress Ruins",
+        "x": 194,
+        "y": -353
+      },
+      {
+        "name": "Windswept Island",
+        "x": 114,
+        "y": -487
+      }
+    ],
+    "overworld": {
+      "min": 1,
+      "max": 7
+    },
+    "dungeons": {
+      "names": [
+        "Hillside Cavern",
+        "Isolated Island Cavern"
+      ],
+      "min": 6,
+      "max": 9
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Celaray": {
+    "day": [
+      {
+        "name": "Flying Fish Coast",
+        "x": 154,
+        "y": -541
+      }
+    ],
+    "night": [
+      {
+        "name": "Flying Fish Coast",
+        "x": 154,
+        "y": -541
+      }
+    ],
+    "overworld": {
+      "min": 2,
+      "max": 14
+    },
+    "dungeons": {
+      "names": [
+        "Hillside Cavern",
+        "Isolated Island Cavern"
+      ],
+      "min": 6,
+      "max": 9
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Celaray_Lux": {
+    "day": [
+      {
+        "name": "Foot of the Astral Mountains",
+        "x": -96,
+        "y": 197
+      },
+      {
+        "name": "Frostbound Mountains",
+        "x": 199,
+        "y": 57
+      },
+      {
+        "name": "Oasis Isle",
+        "x": 900,
+        "y": 202
+      }
+    ],
+    "night": [
+      {
+        "name": "Foot of the Astral Mountains",
+        "x": -96,
+        "y": 197
+      },
+      {
+        "name": "Frostbound Mountains",
+        "x": 199,
+        "y": 57
+      },
+      {
+        "name": "Oasis Isle",
+        "x": 900,
+        "y": 202
+      }
+    ],
+    "overworld": {
+      "min": 26,
+      "max": 29
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Cremis": {
+    "day": [
+      {
+        "name": "Isle of Murmurs",
+        "x": -303,
+        "y": 12
+      },
+      {
+        "name": "Isle of Silence Church Ruins",
+        "x": -456,
+        "y": -13
+      },
+      {
+        "name": "Isle of Silence",
+        "x": -487,
+        "y": -17
+      }
+    ],
+    "night": [
+      {
+        "name": "Isle of Murmurs",
+        "x": -303,
+        "y": 12
+      },
+      {
+        "name": "Isle of Silence Church Ruins",
+        "x": -456,
+        "y": -13
+      },
+      {
+        "name": "Isle of Silence",
+        "x": -487,
+        "y": -17
+      }
+    ],
+    "overworld": {
+      "min": 1,
+      "max": 3
+    },
+    "dungeons": {
+      "names": [
+        "Hillside Cavern",
+        "Isolated Island Cavern"
+      ],
+      "min": 6,
+      "max": 9
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Croajiro": {
+    "day": [
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      }
+    ],
+    "night": [
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      }
+    ],
+    "overworld": {
+      "min": 4,
+      "max": 49
+    },
+    "dungeons": {
+      "names": [
+        "Cherry Blossom Cave"
+      ],
+      "min": 40,
+      "max": 45
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Croajiro_Noct": {
+    "day": [
+      {
+        "name": "Scorched Hill",
+        "x": -1041,
+        "y": -1139
+      }
+    ],
+    "night": [
+      {
+        "name": "Scorched Hill",
+        "x": -1041,
+        "y": -1139
+      }
+    ],
+    "overworld": {
+      "min": 61,
+      "max": 62
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Herbil": {
+    "day": [
+      {
+        "name": "Deep Bamboo Thicket",
+        "x": -319,
+        "y": -115
+      },
+      {
+        "name": "Twilight Dunes",
+        "x": -124,
+        "y": -100
+      }
+    ],
+    "night": [
+      {
+        "name": "Deep Bamboo Thicket",
+        "x": -319,
+        "y": -115
+      },
+      {
+        "name": "Twilight Dunes",
+        "x": -124,
+        "y": -100
+      }
+    ],
+    "overworld": {
+      "min": 1,
+      "max": 50
+    },
+    "dungeons": {
+      "names": [
+        "Mountain Stream Grotto"
+      ],
+      "min": 22,
+      "max": 35
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Teafant": {
+    "day": [
+      {
+        "name": "Isle of Silence Church Ruins",
+        "x": -456,
+        "y": -13
+      },
+      {
+        "name": "Isle of Silence",
+        "x": -487,
+        "y": -17
+      },
+      {
+        "name": "Sea Breeze Archipelago Church",
+        "x": -62,
+        "y": -534
+      }
+    ],
+    "night": [
+      {
+        "name": "Isle of Silence Church Ruins",
+        "x": -456,
+        "y": -13
+      },
+      {
+        "name": "Isle of Silence",
+        "x": -487,
+        "y": -17
+      },
+      {
+        "name": "Sea Breeze Archipelago Church",
+        "x": -62,
+        "y": -534
+      }
+    ],
+    "overworld": {
+      "min": 2,
+      "max": 4
+    },
+    "dungeons": {
+      "names": [
+        "Hillside Cavern",
+        "Isolated Island Cavern"
+      ],
+      "min": 6,
+      "max": 9
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Gumoss": {
+    "day": [
+      {
+        "name": "Eastern Wild Island",
+        "x": 481,
+        "y": -159
+      },
+      {
+        "name": "Fortress Ruins",
+        "x": 194,
+        "y": -353
+      },
+      {
+        "name": "Windswept Island",
+        "x": 114,
+        "y": -487
+      }
+    ],
+    "night": [
+      {
+        "name": "Eastern Wild Island",
+        "x": 481,
+        "y": -159
+      },
+      {
+        "name": "Fortress Ruins",
+        "x": 194,
+        "y": -353
+      },
+      {
+        "name": "Windswept Island",
+        "x": 114,
+        "y": -487
+      }
+    ],
+    "overworld": {
+      "min": 2,
+      "max": 7
+    },
+    "dungeons": {
+      "names": [
+        "Hillside Cavern",
+        "Isolated Island Cavern"
+      ],
+      "min": 6,
+      "max": 9
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Pupperai": {
+    "day": [
+      {
+        "name": "Flying Fish Coast",
+        "x": 154,
+        "y": -541
+      },
+      {
+        "name": "Windswept Island",
+        "x": 114,
+        "y": -487
+      }
+    ],
+    "night": [
+      {
+        "name": "Flying Fish Coast",
+        "x": 154,
+        "y": -541
+      },
+      {
+        "name": "Windswept Island",
+        "x": 114,
+        "y": -487
+      }
+    ],
+    "overworld": {
+      "min": 2,
+      "max": 4
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Clovee": {
+    "day": [
+      {
+        "name": "Desolate Church",
+        "x": 65,
+        "y": -412
+      },
+      {
+        "name": "Fortress Ruins",
+        "x": 194,
+        "y": -353
+      },
+      {
+        "name": "Windswept Island",
+        "x": 114,
+        "y": -487
+      }
+    ],
+    "night": [
+      {
+        "name": "Desolate Church",
+        "x": 65,
+        "y": -412
+      },
+      {
+        "name": "Fortress Ruins",
+        "x": 194,
+        "y": -353
+      },
+      {
+        "name": "Windswept Island",
+        "x": 114,
+        "y": -487
+      }
+    ],
+    "overworld": {
+      "min": 3,
+      "max": 5
+    },
+    "dungeons": {
+      "names": [
+        "Hillside Cavern",
+        "Isolated Island Cavern"
+      ],
+      "min": 6,
+      "max": 9
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Jolthog": {
+    "day": [
+      {
+        "name": "Small Settlement",
+        "x": 75,
+        "y": -480
+      }
+    ],
+    "night": [
+      {
+        "name": "Small Settlement",
+        "x": 75,
+        "y": -480
+      }
+    ],
+    "overworld": {
+      "min": 4,
+      "max": 8
+    },
+    "dungeons": {
+      "names": [
+        "Hillside Cavern",
+        "Isolated Island Cavern"
+      ],
+      "min": 6,
+      "max": 9
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Jolthog_Cryst": {
+    "day": [
+      {
+        "name": "Bamboo Groves",
+        "x": -229,
+        "y": -312
+      }
+    ],
+    "night": [
+      {
+        "name": "Bamboo Groves",
+        "x": -229,
+        "y": -312
+      }
+    ],
+    "overworld": {
+      "min": 10,
+      "max": 24
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Depresso": {
+    "day": [
+      {
+        "name": "Dancing Sakura Shrine",
+        "x": -636,
+        "y": 253
+      }
+    ],
+    "night": [
+      {
+        "name": "Bamboo Groves",
+        "x": -229,
+        "y": -312
+      },
+      {
+        "name": "Eastern Wild Island",
+        "x": 481,
+        "y": -159
+      },
+      {
+        "name": "Sea Breeze Archipelago Church",
+        "x": -62,
+        "y": -534
+      }
+    ],
+    "overworld": {
+      "min": 4,
+      "max": 24
+    },
+    "dungeons": {
+      "names": [
+        "Hillside Cavern",
+        "Isolated Island Cavern"
+      ],
+      "min": 6,
+      "max": 9
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Pengullet": {
+    "day": [
+      {
+        "name": "Flying Fish Coast",
+        "x": 154,
+        "y": -541
+      }
+    ],
+    "night": [
+      {
+        "name": "Flying Fish Coast",
+        "x": 154,
+        "y": -541
+      }
+    ],
+    "overworld": {
+      "min": 2,
+      "max": 34
+    },
+    "dungeons": {
+      "names": [
+        "Hillside Cavern",
+        "Isolated Island Cavern",
+        "Astral Mountains Cavern"
+      ],
+      "min": 6,
+      "max": 41
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Pengullet_Lux": {
+    "day": null,
+    "night": [
+      {
+        "name": "Arena",
+        "x": 633,
+        "y": 18
+      },
+      {
+        "name": "Isle of the Glacial Core",
+        "x": 143,
+        "y": 655
+      }
+    ],
+    "overworld": null,
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Penking": {
+    "day": [
+      {
+        "name": "Foot of the Astral Mountains",
+        "x": -96,
+        "y": 197
+      }
+    ],
+    "night": [
+      {
+        "name": "Foot of the Astral Mountains",
+        "x": -96,
+        "y": 197
+      }
+    ],
+    "overworld": {
+      "min": 20,
+      "max": 44
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Penking_Lux": {
+    "day": [
+      {
+        "name": "Dancing Sakura Shrine",
+        "x": -636,
+        "y": 253
+      },
+      {
+        "name": "Sakurajima - Mushroom Wetlands",
+        "x": -416,
+        "y": 163
+      },
+      {
+        "name": "Sakurajima - Southern Sandbar",
+        "x": -721,
+        "y": 115
+      }
+    ],
+    "night": [
+      {
+        "name": "Dancing Sakura Shrine",
+        "x": -636,
+        "y": 253
+      },
+      {
+        "name": "Sakurajima - Mushroom Wetlands",
+        "x": -416,
+        "y": 163
+      },
+      {
+        "name": "Sakurajima - Southern Sandbar",
+        "x": -721,
+        "y": 115
+      }
+    ],
+    "overworld": null,
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Hoocrates": {
+    "day": [
+      {
+        "name": "Foot of the Astral Mountains",
+        "x": -96,
+        "y": 197
+      }
+    ],
+    "night": [
+      {
+        "name": "Bamboo Groves",
+        "x": -229,
+        "y": -312
+      },
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      }
+    ],
+    "overworld": {
+      "min": 4,
+      "max": 22
+    },
+    "dungeons": {
+      "names": [
+        "Hillside Cavern",
+        "Isolated Island Cavern"
+      ],
+      "min": 6,
+      "max": 9
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Melpaca": {
+    "day": [
+      {
+        "name": "Eastern Wild Island",
+        "x": 481,
+        "y": -159
+      },
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      }
+    ],
+    "night": [
+      {
+        "name": "Eastern Wild Island",
+        "x": 481,
+        "y": -159
+      },
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      }
+    ],
+    "overworld": {
+      "min": 5,
+      "max": 17
+    },
+    "dungeons": {
+      "names": [
+        "Hillside Cavern",
+        "Isolated Island Cavern"
+      ],
+      "min": 6,
+      "max": 9
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Kingpaca": {
+    "day": null,
+    "night": null,
+    "overworld": null,
+    "dungeons": null,
+    "boss": {
+      "name": "Golden Hills",
+      "x": 50,
+      "y": -460,
+      "lv": 23
+    },
+    "worldTree": true
+  },
+  "Kingpaca_Cryst": {
+    "day": null,
+    "night": null,
+    "overworld": null,
+    "dungeons": null,
+    "boss": {
+      "name": "No. 1 Wildlife Sanctuary",
+      "x": -385,
+      "y": 356,
+      "lv": 46
+    },
+    "worldTree": false
+  },
+  "Daedream": {
+    "day": null,
+    "night": [
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      },
+      {
+        "name": "Flying Fish Coast",
+        "x": 154,
+        "y": -541
+      }
+    ],
+    "overworld": {
+      "min": 4,
+      "max": 16
+    },
+    "dungeons": {
+      "names": [
+        "Hillside Cavern",
+        "Isolated Island Cavern",
+        "Ravine Grotto"
+      ],
+      "min": 5,
+      "max": 15
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Tanzee": {
+    "day": [
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      },
+      {
+        "name": "Desolate Church",
+        "x": 65,
+        "y": -412
+      },
+      {
+        "name": "Isle of Silence Church Ruins",
+        "x": -456,
+        "y": -13
+      }
+    ],
+    "night": [
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      },
+      {
+        "name": "Desolate Church",
+        "x": 65,
+        "y": -412
+      },
+      {
+        "name": "Isle of Silence Church Ruins",
+        "x": -456,
+        "y": -13
+      }
+    ],
+    "overworld": {
+      "min": 4,
+      "max": 12
+    },
+    "dungeons": {
+      "names": [
+        "Hillside Cavern",
+        "Isolated Island Cavern"
+      ],
+      "min": 6,
+      "max": 9
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Tanzee_Ignis": {
+    "day": [
+      {
+        "name": "Desolate Church",
+        "x": 65,
+        "y": -412
+      },
+      {
+        "name": "Autumn Rocks",
+        "x": 98,
+        "y": -318
+      }
+    ],
+    "night": [
+      {
+        "name": "Desolate Church",
+        "x": 65,
+        "y": -412
+      },
+      {
+        "name": "Autumn Rocks",
+        "x": 98,
+        "y": -318
+      }
+    ],
+    "overworld": {
+      "min": 10,
+      "max": 12
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Nox": {
+    "day": [
+      {
+        "name": "Stone Pillar Cave",
+        "x": -908,
+        "y": -1093
+      }
+    ],
+    "night": [
+      {
+        "name": "Isle of Murmurs",
+        "x": -303,
+        "y": 12
+      },
+      {
+        "name": "Isle of Silence Church Ruins",
+        "x": -456,
+        "y": -13
+      },
+      {
+        "name": "Isle of Silence",
+        "x": -487,
+        "y": -17
+      }
+    ],
+    "overworld": {
+      "min": 4,
+      "max": 8
+    },
+    "dungeons": {
+      "names": [
+        "Ravine Grotto"
+      ],
+      "min": 12,
+      "max": 15
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Flambelle": {
+    "day": [
+      {
+        "name": "Foot of the Volcano",
+        "x": -364,
+        "y": -377
+      },
+      {
+        "name": "Eastern Wild Island",
+        "x": 481,
+        "y": -159
+      }
+    ],
+    "night": [
+      {
+        "name": "Foot of the Volcano",
+        "x": -364,
+        "y": -377
+      },
+      {
+        "name": "Eastern Wild Island",
+        "x": 481,
+        "y": -159
+      }
+    ],
+    "overworld": {
+      "min": 4,
+      "max": 33
+    },
+    "dungeons": {
+      "names": [
+        "Volcanic Cavern"
+      ],
+      "min": 32,
+      "max": 35
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Rooby": {
+    "day": [
+      {
+        "name": "Isle of Murmurs",
+        "x": -303,
+        "y": 12
+      },
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      }
+    ],
+    "night": [
+      {
+        "name": "Isle of Murmurs",
+        "x": -303,
+        "y": 12
+      },
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      }
+    ],
+    "overworld": {
+      "min": 4,
+      "max": 14
+    },
+    "dungeons": {
+      "names": [
+        "Hillside Cavern",
+        "Isolated Island Cavern"
+      ],
+      "min": 6,
+      "max": 9
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Mau": {
+    "day": [
+      {
+        "name": "Fisherman's Point",
+        "x": -474,
+        "y": -750
+      }
+    ],
+    "night": [
+      {
+        "name": "Fisherman's Point",
+        "x": -474,
+        "y": -750
+      }
+    ],
+    "overworld": null,
+    "dungeons": {
+      "names": [
+        "Hillside Cavern",
+        "Isolated Island Cavern",
+        "Ravine Grotto"
+      ],
+      "min": 5,
+      "max": 15
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Mau_Cryst": {
+    "day": [
+      {
+        "name": "Foot of the Astral Mountains",
+        "x": -96,
+        "y": 197
+      }
+    ],
+    "night": [
+      {
+        "name": "Foot of the Astral Mountains",
+        "x": -96,
+        "y": 197
+      }
+    ],
+    "overworld": null,
+    "dungeons": {
+      "names": [
+        "Astral Mountains Cavern"
+      ],
+      "min": 39,
+      "max": 41
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Rushoar": {
+    "day": [
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      },
+      {
+        "name": "Desolate Church",
+        "x": 65,
+        "y": -412
+      }
+    ],
+    "night": [
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      },
+      {
+        "name": "Desolate Church",
+        "x": 65,
+        "y": -412
+      }
+    ],
+    "overworld": {
+      "min": 5,
+      "max": 13
+    },
+    "dungeons": {
+      "names": [
+        "Hillside Cavern",
+        "Isolated Island Cavern"
+      ],
+      "min": 6,
+      "max": 9
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Foxparks": {
+    "day": [
+      {
+        "name": "Fortress Ruins",
+        "x": 194,
+        "y": -353
+      },
+      {
+        "name": "Windswept Island",
+        "x": 114,
+        "y": -487
+      },
+      {
+        "name": "Desolate Church",
+        "x": 65,
+        "y": -412
+      }
+    ],
+    "night": [
+      {
+        "name": "Fortress Ruins",
+        "x": 194,
+        "y": -353
+      },
+      {
+        "name": "Windswept Island",
+        "x": 114,
+        "y": -487
+      },
+      {
+        "name": "Desolate Church",
+        "x": 65,
+        "y": -412
+      }
+    ],
+    "overworld": {
+      "min": 5,
+      "max": 7
+    },
+    "dungeons": {
+      "names": [
+        "Hillside Cavern",
+        "Isolated Island Cavern"
+      ],
+      "min": 6,
+      "max": 9
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Foxparks_Cryst": {
+    "day": [
+      {
+        "name": "Abandoned Ruins",
+        "x": -152,
+        "y": 295
+      }
+    ],
+    "night": [
+      {
+        "name": "Abandoned Ruins",
+        "x": -152,
+        "y": 295
+      }
+    ],
+    "overworld": {
+      "min": 30,
+      "max": 52
+    },
+    "dungeons": {
+      "names": [
+        "Feybreak Cavern"
+      ],
+      "min": 50,
+      "max": 55
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Killamari": {
+    "day": [
+      {
+        "name": "Scorched Ashland",
+        "x": -805,
+        "y": -954
+      },
+      {
+        "name": "Deserted Ash Plateau",
+        "x": -1300,
+        "y": -1198
+      }
+    ],
+    "night": [
+      {
+        "name": "Scorched Ashland",
+        "x": -805,
+        "y": -954
+      },
+      {
+        "name": "Deserted Ash Plateau",
+        "x": -1300,
+        "y": -1198
+      },
+      {
+        "name": "Foot of the Astral Mountains",
+        "x": -96,
+        "y": 197
+      }
+    ],
+    "overworld": {
+      "min": 34,
+      "max": 62
+    },
+    "dungeons": {
+      "names": [
+        "Hillside Cavern",
+        "Isolated Island Cavern"
+      ],
+      "min": 5,
+      "max": 10
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Killamari_Primo": {
+    "day": [
+      {
+        "name": "Fisherman's Point",
+        "x": -474,
+        "y": -750
+      },
+      {
+        "name": "Phantom Isle",
+        "x": -908,
+        "y": -198
+      }
+    ],
+    "night": [
+      {
+        "name": "Fisherman's Point",
+        "x": -474,
+        "y": -750
+      },
+      {
+        "name": "Phantom Isle",
+        "x": -908,
+        "y": -198
+      }
+    ],
+    "overworld": {
+      "min": 24,
+      "max": 28
+    },
+    "dungeons": {
+      "names": [],
+      "min": 42,
+      "max": 44
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Fuddler": {
+    "day": [
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Twilight Dunes",
+        "x": -124,
+        "y": -100
+      },
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      }
+    ],
+    "night": [
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Twilight Dunes",
+        "x": -124,
+        "y": -100
+      },
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      }
+    ],
+    "overworld": {
+      "min": 28,
+      "max": 38
+    },
+    "dungeons": {
+      "names": [
+        "Hillside Cavern",
+        "Isolated Island Cavern",
+        "Ravine Grotto",
+        "Cavern of the Dunes"
+      ],
+      "min": 5,
+      "max": 36
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Eikthyrdeer": {
+    "day": [
+      {
+        "name": "Marsh Island",
+        "x": 349,
+        "y": -306
+      },
+      {
+        "name": "Sea Breeze Archipelago Church",
+        "x": -62,
+        "y": -534
+      }
+    ],
+    "night": [
+      {
+        "name": "Marsh Island",
+        "x": 349,
+        "y": -306
+      },
+      {
+        "name": "Sea Breeze Archipelago Church",
+        "x": -62,
+        "y": -534
+      }
+    ],
+    "overworld": {
+      "min": 9,
+      "max": 13
+    },
+    "dungeons": {
+      "names": [
+        "Hillside Cavern",
+        "Isolated Island Cavern"
+      ],
+      "min": 6,
+      "max": 9
+    },
+    "boss": null,
+    "worldTree": true
+  },
+  "Eikthyrdeer_Terra": {
+    "day": [
+      {
+        "name": "Sea Breeze Archipelago Church",
+        "x": -62,
+        "y": -534
+      },
+      {
+        "name": "Flying Fish Coast",
+        "x": 154,
+        "y": -541
+      }
+    ],
+    "night": [
+      {
+        "name": "Sea Breeze Archipelago Church",
+        "x": -62,
+        "y": -534
+      },
+      {
+        "name": "Flying Fish Coast",
+        "x": 154,
+        "y": -541
+      }
+    ],
+    "overworld": {
+      "min": 20,
+      "max": 23
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Direhowl": {
+    "day": [
+      {
+        "name": "Deep Bamboo Thicket",
+        "x": -319,
+        "y": -115
+      },
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      },
+      {
+        "name": "Sea Breeze Archipelago Church",
+        "x": -62,
+        "y": -534
+      }
+    ],
+    "night": [
+      {
+        "name": "Deep Bamboo Thicket",
+        "x": -319,
+        "y": -115
+      },
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      },
+      {
+        "name": "Sea Breeze Archipelago Church",
+        "x": -62,
+        "y": -534
+      }
+    ],
+    "overworld": {
+      "min": 10,
+      "max": 14
+    },
+    "dungeons": {
+      "names": [
+        "Hillside Cavern",
+        "Isolated Island Cavern"
+      ],
+      "min": 6,
+      "max": 9
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Caprity": {
+    "day": [
+      {
+        "name": "Crescent Moon Shore",
+        "x": -6,
+        "y": -208
+      },
+      {
+        "name": "Isle of Murmurs",
+        "x": -303,
+        "y": 12
+      },
+      {
+        "name": "Flying Fish Coast",
+        "x": 154,
+        "y": -541
+      }
+    ],
+    "night": [
+      {
+        "name": "Crescent Moon Shore",
+        "x": -6,
+        "y": -208
+      },
+      {
+        "name": "Isle of Murmurs",
+        "x": -303,
+        "y": 12
+      },
+      {
+        "name": "Flying Fish Coast",
+        "x": 154,
+        "y": -541
+      }
+    ],
+    "overworld": {
+      "min": 14,
+      "max": 28
+    },
+    "dungeons": {
+      "names": [
+        "Hillside Cavern",
+        "Isolated Island Cavern"
+      ],
+      "min": 6,
+      "max": 9
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Caprity_Noct": {
+    "day": [
+      {
+        "name": "Loess Plains",
+        "x": -902,
+        "y": -1416
+      },
+      {
+        "name": "Crystalized Ancient Tree",
+        "x": -982,
+        "y": -1165
+      }
+    ],
+    "night": [
+      {
+        "name": "Loess Plains",
+        "x": -902,
+        "y": -1416
+      },
+      {
+        "name": "Crystalized Ancient Tree",
+        "x": -982,
+        "y": -1165
+      }
+    ],
+    "overworld": {
+      "min": 50,
+      "max": 58
+    },
+    "dungeons": {
+      "names": [
+        "Feybreak Cavern"
+      ],
+      "min": 50,
+      "max": 55
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Swee": {
+    "day": [
+      {
+        "name": "Abandoned Ruins",
+        "x": -152,
+        "y": 295
+      },
+      {
+        "name": "Bamboo Groves",
+        "x": -229,
+        "y": -312
+      },
+      {
+        "name": "Twilight Dunes",
+        "x": -124,
+        "y": -100
+      }
+    ],
+    "night": [
+      {
+        "name": "Abandoned Ruins",
+        "x": -152,
+        "y": 295
+      },
+      {
+        "name": "Bamboo Groves",
+        "x": -229,
+        "y": -312
+      },
+      {
+        "name": "Twilight Dunes",
+        "x": -124,
+        "y": -100
+      }
+    ],
+    "overworld": {
+      "min": 7,
+      "max": 34
+    },
+    "dungeons": {
+      "names": [
+        "Ravine Grotto"
+      ],
+      "min": 14,
+      "max": 17
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Sweepa": {
+    "day": [
+      {
+        "name": "Abandoned Ruins",
+        "x": -152,
+        "y": 295
+      },
+      {
+        "name": "Bamboo Groves",
+        "x": -229,
+        "y": -312
+      },
+      {
+        "name": "Twilight Dunes",
+        "x": -124,
+        "y": -100
+      }
+    ],
+    "night": [
+      {
+        "name": "Abandoned Ruins",
+        "x": -152,
+        "y": 295
+      },
+      {
+        "name": "Bamboo Groves",
+        "x": -229,
+        "y": -312
+      },
+      {
+        "name": "Twilight Dunes",
+        "x": -124,
+        "y": -100
+      }
+    ],
+    "overworld": {
+      "min": 25,
+      "max": 40
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Turtacle": {
+    "day": [
+      {
+        "name": "Flying Fish Coast",
+        "x": 154,
+        "y": -541
+      }
+    ],
+    "night": [
+      {
+        "name": "Flying Fish Coast",
+        "x": 154,
+        "y": -541
+      }
+    ],
+    "overworld": {
+      "min": 10,
+      "max": 39
+    },
+    "dungeons": {
+      "names": [
+        "Hillside Cavern",
+        "Ravine Grotto",
+        "Mountain Stream Grotto"
+      ],
+      "min": 5,
+      "max": 25
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Turtacle_Terra": {
+    "day": [
+      {
+        "name": "Arena",
+        "x": 633,
+        "y": 18
+      }
+    ],
+    "night": [
+      {
+        "name": "Arena",
+        "x": 633,
+        "y": 18
+      }
+    ],
+    "overworld": {
+      "min": 40,
+      "max": 48
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Hangyu": {
+    "day": [
+      {
+        "name": "Bamboo Groves",
+        "x": -229,
+        "y": -312
+      },
+      {
+        "name": "Deep Bamboo Thicket",
+        "x": -319,
+        "y": -115
+      },
+      {
+        "name": "Twilight Dunes",
+        "x": -124,
+        "y": -100
+      }
+    ],
+    "night": [
+      {
+        "name": "Bamboo Groves",
+        "x": -229,
+        "y": -312
+      },
+      {
+        "name": "Deep Bamboo Thicket",
+        "x": -319,
+        "y": -115
+      },
+      {
+        "name": "Twilight Dunes",
+        "x": -124,
+        "y": -100
+      }
+    ],
+    "overworld": {
+      "min": 9,
+      "max": 22
+    },
+    "dungeons": {
+      "names": [
+        "Ravine Grotto",
+        "Cavern of the Dunes"
+      ],
+      "min": 14,
+      "max": 36
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Hangyu_Cryst": {
+    "day": null,
+    "night": [
+      {
+        "name": "Foot of the Astral Mountains",
+        "x": -96,
+        "y": 197
+      },
+      {
+        "name": "No. 1 Wildlife Sanctuary",
+        "x": -344,
+        "y": 270
+      },
+      {
+        "name": "Abandoned Ruins",
+        "x": -152,
+        "y": 295
+      }
+    ],
+    "overworld": {
+      "min": 32,
+      "max": 40
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Woolipop": {
+    "day": [
+      {
+        "name": "Sea Breeze Archipelago Church",
+        "x": -62,
+        "y": -534
+      },
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      }
+    ],
+    "night": [
+      {
+        "name": "Sea Breeze Archipelago Church",
+        "x": -62,
+        "y": -534
+      },
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      }
+    ],
+    "overworld": {
+      "min": 9,
+      "max": 10
+    },
+    "dungeons": {
+      "names": [
+        "Ravine Grotto"
+      ],
+      "min": 14,
+      "max": 17
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Woolipop_Terra": {
+    "day": [
+      {
+        "name": "Suncrest Islet",
+        "x": -894,
+        "y": 122
+      }
+    ],
+    "night": [
+      {
+        "name": "Suncrest Islet",
+        "x": -894,
+        "y": 122
+      }
+    ],
+    "overworld": {
+      "min": 55,
+      "max": 60
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Mozzarina": {
+    "day": [
+      {
+        "name": "Marsh Island",
+        "x": 349,
+        "y": -306
+      },
+      {
+        "name": "Fortress Ruins",
+        "x": 194,
+        "y": -353
+      }
+    ],
+    "night": [
+      {
+        "name": "Marsh Island",
+        "x": 349,
+        "y": -306
+      },
+      {
+        "name": "Fortress Ruins",
+        "x": 194,
+        "y": -353
+      }
+    ],
+    "overworld": {
+      "min": 9,
+      "max": 11
+    },
+    "dungeons": {
+      "names": [
+        "Ravine Grotto"
+      ],
+      "min": 14,
+      "max": 17
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Azurobe": {
+    "day": [
+      {
+        "name": "Verdant Brook",
+        "x": 208,
+        "y": -13
+      },
+      {
+        "name": "Scars of War",
+        "x": 381,
+        "y": -18
+      },
+      {
+        "name": "Isle of Decayed Treasures",
+        "x": 623,
+        "y": -169
+      }
+    ],
+    "night": [
+      {
+        "name": "Verdant Brook",
+        "x": 208,
+        "y": -13
+      },
+      {
+        "name": "Scars of War",
+        "x": 381,
+        "y": -18
+      },
+      {
+        "name": "Isle of Decayed Treasures",
+        "x": 623,
+        "y": -169
+      }
+    ],
+    "overworld": {
+      "min": 35,
+      "max": 38
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Azurobe_Cryst": {
+    "day": [
+      {
+        "name": "Frozen Coral Hill",
+        "x": -1243,
+        "y": -1531
+      },
+      {
+        "name": "Feybreak Shipwreck",
+        "x": -1417,
+        "y": -1450
+      },
+      {
+        "name": "Isle of the Glacial Core",
+        "x": 143,
+        "y": 655
+      }
+    ],
+    "night": [
+      {
+        "name": "Frozen Coral Hill",
+        "x": -1243,
+        "y": -1531
+      },
+      {
+        "name": "Feybreak Shipwreck",
+        "x": -1417,
+        "y": -1450
+      },
+      {
+        "name": "Isle of the Glacial Core",
+        "x": 143,
+        "y": 655
+      }
+    ],
+    "overworld": {
+      "min": 50,
+      "max": 60
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Sparkit": {
+    "day": [
+      {
+        "name": "Sea Breeze Archipelago Church",
+        "x": -62,
+        "y": -534
+      },
+      {
+        "name": "Golden Hills",
+        "x": 36,
+        "y": -476
+      }
+    ],
+    "night": [
+      {
+        "name": "Sea Breeze Archipelago Church",
+        "x": -62,
+        "y": -534
+      },
+      {
+        "name": "Golden Hills",
+        "x": 36,
+        "y": -476
+      }
+    ],
+    "overworld": {
+      "min": 10,
+      "max": 12
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Kelpsea": {
+    "day": [
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      }
+    ],
+    "night": [
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      }
+    ],
+    "overworld": {
+      "min": 9,
+      "max": 14
+    },
+    "dungeons": {
+      "names": [
+        "Ravine Grotto"
+      ],
+      "min": 14,
+      "max": 17
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Kelpsea_Ignis": {
+    "day": [
+      {
+        "name": "Dry Sandy Beach",
+        "x": -606,
+        "y": -667
+      }
+    ],
+    "night": [
+      {
+        "name": "Dry Sandy Beach",
+        "x": -606,
+        "y": -667
+      }
+    ],
+    "overworld": {
+      "min": 20,
+      "max": 22
+    },
+    "dungeons": {
+      "names": [
+        "Volcanic Cavern"
+      ],
+      "min": 32,
+      "max": 35
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Ribbuny": {
+    "day": [
+      {
+        "name": "Eastern Wild Island",
+        "x": 481,
+        "y": -159
+      },
+      {
+        "name": "Crescent Moon Shore",
+        "x": -6,
+        "y": -208
+      },
+      {
+        "name": "Isle of Murmurs",
+        "x": -303,
+        "y": 12
+      }
+    ],
+    "night": [
+      {
+        "name": "Eastern Wild Island",
+        "x": 481,
+        "y": -159
+      },
+      {
+        "name": "Crescent Moon Shore",
+        "x": -6,
+        "y": -208
+      },
+      {
+        "name": "Isle of Murmurs",
+        "x": -303,
+        "y": 12
+      }
+    ],
+    "overworld": {
+      "min": 1,
+      "max": 24
+    },
+    "dungeons": {
+      "names": [
+        "Ravine Grotto"
+      ],
+      "min": 14,
+      "max": 17
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Ribbuny_Botan": {
+    "day": [
+      {
+        "name": "Crescent Moon Shore",
+        "x": -6,
+        "y": -208
+      },
+      {
+        "name": "Bamboo Groves",
+        "x": -229,
+        "y": -312
+      }
+    ],
+    "night": [
+      {
+        "name": "Crescent Moon Shore",
+        "x": -6,
+        "y": -208
+      },
+      {
+        "name": "Bamboo Groves",
+        "x": -229,
+        "y": -312
+      }
+    ],
+    "overworld": {
+      "min": 18,
+      "max": 52
+    },
+    "dungeons": {
+      "names": [
+        "Feybreak Cavern"
+      ],
+      "min": 50,
+      "max": 55
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Jelliette": {
+    "day": [
+      {
+        "name": "Flying Fish Coast",
+        "x": 154,
+        "y": -541
+      }
+    ],
+    "night": [
+      {
+        "name": "Withered Seaside",
+        "x": -709,
+        "y": -1103
+      },
+      {
+        "name": "Scorched Ashland",
+        "x": -805,
+        "y": -954
+      },
+      {
+        "name": "Sandstone Gate Islet",
+        "x": -1273,
+        "y": -615
+      }
+    ],
+    "overworld": {
+      "min": 10,
+      "max": 58
+    },
+    "dungeons": {
+      "names": [
+        "Hillside Cavern",
+        "Isolated Island Cavern",
+        "Mountain Stream Grotto"
+      ],
+      "min": 6,
+      "max": 15
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Jellroy": {
+    "day": [
+      {
+        "name": "Phantom Isle",
+        "x": -908,
+        "y": -198
+      }
+    ],
+    "night": [
+      {
+        "name": "Deserted Ash Plateau",
+        "x": -1300,
+        "y": -1198
+      },
+      {
+        "name": "Scorched Ashland",
+        "x": -805,
+        "y": -954
+      }
+    ],
+    "overworld": {
+      "min": 30,
+      "max": 63
+    },
+    "dungeons": {
+      "names": [
+        "Ravine Grotto"
+      ],
+      "min": 14,
+      "max": 41
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Amione": {
+    "day": [
+      {
+        "name": "Enchanted Firmament",
+        "x": -358,
+        "y": -1511
+      },
+      {
+        "name": "Golden Hills",
+        "x": 36,
+        "y": -476
+      }
+    ],
+    "night": [
+      {
+        "name": "Enchanted Firmament",
+        "x": -358,
+        "y": -1511
+      },
+      {
+        "name": "Golden Hills",
+        "x": 36,
+        "y": -476
+      }
+    ],
+    "overworld": {
+      "min": 9,
+      "max": 65
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Gloopie": {
+    "day": [
+      {
+        "name": "Scorched Ashland",
+        "x": -805,
+        "y": -954
+      },
+      {
+        "name": "Deserted Ash Plateau",
+        "x": -1300,
+        "y": -1198
+      },
+      {
+        "name": "Withered Seaside",
+        "x": -709,
+        "y": -1103
+      }
+    ],
+    "night": [
+      {
+        "name": "Scorched Ashland",
+        "x": -805,
+        "y": -954
+      }
+    ],
+    "overworld": {
+      "min": 10,
+      "max": 62
+    },
+    "dungeons": {
+      "names": [
+        "Volcanic Cavern"
+      ],
+      "min": 32,
+      "max": 36
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Gloopie_Primo": {
+    "day": [
+      {
+        "name": "Waterlily Gorge",
+        "x": -554,
+        "y": -1504
+      },
+      {
+        "name": "Enchanted Firmament",
+        "x": -358,
+        "y": -1511
+      }
+    ],
+    "night": [
+      {
+        "name": "Waterlily Gorge",
+        "x": -554,
+        "y": -1504
+      },
+      {
+        "name": "Enchanted Firmament",
+        "x": -358,
+        "y": -1511
+      }
+    ],
+    "overworld": {
+      "min": 65,
+      "max": 66
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Galeclaw": {
+    "day": [
+      {
+        "name": "Ancient Ritual Site",
+        "x": -17,
+        "y": -265
+      },
+      {
+        "name": "Deep Bamboo Thicket",
+        "x": -319,
+        "y": -115
+      },
+      {
+        "name": "Crescent Moon Shore",
+        "x": -6,
+        "y": -208
+      }
+    ],
+    "night": [
+      {
+        "name": "Ancient Ritual Site",
+        "x": -17,
+        "y": -265
+      },
+      {
+        "name": "Deep Bamboo Thicket",
+        "x": -319,
+        "y": -115
+      },
+      {
+        "name": "Crescent Moon Shore",
+        "x": -6,
+        "y": -208
+      }
+    ],
+    "overworld": {
+      "min": 11,
+      "max": 18
+    },
+    "dungeons": {
+      "names": [
+        "Ravine Grotto",
+        "Mountain Stream Grotto"
+      ],
+      "min": 14,
+      "max": 25
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Wispaw": {
+    "day": null,
+    "night": [
+      {
+        "name": "Marsh Island",
+        "x": 349,
+        "y": -306
+      },
+      {
+        "name": "Golden Hills",
+        "x": 36,
+        "y": -476
+      },
+      {
+        "name": "Sea Breeze Archipelago Church",
+        "x": -62,
+        "y": -534
+      }
+    ],
+    "overworld": {
+      "min": 11,
+      "max": 73
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Nitewing": {
+    "day": [
+      {
+        "name": "Marsh Island",
+        "x": 349,
+        "y": -306
+      },
+      {
+        "name": "Sea Breeze Archipelago Church",
+        "x": -62,
+        "y": -534
+      }
+    ],
+    "night": [
+      {
+        "name": "Marsh Island",
+        "x": 349,
+        "y": -306
+      },
+      {
+        "name": "Sea Breeze Archipelago Church",
+        "x": -62,
+        "y": -534
+      }
+    ],
+    "overworld": {
+      "min": 12,
+      "max": 16
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Tombat": {
+    "day": [
+      {
+        "name": "Rayne Syndicate Oil Rig",
+        "x": 579,
+        "y": -423
+      }
+    ],
+    "night": [
+      {
+        "name": "Marsh Island",
+        "x": 349,
+        "y": -306
+      },
+      {
+        "name": "Golden Hills",
+        "x": 36,
+        "y": -476
+      },
+      {
+        "name": "Sea Breeze Archipelago Church",
+        "x": -62,
+        "y": -534
+      }
+    ],
+    "overworld": {
+      "min": 12,
+      "max": 15
+    },
+    "dungeons": {
+      "names": [
+        "Astral Mountains Cavern"
+      ],
+      "min": 36,
+      "max": 42
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Tocotoco": {
+    "day": [
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      }
+    ],
+    "night": [
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      }
+    ],
+    "overworld": {
+      "min": 20,
+      "max": 47
+    },
+    "dungeons": {
+      "names": [
+        "Ravine Grotto",
+        "Cavern of the Dunes"
+      ],
+      "min": 14,
+      "max": 36
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Univolt": {
+    "day": [
+      {
+        "name": "Bamboo Groves",
+        "x": -229,
+        "y": -312
+      },
+      {
+        "name": "Deep Bamboo Thicket",
+        "x": -319,
+        "y": -115
+      }
+    ],
+    "night": [
+      {
+        "name": "Bamboo Groves",
+        "x": -229,
+        "y": -312
+      },
+      {
+        "name": "Deep Bamboo Thicket",
+        "x": -319,
+        "y": -115
+      }
+    ],
+    "overworld": {
+      "min": 20,
+      "max": 24
+    },
+    "dungeons": {
+      "names": [
+        "Ravine Grotto"
+      ],
+      "min": 14,
+      "max": 17
+    },
+    "boss": null,
+    "worldTree": true
+  },
+  "Univolt_Cryst": {
+    "day": null,
+    "night": null,
+    "overworld": {
+      "min": 75,
+      "max": 77
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Gobfin": {
+    "day": [
+      {
+        "name": "Gobfin's Turf",
+        "x": 153,
+        "y": -173
+      },
+      {
+        "name": "Deep Bamboo Thicket",
+        "x": -319,
+        "y": -115
+      },
+      {
+        "name": "Foot of the Volcano",
+        "x": -364,
+        "y": -377
+      }
+    ],
+    "night": [
+      {
+        "name": "Gobfin's Turf",
+        "x": 153,
+        "y": -173
+      },
+      {
+        "name": "Deep Bamboo Thicket",
+        "x": -319,
+        "y": -115
+      },
+      {
+        "name": "Foot of the Volcano",
+        "x": -364,
+        "y": -377
+      }
+    ],
+    "overworld": {
+      "min": 14,
+      "max": 26
+    },
+    "dungeons": {
+      "names": [
+        "Mountain Stream Grotto"
+      ],
+      "min": 22,
+      "max": 25
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Gobfin_Ignis": {
+    "day": [
+      {
+        "name": "Phantom Isle",
+        "x": -908,
+        "y": -198
+      },
+      {
+        "name": "Mount Obsidian",
+        "x": -587,
+        "y": -484
+      },
+      {
+        "name": "Ruined Fortress City",
+        "x": -601,
+        "y": -214
+      }
+    ],
+    "night": [
+      {
+        "name": "Phantom Isle",
+        "x": -908,
+        "y": -198
+      },
+      {
+        "name": "Mount Obsidian",
+        "x": -587,
+        "y": -484
+      },
+      {
+        "name": "Ruined Fortress City",
+        "x": -601,
+        "y": -214
+      }
+    ],
+    "overworld": {
+      "min": 34,
+      "max": 39
+    },
+    "dungeons": {
+      "names": [
+        "Volcanic Cavern"
+      ],
+      "min": 32,
+      "max": 35
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Loupmoon": {
+    "day": [
+      {
+        "name": "Deep Bamboo Thicket",
+        "x": -319,
+        "y": -115
+      }
+    ],
+    "night": [
+      {
+        "name": "Deep Bamboo Thicket",
+        "x": -319,
+        "y": -115
+      },
+      {
+        "name": "Bamboo Groves",
+        "x": -229,
+        "y": -312
+      },
+      {
+        "name": "Ancient Ritual Site",
+        "x": -17,
+        "y": -265
+      }
+    ],
+    "overworld": {
+      "min": 14,
+      "max": 38
+    },
+    "dungeons": {
+      "names": [
+        "Mountain Stream Grotto"
+      ],
+      "min": 20,
+      "max": 25
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Loupmoon_Cryst": {
+    "day": [
+      {
+        "name": "The Oculus Gate, Tower in Sight",
+        "x": -1115,
+        "y": -1355
+      },
+      {
+        "name": "Frozen Coral Hill",
+        "x": -1243,
+        "y": -1531
+      }
+    ],
+    "night": [
+      {
+        "name": "Foot of the Astral Mountains",
+        "x": -96,
+        "y": 197
+      },
+      {
+        "name": "No. 1 Wildlife Sanctuary",
+        "x": -344,
+        "y": 270
+      },
+      {
+        "name": "Astral Mountains",
+        "x": -186,
+        "y": 396
+      }
+    ],
+    "overworld": {
+      "min": 40,
+      "max": 65
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Cawgnito": {
+    "day": [
+      {
+        "name": "Stone Pillar Cave",
+        "x": -908,
+        "y": -1093
+      },
+      {
+        "name": "Scorched Ashland",
+        "x": -805,
+        "y": -954
+      },
+      {
+        "name": "Withered Seaside",
+        "x": -709,
+        "y": -1103
+      }
+    ],
+    "night": [
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      },
+      {
+        "name": "Deep Bamboo Thicket",
+        "x": -319,
+        "y": -115
+      }
+    ],
+    "overworld": {
+      "min": 14,
+      "max": 57
+    },
+    "dungeons": {
+      "names": [
+        "Ravine Grotto",
+        "Cavern of the Dunes"
+      ],
+      "min": 14,
+      "max": 36
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Arsox": {
+    "day": [
+      {
+        "name": "Foot of the Volcano",
+        "x": -364,
+        "y": -377
+      },
+      {
+        "name": "Rayne Syndicate Test Drilling Rig",
+        "x": 169,
+        "y": -297
+      }
+    ],
+    "night": [
+      {
+        "name": "Foot of the Volcano",
+        "x": -364,
+        "y": -377
+      },
+      {
+        "name": "Rayne Syndicate Test Drilling Rig",
+        "x": 169,
+        "y": -297
+      }
+    ],
+    "overworld": {
+      "min": 20,
+      "max": 27
+    },
+    "dungeons": {
+      "names": [
+        "Ravine Grotto"
+      ],
+      "min": 14,
+      "max": 17
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Muffly": {
+    "day": [
+      {
+        "name": "Ancient Ritual Site",
+        "x": -17,
+        "y": -265
+      },
+      {
+        "name": "Crescent Moon Shore",
+        "x": -6,
+        "y": -208
+      },
+      {
+        "name": "Autumn Rocks",
+        "x": 98,
+        "y": -318
+      }
+    ],
+    "night": [
+      {
+        "name": "Ancient Ritual Site",
+        "x": -17,
+        "y": -265
+      },
+      {
+        "name": "Crescent Moon Shore",
+        "x": -6,
+        "y": -208
+      },
+      {
+        "name": "Autumn Rocks",
+        "x": 98,
+        "y": -318
+      }
+    ],
+    "overworld": {
+      "min": 15,
+      "max": 65
+    },
+    "dungeons": {
+      "names": [
+        "Mountain Stream Grotto"
+      ],
+      "min": 22,
+      "max": 25
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Bristla": {
+    "day": [
+      {
+        "name": "Ancient Ritual Site",
+        "x": -17,
+        "y": -265
+      },
+      {
+        "name": "Crescent Moon Shore",
+        "x": -6,
+        "y": -208
+      },
+      {
+        "name": "Autumn Rocks",
+        "x": 98,
+        "y": -318
+      }
+    ],
+    "night": [
+      {
+        "name": "Ancient Ritual Site",
+        "x": -17,
+        "y": -265
+      },
+      {
+        "name": "Crescent Moon Shore",
+        "x": -6,
+        "y": -208
+      },
+      {
+        "name": "Autumn Rocks",
+        "x": 98,
+        "y": -318
+      }
+    ],
+    "overworld": {
+      "min": 16,
+      "max": 18
+    },
+    "dungeons": {
+      "names": [
+        "Mountain Stream Grotto"
+      ],
+      "min": 22,
+      "max": 25
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Cinnamoth": {
+    "day": [
+      {
+        "name": "Ancient Ritual Site",
+        "x": -17,
+        "y": -265
+      },
+      {
+        "name": "Crescent Moon Shore",
+        "x": -6,
+        "y": -208
+      },
+      {
+        "name": "Autumn Rocks",
+        "x": 98,
+        "y": -318
+      }
+    ],
+    "night": [
+      {
+        "name": "Ancient Ritual Site",
+        "x": -17,
+        "y": -265
+      },
+      {
+        "name": "Crescent Moon Shore",
+        "x": -6,
+        "y": -208
+      },
+      {
+        "name": "Autumn Rocks",
+        "x": 98,
+        "y": -318
+      }
+    ],
+    "overworld": {
+      "min": 16,
+      "max": 18
+    },
+    "dungeons": {
+      "names": [
+        "Mountain Stream Grotto"
+      ],
+      "min": 22,
+      "max": 25
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Puffolt": {
+    "day": [
+      {
+        "name": "Bamboo Groves",
+        "x": -229,
+        "y": -312
+      },
+      {
+        "name": "Farcry Marsh",
+        "x": -446,
+        "y": -1368
+      }
+    ],
+    "night": [
+      {
+        "name": "Bamboo Groves",
+        "x": -229,
+        "y": -312
+      },
+      {
+        "name": "Farcry Marsh",
+        "x": -446,
+        "y": -1368
+      }
+    ],
+    "overworld": {
+      "min": 18,
+      "max": 65
+    },
+    "dungeons": {
+      "names": [
+        "Sunreach Skies"
+      ],
+      "min": 63,
+      "max": 64
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Elphidran": {
+    "day": [
+      {
+        "name": "Ancient Ritual Site",
+        "x": -17,
+        "y": -265
+      },
+      {
+        "name": "Crescent Moon Shore",
+        "x": -6,
+        "y": -208
+      },
+      {
+        "name": "Autumn Rocks",
+        "x": 98,
+        "y": -318
+      }
+    ],
+    "night": [
+      {
+        "name": "Ancient Ritual Site",
+        "x": -17,
+        "y": -265
+      },
+      {
+        "name": "Crescent Moon Shore",
+        "x": -6,
+        "y": -208
+      },
+      {
+        "name": "Autumn Rocks",
+        "x": 98,
+        "y": -318
+      }
+    ],
+    "overworld": {
+      "min": 20,
+      "max": 28
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Elphidran_Aqua": {
+    "day": [
+      {
+        "name": "Frostbound Mountains",
+        "x": 199,
+        "y": 57
+      },
+      {
+        "name": "Sakurajima - Southern Sandbar",
+        "x": -721,
+        "y": 115
+      },
+      {
+        "name": "Dancing Sakura Shrine",
+        "x": -636,
+        "y": 253
+      }
+    ],
+    "night": [
+      {
+        "name": "Frostbound Mountains",
+        "x": 199,
+        "y": 57
+      },
+      {
+        "name": "Sakurajima - Southern Sandbar",
+        "x": -721,
+        "y": 115
+      },
+      {
+        "name": "Dancing Sakura Shrine",
+        "x": -636,
+        "y": 253
+      }
+    ],
+    "overworld": {
+      "min": 33,
+      "max": 55
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Vanwyrm": {
+    "day": [
+      {
+        "name": "Scorched Ashland",
+        "x": -805,
+        "y": -954
+      },
+      {
+        "name": "Withered Seaside",
+        "x": -709,
+        "y": -1103
+      },
+      {
+        "name": "Deserted Ash Plateau",
+        "x": -1300,
+        "y": -1198
+      }
+    ],
+    "night": [
+      {
+        "name": "Scorched Ashland",
+        "x": -805,
+        "y": -954
+      },
+      {
+        "name": "Withered Seaside",
+        "x": -709,
+        "y": -1103
+      },
+      {
+        "name": "Deserted Ash Plateau",
+        "x": -1300,
+        "y": -1198
+      }
+    ],
+    "overworld": {
+      "min": 20,
+      "max": 63
+    },
+    "dungeons": {
+      "names": [
+        "Volcanic Cavern"
+      ],
+      "min": 32,
+      "max": 35
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Vanwyrm_Cryst": {
+    "day": [
+      {
+        "name": "Frozen Coral Hill",
+        "x": -1243,
+        "y": -1531
+      },
+      {
+        "name": "The Oculus Gate, Tower in Sight",
+        "x": -1115,
+        "y": -1355
+      },
+      {
+        "name": "No. 1 Wildlife Sanctuary",
+        "x": -344,
+        "y": 270
+      }
+    ],
+    "night": [
+      {
+        "name": "Frozen Coral Hill",
+        "x": -1243,
+        "y": -1531
+      },
+      {
+        "name": "The Oculus Gate, Tower in Sight",
+        "x": -1115,
+        "y": -1355
+      }
+    ],
+    "overworld": {
+      "min": 23,
+      "max": 67
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Felbat": {
+    "day": [
+      {
+        "name": "The Oculus Gate, Tower in Sight",
+        "x": -1115,
+        "y": -1355
+      },
+      {
+        "name": "Frozen Coral Hill",
+        "x": -1243,
+        "y": -1531
+      }
+    ],
+    "night": [
+      {
+        "name": "The Oculus Gate, Tower in Sight",
+        "x": -1115,
+        "y": -1355
+      },
+      {
+        "name": "Frozen Coral Hill",
+        "x": -1243,
+        "y": -1531
+      }
+    ],
+    "overworld": {
+      "min": 63,
+      "max": 66
+    },
+    "dungeons": {
+      "names": [
+        "Mountain Stream Grotto"
+      ],
+      "min": 20,
+      "max": 23
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Vaelet": {
+    "day": [
+      {
+        "name": "Sea Breeze Archipelago Church",
+        "x": -62,
+        "y": -534
+      },
+      {
+        "name": "Flying Fish Coast",
+        "x": 154,
+        "y": -541
+      }
+    ],
+    "night": [
+      {
+        "name": "Dancing Sakura Shrine",
+        "x": -636,
+        "y": 253
+      },
+      {
+        "name": "Sea Breeze Archipelago Church",
+        "x": -62,
+        "y": -534
+      },
+      {
+        "name": "Flying Fish Coast",
+        "x": 154,
+        "y": -541
+      }
+    ],
+    "overworld": {
+      "min": 20,
+      "max": 57
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Beegarde": {
+    "day": [
+      {
+        "name": "Gobfin's Turf",
+        "x": 153,
+        "y": -173
+      },
+      {
+        "name": "Verdant Brook",
+        "x": 208,
+        "y": -13
+      }
+    ],
+    "night": [
+      {
+        "name": "Gobfin's Turf",
+        "x": 153,
+        "y": -173
+      },
+      {
+        "name": "Verdant Brook",
+        "x": 208,
+        "y": -13
+      }
+    ],
+    "overworld": {
+      "min": 28,
+      "max": 34
+    },
+    "dungeons": {
+      "names": [
+        "Mountain Stream Grotto"
+      ],
+      "min": 20,
+      "max": 23
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Elizabee": {
+    "day": [
+      {
+        "name": "Gobfin's Turf",
+        "x": 153,
+        "y": -173
+      },
+      {
+        "name": "Verdant Brook",
+        "x": 208,
+        "y": -13
+      }
+    ],
+    "night": [
+      {
+        "name": "Gobfin's Turf",
+        "x": 153,
+        "y": -173
+      },
+      {
+        "name": "Verdant Brook",
+        "x": 208,
+        "y": -13
+      }
+    ],
+    "overworld": {
+      "min": 34,
+      "max": 38
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Lovander": {
+    "day": null,
+    "night": [
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      }
+    ],
+    "overworld": {
+      "min": 30,
+      "max": 42
+    },
+    "dungeons": {
+      "names": [
+        "Cavern of the Dunes"
+      ],
+      "min": 35,
+      "max": 37
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Grintale": {
+    "day": [
+      {
+        "name": "Sakurajima - Mushroom Wetlands",
+        "x": -416,
+        "y": 163
+      }
+    ],
+    "night": [
+      {
+        "name": "Ancient Ritual Site",
+        "x": -17,
+        "y": -265
+      },
+      {
+        "name": "Crescent Moon Shore",
+        "x": -6,
+        "y": -208
+      },
+      {
+        "name": "Gobfin's Turf",
+        "x": 153,
+        "y": -173
+      }
+    ],
+    "overworld": {
+      "min": 25,
+      "max": 48
+    },
+    "dungeons": {
+      "names": [
+        "Mountain Stream Grotto"
+      ],
+      "min": 20,
+      "max": 23
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Tarantriss": {
+    "day": [
+      {
+        "name": "Gobfin's Turf",
+        "x": 153,
+        "y": -173
+      },
+      {
+        "name": "Verdant Brook",
+        "x": 208,
+        "y": -13
+      }
+    ],
+    "night": [
+      {
+        "name": "Gobfin's Turf",
+        "x": 153,
+        "y": -173
+      },
+      {
+        "name": "Verdant Brook",
+        "x": 208,
+        "y": -13
+      }
+    ],
+    "overworld": {
+      "min": 30,
+      "max": 52
+    },
+    "dungeons": {
+      "names": [
+        "Mountain Stream Grotto",
+        "Feybreak Cavern"
+      ],
+      "min": 20,
+      "max": 55
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Polapup": {
+    "day": [
+      {
+        "name": "Frozen Coral Hill",
+        "x": -1243,
+        "y": -1531
+      },
+      {
+        "name": "Feybreak Shipwreck",
+        "x": -1417,
+        "y": -1450
+      }
+    ],
+    "night": [
+      {
+        "name": "Frozen Coral Hill",
+        "x": -1243,
+        "y": -1531
+      },
+      {
+        "name": "Feybreak Shipwreck",
+        "x": -1417,
+        "y": -1450
+      }
+    ],
+    "overworld": {
+      "min": 33,
+      "max": 38
+    },
+    "dungeons": {
+      "names": [
+        "Astral Mountains Cavern"
+      ],
+      "min": 39,
+      "max": 44
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Polapup_Terra": {
+    "day": [
+      {
+        "name": "Suncrest Islet",
+        "x": -894,
+        "y": 122
+      }
+    ],
+    "night": [
+      {
+        "name": "Suncrest Islet",
+        "x": -894,
+        "y": 122
+      }
+    ],
+    "overworld": {
+      "min": 55,
+      "max": 60
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Leezpunk": {
+    "day": [
+      {
+        "name": "Dry Sandy Beach",
+        "x": -606,
+        "y": -667
+      },
+      {
+        "name": "Foot of the Volcano",
+        "x": -364,
+        "y": -377
+      },
+      {
+        "name": "Fisherman's Point",
+        "x": -474,
+        "y": -750
+      }
+    ],
+    "night": [
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      }
+    ],
+    "overworld": {
+      "min": 21,
+      "max": 36
+    },
+    "dungeons": {
+      "names": [
+        "Cavern of the Dunes",
+        "Volcanic Cavern"
+      ],
+      "min": 30,
+      "max": 36
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Leezpunk_Ignis": {
+    "day": [
+      {
+        "name": "Foot of the Volcano",
+        "x": -364,
+        "y": -377
+      },
+      {
+        "name": "Mount Obsidian",
+        "x": -587,
+        "y": -484
+      },
+      {
+        "name": "Dry Sandy Beach",
+        "x": -606,
+        "y": -667
+      }
+    ],
+    "night": [
+      {
+        "name": "Foot of the Volcano",
+        "x": -364,
+        "y": -377
+      },
+      {
+        "name": "Mount Obsidian",
+        "x": -587,
+        "y": -484
+      },
+      {
+        "name": "Dry Sandy Beach",
+        "x": -606,
+        "y": -667
+      }
+    ],
+    "overworld": {
+      "min": 28,
+      "max": 36
+    },
+    "dungeons": {
+      "names": [
+        "Volcanic Cavern"
+      ],
+      "min": 32,
+      "max": 36
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Gorirat": {
+    "day": [
+      {
+        "name": "Frostbound Mountains",
+        "x": 199,
+        "y": 57
+      },
+      {
+        "name": "Verdant Brook",
+        "x": 208,
+        "y": -13
+      }
+    ],
+    "night": [
+      {
+        "name": "Frostbound Mountains",
+        "x": 199,
+        "y": 57
+      },
+      {
+        "name": "Verdant Brook",
+        "x": 208,
+        "y": -13
+      }
+    ],
+    "overworld": {
+      "min": 30,
+      "max": 34
+    },
+    "dungeons": {
+      "names": [
+        "Mountain Stream Grotto"
+      ],
+      "min": 22,
+      "max": 25
+    },
+    "boss": null,
+    "worldTree": true
+  },
+  "Gorirat_Terra": {
+    "day": [
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      },
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Arena",
+        "x": 633,
+        "y": 18
+      }
+    ],
+    "night": [
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      },
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Arena",
+        "x": 633,
+        "y": 18
+      }
+    ],
+    "overworld": {
+      "min": 35,
+      "max": 39
+    },
+    "dungeons": {
+      "names": [
+        "Cherry Blossom Cave"
+      ],
+      "min": 40,
+      "max": 45
+    },
+    "boss": null,
+    "worldTree": true
+  },
+  "Surfent": {
+    "day": [
+      {
+        "name": "Verdant Brook",
+        "x": 208,
+        "y": -13
+      },
+      {
+        "name": "Scars of War",
+        "x": 381,
+        "y": -18
+      },
+      {
+        "name": "Frostbound Mountains",
+        "x": 199,
+        "y": 57
+      }
+    ],
+    "night": [
+      {
+        "name": "Verdant Brook",
+        "x": 208,
+        "y": -13
+      },
+      {
+        "name": "Scars of War",
+        "x": 381,
+        "y": -18
+      }
+    ],
+    "overworld": {
+      "min": 12,
+      "max": 35
+    },
+    "dungeons": {
+      "names": [
+        "Ravine Grotto"
+      ],
+      "min": 14,
+      "max": 17
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Surfent_Terra": {
+    "day": [
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      },
+      {
+        "name": "Deserted Ash Plateau",
+        "x": -1300,
+        "y": -1198
+      }
+    ],
+    "night": [
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      },
+      {
+        "name": "Deserted Ash Plateau",
+        "x": -1300,
+        "y": -1198
+      }
+    ],
+    "overworld": {
+      "min": 31,
+      "max": 63
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Robinquill": {
+    "day": [
+      {
+        "name": "Gobfin's Turf",
+        "x": 153,
+        "y": -173
+      },
+      {
+        "name": "Verdant Brook",
+        "x": 208,
+        "y": -13
+      }
+    ],
+    "night": [
+      {
+        "name": "Gobfin's Turf",
+        "x": 153,
+        "y": -173
+      },
+      {
+        "name": "Verdant Brook",
+        "x": 208,
+        "y": -13
+      }
+    ],
+    "overworld": {
+      "min": 30,
+      "max": 34
+    },
+    "dungeons": {
+      "names": [
+        "Mountain Stream Grotto"
+      ],
+      "min": 22,
+      "max": 25
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Robinquill_Terra": {
+    "day": [
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      },
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Arena",
+        "x": 633,
+        "y": 18
+      }
+    ],
+    "night": [
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      },
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Arena",
+        "x": 633,
+        "y": 18
+      }
+    ],
+    "overworld": {
+      "min": 32,
+      "max": 38
+    },
+    "dungeons": {
+      "names": [
+        "Cavern of the Dunes"
+      ],
+      "min": 33,
+      "max": 36
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Flopie": {
+    "day": [
+      {
+        "name": "Crescent Moon Shore",
+        "x": -6,
+        "y": -208
+      },
+      {
+        "name": "Twilight Dunes",
+        "x": -124,
+        "y": -100
+      }
+    ],
+    "night": [
+      {
+        "name": "Crescent Moon Shore",
+        "x": -6,
+        "y": -208
+      },
+      {
+        "name": "Twilight Dunes",
+        "x": -124,
+        "y": -100
+      }
+    ],
+    "overworld": {
+      "min": 22,
+      "max": 24
+    },
+    "dungeons": {
+      "names": [
+        "Mountain Stream Grotto"
+      ],
+      "min": 22,
+      "max": 25
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Wixen": {
+    "day": [
+      {
+        "name": "Ruined Fortress City",
+        "x": -601,
+        "y": -214
+      },
+      {
+        "name": "Scars of War",
+        "x": 381,
+        "y": -18
+      }
+    ],
+    "night": [
+      {
+        "name": "Ruined Fortress City",
+        "x": -601,
+        "y": -214
+      },
+      {
+        "name": "Scars of War",
+        "x": 381,
+        "y": -18
+      }
+    ],
+    "overworld": {
+      "min": 23,
+      "max": 36
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Wixen_Noct": {
+    "day": null,
+    "night": [
+      {
+        "name": "Sakurajima - Southern Sandbar",
+        "x": -721,
+        "y": 115
+      },
+      {
+        "name": "Sakurajima - Northern Rock Field",
+        "x": -571,
+        "y": 332
+      },
+      {
+        "name": "Dancing Sakura Shrine",
+        "x": -636,
+        "y": 253
+      }
+    ],
+    "overworld": {
+      "min": 46,
+      "max": 55
+    },
+    "dungeons": {
+      "names": [
+        "Cherry Blossom Cave"
+      ],
+      "min": 46,
+      "max": 50
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Katress": {
+    "day": [
+      {
+        "name": "Foot of the Astral Mountains",
+        "x": -96,
+        "y": 197
+      },
+      {
+        "name": "Astral Mountains",
+        "x": -186,
+        "y": 396
+      }
+    ],
+    "night": [
+      {
+        "name": "Ancient Ritual Site",
+        "x": -17,
+        "y": -265
+      },
+      {
+        "name": "Crescent Moon Shore",
+        "x": -6,
+        "y": -208
+      },
+      {
+        "name": "Gobfin's Turf",
+        "x": 153,
+        "y": -173
+      }
+    ],
+    "overworld": {
+      "min": 25,
+      "max": 46
+    },
+    "dungeons": {
+      "names": [
+        "Mountain Stream Grotto"
+      ],
+      "min": 20,
+      "max": 23
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Katress_Ignis": {
+    "day": [
+      {
+        "name": "Stone Pillar Cave",
+        "x": -908,
+        "y": -1093
+      }
+    ],
+    "night": [
+      {
+        "name": "Stone Pillar Cave",
+        "x": -908,
+        "y": -1093
+      }
+    ],
+    "overworld": null,
+    "dungeons": {
+      "names": [
+        "Cherry Blossom Cave"
+      ],
+      "min": 40,
+      "max": 45
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Helzephyr": {
+    "day": [
+      {
+        "name": "Scorched Hill",
+        "x": -1041,
+        "y": -1139
+      },
+      {
+        "name": "Hidden Passage to the Oculus Gate",
+        "x": -1079,
+        "y": -1283
+      },
+      {
+        "name": "Deserted Ash Plateau",
+        "x": -1300,
+        "y": -1198
+      }
+    ],
+    "night": [
+      {
+        "name": "Scorched Hill",
+        "x": -1041,
+        "y": -1139
+      },
+      {
+        "name": "Ancient Ritual Site",
+        "x": -17,
+        "y": -265
+      }
+    ],
+    "overworld": {
+      "min": 24,
+      "max": 66
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Helzephyr_Lux": {
+    "day": [
+      {
+        "name": "Sakurajima - Northern Rock Field",
+        "x": -571,
+        "y": 332
+      },
+      {
+        "name": "Dancing Sakura Shrine",
+        "x": -636,
+        "y": 253
+      }
+    ],
+    "night": [
+      {
+        "name": "Sakurajima - Northern Rock Field",
+        "x": -571,
+        "y": 332
+      },
+      {
+        "name": "Dancing Sakura Shrine",
+        "x": -636,
+        "y": 253
+      }
+    ],
+    "overworld": {
+      "min": 47,
+      "max": 48
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Elgrove": {
+    "day": [
+      {
+        "name": "Bamboo Groves",
+        "x": -229,
+        "y": -312
+      }
+    ],
+    "night": [
+      {
+        "name": "Bamboo Groves",
+        "x": -229,
+        "y": -312
+      }
+    ],
+    "overworld": {
+      "min": 24,
+      "max": 26
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Elgrove_Cryst": {
+    "day": null,
+    "night": null,
+    "overworld": {
+      "min": 75,
+      "max": 77
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Lunaris": {
+    "day": [
+      {
+        "name": "Foot of the Astral Mountains",
+        "x": -96,
+        "y": 197
+      },
+      {
+        "name": "Astral Mountains",
+        "x": -186,
+        "y": 396
+      }
+    ],
+    "night": [
+      {
+        "name": "Foot of the Astral Mountains",
+        "x": -96,
+        "y": 197
+      },
+      {
+        "name": "Astral Mountains",
+        "x": -186,
+        "y": 396
+      }
+    ],
+    "overworld": {
+      "min": 25,
+      "max": 49
+    },
+    "dungeons": {
+      "names": [
+        "Astral Mountains Cavern"
+      ],
+      "min": 38,
+      "max": 42
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Fenglope": {
+    "day": [
+      {
+        "name": "No. 3 Wildlife Sanctuary",
+        "x": 663,
+        "y": 634
+      }
+    ],
+    "night": [
+      {
+        "name": "No. 3 Wildlife Sanctuary",
+        "x": 663,
+        "y": 634
+      }
+    ],
+    "overworld": {
+      "min": 45,
+      "max": 50
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Fenglope_Lux": {
+    "day": [
+      {
+        "name": "Stone Pillar Cave",
+        "x": -908,
+        "y": -1093
+      },
+      {
+        "name": "Scorched Ashland",
+        "x": -805,
+        "y": -954
+      },
+      {
+        "name": "Withered Seaside",
+        "x": -709,
+        "y": -1103
+      }
+    ],
+    "night": [
+      {
+        "name": "Stone Pillar Cave",
+        "x": -908,
+        "y": -1093
+      },
+      {
+        "name": "Scorched Ashland",
+        "x": -805,
+        "y": -954
+      },
+      {
+        "name": "Withered Seaside",
+        "x": -709,
+        "y": -1103
+      }
+    ],
+    "overworld": {
+      "min": 57,
+      "max": 59
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Dinossom": {
+    "day": [
+      {
+        "name": "Eastern Wild Island",
+        "x": 481,
+        "y": -159
+      },
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      }
+    ],
+    "night": [
+      {
+        "name": "Eastern Wild Island",
+        "x": 481,
+        "y": -159
+      },
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      }
+    ],
+    "overworld": {
+      "min": 25,
+      "max": 34
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Dinossom_Lux": {
+    "day": [
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      }
+    ],
+    "night": [
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      }
+    ],
+    "overworld": {
+      "min": 34,
+      "max": 39
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Bushi": {
+    "day": [
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      }
+    ],
+    "night": [
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      }
+    ],
+    "overworld": {
+      "min": 25,
+      "max": 59
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Bushi_Noct": {
+    "day": [
+      {
+        "name": "Deserted Ash Plateau",
+        "x": -1300,
+        "y": -1198
+      },
+      {
+        "name": "Scorched Ashland",
+        "x": -805,
+        "y": -954
+      },
+      {
+        "name": "Scorched Hill",
+        "x": -1041,
+        "y": -1139
+      }
+    ],
+    "night": [
+      {
+        "name": "Deserted Ash Plateau",
+        "x": -1300,
+        "y": -1198
+      }
+    ],
+    "overworld": {
+      "min": 47,
+      "max": 67
+    },
+    "dungeons": {
+      "names": [
+        "Cherry Blossom Cave"
+      ],
+      "min": 46,
+      "max": 50
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Munchill": {
+    "day": [
+      {
+        "name": "Frozen Coral Hill",
+        "x": -1243,
+        "y": -1531
+      },
+      {
+        "name": "Feybreak Shipwreck",
+        "x": -1417,
+        "y": -1450
+      }
+    ],
+    "night": [
+      {
+        "name": "Frozen Coral Hill",
+        "x": -1243,
+        "y": -1531
+      },
+      {
+        "name": "Feybreak Shipwreck",
+        "x": -1417,
+        "y": -1450
+      }
+    ],
+    "overworld": {
+      "min": 10,
+      "max": 35
+    },
+    "dungeons": {
+      "names": [
+        "Astral Mountains Cavern"
+      ],
+      "min": 39,
+      "max": 41
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Mammorest": {
+    "day": [
+      {
+        "name": "Foot of the Astral Mountains",
+        "x": -96,
+        "y": 197
+      },
+      {
+        "name": "Flying Fish Coast",
+        "x": 154,
+        "y": -541
+      },
+      {
+        "name": "Bamboo Groves",
+        "x": -229,
+        "y": -312
+      }
+    ],
+    "night": [
+      {
+        "name": "Foot of the Astral Mountains",
+        "x": -96,
+        "y": 197
+      },
+      {
+        "name": "Flying Fish Coast",
+        "x": 154,
+        "y": -541
+      },
+      {
+        "name": "Bamboo Groves",
+        "x": -229,
+        "y": -312
+      }
+    ],
+    "overworld": {
+      "min": 26,
+      "max": 39
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Mammorest_Cryst": {
+    "day": [
+      {
+        "name": "No. 1 Wildlife Sanctuary",
+        "x": -344,
+        "y": 270
+      },
+      {
+        "name": "Foot of the Astral Mountains",
+        "x": -96,
+        "y": 197
+      }
+    ],
+    "night": [
+      {
+        "name": "No. 1 Wildlife Sanctuary",
+        "x": -344,
+        "y": 270
+      },
+      {
+        "name": "Foot of the Astral Mountains",
+        "x": -96,
+        "y": 197
+      }
+    ],
+    "overworld": {
+      "min": 36,
+      "max": 42
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Finsider": {
+    "day": [
+      {
+        "name": "Arena",
+        "x": 633,
+        "y": 18
+      },
+      {
+        "name": "Isle of the Glacial Core",
+        "x": 143,
+        "y": 655
+      }
+    ],
+    "night": [
+      {
+        "name": "Arena",
+        "x": 633,
+        "y": 18
+      },
+      {
+        "name": "Isle of the Glacial Core",
+        "x": 143,
+        "y": 655
+      }
+    ],
+    "overworld": {
+      "min": 1,
+      "max": 38
+    },
+    "dungeons": {
+      "names": [
+        "Cavern of the Dunes"
+      ],
+      "min": 30,
+      "max": 36
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Finsider_Ignis": {
+    "day": [
+      {
+        "name": "Deserted Ash Plateau",
+        "x": -1300,
+        "y": -1198
+      },
+      {
+        "name": "Scorched Hill",
+        "x": -1041,
+        "y": -1139
+      },
+      {
+        "name": "Withered Seaside",
+        "x": -709,
+        "y": -1103
+      }
+    ],
+    "night": [
+      {
+        "name": "Deserted Ash Plateau",
+        "x": -1300,
+        "y": -1198
+      },
+      {
+        "name": "Scorched Hill",
+        "x": -1041,
+        "y": -1139
+      },
+      {
+        "name": "Withered Seaside",
+        "x": -709,
+        "y": -1103
+      }
+    ],
+    "overworld": null,
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Petallia": {
+    "day": [
+      {
+        "name": "Crescent Moon Shore",
+        "x": -6,
+        "y": -208
+      },
+      {
+        "name": "Dancing Sakura Shrine",
+        "x": -636,
+        "y": 253
+      },
+      {
+        "name": "Twilight Dunes",
+        "x": -124,
+        "y": -100
+      }
+    ],
+    "night": [
+      {
+        "name": "Crescent Moon Shore",
+        "x": -6,
+        "y": -208
+      },
+      {
+        "name": "Dancing Sakura Shrine",
+        "x": -636,
+        "y": 253
+      },
+      {
+        "name": "Twilight Dunes",
+        "x": -124,
+        "y": -100
+      }
+    ],
+    "overworld": {
+      "min": 28,
+      "max": 57
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Petallia_Ignis": {
+    "day": null,
+    "night": null,
+    "overworld": {
+      "min": 71,
+      "max": 73
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Leafan": {
+    "day": [
+      {
+        "name": "Enchanted Firmament",
+        "x": -358,
+        "y": -1511
+      },
+      {
+        "name": "Gobfin's Turf",
+        "x": 153,
+        "y": -173
+      },
+      {
+        "name": "Verdant Brook",
+        "x": 208,
+        "y": -13
+      }
+    ],
+    "night": [
+      {
+        "name": "Enchanted Firmament",
+        "x": -358,
+        "y": -1511
+      },
+      {
+        "name": "Gobfin's Turf",
+        "x": 153,
+        "y": -173
+      },
+      {
+        "name": "Verdant Brook",
+        "x": 208,
+        "y": -13
+      }
+    ],
+    "overworld": {
+      "min": 28,
+      "max": 68
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Incineram": {
+    "day": [
+      {
+        "name": "Mount Obsidian",
+        "x": -587,
+        "y": -484
+      },
+      {
+        "name": "Foot of the Volcano",
+        "x": -364,
+        "y": -377
+      },
+      {
+        "name": "Phantom Isle",
+        "x": -908,
+        "y": -198
+      }
+    ],
+    "night": [
+      {
+        "name": "Mount Obsidian",
+        "x": -587,
+        "y": -484
+      },
+      {
+        "name": "Foot of the Volcano",
+        "x": -364,
+        "y": -377
+      },
+      {
+        "name": "Phantom Isle",
+        "x": -908,
+        "y": -198
+      }
+    ],
+    "overworld": {
+      "min": 30,
+      "max": 40
+    },
+    "dungeons": {
+      "names": [
+        "Volcanic Cavern"
+      ],
+      "min": 32,
+      "max": 36
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Incineram_Noct": {
+    "day": [
+      {
+        "name": "No. 2 Wildlife Sanctuary",
+        "x": -676,
+        "y": -111
+      },
+      {
+        "name": "Rayne Syndicate Platform Oil Rig",
+        "x": -1722,
+        "y": -1462
+      }
+    ],
+    "night": [
+      {
+        "name": "No. 2 Wildlife Sanctuary",
+        "x": -676,
+        "y": -111
+      },
+      {
+        "name": "Rayne Syndicate Platform Oil Rig",
+        "x": -1722,
+        "y": -1462
+      }
+    ],
+    "overworld": {
+      "min": 37,
+      "max": 39
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Dazzi": {
+    "day": [
+      {
+        "name": "Twilight Dunes",
+        "x": -124,
+        "y": -100
+      },
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      }
+    ],
+    "night": [
+      {
+        "name": "Twilight Dunes",
+        "x": -124,
+        "y": -100
+      },
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      }
+    ],
+    "overworld": {
+      "min": 30,
+      "max": 35
+    },
+    "dungeons": {
+      "names": [
+        "Cavern of the Dunes"
+      ],
+      "min": 33,
+      "max": 36
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Dazzi_Noct": {
+    "day": [
+      {
+        "name": "Stone Pillar Cave",
+        "x": -908,
+        "y": -1093
+      },
+      {
+        "name": "Scorched Ashland",
+        "x": -805,
+        "y": -954
+      },
+      {
+        "name": "Waterlily Gorge",
+        "x": -554,
+        "y": -1504
+      }
+    ],
+    "night": [
+      {
+        "name": "Stone Pillar Cave",
+        "x": -908,
+        "y": -1093
+      },
+      {
+        "name": "Scorched Ashland",
+        "x": -805,
+        "y": -954
+      },
+      {
+        "name": "Waterlily Gorge",
+        "x": -554,
+        "y": -1504
+      }
+    ],
+    "overworld": {
+      "min": 50,
+      "max": 66
+    },
+    "dungeons": {
+      "names": [
+        "Feybreak Cavern"
+      ],
+      "min": 50,
+      "max": 55
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Pyrin": {
+    "day": [
+      {
+        "name": "Mount Obsidian",
+        "x": -587,
+        "y": -484
+      },
+      {
+        "name": "Foot of the Volcano",
+        "x": -364,
+        "y": -377
+      },
+      {
+        "name": "Ruined Fortress City",
+        "x": -601,
+        "y": -214
+      }
+    ],
+    "night": [
+      {
+        "name": "Mount Obsidian",
+        "x": -587,
+        "y": -484
+      },
+      {
+        "name": "Foot of the Volcano",
+        "x": -364,
+        "y": -377
+      },
+      {
+        "name": "Ruined Fortress City",
+        "x": -601,
+        "y": -214
+      }
+    ],
+    "overworld": {
+      "min": 30,
+      "max": 38
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Pyrin_Noct": {
+    "day": [
+      {
+        "name": "No. 2 Wildlife Sanctuary",
+        "x": -676,
+        "y": -111
+      }
+    ],
+    "night": [
+      {
+        "name": "Foot of the Volcano",
+        "x": -364,
+        "y": -377
+      },
+      {
+        "name": "Mount Obsidian",
+        "x": -587,
+        "y": -484
+      },
+      {
+        "name": "Dry Sandy Beach",
+        "x": -606,
+        "y": -667
+      }
+    ],
+    "overworld": {
+      "min": 34,
+      "max": 42
+    },
+    "dungeons": {
+      "names": [
+        "Volcanic Cavern"
+      ],
+      "min": 32,
+      "max": 36
+    },
+    "boss": null,
+    "worldTree": true
+  },
+  "Relaxaurus": {
+    "day": [
+      {
+        "name": "Bamboo Groves",
+        "x": -229,
+        "y": -312
+      },
+      {
+        "name": "Frostbound Mountains",
+        "x": 199,
+        "y": 57
+      },
+      {
+        "name": "Foot of the Volcano",
+        "x": -364,
+        "y": -377
+      }
+    ],
+    "night": [
+      {
+        "name": "Bamboo Groves",
+        "x": -229,
+        "y": -312
+      },
+      {
+        "name": "Frostbound Mountains",
+        "x": 199,
+        "y": 57
+      },
+      {
+        "name": "Foot of the Volcano",
+        "x": -364,
+        "y": -377
+      }
+    ],
+    "overworld": {
+      "min": 30,
+      "max": 68
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Relaxaurus_Lux": {
+    "day": [
+      {
+        "name": "Scorched Hill",
+        "x": -1041,
+        "y": -1139
+      }
+    ],
+    "night": [
+      {
+        "name": "Scorched Hill",
+        "x": -1041,
+        "y": -1139
+      }
+    ],
+    "overworld": {
+      "min": 48,
+      "max": 68
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Foxcicle": {
+    "day": [
+      {
+        "name": "No. 1 Wildlife Sanctuary",
+        "x": -344,
+        "y": 270
+      },
+      {
+        "name": "Abandoned Ruins",
+        "x": -152,
+        "y": 295
+      },
+      {
+        "name": "Foot of the Astral Mountains",
+        "x": -96,
+        "y": 197
+      }
+    ],
+    "night": [
+      {
+        "name": "No. 1 Wildlife Sanctuary",
+        "x": -344,
+        "y": 270
+      },
+      {
+        "name": "Abandoned Ruins",
+        "x": -152,
+        "y": 295
+      },
+      {
+        "name": "Foot of the Astral Mountains",
+        "x": -96,
+        "y": 197
+      }
+    ],
+    "overworld": {
+      "min": 30,
+      "max": 37
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Beakon": {
+    "day": [
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      },
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      }
+    ],
+    "night": [
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      },
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      }
+    ],
+    "overworld": {
+      "min": 30,
+      "max": 38
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Beakon_Cryst": {
+    "day": null,
+    "night": null,
+    "overworld": {
+      "min": 75,
+      "max": 77
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Ghangler": {
+    "day": [
+      {
+        "name": "Scorched Ashland",
+        "x": -805,
+        "y": -954
+      },
+      {
+        "name": "Deserted Ash Plateau",
+        "x": -1300,
+        "y": -1198
+      },
+      {
+        "name": "Phantom Isle",
+        "x": -908,
+        "y": -198
+      }
+    ],
+    "night": [
+      {
+        "name": "Dancing Sakura Shrine",
+        "x": -636,
+        "y": 253
+      },
+      {
+        "name": "Sakurajima - Mushroom Wetlands",
+        "x": -416,
+        "y": 163
+      },
+      {
+        "name": "Phantom Isle",
+        "x": -908,
+        "y": -198
+      }
+    ],
+    "overworld": {
+      "min": 30,
+      "max": 58
+    },
+    "dungeons": {
+      "names": [
+        "Volcanic Cavern",
+        "Cherry Blossom Cave"
+      ],
+      "min": 32,
+      "max": 45
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Ghangler_Ignis": {
+    "day": [
+      {
+        "name": "Deserted Ash Plateau",
+        "x": -1300,
+        "y": -1198
+      },
+      {
+        "name": "Scorched Hill",
+        "x": -1041,
+        "y": -1139
+      },
+      {
+        "name": "Withered Seaside",
+        "x": -709,
+        "y": -1103
+      }
+    ],
+    "night": [
+      {
+        "name": "Deserted Ash Plateau",
+        "x": -1300,
+        "y": -1198
+      },
+      {
+        "name": "Scorched Hill",
+        "x": -1041,
+        "y": -1139
+      },
+      {
+        "name": "Withered Seaside",
+        "x": -709,
+        "y": -1103
+      }
+    ],
+    "overworld": null,
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Rayhound": {
+    "day": [
+      {
+        "name": "Foot of the Astral Mountains",
+        "x": -96,
+        "y": 197
+      },
+      {
+        "name": "Loess Plains",
+        "x": -902,
+        "y": -1416
+      }
+    ],
+    "night": [
+      {
+        "name": "Foot of the Astral Mountains",
+        "x": -96,
+        "y": 197
+      },
+      {
+        "name": "Loess Plains",
+        "x": -902,
+        "y": -1416
+      }
+    ],
+    "overworld": {
+      "min": 31,
+      "max": 58
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Rayhound_Cryst": {
+    "day": [
+      {
+        "name": "No. 1 Wildlife Sanctuary",
+        "x": -344,
+        "y": 270
+      },
+      {
+        "name": "Foot of the Astral Mountains",
+        "x": -96,
+        "y": 197
+      }
+    ],
+    "night": [
+      {
+        "name": "No. 1 Wildlife Sanctuary",
+        "x": -344,
+        "y": 270
+      },
+      {
+        "name": "Foot of the Astral Mountains",
+        "x": -96,
+        "y": 197
+      }
+    ],
+    "overworld": {
+      "min": 35,
+      "max": 77
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Menasting": {
+    "day": [
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      },
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Arena",
+        "x": 633,
+        "y": 18
+      }
+    ],
+    "night": [
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      },
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Arena",
+        "x": 633,
+        "y": 18
+      }
+    ],
+    "overworld": {
+      "min": 31,
+      "max": 43
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Menasting_Terra": {
+    "day": [
+      {
+        "name": "No. 3 Wildlife Sanctuary",
+        "x": 663,
+        "y": 634
+      }
+    ],
+    "night": [
+      {
+        "name": "No. 3 Wildlife Sanctuary",
+        "x": 663,
+        "y": 634
+      }
+    ],
+    "overworld": {
+      "min": 48,
+      "max": 52
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Needoll": {
+    "day": [
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      },
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Isle of the Glacial Core",
+        "x": 143,
+        "y": 655
+      }
+    ],
+    "night": [
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      },
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Isle of the Glacial Core",
+        "x": 143,
+        "y": 655
+      }
+    ],
+    "overworld": {
+      "min": 31,
+      "max": 36
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Needoll_Noct": {
+    "day": null,
+    "night": [
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      },
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Isle of the Glacial Core",
+        "x": 143,
+        "y": 655
+      }
+    ],
+    "overworld": {
+      "min": 33,
+      "max": 36
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Reindrix": {
+    "day": [
+      {
+        "name": "No. 1 Wildlife Sanctuary",
+        "x": -344,
+        "y": 270
+      },
+      {
+        "name": "Frostbound Mountains",
+        "x": 199,
+        "y": 57
+      }
+    ],
+    "night": [
+      {
+        "name": "No. 1 Wildlife Sanctuary",
+        "x": -344,
+        "y": 270
+      },
+      {
+        "name": "Frostbound Mountains",
+        "x": 199,
+        "y": 57
+      }
+    ],
+    "overworld": {
+      "min": 32,
+      "max": 39
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Mossanda": {
+    "day": [
+      {
+        "name": "Gobfin's Turf",
+        "x": 153,
+        "y": -173
+      },
+      {
+        "name": "Verdant Brook",
+        "x": 208,
+        "y": -13
+      }
+    ],
+    "night": [
+      {
+        "name": "Gobfin's Turf",
+        "x": 153,
+        "y": -173
+      },
+      {
+        "name": "Verdant Brook",
+        "x": 208,
+        "y": -13
+      }
+    ],
+    "overworld": {
+      "min": 32,
+      "max": 36
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Mossanda_Lux": {
+    "day": null,
+    "night": null,
+    "overworld": {
+      "min": 70,
+      "max": 72
+    },
+    "dungeons": {
+      "names": [
+        "Cavern of the Dunes"
+      ],
+      "min": 35,
+      "max": 37
+    },
+    "boss": {
+      "name": "Eastern Wild Island",
+      "x": 448,
+      "y": -181,
+      "lv": 31
+    },
+    "worldTree": true
+  },
+  "Chillet": {
+    "day": [
+      {
+        "name": "Foot of the Astral Mountains",
+        "x": -96,
+        "y": 197
+      }
+    ],
+    "night": [
+      {
+        "name": "Foot of the Astral Mountains",
+        "x": -96,
+        "y": 197
+      }
+    ],
+    "overworld": {
+      "min": 32,
+      "max": 36
+    },
+    "dungeons": {
+      "names": [
+        "Astral Mountains Cavern"
+      ],
+      "min": 39,
+      "max": 41
+    },
+    "boss": null,
+    "worldTree": true
+  },
+  "Chillet_Ignis": {
+    "day": [
+      {
+        "name": "Dancing Sakura Shrine",
+        "x": -636,
+        "y": 253
+      }
+    ],
+    "night": [
+      {
+        "name": "Dancing Sakura Shrine",
+        "x": -636,
+        "y": 253
+      }
+    ],
+    "overworld": {
+      "min": 53,
+      "max": 56
+    },
+    "dungeons": {
+      "names": [
+        "Cherry Blossom Cave"
+      ],
+      "min": 40,
+      "max": 45
+    },
+    "boss": null,
+    "worldTree": true
+  },
+  "Ragnahawk": {
+    "day": [
+      {
+        "name": "Mount Obsidian",
+        "x": -587,
+        "y": -484
+      },
+      {
+        "name": "Emberstone Plateau",
+        "x": -790,
+        "y": -1235
+      },
+      {
+        "name": "Foot of the Volcano",
+        "x": -364,
+        "y": -377
+      }
+    ],
+    "night": [
+      {
+        "name": "Mount Obsidian",
+        "x": -587,
+        "y": -484
+      },
+      {
+        "name": "Emberstone Plateau",
+        "x": -790,
+        "y": -1235
+      },
+      {
+        "name": "Foot of the Volcano",
+        "x": -364,
+        "y": -377
+      }
+    ],
+    "overworld": {
+      "min": 32,
+      "max": 67
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Moldron": {
+    "day": [
+      {
+        "name": "Mount Obsidian",
+        "x": -587,
+        "y": -484
+      },
+      {
+        "name": "Bicornis Islet",
+        "x": -1170,
+        "y": -1939
+      },
+      {
+        "name": "Foot of the Volcano",
+        "x": -364,
+        "y": -377
+      }
+    ],
+    "night": [
+      {
+        "name": "Mount Obsidian",
+        "x": -587,
+        "y": -484
+      },
+      {
+        "name": "Bicornis Islet",
+        "x": -1170,
+        "y": -1939
+      },
+      {
+        "name": "Foot of the Volcano",
+        "x": -364,
+        "y": -377
+      }
+    ],
+    "overworld": {
+      "min": 32,
+      "max": 68
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Palumba": {
+    "day": [
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "No. 3 Wildlife Sanctuary",
+        "x": 663,
+        "y": 634
+      },
+      {
+        "name": "Isle of Eternal Summer",
+        "x": -424,
+        "y": -811
+      }
+    ],
+    "night": [
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "No. 3 Wildlife Sanctuary",
+        "x": 663,
+        "y": 634
+      },
+      {
+        "name": "Isle of Eternal Summer",
+        "x": -424,
+        "y": -811
+      }
+    ],
+    "overworld": {
+      "min": 32,
+      "max": 50
+    },
+    "dungeons": {
+      "names": [
+        "Cherry Blossom Cave"
+      ],
+      "min": 40,
+      "max": 45
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Digtoise": {
+    "day": [
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      },
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Twilight Dunes",
+        "x": -124,
+        "y": -100
+      }
+    ],
+    "night": [
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      },
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Twilight Dunes",
+        "x": -124,
+        "y": -100
+      }
+    ],
+    "overworld": {
+      "min": 33,
+      "max": 44
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Broncherry": {
+    "day": [
+      {
+        "name": "Ancient Ritual Site",
+        "x": -17,
+        "y": -265
+      },
+      {
+        "name": "Eastern Wild Island",
+        "x": 481,
+        "y": -159
+      }
+    ],
+    "night": [
+      {
+        "name": "Ancient Ritual Site",
+        "x": -17,
+        "y": -265
+      },
+      {
+        "name": "Eastern Wild Island",
+        "x": 481,
+        "y": -159
+      }
+    ],
+    "overworld": {
+      "min": 33,
+      "max": 54
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Broncherry_Aqua": {
+    "day": [
+      {
+        "name": "Verdant Brook",
+        "x": 208,
+        "y": -13
+      },
+      {
+        "name": "Scars of War",
+        "x": 381,
+        "y": -18
+      }
+    ],
+    "night": [
+      {
+        "name": "Verdant Brook",
+        "x": 208,
+        "y": -13
+      },
+      {
+        "name": "Scars of War",
+        "x": 381,
+        "y": -18
+      }
+    ],
+    "overworld": {
+      "min": 51,
+      "max": 55
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Dumud": {
+    "day": [
+      {
+        "name": "Dry Sandy Beach",
+        "x": -606,
+        "y": -667
+      },
+      {
+        "name": "Twilight Dunes",
+        "x": -124,
+        "y": -100
+      },
+      {
+        "name": "Bamboo Groves",
+        "x": -229,
+        "y": -312
+      }
+    ],
+    "night": [
+      {
+        "name": "Dry Sandy Beach",
+        "x": -606,
+        "y": -667
+      },
+      {
+        "name": "Twilight Dunes",
+        "x": -124,
+        "y": -100
+      },
+      {
+        "name": "Bamboo Groves",
+        "x": -229,
+        "y": -312
+      }
+    ],
+    "overworld": {
+      "min": 20,
+      "max": 39
+    },
+    "dungeons": {
+      "names": [
+        "Ravine Grotto",
+        "Volcanic Cavern"
+      ],
+      "min": 14,
+      "max": 35
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Dumud_Gild": {
+    "day": [
+      {
+        "name": "Sakurajima - Northern Rock Field",
+        "x": -571,
+        "y": 332
+      },
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      }
+    ],
+    "night": [
+      {
+        "name": "Sakurajima - Northern Rock Field",
+        "x": -571,
+        "y": 332
+      },
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      }
+    ],
+    "overworld": {
+      "min": 25,
+      "max": 49
+    },
+    "dungeons": {
+      "names": [],
+      "min": 33,
+      "max": 35
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Braloha": {
+    "day": [
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      },
+      {
+        "name": "Isle of Murmurs",
+        "x": -303,
+        "y": 12
+      },
+      {
+        "name": "Isle of Silence Church Ruins",
+        "x": -456,
+        "y": -13
+      }
+    ],
+    "night": [
+      {
+        "name": "Sea Breeze Archipelago",
+        "x": -188,
+        "y": -638
+      },
+      {
+        "name": "Isle of Murmurs",
+        "x": -303,
+        "y": 12
+      },
+      {
+        "name": "Isle of Silence Church Ruins",
+        "x": -456,
+        "y": -13
+      }
+    ],
+    "overworld": {
+      "min": 33,
+      "max": 50
+    },
+    "dungeons": {
+      "names": [
+        "Cherry Blossom Cave"
+      ],
+      "min": 40,
+      "max": 45
+    },
+    "boss": null,
+    "worldTree": true
+  },
+  "Kitsun": {
+    "day": [
+      {
+        "name": "No. 2 Wildlife Sanctuary",
+        "x": -676,
+        "y": -111
+      }
+    ],
+    "night": [
+      {
+        "name": "Frostbound Mountains",
+        "x": 199,
+        "y": 57
+      },
+      {
+        "name": "No. 2 Wildlife Sanctuary",
+        "x": -676,
+        "y": -111
+      }
+    ],
+    "overworld": {
+      "min": 34,
+      "max": 38
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Kitsun_Noct": {
+    "day": [
+      {
+        "name": "Scorched Hill",
+        "x": -1041,
+        "y": -1139
+      },
+      {
+        "name": "The Oculus Gate, Tower in Sight",
+        "x": -1115,
+        "y": -1355
+      },
+      {
+        "name": "Emberstone Plateau",
+        "x": -790,
+        "y": -1235
+      }
+    ],
+    "night": [
+      {
+        "name": "Scorched Hill",
+        "x": -1041,
+        "y": -1139
+      },
+      {
+        "name": "The Oculus Gate, Tower in Sight",
+        "x": -1115,
+        "y": -1355
+      },
+      {
+        "name": "Emberstone Plateau",
+        "x": -790,
+        "y": -1235
+      }
+    ],
+    "overworld": {
+      "min": 61,
+      "max": 66
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Blazehowl": {
+    "day": [
+      {
+        "name": "Emberstone Plateau",
+        "x": -790,
+        "y": -1235
+      },
+      {
+        "name": "Foot of the Volcano",
+        "x": -364,
+        "y": -377
+      },
+      {
+        "name": "Mount Obsidian",
+        "x": -587,
+        "y": -484
+      }
+    ],
+    "night": [
+      {
+        "name": "Emberstone Plateau",
+        "x": -790,
+        "y": -1235
+      },
+      {
+        "name": "Foot of the Volcano",
+        "x": -364,
+        "y": -377
+      },
+      {
+        "name": "Mount Obsidian",
+        "x": -587,
+        "y": -484
+      }
+    ],
+    "overworld": {
+      "min": 35,
+      "max": 67
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Blazehowl_Noct": {
+    "day": [
+      {
+        "name": "Frozen Coral Hill",
+        "x": -1243,
+        "y": -1531
+      },
+      {
+        "name": "Feybreak Shipwreck",
+        "x": -1417,
+        "y": -1450
+      }
+    ],
+    "night": [
+      {
+        "name": "Frozen Coral Hill",
+        "x": -1243,
+        "y": -1531
+      },
+      {
+        "name": "Foot of the Volcano",
+        "x": -364,
+        "y": -377
+      },
+      {
+        "name": "Mount Obsidian",
+        "x": -587,
+        "y": -484
+      }
+    ],
+    "overworld": {
+      "min": 35,
+      "max": 67
+    },
+    "dungeons": {
+      "names": [
+        "Volcanic Cavern"
+      ],
+      "min": 34,
+      "max": 36
+    },
+    "boss": null,
+    "worldTree": true
+  },
+  "Warsect": {
+    "day": [
+      {
+        "name": "Verdant Brook",
+        "x": 208,
+        "y": -13
+      },
+      {
+        "name": "Gobfin's Turf",
+        "x": 153,
+        "y": -173
+      }
+    ],
+    "night": [
+      {
+        "name": "Verdant Brook",
+        "x": 208,
+        "y": -13
+      },
+      {
+        "name": "Gobfin's Turf",
+        "x": 153,
+        "y": -173
+      }
+    ],
+    "overworld": {
+      "min": 34,
+      "max": 38
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Warsect_Terra": {
+    "day": [
+      {
+        "name": "Loess Plains",
+        "x": -902,
+        "y": -1416
+      },
+      {
+        "name": "Crystalized Ancient Tree",
+        "x": -982,
+        "y": -1165
+      }
+    ],
+    "night": [
+      {
+        "name": "Loess Plains",
+        "x": -902,
+        "y": -1416
+      },
+      {
+        "name": "Crystalized Ancient Tree",
+        "x": -982,
+        "y": -1165
+      }
+    ],
+    "overworld": {
+      "min": 53,
+      "max": 64
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Frostplume": {
+    "day": [
+      {
+        "name": "Farcry Marsh",
+        "x": -446,
+        "y": -1368
+      },
+      {
+        "name": "Crystalline Archipelago",
+        "x": -474,
+        "y": -1506
+      },
+      {
+        "name": "Enchanted Firmament",
+        "x": -358,
+        "y": -1511
+      }
+    ],
+    "night": [
+      {
+        "name": "Farcry Marsh",
+        "x": -446,
+        "y": -1368
+      },
+      {
+        "name": "Crystalline Archipelago",
+        "x": -474,
+        "y": -1506
+      },
+      {
+        "name": "Enchanted Firmament",
+        "x": -358,
+        "y": -1511
+      }
+    ],
+    "overworld": {
+      "min": 65,
+      "max": 68
+    },
+    "dungeons": {
+      "names": [
+        "Astral Mountains Cavern"
+      ],
+      "min": 39,
+      "max": 41
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Majex": {
+    "day": [
+      {
+        "name": "No. 2 Wildlife Sanctuary",
+        "x": -676,
+        "y": -111
+      }
+    ],
+    "night": [
+      {
+        "name": "No. 2 Wildlife Sanctuary",
+        "x": -676,
+        "y": -111
+      }
+    ],
+    "overworld": {
+      "min": 35,
+      "max": 77
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Sibelyx": {
+    "day": [
+      {
+        "name": "No. 1 Wildlife Sanctuary",
+        "x": -344,
+        "y": 270
+      },
+      {
+        "name": "Astral Mountains",
+        "x": -186,
+        "y": 396
+      }
+    ],
+    "night": [
+      {
+        "name": "No. 1 Wildlife Sanctuary",
+        "x": -344,
+        "y": 270
+      },
+      {
+        "name": "Astral Mountains",
+        "x": -186,
+        "y": 396
+      }
+    ],
+    "overworld": {
+      "min": 36,
+      "max": 39
+    },
+    "dungeons": {
+      "names": [
+        "Astral Mountains Cavern"
+      ],
+      "min": 38,
+      "max": 42
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Sibelyx_Primo": {
+    "day": null,
+    "night": null,
+    "overworld": {
+      "min": 75,
+      "max": 78
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Maraith": {
+    "day": null,
+    "night": [
+      {
+        "name": "Foot of the Astral Mountains",
+        "x": -96,
+        "y": 197
+      },
+      {
+        "name": "No. 1 Wildlife Sanctuary",
+        "x": -344,
+        "y": 270
+      },
+      {
+        "name": "Astral Mountains",
+        "x": -186,
+        "y": 396
+      }
+    ],
+    "overworld": {
+      "min": 40,
+      "max": 59
+    },
+    "dungeons": {
+      "names": [
+        "Astral Mountains Cavern",
+        "Cherry Blossom Cave"
+      ],
+      "min": 38,
+      "max": 50
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Shroomer": {
+    "day": [
+      {
+        "name": "Sakurajima - Mushroom Wetlands",
+        "x": -416,
+        "y": 163
+      }
+    ],
+    "night": [
+      {
+        "name": "Sakurajima - Mushroom Wetlands",
+        "x": -416,
+        "y": 163
+      }
+    ],
+    "overworld": {
+      "min": 47,
+      "max": 77
+    },
+    "dungeons": {
+      "names": [
+        "Cherry Blossom Cave"
+      ],
+      "min": 39,
+      "max": 45
+    },
+    "boss": null,
+    "worldTree": true
+  },
+  "Shroomer_Noct": {
+    "day": [
+      {
+        "name": "Frozen Coral Hill",
+        "x": -1243,
+        "y": -1531
+      },
+      {
+        "name": "Sakurajima - Mushroom Wetlands",
+        "x": -416,
+        "y": 163
+      }
+    ],
+    "night": [
+      {
+        "name": "Frozen Coral Hill",
+        "x": -1243,
+        "y": -1531
+      },
+      {
+        "name": "Sakurajima - Mushroom Wetlands",
+        "x": -416,
+        "y": 163
+      }
+    ],
+    "overworld": {
+      "min": 47,
+      "max": 77
+    },
+    "dungeons": {
+      "names": [
+        "Cherry Blossom Cave"
+      ],
+      "min": 39,
+      "max": 45
+    },
+    "boss": null,
+    "worldTree": true
+  },
+  "Icelyn": {
+    "day": [
+      {
+        "name": "Astral Mountains",
+        "x": -186,
+        "y": 396
+      }
+    ],
+    "night": [
+      {
+        "name": "Astral Mountains",
+        "x": -186,
+        "y": 396
+      }
+    ],
+    "overworld": {
+      "min": 45,
+      "max": 48
+    },
+    "dungeons": {
+      "names": [],
+      "min": 42,
+      "max": 44
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Gildra": {
+    "day": [
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      },
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Isle of the Glacial Core",
+        "x": 143,
+        "y": 655
+      }
+    ],
+    "night": [
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      },
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Isle of the Glacial Core",
+        "x": 143,
+        "y": 655
+      }
+    ],
+    "overworld": {
+      "min": 39,
+      "max": 44
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Jormuntide": {
+    "day": null,
+    "night": null,
+    "overworld": null,
+    "dungeons": null,
+    "boss": {
+      "name": "Scars of War",
+      "x": 350,
+      "y": -85,
+      "lv": 55
+    },
+    "worldTree": true
+  },
+  "Jormuntide_Ignis": {
+    "day": [
+      {
+        "name": "Emberstone Plateau",
+        "x": -790,
+        "y": -1235
+      }
+    ],
+    "night": [
+      {
+        "name": "Emberstone Plateau",
+        "x": -790,
+        "y": -1235
+      }
+    ],
+    "overworld": {
+      "min": 66,
+      "max": 67
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Suzaku": {
+    "day": [
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Arena",
+        "x": 633,
+        "y": 18
+      },
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      }
+    ],
+    "night": [
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Arena",
+        "x": 633,
+        "y": 18
+      },
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      }
+    ],
+    "overworld": null,
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Suzaku_Aqua": {
+    "day": [
+      {
+        "name": "Farcry Marsh",
+        "x": -446,
+        "y": -1368
+      },
+      {
+        "name": "Crystalline Archipelago",
+        "x": -474,
+        "y": -1506
+      }
+    ],
+    "night": [
+      {
+        "name": "Farcry Marsh",
+        "x": -446,
+        "y": -1368
+      },
+      {
+        "name": "Crystalline Archipelago",
+        "x": -474,
+        "y": -1506
+      }
+    ],
+    "overworld": {
+      "min": 68,
+      "max": 69
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Dazemu": {
+    "day": [
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      },
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Sakurajima - Northern Rock Field",
+        "x": -571,
+        "y": 332
+      }
+    ],
+    "night": [
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      },
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Sakurajima - Northern Rock Field",
+        "x": -571,
+        "y": 332
+      }
+    ],
+    "overworld": {
+      "min": 31,
+      "max": 48
+    },
+    "dungeons": {
+      "names": [
+        "Cherry Blossom Cave"
+      ],
+      "min": 40,
+      "max": 45
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Quivern": {
+    "day": [
+      {
+        "name": "Enchanted Firmament",
+        "x": -358,
+        "y": -1511
+      },
+      {
+        "name": "No. 1 Wildlife Sanctuary",
+        "x": -344,
+        "y": 270
+      },
+      {
+        "name": "Astral Mountains",
+        "x": -186,
+        "y": 396
+      }
+    ],
+    "night": [
+      {
+        "name": "Enchanted Firmament",
+        "x": -358,
+        "y": -1511
+      },
+      {
+        "name": "No. 1 Wildlife Sanctuary",
+        "x": -344,
+        "y": 270
+      },
+      {
+        "name": "Astral Mountains",
+        "x": -186,
+        "y": 396
+      }
+    ],
+    "overworld": {
+      "min": 40,
+      "max": 59
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Quivern_Botan": {
+    "day": [
+      {
+        "name": "Dancing Sakura Shrine",
+        "x": -636,
+        "y": 253
+      },
+      {
+        "name": "Sakurajima - Northern Rock Field",
+        "x": -571,
+        "y": 332
+      },
+      {
+        "name": "Sakurajima - Mushroom Wetlands",
+        "x": -416,
+        "y": 163
+      }
+    ],
+    "night": [
+      {
+        "name": "Dancing Sakura Shrine",
+        "x": -636,
+        "y": 253
+      },
+      {
+        "name": "Sakurajima - Northern Rock Field",
+        "x": -571,
+        "y": 332
+      },
+      {
+        "name": "Sakurajima - Mushroom Wetlands",
+        "x": -416,
+        "y": 163
+      }
+    ],
+    "overworld": {
+      "min": 45,
+      "max": 55
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Lullu": {
+    "day": [
+      {
+        "name": "Dancing Sakura Shrine",
+        "x": -636,
+        "y": 253
+      },
+      {
+        "name": "Sakurajima - Northern Rock Field",
+        "x": -571,
+        "y": 332
+      }
+    ],
+    "night": [
+      {
+        "name": "Dancing Sakura Shrine",
+        "x": -636,
+        "y": 253
+      },
+      {
+        "name": "Sakurajima - Northern Rock Field",
+        "x": -571,
+        "y": 332
+      }
+    ],
+    "overworld": {
+      "min": 55,
+      "max": 57
+    },
+    "dungeons": {
+      "names": [
+        "Cherry Blossom Cave"
+      ],
+      "min": 40,
+      "max": 45
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Kikit": {
+    "day": [
+      {
+        "name": "Sakurajima - Southern Sandbar",
+        "x": -721,
+        "y": 115
+      }
+    ],
+    "night": [
+      {
+        "name": "Sakurajima - Southern Sandbar",
+        "x": -721,
+        "y": 115
+      }
+    ],
+    "overworld": {
+      "min": 46,
+      "max": 48
+    },
+    "dungeons": {
+      "names": [
+        "Cherry Blossom Cave"
+      ],
+      "min": 40,
+      "max": 45
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Yakumo": {
+    "day": [
+      {
+        "name": "Dancing Sakura Shrine",
+        "x": -636,
+        "y": 253
+      }
+    ],
+    "night": [
+      {
+        "name": "Dancing Sakura Shrine",
+        "x": -636,
+        "y": 253
+      }
+    ],
+    "overworld": {
+      "min": 53,
+      "max": 56
+    },
+    "dungeons": {
+      "names": [
+        "Cherry Blossom Cave"
+      ],
+      "min": 40,
+      "max": 45
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Skutlass": {
+    "day": [
+      {
+        "name": "Waterlily Gorge",
+        "x": -554,
+        "y": -1504
+      },
+      {
+        "name": "Farcry Marsh",
+        "x": -446,
+        "y": -1368
+      },
+      {
+        "name": "Twilight Dunes",
+        "x": -124,
+        "y": -100
+      }
+    ],
+    "night": [
+      {
+        "name": "Waterlily Gorge",
+        "x": -554,
+        "y": -1504
+      },
+      {
+        "name": "Farcry Marsh",
+        "x": -446,
+        "y": -1368
+      },
+      {
+        "name": "Twilight Dunes",
+        "x": -124,
+        "y": -100
+      }
+    ],
+    "overworld": {
+      "min": 30,
+      "max": 66
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Skutlass_Ignis": {
+    "day": [
+      {
+        "name": "Flamepulse Islet",
+        "x": 793,
+        "y": 455
+      }
+    ],
+    "night": [
+      {
+        "name": "Flamepulse Islet",
+        "x": 793,
+        "y": 455
+      }
+    ],
+    "overworld": {
+      "min": 40,
+      "max": 44
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Reptyro": {
+    "day": [
+      {
+        "name": "Ruined Fortress City",
+        "x": -601,
+        "y": -214
+      },
+      {
+        "name": "Mount Obsidian",
+        "x": -587,
+        "y": -484
+      },
+      {
+        "name": "Foot of the Volcano",
+        "x": -364,
+        "y": -377
+      }
+    ],
+    "night": [
+      {
+        "name": "Ruined Fortress City",
+        "x": -601,
+        "y": -214
+      },
+      {
+        "name": "Mount Obsidian",
+        "x": -587,
+        "y": -484
+      },
+      {
+        "name": "Foot of the Volcano",
+        "x": -364,
+        "y": -377
+      }
+    ],
+    "overworld": {
+      "min": 46,
+      "max": 48
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Reptyro_Cryst": {
+    "day": [
+      {
+        "name": "Frozen Coral Hill",
+        "x": -1243,
+        "y": -1531
+      },
+      {
+        "name": "Astral Mountains",
+        "x": -186,
+        "y": 396
+      }
+    ],
+    "night": [
+      {
+        "name": "Frozen Coral Hill",
+        "x": -1243,
+        "y": -1531
+      },
+      {
+        "name": "Astral Mountains",
+        "x": -186,
+        "y": 396
+      }
+    ],
+    "overworld": {
+      "min": 48,
+      "max": 67
+    },
+    "dungeons": {
+      "names": [
+        "Astral Mountains Cavern"
+      ],
+      "min": 42,
+      "max": 44
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Starryon": {
+    "day": [
+      {
+        "name": "Emberstone Plateau",
+        "x": -790,
+        "y": -1235
+      }
+    ],
+    "night": [
+      {
+        "name": "Loess Plains",
+        "x": -902,
+        "y": -1416
+      },
+      {
+        "name": "Emberstone Plateau",
+        "x": -790,
+        "y": -1235
+      },
+      {
+        "name": "Crystalized Ancient Tree",
+        "x": -982,
+        "y": -1165
+      }
+    ],
+    "overworld": {
+      "min": 50,
+      "max": 67
+    },
+    "dungeons": {
+      "names": [
+        "Feybreak Cavern"
+      ],
+      "min": 42,
+      "max": 54
+    },
+    "boss": null,
+    "worldTree": true
+  },
+  "Starryon_Primo": {
+    "day": null,
+    "night": null,
+    "overworld": {
+      "min": 74,
+      "max": 76
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Pierdon": {
+    "day": [
+      {
+        "name": "Flamepulse Islet",
+        "x": 793,
+        "y": 455
+      }
+    ],
+    "night": [
+      {
+        "name": "Flamepulse Islet",
+        "x": 793,
+        "y": 455
+      }
+    ],
+    "overworld": {
+      "min": 42,
+      "max": 46
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Pierdon_Cryst": {
+    "day": [
+      {
+        "name": "Farcry Marsh",
+        "x": -446,
+        "y": -1368
+      },
+      {
+        "name": "Crystalline Archipelago",
+        "x": -474,
+        "y": -1506
+      }
+    ],
+    "night": [
+      {
+        "name": "Farcry Marsh",
+        "x": -446,
+        "y": -1368
+      },
+      {
+        "name": "Crystalline Archipelago",
+        "x": -474,
+        "y": -1506
+      }
+    ],
+    "overworld": {
+      "min": 68,
+      "max": 69
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Cryolinx": {
+    "day": [
+      {
+        "name": "Astral Mountains",
+        "x": -186,
+        "y": 396
+      }
+    ],
+    "night": [
+      {
+        "name": "Astral Mountains",
+        "x": -186,
+        "y": 396
+      }
+    ],
+    "overworld": {
+      "min": 44,
+      "max": 49
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Cryolinx_Terra": {
+    "day": [
+      {
+        "name": "Deserted Ash Plateau",
+        "x": -1300,
+        "y": -1198
+      }
+    ],
+    "night": [
+      {
+        "name": "Deserted Ash Plateau",
+        "x": -1300,
+        "y": -1198
+      }
+    ],
+    "overworld": {
+      "min": 62,
+      "max": 64
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Snugloo": {
+    "day": [
+      {
+        "name": "Frostbound Mountains",
+        "x": 199,
+        "y": 57
+      }
+    ],
+    "night": [
+      {
+        "name": "Frostbound Mountains",
+        "x": 199,
+        "y": 57
+      }
+    ],
+    "overworld": {
+      "min": 32,
+      "max": 34
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Wumpo": {
+    "day": [
+      {
+        "name": "Astral Mountains",
+        "x": -186,
+        "y": 396
+      }
+    ],
+    "night": [
+      {
+        "name": "Astral Mountains",
+        "x": -186,
+        "y": 396
+      }
+    ],
+    "overworld": {
+      "min": 45,
+      "max": 52
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Wumpo_Botan": {
+    "day": [
+      {
+        "name": "Dancing Sakura Shrine",
+        "x": -636,
+        "y": 253
+      },
+      {
+        "name": "Sakurajima - Southern Sandbar",
+        "x": -721,
+        "y": 115
+      },
+      {
+        "name": "Sakurajima - Northern Rock Field",
+        "x": -571,
+        "y": 332
+      }
+    ],
+    "night": [
+      {
+        "name": "Dancing Sakura Shrine",
+        "x": -636,
+        "y": 253
+      },
+      {
+        "name": "Sakurajima - Southern Sandbar",
+        "x": -721,
+        "y": 115
+      },
+      {
+        "name": "Sakurajima - Northern Rock Field",
+        "x": -571,
+        "y": 332
+      }
+    ],
+    "overworld": {
+      "min": 53,
+      "max": 55
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Sootseer": {
+    "day": [
+      {
+        "name": "No. 2 Wildlife Sanctuary",
+        "x": -676,
+        "y": -111
+      }
+    ],
+    "night": [
+      {
+        "name": "Frozen Coral Hill",
+        "x": -1243,
+        "y": -1531
+      },
+      {
+        "name": "Dancing Sakura Shrine",
+        "x": -636,
+        "y": 253
+      },
+      {
+        "name": "Sakurajima - Northern Rock Field",
+        "x": -571,
+        "y": 332
+      }
+    ],
+    "overworld": {
+      "min": 45,
+      "max": 67
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Carnibora": {
+    "day": [
+      {
+        "name": "No. 3 Wildlife Sanctuary",
+        "x": 663,
+        "y": 634
+      }
+    ],
+    "night": [
+      {
+        "name": "No. 3 Wildlife Sanctuary",
+        "x": 663,
+        "y": 634
+      }
+    ],
+    "overworld": {
+      "min": 45,
+      "max": 48
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Blazamut": {
+    "day": [
+      {
+        "name": "Flamepulse Islet",
+        "x": 793,
+        "y": 455
+      }
+    ],
+    "night": [
+      {
+        "name": "Flamepulse Islet",
+        "x": 793,
+        "y": 455
+      }
+    ],
+    "overworld": {
+      "min": 46,
+      "max": 50
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Dualith": {
+    "day": [
+      {
+        "name": "Foot of the Astral Mountains",
+        "x": -96,
+        "y": 197
+      }
+    ],
+    "night": [
+      {
+        "name": "Foot of the Astral Mountains",
+        "x": -96,
+        "y": 197
+      }
+    ],
+    "overworld": {
+      "min": 46,
+      "max": 75
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Dualith_Noct": {
+    "day": null,
+    "night": null,
+    "overworld": {
+      "min": 75,
+      "max": 77
+    },
+    "dungeons": null,
+    "boss": {
+      "name": "Glacial Memento Islet",
+      "x": -1694,
+      "y": -948,
+      "lv": 70
+    },
+    "worldTree": true
+  },
+  "Anubis": {
+    "day": [
+      {
+        "name": "Sandstone Gate Islet",
+        "x": -1273,
+        "y": -615
+      }
+    ],
+    "night": [
+      {
+        "name": "Sandstone Gate Islet",
+        "x": -1273,
+        "y": -615
+      }
+    ],
+    "overworld": {
+      "min": 68,
+      "max": 72
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Sekhmet": {
+    "day": [
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      },
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Isle of the Glacial Core",
+        "x": 143,
+        "y": 655
+      }
+    ],
+    "night": [
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      },
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Isle of the Glacial Core",
+        "x": 143,
+        "y": 655
+      }
+    ],
+    "overworld": {
+      "min": 37,
+      "max": 68
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Prixter": {
+    "day": [
+      {
+        "name": "Sakurajima - Southern Sandbar",
+        "x": -721,
+        "y": 115
+      }
+    ],
+    "night": [
+      {
+        "name": "Sakurajima - Southern Sandbar",
+        "x": -721,
+        "y": 115
+      }
+    ],
+    "overworld": {
+      "min": 48,
+      "max": 49
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Prixter_Lux": {
+    "day": [
+      {
+        "name": "Sandstone Gate Islet",
+        "x": -1273,
+        "y": -615
+      }
+    ],
+    "night": [
+      {
+        "name": "Sandstone Gate Islet",
+        "x": -1273,
+        "y": -615
+      }
+    ],
+    "overworld": {
+      "min": 65,
+      "max": 68
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Tetroise": {
+    "day": [
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      },
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Isle of the Glacial Core",
+        "x": 143,
+        "y": 655
+      }
+    ],
+    "night": [
+      {
+        "name": "Duneshelter",
+        "x": 349,
+        "y": 353
+      },
+      {
+        "name": "Desiccated Dunes",
+        "x": 471,
+        "y": 377
+      },
+      {
+        "name": "Isle of the Glacial Core",
+        "x": 143,
+        "y": 655
+      }
+    ],
+    "overworld": {
+      "min": 48,
+      "max": 52
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Tetroise_Primo": {
+    "day": null,
+    "night": null,
+    "overworld": {
+      "min": 76,
+      "max": 78
+    },
+    "dungeons": null,
+    "boss": {
+      "name": "Hidden Passage to the Oculus Gate",
+      "x": -1082,
+      "y": -1320,
+      "lv": 60
+    },
+    "worldTree": true
+  },
+  "Nyafia": {
+    "day": [
+      {
+        "name": "Stone Pillar Cave",
+        "x": -908,
+        "y": -1093
+      },
+      {
+        "name": "Scorched Ashland",
+        "x": -805,
+        "y": -954
+      },
+      {
+        "name": "Withered Seaside",
+        "x": -709,
+        "y": -1103
+      }
+    ],
+    "night": [
+      {
+        "name": "Stone Pillar Cave",
+        "x": -908,
+        "y": -1093
+      },
+      {
+        "name": "Scorched Ashland",
+        "x": -805,
+        "y": -954
+      },
+      {
+        "name": "Withered Seaside",
+        "x": -709,
+        "y": -1103
+      }
+    ],
+    "overworld": {
+      "min": 50,
+      "max": 58
+    },
+    "dungeons": {
+      "names": [
+        "Feybreak Cavern"
+      ],
+      "min": 52,
+      "max": 56
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Mimog": {
+    "day": [
+      {
+        "name": "Deserted Ash Plateau",
+        "x": -1300,
+        "y": -1198
+      }
+    ],
+    "night": [
+      {
+        "name": "Deserted Ash Plateau",
+        "x": -1300,
+        "y": -1198
+      }
+    ],
+    "overworld": {
+      "min": 10,
+      "max": 78
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Xenovader": {
+    "day": [
+      {
+        "name": "Rayne Syndicate Platform Oil Rig",
+        "x": -1722,
+        "y": -1462
+      }
+    ],
+    "night": [
+      {
+        "name": "Rayne Syndicate Platform Oil Rig",
+        "x": -1722,
+        "y": -1462
+      }
+    ],
+    "overworld": null,
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Prunelia": {
+    "day": [
+      {
+        "name": "Scorched Hill",
+        "x": -1041,
+        "y": -1139
+      },
+      {
+        "name": "Loess Plains",
+        "x": -902,
+        "y": -1416
+      },
+      {
+        "name": "Hidden Passage to the Oculus Gate",
+        "x": -1079,
+        "y": -1283
+      }
+    ],
+    "night": [
+      {
+        "name": "Scorched Hill",
+        "x": -1041,
+        "y": -1139
+      },
+      {
+        "name": "Loess Plains",
+        "x": -902,
+        "y": -1416
+      },
+      {
+        "name": "Hidden Passage to the Oculus Gate",
+        "x": -1079,
+        "y": -1283
+      }
+    ],
+    "overworld": {
+      "min": 52,
+      "max": 66
+    },
+    "dungeons": {
+      "names": [
+        "Feybreak Cavern"
+      ],
+      "min": 50,
+      "max": 55
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Nitemary": {
+    "day": [
+      {
+        "name": "The Oculus Gate, Tower in Sight",
+        "x": -1115,
+        "y": -1355
+      },
+      {
+        "name": "Frozen Coral Hill",
+        "x": -1243,
+        "y": -1531
+      },
+      {
+        "name": "Feybreak Shipwreck",
+        "x": -1417,
+        "y": -1450
+      }
+    ],
+    "night": [
+      {
+        "name": "The Oculus Gate, Tower in Sight",
+        "x": -1115,
+        "y": -1355
+      },
+      {
+        "name": "Frozen Coral Hill",
+        "x": -1243,
+        "y": -1531
+      },
+      {
+        "name": "Feybreak Shipwreck",
+        "x": -1417,
+        "y": -1450
+      }
+    ],
+    "overworld": {
+      "min": 65,
+      "max": 67
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Nitemary_Botan": {
+    "day": [
+      {
+        "name": "Islet of Circular Ruins",
+        "x": 907,
+        "y": -98
+      }
+    ],
+    "night": [
+      {
+        "name": "Islet of Circular Ruins",
+        "x": 907,
+        "y": -98
+      }
+    ],
+    "overworld": {
+      "min": 50,
+      "max": 54
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Smokie": {
+    "day": [
+      {
+        "name": "Deserted Ash Plateau",
+        "x": -1300,
+        "y": -1198
+      },
+      {
+        "name": "Scorched Ashland",
+        "x": -805,
+        "y": -954
+      },
+      {
+        "name": "Scorched Hill",
+        "x": -1041,
+        "y": -1139
+      }
+    ],
+    "night": [
+      {
+        "name": "Deserted Ash Plateau",
+        "x": -1300,
+        "y": -1198
+      },
+      {
+        "name": "Scorched Ashland",
+        "x": -805,
+        "y": -954
+      },
+      {
+        "name": "Scorched Hill",
+        "x": -1041,
+        "y": -1139
+      }
+    ],
+    "overworld": {
+      "min": 50,
+      "max": 66
+    },
+    "dungeons": {
+      "names": [
+        "Feybreak Cavern"
+      ],
+      "min": 50,
+      "max": 55
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Smokie_Cryst": {
+    "day": [
+      {
+        "name": "Glacial Memento Islet",
+        "x": -1695,
+        "y": -949
+      }
+    ],
+    "night": [
+      {
+        "name": "Glacial Memento Islet",
+        "x": -1695,
+        "y": -949
+      }
+    ],
+    "overworld": {
+      "min": 62,
+      "max": 64
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Omascul": {
+    "day": [
+      {
+        "name": "Deserted Ash Plateau",
+        "x": -1300,
+        "y": -1198
+      },
+      {
+        "name": "Scorched Ashland",
+        "x": -805,
+        "y": -954
+      },
+      {
+        "name": "Scorched Hill",
+        "x": -1041,
+        "y": -1139
+      }
+    ],
+    "night": [
+      {
+        "name": "Deserted Ash Plateau",
+        "x": -1300,
+        "y": -1198
+      },
+      {
+        "name": "Scorched Ashland",
+        "x": -805,
+        "y": -954
+      },
+      {
+        "name": "Scorched Hill",
+        "x": -1041,
+        "y": -1139
+      }
+    ],
+    "overworld": {
+      "min": 50,
+      "max": 66
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Whalaska": {
+    "day": [
+      {
+        "name": "Frozen Coral Hill",
+        "x": -1243,
+        "y": -1531
+      },
+      {
+        "name": "Feybreak Shipwreck",
+        "x": -1417,
+        "y": -1450
+      },
+      {
+        "name": "Isle of the Glacial Core",
+        "x": 143,
+        "y": 655
+      }
+    ],
+    "night": [
+      {
+        "name": "Isle of the Glacial Core",
+        "x": 143,
+        "y": 655
+      }
+    ],
+    "overworld": {
+      "min": 50,
+      "max": 60
+    },
+    "dungeons": {
+      "names": [
+        "Astral Mountains Cavern"
+      ],
+      "min": 42,
+      "max": 44
+    },
+    "boss": null,
+    "worldTree": true
+  },
+  "Whalaska_Ignis": {
+    "day": null,
+    "night": null,
+    "overworld": {
+      "min": 71,
+      "max": 73
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Verdash": {
+    "day": [
+      {
+        "name": "Dancing Sakura Shrine",
+        "x": -636,
+        "y": 253
+      },
+      {
+        "name": "Sakurajima - Southern Sandbar",
+        "x": -721,
+        "y": 115
+      },
+      {
+        "name": "Sakurajima - Northern Rock Field",
+        "x": -571,
+        "y": 332
+      }
+    ],
+    "night": [
+      {
+        "name": "Dancing Sakura Shrine",
+        "x": -636,
+        "y": 253
+      },
+      {
+        "name": "Sakurajima - Southern Sandbar",
+        "x": -721,
+        "y": 115
+      },
+      {
+        "name": "Sakurajima - Northern Rock Field",
+        "x": -571,
+        "y": 332
+      }
+    ],
+    "overworld": {
+      "min": 52,
+      "max": 53
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Splatterina": {
+    "day": null,
+    "night": [
+      {
+        "name": "Scorched Hill",
+        "x": -1041,
+        "y": -1139
+      },
+      {
+        "name": "Stone Pillar Cave",
+        "x": -908,
+        "y": -1093
+      }
+    ],
+    "overworld": {
+      "min": 56,
+      "max": 66
+    },
+    "dungeons": {
+      "names": [
+        "Feybreak Cavern"
+      ],
+      "min": 52,
+      "max": 56
+    },
+    "boss": null,
+    "worldTree": true
+  },
+  "Gildane": {
+    "day": [
+      {
+        "name": "Loess Plains",
+        "x": -902,
+        "y": -1416
+      },
+      {
+        "name": "Hidden Passage to the Oculus Gate",
+        "x": -1079,
+        "y": -1283
+      },
+      {
+        "name": "The Oculus Gate, Tower in Sight",
+        "x": -1115,
+        "y": -1355
+      }
+    ],
+    "night": [
+      {
+        "name": "Loess Plains",
+        "x": -902,
+        "y": -1416
+      },
+      {
+        "name": "Hidden Passage to the Oculus Gate",
+        "x": -1079,
+        "y": -1283
+      },
+      {
+        "name": "The Oculus Gate, Tower in Sight",
+        "x": -1115,
+        "y": -1355
+      }
+    ],
+    "overworld": {
+      "min": 53,
+      "max": 66
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Dogen": {
+    "day": [
+      {
+        "name": "Dancing Sakura Shrine",
+        "x": -636,
+        "y": 253
+      }
+    ],
+    "night": [
+      {
+        "name": "Dancing Sakura Shrine",
+        "x": -636,
+        "y": 253
+      }
+    ],
+    "overworld": {
+      "min": 53,
+      "max": 56
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Bulldosu": {
+    "day": [
+      {
+        "name": "Dancing Sakura Shrine",
+        "x": -636,
+        "y": 253
+      }
+    ],
+    "night": [
+      {
+        "name": "Dancing Sakura Shrine",
+        "x": -636,
+        "y": 253
+      }
+    ],
+    "overworld": {
+      "min": 53,
+      "max": 56
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Celesdir": {
+    "day": [
+      {
+        "name": "Deserted Ash Plateau",
+        "x": -1300,
+        "y": -1198
+      },
+      {
+        "name": "Scorched Ashland",
+        "x": -805,
+        "y": -954
+      },
+      {
+        "name": "Scorched Hill",
+        "x": -1041,
+        "y": -1139
+      }
+    ],
+    "night": [
+      {
+        "name": "Deserted Ash Plateau",
+        "x": -1300,
+        "y": -1198
+      },
+      {
+        "name": "Scorched Ashland",
+        "x": -805,
+        "y": -954
+      },
+      {
+        "name": "Scorched Hill",
+        "x": -1041,
+        "y": -1139
+      }
+    ],
+    "overworld": {
+      "min": 54,
+      "max": 68
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Astegon": {
+    "day": null,
+    "night": null,
+    "overworld": null,
+    "dungeons": null,
+    "boss": {
+      "name": "No. 2 Wildlife Sanctuary",
+      "x": -689,
+      "y": -110,
+      "lv": 55
+    },
+    "worldTree": true
+  },
+  "Knocklem": {
+    "day": [
+      {
+        "name": "No. 3 Wildlife Sanctuary",
+        "x": 663,
+        "y": 634
+      }
+    ],
+    "night": [
+      {
+        "name": "No. 3 Wildlife Sanctuary",
+        "x": 663,
+        "y": 634
+      }
+    ],
+    "overworld": {
+      "min": 55,
+      "max": 73
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Knocklem_Ignis": {
+    "day": [
+      {
+        "name": "Bicornis Islet",
+        "x": -1170,
+        "y": -1939
+      }
+    ],
+    "night": [
+      {
+        "name": "Bicornis Islet",
+        "x": -1170,
+        "y": -1939
+      }
+    ],
+    "overworld": {
+      "min": 65,
+      "max": 73
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Silvegis": {
+    "day": null,
+    "night": null,
+    "overworld": null,
+    "dungeons": null,
+    "boss": {
+      "name": "Stone Pillar Cave",
+      "x": -985,
+      "y": -1023,
+      "lv": 62
+    },
+    "worldTree": true
+  },
+  "Azurmane": {
+    "day": [
+      {
+        "name": "Frozen Coral Hill",
+        "x": -1243,
+        "y": -1531
+      }
+    ],
+    "night": [
+      {
+        "name": "Frozen Coral Hill",
+        "x": -1243,
+        "y": -1531
+      }
+    ],
+    "overworld": {
+      "min": 63,
+      "max": 66
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Valentail": {
+    "day": [
+      {
+        "name": "Enchanted Firmament",
+        "x": -358,
+        "y": -1511
+      }
+    ],
+    "night": [
+      {
+        "name": "Enchanted Firmament",
+        "x": -358,
+        "y": -1511
+      }
+    ],
+    "overworld": {
+      "min": 64,
+      "max": 65
+    },
+    "dungeons": {
+      "names": [
+        "Sunreach Skies"
+      ],
+      "min": 63,
+      "max": 64
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Snock": {
+    "day": [
+      {
+        "name": "Enchanted Firmament",
+        "x": -358,
+        "y": -1511
+      },
+      {
+        "name": "Farcry Marsh",
+        "x": -446,
+        "y": -1368
+      }
+    ],
+    "night": [
+      {
+        "name": "Enchanted Firmament",
+        "x": -358,
+        "y": -1511
+      },
+      {
+        "name": "Farcry Marsh",
+        "x": -446,
+        "y": -1368
+      }
+    ],
+    "overworld": {
+      "min": 64,
+      "max": 65
+    },
+    "dungeons": {
+      "names": [
+        "Sunreach Skies"
+      ],
+      "min": 63,
+      "max": 64
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Snock_Lux": {
+    "day": null,
+    "night": null,
+    "overworld": {
+      "min": 74,
+      "max": 76
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Souffline": {
+    "day": [
+      {
+        "name": "Enchanted Firmament",
+        "x": -358,
+        "y": -1511
+      }
+    ],
+    "night": [
+      {
+        "name": "Enchanted Firmament",
+        "x": -358,
+        "y": -1511
+      }
+    ],
+    "overworld": {
+      "min": 64,
+      "max": 65
+    },
+    "dungeons": {
+      "names": [
+        "Sunreach Skies"
+      ],
+      "min": 63,
+      "max": 69
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Lapiron": {
+    "day": [
+      {
+        "name": "Azure Woodland",
+        "x": -325,
+        "y": -1332
+      }
+    ],
+    "night": [
+      {
+        "name": "Azure Woodland",
+        "x": -325,
+        "y": -1332
+      }
+    ],
+    "overworld": {
+      "min": 65,
+      "max": 66
+    },
+    "dungeons": {
+      "names": [
+        "Sunreach Skies"
+      ],
+      "min": 63,
+      "max": 64
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Hoodle": {
+    "day": [
+      {
+        "name": "Azure Woodland",
+        "x": -325,
+        "y": -1332
+      }
+    ],
+    "night": [
+      {
+        "name": "Enchanted Firmament",
+        "x": -358,
+        "y": -1511
+      },
+      {
+        "name": "Azure Woodland",
+        "x": -325,
+        "y": -1332
+      },
+      {
+        "name": "Waterlily Gorge",
+        "x": -554,
+        "y": -1504
+      }
+    ],
+    "overworld": {
+      "min": 65,
+      "max": 66
+    },
+    "dungeons": {
+      "names": [
+        "Sunreach Skies"
+      ],
+      "min": 65,
+      "max": 69
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Slowatt": {
+    "day": [
+      {
+        "name": "Azure Woodland",
+        "x": -325,
+        "y": -1332
+      }
+    ],
+    "night": [
+      {
+        "name": "Azure Woodland",
+        "x": -325,
+        "y": -1332
+      }
+    ],
+    "overworld": {
+      "min": 65,
+      "max": 66
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Bakemi": {
+    "day": [
+      {
+        "name": "Azure Woodland",
+        "x": -325,
+        "y": -1332
+      }
+    ],
+    "night": [
+      {
+        "name": "Enchanted Firmament",
+        "x": -358,
+        "y": -1511
+      },
+      {
+        "name": "Azure Woodland",
+        "x": -325,
+        "y": -1332
+      },
+      {
+        "name": "Waterlily Gorge",
+        "x": -554,
+        "y": -1504
+      }
+    ],
+    "overworld": {
+      "min": 65,
+      "max": 66
+    },
+    "dungeons": {
+      "names": [
+        "Sunreach Skies"
+      ],
+      "min": 65,
+      "max": 69
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Solmora": {
+    "day": [
+      {
+        "name": "Waterlily Gorge",
+        "x": -554,
+        "y": -1504
+      },
+      {
+        "name": "Farcry Marsh",
+        "x": -446,
+        "y": -1368
+      },
+      {
+        "name": "Enchanted Firmament",
+        "x": -358,
+        "y": -1511
+      }
+    ],
+    "night": [
+      {
+        "name": "Waterlily Gorge",
+        "x": -554,
+        "y": -1504
+      },
+      {
+        "name": "Farcry Marsh",
+        "x": -446,
+        "y": -1368
+      },
+      {
+        "name": "Enchanted Firmament",
+        "x": -358,
+        "y": -1511
+      }
+    ],
+    "overworld": {
+      "min": 66,
+      "max": 67
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": false
+  },
+  "Solmora_Lux": {
+    "day": [
+      {
+        "name": "Waterlily Gorge",
+        "x": -554,
+        "y": -1504
+      },
+      {
+        "name": "Enchanted Firmament",
+        "x": -358,
+        "y": -1511
+      }
+    ],
+    "night": [
+      {
+        "name": "Waterlily Gorge",
+        "x": -554,
+        "y": -1504
+      },
+      {
+        "name": "Enchanted Firmament",
+        "x": -358,
+        "y": -1511
+      }
+    ],
+    "overworld": {
+      "min": 76,
+      "max": 78
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Lapure": {
+    "day": [
+      {
+        "name": "Enchanted Firmament",
+        "x": -358,
+        "y": -1511
+      },
+      {
+        "name": "Crystalline Archipelago",
+        "x": -474,
+        "y": -1506
+      }
+    ],
+    "night": [
+      {
+        "name": "Enchanted Firmament",
+        "x": -358,
+        "y": -1511
+      },
+      {
+        "name": "Crystalline Archipelago",
+        "x": -474,
+        "y": -1506
+      }
+    ],
+    "overworld": {
+      "min": 65,
+      "max": 66
+    },
+    "dungeons": {
+      "names": [
+        "Sunreach Skies"
+      ],
+      "min": 65,
+      "max": 69
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Eidrolon": {
+    "day": null,
+    "night": null,
+    "overworld": null,
+    "dungeons": {
+      "names": [
+        "Sunreach Skies"
+      ],
+      "min": 65,
+      "max": 69
+    },
+    "boss": {
+      "name": "Crystalline Archipelago",
+      "x": -489,
+      "y": -1521,
+      "lv": 69
+    },
+    "worldTree": true
+  },
+  "Eidrolon_Ignis": {
+    "day": null,
+    "night": null,
+    "overworld": {
+      "min": 75,
+      "max": 77
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Dynamoff": {
+    "day": [
+      {
+        "name": "Waterlily Gorge",
+        "x": -554,
+        "y": -1504
+      }
+    ],
+    "night": [
+      {
+        "name": "Waterlily Gorge",
+        "x": -554,
+        "y": -1504
+      }
+    ],
+    "overworld": {
+      "min": 66,
+      "max": 67
+    },
+    "dungeons": {
+      "names": [
+        "Sunreach Skies"
+      ],
+      "min": 63,
+      "max": 64
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Tropicaw": {
+    "day": [
+      {
+        "name": "Farcry Marsh",
+        "x": -446,
+        "y": -1368
+      },
+      {
+        "name": "Crystalline Archipelago",
+        "x": -474,
+        "y": -1506
+      }
+    ],
+    "night": [
+      {
+        "name": "Farcry Marsh",
+        "x": -446,
+        "y": -1368
+      },
+      {
+        "name": "Crystalline Archipelago",
+        "x": -474,
+        "y": -1506
+      }
+    ],
+    "overworld": {
+      "min": 66,
+      "max": 67
+    },
+    "dungeons": {
+      "names": [
+        "Sunreach Skies"
+      ],
+      "min": 63,
+      "max": 64
+    },
+    "boss": null,
+    "worldTree": false
+  },
+  "Flaracle": {
+    "day": null,
+    "night": null,
+    "overworld": {
+      "min": 75,
+      "max": 77
+    },
+    "dungeons": null,
+    "boss": {
+      "name": "Enchanted Firmament",
+      "x": -244,
+      "y": -1520,
+      "lv": 68
+    },
+    "worldTree": true
+  },
+  "Ophydia": {
+    "day": null,
+    "night": null,
+    "overworld": null,
+    "dungeons": null,
+    "boss": {
+      "name": "Waterlily Gorge",
+      "x": -590,
+      "y": -1478,
+      "lv": 69
+    },
+    "worldTree": true
+  },
+  "Dupin": {
+    "day": [
+      {
+        "name": "Sandstone Gate Islet",
+        "x": -1273,
+        "y": -615
+      }
+    ],
+    "night": [
+      {
+        "name": "Sandstone Gate Islet",
+        "x": -1273,
+        "y": -615
+      }
+    ],
+    "overworld": {
+      "min": 72,
+      "max": 74
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Roujay": {
+    "day": null,
+    "night": null,
+    "overworld": {
+      "min": 74,
+      "max": 78
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Venusa": {
+    "day": null,
+    "night": null,
+    "overworld": {
+      "min": 75,
+      "max": 77
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Mycora": {
+    "day": null,
+    "night": null,
+    "overworld": {
+      "min": 75,
+      "max": 77
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Loomen": {
+    "day": null,
+    "night": null,
+    "overworld": {
+      "min": 75,
+      "max": 77
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Wistella": {
+    "day": null,
+    "night": null,
+    "overworld": {
+      "min": 76,
+      "max": 78
+    },
+    "dungeons": null,
+    "boss": {
+      "name": "Azure Woodland",
+      "x": -232,
+      "y": -1415,
+      "lv": 66
+    },
+    "worldTree": true
+  },
+  "Solenne": {
+    "day": null,
+    "night": null,
+    "overworld": {
+      "min": 76,
+      "max": 78
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Renjishi": {
+    "day": null,
+    "night": null,
+    "overworld": null,
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Grizzbolt": {
+    "day": null,
+    "night": null,
+    "overworld": {
+      "min": 70,
+      "max": 72
+    },
+    "dungeons": null,
+    "boss": {
+      "name": "Flying Fish Coast",
+      "x": 56,
+      "y": -697,
+      "lv": 30
+    },
+    "worldTree": true
+  },
+  "Lyleen": {
+    "day": null,
+    "night": null,
+    "overworld": {
+      "min": 75,
+      "max": 77
+    },
+    "dungeons": null,
+    "boss": {
+      "name": "Dancing Sakura Shrine",
+      "x": -632,
+      "y": 302,
+      "lv": 58
+    },
+    "worldTree": true
+  },
+  "Lyleen_Noct": {
+    "day": null,
+    "night": null,
+    "overworld": {
+      "min": 75,
+      "max": 77
+    },
+    "dungeons": null,
+    "boss": {
+      "name": "Dancing Sakura Shrine",
+      "x": -628,
+      "y": 304,
+      "lv": 58
+    },
+    "worldTree": true
+  },
+  "Orserk": {
+    "day": null,
+    "night": null,
+    "overworld": {
+      "min": 74,
+      "max": 76
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Faleris": {
+    "day": null,
+    "night": null,
+    "overworld": {
+      "min": 76,
+      "max": 78
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Faleris_Aqua": {
+    "day": [
+      {
+        "name": "Frozen Coral Hill",
+        "x": -1243,
+        "y": -1531
+      },
+      {
+        "name": "Enchanted Firmament",
+        "x": -358,
+        "y": -1511
+      }
+    ],
+    "night": [
+      {
+        "name": "Frozen Coral Hill",
+        "x": -1243,
+        "y": -1531
+      },
+      {
+        "name": "Enchanted Firmament",
+        "x": -358,
+        "y": -1511
+      }
+    ],
+    "overworld": {
+      "min": 65,
+      "max": 78
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Shadowbeak": {
+    "day": [
+      {
+        "name": "No. 3 Wildlife Sanctuary",
+        "x": 663,
+        "y": 634
+      }
+    ],
+    "night": [
+      {
+        "name": "No. 3 Wildlife Sanctuary",
+        "x": 663,
+        "y": 634
+      }
+    ],
+    "overworld": {
+      "min": 50,
+      "max": 55
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Selyne": {
+    "day": null,
+    "night": null,
+    "overworld": {
+      "min": 76,
+      "max": 78
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Bastigor": {
+    "day": null,
+    "night": null,
+    "overworld": {
+      "min": 75,
+      "max": 77
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Shaolong": {
+    "day": null,
+    "night": null,
+    "overworld": {
+      "min": 76,
+      "max": 78
+    },
+    "dungeons": null,
+    "boss": null,
+    "worldTree": true
+  },
+  "Paladius": {
+    "day": null,
+    "night": null,
+    "overworld": null,
+    "dungeons": null,
+    "boss": {
+      "name": "No. 3 Wildlife Sanctuary",
+      "x": 440,
+      "y": 679,
+      "lv": 60
+    },
+    "worldTree": false
+  },
+  "Frostallion": {
+    "day": null,
+    "night": null,
+    "overworld": null,
+    "dungeons": null,
+    "boss": {
+      "name": "Astral Mountains",
+      "x": -357,
+      "y": 509,
+      "lv": 60
+    },
+    "worldTree": false
+  },
+  "Frostallion_Noct": {
+    "day": null,
+    "night": null,
+    "overworld": null,
+    "dungeons": null,
+    "boss": {
+      "name": "No. 3 Wildlife Sanctuary",
+      "x": 689,
+      "y": 648,
+      "lv": 65
+    },
+    "worldTree": false
+  },
+  "Neptilius": {
+    "day": null,
+    "night": null,
+    "overworld": null,
+    "dungeons": null,
+    "boss": {
+      "name": "Isle of the Glacial Core",
+      "x": 139,
+      "y": 651,
+      "lv": 60
+    },
+    "worldTree": false
+  },
+  "Jetragon": {
+    "day": null,
+    "night": null,
+    "overworld": null,
+    "dungeons": null,
+    "boss": {
+      "name": "Dragonmark Peak",
+      "x": -553,
+      "y": -1332,
+      "lv": 70
+    },
+    "worldTree": false
+  },
+  "Blue_Slime": {
+    "day": null,
+    "night": null,
+    "overworld": null,
+    "dungeons": {
+      "names": [],
+      "min": 33,
+      "max": 35
+    },
+    "boss": null,
+    "worldTree": true
+  },
+  "Cave_Bat": {
+    "day": null,
+    "night": null,
+    "overworld": null,
+    "dungeons": {
+      "names": [],
+      "min": 36,
+      "max": 41
+    },
+    "boss": null,
+    "worldTree": true
+  },
+  "Demon_Eye": {
+    "day": null,
+    "night": null,
+    "overworld": null,
+    "dungeons": {
+      "names": [],
+      "min": 33,
+      "max": 35
+    },
+    "boss": null,
+    "worldTree": true
+  },
+  "Enchanted_Sword": {
+    "day": null,
+    "night": null,
+    "overworld": null,
+    "dungeons": {
+      "names": [],
+      "min": 42,
+      "max": 44
+    },
+    "boss": null,
+    "worldTree": true
+  },
+  "Green_Slime": {
+    "day": null,
+    "night": null,
+    "overworld": null,
+    "dungeons": {
+      "names": [],
+      "min": 33,
+      "max": 35
+    },
+    "boss": null,
+    "worldTree": true
+  },
+  "Illuminant_Bat": {
+    "day": null,
+    "night": null,
+    "overworld": null,
+    "dungeons": {
+      "names": [],
+      "min": 42,
+      "max": 44
+    },
+    "boss": null,
+    "worldTree": true
+  },
+  "Illuminant_Slime": {
+    "day": null,
+    "night": null,
+    "overworld": null,
+    "dungeons": {
+      "names": [],
+      "min": 42,
+      "max": 44
+    },
+    "boss": null,
+    "worldTree": true
+  },
+  "Purple_Slime": {
+    "day": null,
+    "night": null,
+    "overworld": null,
+    "dungeons": {
+      "names": [],
+      "min": 36,
+      "max": 41
+    },
+    "boss": null,
+    "worldTree": true
+  },
+  "Rainbow_Slime": {
+    "day": null,
+    "night": null,
+    "overworld": null,
+    "dungeons": {
+      "names": [],
+      "min": 42,
+      "max": 44
+    },
+    "boss": null,
+    "worldTree": true
+  },
+  "Red_Slime": {
+    "day": null,
+    "night": null,
+    "overworld": null,
+    "dungeons": {
+      "names": [],
+      "min": 36,
+      "max": 41
+    },
+    "boss": null,
+    "worldTree": true
+  }
+}
