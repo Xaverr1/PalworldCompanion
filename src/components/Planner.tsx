@@ -4,11 +4,39 @@ import { useSavedSets } from "../hooks/useSavedSets";
 import { SET_LIMIT, resolveMembers, type PalSet } from "../lib/sets";
 import { BaseCoverage } from "./BaseCoverage";
 import { PartySummary } from "./PartySummary";
+import { PartyPlanner } from "./PartyPlanner";
 import { PalPicker } from "./PalPicker";
 import { PalDetail } from "./PalDetail";
 import { HumanAddSelect, HumanTile, HumanEditor } from "./HumanWorkers";
 
 export function Planner() {
+  const [mode, setMode] = useState<"party" | "base">("party");
+  return (
+    <div className="plannerwrap">
+      <div className="plannerwrap__modes" role="tablist">
+        <button
+          role="tab"
+          aria-selected={mode === "party"}
+          className={`modebtn ${mode === "party" ? "is-active" : ""}`}
+          onClick={() => setMode("party")}
+        >
+          Parties
+        </button>
+        <button
+          role="tab"
+          aria-selected={mode === "base"}
+          className={`modebtn ${mode === "base" ? "is-active" : ""}`}
+          onClick={() => setMode("base")}
+        >
+          Bases
+        </button>
+      </div>
+      {mode === "party" ? <PartyPlanner /> : <BasePlanner />}
+    </div>
+  );
+}
+
+function BasePlanner() {
   const {
     sets,
     addSet,
@@ -21,11 +49,12 @@ export function Planner() {
     setHumanLevel,
     setHumanWork,
   } = useSavedSets();
-  const [activeId, setActiveId] = useState<string | null>(sets[0]?.id ?? null);
+  const baseSets = sets.filter((s) => s.kind === "base");
+  const [activeId, setActiveId] = useState<string | null>(baseSets[0]?.id ?? null);
   const [pickerOpen, setPickerOpen] = useState(false);
   const [detailPal, setDetailPal] = useState<Pal | null>(null);
 
-  const active = sets.find((s) => s.id === activeId) ?? null;
+  const active = baseSets.find((s) => s.id === activeId) ?? null;
 
   function handleNew(kind: PalSet["kind"]) {
     const label = kind === "base" ? "Base" : "Party";
@@ -37,7 +66,7 @@ export function Planner() {
   function handleDelete(id: string) {
     removeSet(id);
     if (activeId === id) {
-      const remaining = sets.filter((s) => s.id !== id);
+      const remaining = baseSets.filter((s) => s.id !== id);
       setActiveId(remaining[0]?.id ?? null);
     }
   }
@@ -49,19 +78,14 @@ export function Planner() {
           <button className="btn" onClick={() => handleNew("base")}>
             + Base
           </button>
-          <button className="btn" onClick={() => handleNew("party")}>
-            + Party
-          </button>
         </div>
 
-        {sets.length === 0 && (
-          <p className="muted planner__hint">
-            Create a base or party to start planning.
-          </p>
+        {baseSets.length === 0 && (
+          <p className="muted planner__hint">Create a base to start planning.</p>
         )}
 
         <ul className="setlist">
-          {sets.map((s) => (
+          {baseSets.map((s) => (
             <li key={s.id}>
               <button
                 className={`setlist__item ${s.id === activeId ? "is-active" : ""}`}
