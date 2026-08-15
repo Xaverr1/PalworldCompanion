@@ -238,8 +238,9 @@ function Regions({ spots }: { spots: RegionSpot[] }) {
 }
 
 /** Where a pal is found in the wild: day/night regions + dungeons. */
-function Habitat({ pal }: { pal: Pal }) {
+export function Habitat({ pal, collapsible = false }: { pal: Pal; collapsible?: boolean }) {
   const loc = LOCATION_BY_SLUG[pal.slug];
+  const [open, setOpen] = useState(!collapsible);
   if (!loc) return null;
 
   const owLv = lvlLabel(loc.overworld);
@@ -247,7 +248,19 @@ function Habitat({ pal }: { pal: Pal }) {
 
   return (
     <section>
-      <h3 className="detail__sub">Where to Find</h3>
+      {collapsible ? (
+        <button
+          className="collapse-head"
+          aria-expanded={open}
+          onClick={() => setOpen((o) => !o)}
+        >
+          {open ? "▾" : "▸"} Where to Find
+        </button>
+      ) : (
+        <h3 className="detail__sub">Where to Find</h3>
+      )}
+      {open && (
+      <>
       <ul className="habitat">
         {loc.day && (
           <HabitatRow
@@ -297,6 +310,8 @@ function Habitat({ pal }: { pal: Pal }) {
         <p className="coverage__note">Also spawns on The World Tree.</p>
       )}
       <p className="habitat__hint">Coordinates match the in-game map.</p>
+      </>
+      )}
     </section>
   );
 }

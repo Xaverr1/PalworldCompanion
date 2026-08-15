@@ -4,11 +4,25 @@ import { SKILLS, SKILL_BY_ID, type Skill } from "../data/skills";
 import { ELEMENT_COLOR } from "../lib/elements";
 import { EQUIP_LIMIT, useLoadouts } from "../hooks/useLoadouts";
 
-export function AbilitiesEditor({ instanceId }: { instanceId: string }) {
+export function AbilitiesEditor({
+  instanceId,
+  heading = "Active Abilities",
+  showHeading = true,
+  addCollapsed = false,
+}: {
+  instanceId: string;
+  /** Section label (e.g. "Skills"). */
+  heading?: string;
+  /** Hide the internal heading when the parent already labels the section. */
+  showHeading?: boolean;
+  /** Hide the search box behind a "+ Add Skill" button until clicked. */
+  addCollapsed?: boolean;
+}) {
   const { getLoadout, toggleLearned, toggleEquipped } = useLoadouts();
   const loadout = getLoadout(instanceId);
   const [query, setQuery] = useState("");
   const [element, setElement] = useState<Element | "">("");
+  const [showAdd, setShowAdd] = useState(!addCollapsed);
 
   const learnedSet = new Set(loadout.learned);
   const equippedSet = new Set(loadout.equipped);
@@ -33,9 +47,11 @@ export function AbilitiesEditor({ instanceId }: { instanceId: string }) {
 
   return (
     <section className="abilities">
-      <h3 className="detail__sub">
-        Active Abilities · equipped {loadout.equipped.length}/{EQUIP_LIMIT}
-      </h3>
+      {showHeading && (
+        <h3 className="detail__sub">
+          {heading} · equipped {loadout.equipped.length}/{EQUIP_LIMIT}
+        </h3>
+      )}
 
       {learnedSkills.length === 0 ? (
         <p className="coverage__note">
@@ -86,23 +102,30 @@ export function AbilitiesEditor({ instanceId }: { instanceId: string }) {
         </ul>
       )}
 
-      <div className="abil__add">
-        <input
-          className="search"
-          type="search"
-          placeholder="Add a learned ability…"
-          value={query}
-          onChange={(e) => setQuery(e.target.value)}
-        />
-        <select value={element} onChange={(e) => setElement(e.target.value as Element | "")}>
-          <option value="">Any element</option>
-          {ELEMENTS.map((el) => (
-            <option key={el} value={el}>
-              {el}
-            </option>
-          ))}
-        </select>
-      </div>
+      {showAdd ? (
+        <div className="abil__add">
+          <input
+            className="search"
+            type="search"
+            autoFocus={addCollapsed}
+            placeholder="Add a learned skill…"
+            value={query}
+            onChange={(e) => setQuery(e.target.value)}
+          />
+          <select value={element} onChange={(e) => setElement(e.target.value as Element | "")}>
+            <option value="">Any element</option>
+            {ELEMENTS.map((el) => (
+              <option key={el} value={el}>
+                {el}
+              </option>
+            ))}
+          </select>
+        </div>
+      ) : (
+        <button className="abil__addbtn" onClick={() => setShowAdd(true)}>
+          + Add Skill
+        </button>
+      )}
 
       {matches.length > 0 && (
         <ul className="abil__results">

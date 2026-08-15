@@ -10,11 +10,12 @@ import {
 } from "../data/pals";
 import { ELEMENT_COLOR, TIER_COLOR } from "../lib/elements";
 import { scaledStats } from "../lib/stats";
+import { condenserStatBonus } from "../lib/upgrades";
 import { partySummary, bestCounter } from "../lib/sets";
 import { partyMatchup } from "../lib/typechart";
 import { useOwned, type OwnedPal } from "../hooks/useOwned";
 import { useParties, PARTY_LIMIT } from "../hooks/useParties";
-import { PalDetail } from "./PalDetail";
+import { PalInstanceDetail } from "./PalInstanceDetail";
 
 const PAL_BY_NAME = new Map(PALS.map((p) => [p.name, p]));
 
@@ -27,7 +28,10 @@ interface OwnedEntry {
 }
 
 const stats = (e: OwnedEntry) =>
-  scaledStats(e.pal, e.inst.level, e.inst.ivs ? { talents: e.inst.ivs } : {});
+  scaledStats(e.pal, e.inst.level, {
+    ...(e.inst.ivs ? { talents: e.inst.ivs } : {}),
+    condenser: condenserStatBonus(e.inst.stars ?? 0),
+  });
 
 type SortKey = "level" | "name" | "tier" | "hp" | "atk" | "def";
 const TIER_RANK: Record<string, number> = { S: 0, A: 1, B: 2, C: 3, F: 4 };
@@ -37,7 +41,7 @@ export function PartyPlanner() {
   const { parties, addParty, removeParty, renameParty, toggleMember } =
     useParties();
   const [activeId, setActiveId] = useState<string | null>(null);
-  const [detailPal, setDetailPal] = useState<Pal | null>(null);
+  const [detailId, setDetailId] = useState<string | null>(null);
 
   // Catalog filters.
   const [query, setQuery] = useState("");
@@ -167,7 +171,7 @@ export function PartyPlanner() {
                 entry={e}
                 inParty={memberIds.has(e.inst.id)}
                 onToggle={() => toggle(e.inst.id)}
-                onInfo={() => setDetailPal(e.pal)}
+                onInfo={() => setDetailId(e.inst.id)}
               />
             ))}
             {results.length === 0 && (
@@ -177,8 +181,13 @@ export function PartyPlanner() {
         )}
       </div>
 
-      {detailPal && (
-        <PalDetail pal={detailPal} onClose={() => setDetailPal(null)} />
+      {detailId && byId.has(detailId) && (
+        <PalInstanceDetail
+          instance={byId.get(detailId)!.inst}
+          pal={byId.get(detailId)!.pal}
+          ordinal={byId.get(detailId)!.ordinal}
+          onClose={() => setDetailId(null)}
+        />
       )}
     </div>
   );
@@ -262,7 +271,12 @@ function PartyCards({
               {e.pal.name}
               {e.ordinal > 0 && <span className="pmc__ord">#{e.ordinal}</span>}
             </div>
-            <div className="pmc__lv">Lv {e.inst.level}</div>
+            <div className="pmc__lv">
+              Lv {e.inst.level}
+              {(e.inst.stars ?? 0) > 0 && (
+                <span className="pbx__stars">{"★".repeat(e.inst.stars!)}</span>
+              )}
+            </div>
             <div className="pmc__els">
               {e.pal.elements.map((el) => (
                 <span
@@ -555,7 +569,14 @@ function InstanceCard({
         {entry.pal.name}
         {entry.ordinal > 0 && <span className="icard__ord">#{entry.ordinal}</span>}
       </h3>
-      <div className="icard__lv">Lv {entry.inst.level}</div>
+      <div className="icard__lv">
+        Lv {entry.inst.level}
+        {(entry.inst.stars ?? 0) > 0 && (
+          <span className="pbx__stars" title={`${entry.inst.stars}★ condenser`}>
+            {"★".repeat(entry.inst.stars!)}
+          </span>
+        )}
+      </div>
       <div className="icard__els">
         {entry.pal.elements.map((el) => (
           <span

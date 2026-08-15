@@ -12,10 +12,10 @@ import { SKILL_BY_ID } from "../data/skills";
 import { PASSIVE_BY_ID } from "../data/passives";
 import { ELEMENT_COLOR, TIER_COLOR } from "../lib/elements";
 import { scaledStats } from "../lib/stats";
-import { MAX_LEVEL, useOwned, type OwnedPal } from "../hooks/useOwned";
+import { condenserStatBonus } from "../lib/upgrades";
+import { useOwned, type OwnedPal } from "../hooks/useOwned";
 import { useLoadouts } from "../hooks/useLoadouts";
-import { AbilitiesEditor } from "./AbilitiesEditor";
-import { PassivesEditor } from "./PassivesEditor";
+import { PalInstanceDetail } from "./PalInstanceDetail";
 
 const PAL_BY_NAME = new Map(PALS.map((p) => [p.name, p]));
 
@@ -28,13 +28,16 @@ interface Entry {
 }
 
 const statsOf = (e: Entry) =>
-  scaledStats(e.pal, e.inst.level, e.inst.ivs ? { talents: e.inst.ivs } : {});
+  scaledStats(e.pal, e.inst.level, {
+    ...(e.inst.ivs ? { talents: e.inst.ivs } : {}),
+    condenser: condenserStatBonus(e.inst.stars ?? 0),
+  });
 
 type SortKey = "level" | "name" | "species" | "tier";
 const TIER_RANK: Record<string, number> = { S: 0, A: 1, B: 2, C: 3, F: 4 };
 
 export function Palbox() {
-  const { instances, addInstance, removeInstance } = useOwned();
+  const { instances, addInstance } = useOwned();
   const { getLoadout } = useLoadouts();
   const [detailId, setDetailId] = useState<string | null>(null);
   const [adding, setAdding] = useState(false);
@@ -223,13 +226,11 @@ export function Palbox() {
       </div>
 
       {detail && (
-        <InstanceDetail
-          entry={detail}
+        <PalInstanceDetail
+          instance={detail.inst}
+          pal={detail.pal}
+          ordinal={detail.ordinal}
           onClose={() => setDetailId(null)}
-          onRemove={() => {
-            removeInstance(detail.inst.id);
-            setDetailId(null);
-          }}
         />
       )}
 
@@ -321,7 +322,14 @@ function PalboxCard({ entry, onOpen }: { entry: Entry; onOpen: () => void }) {
         {entry.ordinal > 0 && <span className="icard__ord">#{entry.ordinal}</span>}
       </h3>
       {entry.inst.nickname && <div className="pbx__species">{entry.pal.name}</div>}
-      <div className="icard__lv">Lv {entry.inst.level}</div>
+      <div className="icard__lv">
+        Lv {entry.inst.level}
+        {(entry.inst.stars ?? 0) > 0 && (
+          <span className="pbx__stars" title={`${entry.inst.stars}★ condenser`}>
+            {"★".repeat(entry.inst.stars!)}
+          </span>
+        )}
+      </div>
       <div className="icard__els">
         {entry.pal.elements.map((el) => (
           <span
@@ -343,141 +351,6 @@ function PalboxCard({ entry, onOpen }: { entry: Entry; onOpen: () => void }) {
       </div>
       <PassiveChips instanceId={entry.inst.id} />
     </article>
-  );
-}
-
-/** Full editor for a single owned instance (level, nickname, gender, skills). */
-function InstanceDetail({
-  entry,
-  onClose,
-  onRemove,
-}: {
-  entry: Entry;
-  onClose: () => void;
-  onRemove: () => void;
-}) {
-  const { setLevel, setNickname, setGender } = useOwned();
-  const { inst, pal } = entry;
-  const s = statsOf(entry);
-
-  useEffect(() => {
-    const onKey = (e: KeyboardEvent) => e.key === "Escape" && onClose();
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-  }, [onClose]);
-
-  return (
-    <div className="modal" onClick={onClose}>
-      <div
-        className="modal__panel"
-        role="dialog"
-        aria-modal="true"
-        aria-label={inst.nickname || pal.name}
-        onClick={(e) => e.stopPropagation()}
-      >
-        <button className="modal__close" onClick={onClose} aria-label="Close">
-          ×
-        </button>
-
-        <header className="detail__head">
-          <img className="detail__icon" src={pal.icon} alt="" />
-          <div>
-            <span className="detail__dex">
-              {pal.paldex ? `#${pal.paldex}` : "Terraria Collab"} · {pal.name}
-              {entry.ordinal > 0 && ` #${entry.ordinal}`}
-            </span>
-            <input
-              className="setedit__name pbx__nick"
-              value={inst.nickname ?? ""}
-              placeholder={pal.name}
-              aria-label="Nickname"
-              onChange={(e) => setNickname(inst.id, e.target.value)}
-            />
-            <div className="detail__elements">
-              {pal.elements.map((el) => (
-                <span
-                  key={el}
-                  className="chip chip--element"
-                  style={{ background: ELEMENT_COLOR[el] }}
-                >
-                  {el}
-                </span>
-              ))}
-              <span
-                className="chip chip--element"
-                style={{ background: TIER_COLOR[pal.tier] }}
-                title={`${pal.combatPctl}th combat percentile`}
-              >
-                Tier {pal.tier}
-              </span>
-            </div>
-          </div>
-        </header>
-
-        <div className="pbx__editrow">
-          <label className="owninst__lvl">
-            Lv
-            <input
-              type="number"
-              min={1}
-              max={MAX_LEVEL}
-              value={inst.level}
-              onChange={(e) => setLevel(inst.id, Number(e.target.value))}
-            />
-          </label>
-          <input
-            type="range"
-            min={1}
-            max={MAX_LEVEL}
-            value={inst.level}
-            onChange={(e) => setLevel(inst.id, Number(e.target.value))}
-            className="owninst__slider"
-            aria-label={`Level of ${pal.name}`}
-          />
-          <div className="pbx__genderpick" role="group" aria-label="Gender">
-            {(["Male", "Female"] as const).map((g) => (
-              <button
-                key={g}
-                className={`chip ${inst.gender === g ? "chip--on" : ""}`}
-                onClick={() => setGender(inst.id, inst.gender === g ? "" : g)}
-              >
-                {g === "Male" ? "♂ Male" : "♀ Female"}
-              </button>
-            ))}
-          </div>
-        </div>
-
-        <div className="detail__stats">
-          <Stat label="HP" value={s.hp} />
-          <Stat label="Attack" value={s.atk} />
-          <Stat label="Defense" value={s.def} />
-          <Stat label="Food" value={pal.food} />
-        </div>
-        {inst.ivs && (
-          <p className="stats__note">
-            IVs — HP {inst.ivs.hp} · Shot {inst.ivs.shot} · Defense {inst.ivs.defense}
-          </p>
-        )}
-
-        <AbilitiesEditor instanceId={inst.id} />
-        <PassivesEditor instanceId={inst.id} />
-
-        <div className="pbx__detailfoot">
-          <button className="btn btn--danger" onClick={onRemove}>
-            Remove from Palbox
-          </button>
-        </div>
-      </div>
-    </div>
-  );
-}
-
-function Stat({ label, value }: { label: string; value: number }) {
-  return (
-    <div className="detail__stat">
-      <span className="detail__stat-label">{label}</span>
-      <span className="detail__stat-value">{value.toLocaleString()}</span>
-    </div>
   );
 }
 

@@ -2594,26 +2594,293 @@
   justify-content: center;
   margin-top: 2px;
 }
-/* Instance editor modal */
-.pbx__nick {
-  margin: 2px 0 6px;
-  font-size: 18px;
-  max-width: 260px;
+/* ===== Pal instance detail (rich single-pal card) ===== */
+.pid__head {
+  display: flex;
+  gap: 20px;
+  align-items: flex-start;
+  margin-bottom: 14px;
 }
-.pbx__editrow {
+.pid__portrait {
+  position: relative;
+  flex-shrink: 0;
+  width: 112px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.pid__portrait img {
+  width: 112px;
+  height: 112px;
+  object-fit: contain;
+}
+.pid__tier {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 14px;
+}
+.pid__lv {
+  position: absolute;
+  top: 0;
+  right: 0;
+  background: var(--social-bg);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 2px 8px;
+  font-size: 12px;
+  font-weight: 600;
+  font-family: var(--mono);
+  color: var(--text-h);
+}
+.pid__mount {
+  margin-top: 6px;
+  font-size: 11px;
+  padding: 2px 12px;
+  border-radius: 999px;
+  background: var(--accent-bg);
+  color: var(--accent);
+  border: 1px solid var(--accent-border);
+  font-weight: 600;
+}
+/* Editable condenser stars under the portrait */
+.pid__stars {
+  display: flex;
+  gap: 1px;
+  margin-top: 4px;
+}
+.pid__star {
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 15px;
+  line-height: 1;
+  color: var(--text);
+  opacity: 0.45;
+}
+.pid__star.is-on {
+  color: #f0b429;
+  opacity: 1;
+}
+.pid__star:hover {
+  color: #f0b429;
+  opacity: 1;
+}
+/* Read-only star badge on grid / party cards */
+.pbx__stars {
+  color: #f0b429;
+  margin-left: 6px;
+  font-size: 12px;
+  letter-spacing: 1px;
+}
+.pid__id {
+  flex: 1;
+  min-width: 0;
+}
+.pid__dexrow {
   display: flex;
   align-items: center;
-  gap: 12px;
-  flex-wrap: wrap;
-  margin: 8px 0 12px;
+  gap: 8px;
+  margin-bottom: 4px;
 }
-.pbx__genderpick {
+.pid__dex {
+  font-family: var(--mono);
+  font-size: 13px;
+  color: var(--text);
+}
+.pid__ord {
+  color: var(--accent);
+}
+.pid__genders {
+  display: flex;
+  gap: 4px;
+  margin-left: 6px;
+}
+.pid__gender {
+  width: 24px;
+  height: 24px;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  cursor: pointer;
+  font-size: 14px;
+  line-height: 1;
+  color: var(--text);
+  padding: 0;
+}
+.pid__gender.is-on.is-male {
+  background: #4f8cff;
+  border-color: #4f8cff;
+  color: #fff;
+}
+.pid__gender.is-on.is-female {
+  background: #ff6fae;
+  border-color: #ff6fae;
+  color: #fff;
+}
+.pid__name {
+  font-family: var(--heading);
+  font-size: 24px;
+  font-weight: 500;
+  color: var(--text-h);
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 8px;
+  padding: 2px 6px;
+  margin: 0 0 4px -6px;
+  width: 100%;
+  max-width: 340px;
+}
+.pid__name:hover {
+  border-color: var(--border);
+}
+.pid__name:focus {
+  outline: none;
+  border-color: var(--accent-border);
+  box-shadow: 0 0 0 3px var(--accent-bg);
+  background: var(--bg);
+}
+.pid__species {
+  font-size: 12px;
+  color: var(--text);
+  margin: -2px 0 6px;
+}
+.pid__elements {
   display: flex;
   gap: 6px;
-  margin-left: auto;
+  flex-wrap: wrap;
+  margin-bottom: 10px;
 }
-.pbx__detailfoot {
+.pid__stats {
+  display: flex;
+  gap: 18px;
+  margin: 0;
+  flex-wrap: wrap;
+}
+.pid__stats > div {
+  display: flex;
+  flex-direction: column;
+}
+.pid__stats dt {
+  font-size: 10px;
+  letter-spacing: 0.5px;
+  color: var(--text);
+  text-transform: uppercase;
+}
+.pid__stats dd {
+  margin: 0;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: var(--mono);
+  color: var(--text-h);
+}
+.pid__ivs {
+  font-size: 11px;
+  color: var(--text);
+  font-family: var(--mono);
+  margin-top: 8px;
+}
+/* Partner skill: wide box, label on top, description full-width below */
+.pid__partner {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  background: var(--social-bg);
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 8px 12px;
+  margin-bottom: 14px;
+}
+.pid__partnerlabel {
+  font-weight: 600;
+  color: var(--text-h);
+}
+.pid__partnerdesc {
+  font-size: 12px;
+  color: var(--text);
+}
+.pid__skills {
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 12px;
+  margin-bottom: 14px;
+}
+.pid__skillchips {
+  display: inline-flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-left: 8px;
+}
+.pid__foot {
   margin-top: 16px;
   display: flex;
   justify-content: flex-end;
+}
+/* Collapsible section header (Skills, Where to Find) */
+.collapse-head {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  width: 100%;
+  background: none;
+  border: none;
+  padding: 0;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: 600;
+  color: var(--text-h);
+  text-align: left;
+}
+/* "+ Add Skill" button revealed inside the skills editor */
+.abil__addbtn {
+  background: none;
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  padding: 6px 12px;
+  color: var(--accent);
+  cursor: pointer;
+  font: inherit;
+  font-size: 13px;
+  font-weight: 600;
+}
+.abil__addbtn:hover {
+  border-color: var(--accent-border);
+}
+/* Slim work pills for the detail card */
+.workpills--slim {
+  margin-bottom: 14px;
+}
+.workpills--slim .workpill {
+  padding: 3px 8px 3px 6px;
+  gap: 5px;
+  font-size: 12px;
+}
+.workpills--slim .workpill__icon {
+  width: 18px;
+  height: 18px;
+}
+.workpills--slim .workpill__lvl {
+  font-size: 13px;
+  min-width: 14px;
+}
+/* Passive rows reuse the active-skill format; description is the muted, */
+/* truncating trailer so long text doesn't blow out the row. */
+.passives .abil__name {
+  flex: 0 1 auto;
+}
+.abil__meta--pass {
+  flex: 1;
+  min-width: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
 }
