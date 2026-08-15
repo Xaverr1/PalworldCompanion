@@ -2,6 +2,7 @@ import { useRef, useState } from "react";
 import { Browser } from "./components/Browser";
 import { Planner } from "./components/Planner";
 import { Palbox } from "./components/Palbox";
+import { Breeding } from "./components/Breeding";
 import { UpgradePlanner } from "./components/UpgradePlanner";
 import { BuildQueue } from "./components/BuildQueue";
 import { downloadBackup, importData } from "./lib/backup";
@@ -10,7 +11,7 @@ import { useOwned } from "./hooks/useOwned";
 import { useLoadouts } from "./hooks/useLoadouts";
 import "./App.css";
 
-type View = "browse" | "planner" | "palbox" | "upgrades" | "build";
+type View = "browse" | "planner" | "palbox" | "breeding" | "upgrades" | "build";
 
 function App() {
   const [view, setView] = useState<View>("browse");
@@ -109,6 +110,12 @@ function App() {
             Palbox
           </button>
           <button
+            className={`tab ${view === "breeding" ? "is-active" : ""}`}
+            onClick={() => setView("breeding")}
+          >
+            Breeding
+          </button>
+          <button
             className={`tab ${view === "upgrades" ? "is-active" : ""}`}
             onClick={() => setView("upgrades")}
           >
@@ -160,6 +167,7 @@ function App() {
       {view === "browse" && <Browser />}
       {view === "planner" && <Planner />}
       {view === "palbox" && <Palbox />}
+      {view === "breeding" && <Breeding />}
       {view === "upgrades" && <UpgradePlanner />}
       {view === "build" && <BuildQueue />}
     </>

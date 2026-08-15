@@ -2884,3 +2884,307 @@
   overflow: hidden;
   text-overflow: ellipsis;
 }
+
+/* ===== Breeding planner (parents-first) ===== */
+.btn--sm {
+  font-size: 12px;
+  padding: 4px 10px;
+}
+.btn--accent {
+  background: var(--accent);
+  border-color: var(--accent);
+  color: #fff;
+}
+.btn--accent:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+}
+.breed__bar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--bg);
+  padding: 14px 0 12px;
+  border-bottom: 1px solid var(--border);
+  margin-bottom: 16px;
+}
+.breed__tabs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-bottom: 10px;
+}
+.breed__tab {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 5px 12px;
+  border-radius: 999px;
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text-h);
+  font: inherit;
+  font-size: 13px;
+  cursor: pointer;
+}
+.breed__tab img {
+  width: 20px;
+  height: 20px;
+  object-fit: contain;
+}
+.breed__tab.is-active {
+  border-color: var(--accent);
+  background: var(--accent-bg);
+}
+.breed__tab--new {
+  color: var(--accent);
+  font-weight: 600;
+}
+.breed__baractions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+/* Goal banner */
+.bx-target {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 10px 14px;
+  margin-bottom: 18px;
+  background: var(--social-bg);
+}
+.bx-target.is-met {
+  border-color: #4caf50;
+  background: rgba(76, 175, 80, 0.1);
+}
+.bx-target__label {
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--accent);
+}
+.bx-target__icon {
+  width: 32px;
+  height: 32px;
+  object-fit: contain;
+}
+.bx-target__met {
+  color: #4caf50;
+  font-weight: 700;
+}
+
+/* Chain */
+.breed__chain {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: stretch;
+  max-width: 640px;
+}
+.breed__gen {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.breed__op {
+  font-size: 18px;
+  font-weight: 700;
+  color: var(--text);
+  text-align: center;
+  line-height: 1;
+}
+.breed__add {
+  margin-top: 14px;
+}
+
+/* Cards */
+.bx-card {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  background: var(--bg);
+  padding: 10px 12px;
+}
+.bx-card--result {
+  background: var(--social-bg);
+}
+.bx-card--result.is-final {
+  border-color: var(--accent);
+  border-width: 2px;
+}
+.bx-card__icon {
+  width: 48px;
+  height: 48px;
+  object-fit: contain;
+  flex-shrink: 0;
+}
+.bx-card__body {
+  flex: 1;
+  min-width: 0;
+}
+.bx-card__name {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+  font-weight: 600;
+  color: var(--text-h);
+  margin-bottom: 4px;
+}
+.bx-els {
+  display: inline-flex;
+  gap: 3px;
+}
+.bx-card__actions {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-shrink: 0;
+}
+.bx-remove {
+  border: none;
+  background: none;
+  color: var(--text);
+  font-size: 18px;
+  line-height: 1;
+  cursor: pointer;
+  padding: 0 2px;
+}
+.bx-remove:hover {
+  color: #e0533a;
+}
+.bx-g {
+  width: 18px;
+  height: 18px;
+  font-size: 12px;
+  display: inline-grid;
+  place-items: center;
+  border-radius: 5px;
+}
+.bx-match {
+  font-size: 11px;
+  font-weight: 700;
+}
+.bx-match.is-ok {
+  color: #4caf50;
+}
+.bx-match.is-no {
+  color: #e0533a;
+}
+.bx-pool {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+.bx-pool__label {
+  font-size: 11px;
+  color: var(--text);
+  font-weight: 600;
+}
+.bx-missing {
+  margin-top: 5px;
+  font-size: 11px;
+  color: #e0533a;
+}
+
+/* Passive chips (shared) */
+.pchips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  align-items: center;
+}
+.pchip {
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+  font: inherit;
+  font-size: 11px;
+  padding: 2px 8px;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--text-h);
+  cursor: pointer;
+}
+.pchip.is-off {
+  opacity: 0.4;
+}
+.pchip.is-off:hover {
+  opacity: 0.75;
+}
+.pchip--static {
+  cursor: default;
+}
+.pchip i {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+.pchip__star {
+  color: #f0b429;
+  font-size: 10px;
+}
+.pchip.is-wanted {
+  box-shadow: 0 0 0 1px currentColor;
+}
+
+/* Reused by the instance picker rows */
+.breedpick__row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  text-align: left;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  background: var(--bg);
+  padding: 6px 10px;
+  cursor: pointer;
+  font: inherit;
+}
+.breedpick__row:hover {
+  border-color: var(--accent-border);
+}
+.breedpick__name {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  color: var(--text-h);
+  font-weight: 600;
+  white-space: nowrap;
+}
+
+/* Target editor bits */
+.bx-field {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-h);
+  margin: 16px 0 6px;
+}
+.bx-chosen {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.bx-chosen img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+.bx-shortlist {
+  max-height: 220px;
+  overflow-y: auto;
+}
+
