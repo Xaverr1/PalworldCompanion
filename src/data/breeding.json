@@ -1,0 +1,3443 @@
+{
+  "pals": {
+    "KingWhale": {
+      "name": "Panthalus",
+      "combiRank": 20,
+      "dup": 2000
+    },
+    "DomeArmorDragon": {
+      "name": "Aegidron",
+      "combiRank": 30,
+      "dup": 3000
+    },
+    "BlueSkyDragon": {
+      "name": "Shaolong",
+      "combiRank": 40,
+      "dup": 4000
+    },
+    "SnowTigerBeastman": {
+      "name": "Bastigor",
+      "combiRank": 50,
+      "dup": 5000
+    },
+    "FlowerPrince": {
+      "name": "Dandilord",
+      "combiRank": 60,
+      "dup": 6000
+    },
+    "JetDragon": {
+      "name": "Jetragon",
+      "combiRank": 70,
+      "dup": 7000
+    },
+    "Mothman": {
+      "name": "Silvance",
+      "combiRank": 80,
+      "dup": 8000
+    },
+    "LegendDeer": {
+      "name": "Hartalis",
+      "combiRank": 90,
+      "dup": 9000
+    },
+    "KingBahamut_Dragon": {
+      "name": "Blazamut Ryu",
+      "combiRank": 100,
+      "dup": 10000
+    },
+    "IceHorse_Dark": {
+      "name": "Frostallion Noct",
+      "combiRank": 110,
+      "dup": 11000
+    },
+    "ThunderDragonMan": {
+      "name": "Orserk",
+      "combiRank": 120,
+      "dup": 12000
+    },
+    "NightLady_Dark": {
+      "name": "Bellanoir Libero",
+      "combiRank": 130,
+      "dup": 13000
+    },
+    "GhostDragon_Fire": {
+      "name": "Eidrolon Ignis",
+      "combiRank": 140,
+      "dup": 14000
+    },
+    "IceHorse": {
+      "name": "Frostallion",
+      "combiRank": 150,
+      "dup": 15000
+    },
+    "PoseidonOrca": {
+      "name": "Neptilius",
+      "combiRank": 160,
+      "dup": 16000
+    },
+    "Umihebi_Fire": {
+      "name": "Jormuntide Ignis",
+      "combiRank": 170,
+      "dup": 17000
+    },
+    "SaintCentaur": {
+      "name": "Paladius",
+      "combiRank": 180,
+      "dup": 18000
+    },
+    "BlackCentaur": {
+      "name": "Necromus",
+      "combiRank": 190,
+      "dup": 19000
+    },
+    "CubeTurtle_Neutral": {
+      "name": "Tetroise Primo",
+      "combiRank": 200,
+      "dup": 20000
+    },
+    "WingGolem_Fire": {
+      "name": "Knocklem Ignis",
+      "combiRank": 210,
+      "dup": 21000
+    },
+    "LilyQueen_Dark": {
+      "name": "Lyleen Noct",
+      "combiRank": 220,
+      "dup": 22000
+    },
+    "LotusDragon": {
+      "name": "Ophydia",
+      "combiRank": 230,
+      "dup": 23000
+    },
+    "LilyQueen": {
+      "name": "Lyleen",
+      "combiRank": 240,
+      "dup": 24000
+    },
+    "GrassGolem_Dark": {
+      "name": "Dualith Noct",
+      "combiRank": 250,
+      "dup": 25000
+    },
+    "WingGolem": {
+      "name": "Knocklem",
+      "combiRank": 260,
+      "dup": 26000
+    },
+    "WhiteDeer_Dark": {
+      "name": "Celesdir Noct",
+      "combiRank": 270,
+      "dup": 27000
+    },
+    "MonochromeQueen": {
+      "name": "Solenne",
+      "combiRank": 280,
+      "dup": 28000
+    },
+    "KabukiMan": {
+      "name": "Renjishi",
+      "combiRank": 290,
+      "dup": 29000
+    },
+    "GhostDragon": {
+      "name": "Eidrolon",
+      "combiRank": 300,
+      "dup": 30000
+    },
+    "MoonQueen": {
+      "name": "Selyne",
+      "combiRank": 360,
+      "dup": 36000
+    },
+    "IceNarwhal_Fire": {
+      "name": "Whalaska Ignis",
+      "combiRank": 370,
+      "dup": 37000
+    },
+    "VolcanoDragon_Ice": {
+      "name": "Moldron Cryst",
+      "combiRank": 380,
+      "dup": 38000
+    },
+    "FoxExorcist": {
+      "name": "Flaracle",
+      "combiRank": 390,
+      "dup": 39000
+    },
+    "DarkMechaDragon": {
+      "name": "Xenolord",
+      "combiRank": 400,
+      "dup": 40000
+    },
+    "KingBahamut": {
+      "name": "Blazamut",
+      "combiRank": 410,
+      "dup": 41000
+    },
+    "BlueThunderHorse": {
+      "name": "Azurmane",
+      "combiRank": 420,
+      "dup": 42000
+    },
+    "NightBlueHorse_Neutral": {
+      "name": "Starryon Primo",
+      "combiRank": 430,
+      "dup": 43000
+    },
+    "GrassMinotaur_Ice": {
+      "name": "Elgrove Cryst",
+      "combiRank": 440,
+      "dup": 44000
+    },
+    "Horus_Water": {
+      "name": "Faleris Aqua",
+      "combiRank": 450,
+      "dup": 45000
+    },
+    "RockBeast_Ice": {
+      "name": "Pierdon Cryst",
+      "combiRank": 460,
+      "dup": 46000
+    },
+    "WhiteTiger_Ground": {
+      "name": "Cryolinx Terra",
+      "combiRank": 470,
+      "dup": 47000
+    },
+    "Anubis": {
+      "name": "Anubis",
+      "combiRank": 480,
+      "dup": 48000
+    },
+    "BlackMetalDragon": {
+      "name": "Astegon",
+      "combiRank": 490,
+      "dup": 49000
+    },
+    "Horus": {
+      "name": "Faleris",
+      "combiRank": 500,
+      "dup": 50000
+    },
+    "GrassGolem": {
+      "name": "Dualith",
+      "combiRank": 510,
+      "dup": 51000
+    },
+    "ClownRabbit": {
+      "name": "Dupin",
+      "combiRank": 520,
+      "dup": 52000
+    },
+    "ThiefBird": {
+      "name": "Roujay",
+      "combiRank": 530,
+      "dup": 53000
+    },
+    "Kirin_Ice": {
+      "name": "Univolt Cryst",
+      "combiRank": 540,
+      "dup": 54000
+    },
+    "BlackGriffon": {
+      "name": "Shadowbeak",
+      "combiRank": 550,
+      "dup": 55000
+    },
+    "WhiteShieldDragon": {
+      "name": "Silvegis",
+      "combiRank": 560,
+      "dup": 56000
+    },
+    "WhiteDeer": {
+      "name": "Celesdir",
+      "combiRank": 570,
+      "dup": 57000
+    },
+    "ThunderBird_Ice": {
+      "name": "Beakon Cryst",
+      "combiRank": 580,
+      "dup": 58000
+    },
+    "Umihebi": {
+      "name": "Jormuntide",
+      "combiRank": 590,
+      "dup": 59000
+    },
+    "VolcanicMonster_Ice": {
+      "name": "Reptyro Cryst",
+      "combiRank": 600,
+      "dup": 60000
+    },
+    "Yeti_Grass": {
+      "name": "Wumpo Botan",
+      "combiRank": 610,
+      "dup": 61000
+    },
+    "NightLady": {
+      "name": "Bellanoir",
+      "combiRank": 620,
+      "dup": 62000
+    },
+    "HerculesBeetle_Ground": {
+      "name": "Warsect Terra",
+      "combiRank": 630,
+      "dup": 63000
+    },
+    "DarkScorpion_Ground": {
+      "name": "Menasting Terra",
+      "combiRank": 640,
+      "dup": 64000
+    },
+    "WhiteMoth_Neutral": {
+      "name": "Sibelyx Primo",
+      "combiRank": 650,
+      "dup": 65000
+    },
+    "IceNarwhal": {
+      "name": "Whalaska",
+      "combiRank": 710,
+      "dup": 71000
+    },
+    "GhostAnglerfish_Fire": {
+      "name": "Ghangler Ignis",
+      "combiRank": 720,
+      "dup": 72000
+    },
+    "GoldenHorse": {
+      "name": "Gildane",
+      "combiRank": 730,
+      "dup": 73000
+    },
+    "Suzaku_Water": {
+      "name": "Suzaku Aqua",
+      "combiRank": 740,
+      "dup": 74000
+    },
+    "VolcanoDragon": {
+      "name": "Moldron",
+      "combiRank": 750,
+      "dup": 75000
+    },
+    "MushroomLady": {
+      "name": "Mycora",
+      "combiRank": 760,
+      "dup": 76000
+    },
+    "LazyDragon_Electric": {
+      "name": "Relaxaurus Lux",
+      "combiRank": 770,
+      "dup": 77000
+    },
+    "GrimGirl": {
+      "name": "Splatterina",
+      "combiRank": 780,
+      "dup": 78000
+    },
+    "CubeTurtle": {
+      "name": "Tetroise",
+      "combiRank": 790,
+      "dup": 79000
+    },
+    "AmaterasuWolf_Dark": {
+      "name": "Kitsun Noct",
+      "combiRank": 800,
+      "dup": 80000
+    },
+    "SleeveRabbit": {
+      "name": "Lapure",
+      "combiRank": 810,
+      "dup": 81000
+    },
+    "FlowerDoll_Fire": {
+      "name": "Petallia Ignis",
+      "combiRank": 820,
+      "dup": 82000
+    },
+    "Yeti": {
+      "name": "Wumpo",
+      "combiRank": 830,
+      "dup": 83000
+    },
+    "Ronin_Dark": {
+      "name": "Bushi Noct",
+      "combiRank": 840,
+      "dup": 84000
+    },
+    "ScorpionMan_Electric": {
+      "name": "Prixter Lux",
+      "combiRank": 850,
+      "dup": 85000
+    },
+    "SnowPeafowl": {
+      "name": "Frostplume",
+      "combiRank": 860,
+      "dup": 86000
+    },
+    "Sekhmet": {
+      "name": "Sekhmet",
+      "combiRank": 870,
+      "dup": 87000
+    },
+    "GhostAnglerfish": {
+      "name": "Ghangler",
+      "combiRank": 880,
+      "dup": 88000
+    },
+    "LanternButler": {
+      "name": "Loomen",
+      "combiRank": 890,
+      "dup": 89000
+    },
+    "FengyunDeeper_Electric": {
+      "name": "Fenglope Lux",
+      "combiRank": 900,
+      "dup": 90000
+    },
+    "HadesBird_Electric": {
+      "name": "Helzephyr Lux",
+      "combiRank": 960,
+      "dup": 96000
+    },
+    "SnakeGirl": {
+      "name": "Venusa",
+      "combiRank": 970,
+      "dup": 97000
+    },
+    "CandleGhost": {
+      "name": "Sootseer",
+      "combiRank": 980,
+      "dup": 98000
+    },
+    "WhiteAlienDragon": {
+      "name": "Xenogard",
+      "combiRank": 990,
+      "dup": 99000
+    },
+    "KingSunfish_Thunder": {
+      "name": "Solmora Lux",
+      "combiRank": 1000,
+      "dup": 100000
+    },
+    "DarkFlameFox": {
+      "name": "Majex",
+      "combiRank": 1010,
+      "dup": 101000
+    },
+    "ElecPanda": {
+      "name": "Grizzbolt",
+      "combiRank": 1020,
+      "dup": 102000
+    },
+    "Plesiosaur": {
+      "name": "Braloha",
+      "combiRank": 1030,
+      "dup": 103000
+    },
+    "WhiteTiger": {
+      "name": "Cryolinx",
+      "combiRank": 1040,
+      "dup": 104000
+    },
+    "RedArmorBird": {
+      "name": "Ragnahawk",
+      "combiRank": 1050,
+      "dup": 105000
+    },
+    "VolcanicMonster": {
+      "name": "Reptyro",
+      "combiRank": 1060,
+      "dup": 106000
+    },
+    "GrassMammoth_Ice": {
+      "name": "Mammorest Cryst",
+      "combiRank": 1070,
+      "dup": 107000
+    },
+    "SakuraSaurus_Water": {
+      "name": "Broncherry Aqua",
+      "combiRank": 1080,
+      "dup": 108000
+    },
+    "LazyDragon": {
+      "name": "Relaxaurus",
+      "combiRank": 1090,
+      "dup": 109000
+    },
+    "IceSeal_Ground": {
+      "name": "Polapup Terra",
+      "combiRank": 1100,
+      "dup": 110000
+    },
+    "RockBeast": {
+      "name": "Pierdon",
+      "combiRank": 1110,
+      "dup": 111000
+    },
+    "DarkScorpion": {
+      "name": "Menasting",
+      "combiRank": 1120,
+      "dup": 112000
+    },
+    "HadesBird": {
+      "name": "Helzephyr",
+      "combiRank": 1130,
+      "dup": 113000
+    },
+    "MysteryMask": {
+      "name": "Omascul",
+      "combiRank": 1140,
+      "dup": 114000
+    },
+    "NightBlueHorse": {
+      "name": "Starryon",
+      "combiRank": 1150,
+      "dup": 115000
+    },
+    "GrassRabbitMan": {
+      "name": "Verdash",
+      "combiRank": 1160,
+      "dup": 116000
+    },
+    "MummyPal": {
+      "name": "Gildra",
+      "combiRank": 1170,
+      "dup": 117000
+    },
+    "MoonChild": {
+      "name": "Wistella",
+      "combiRank": 1180,
+      "dup": 118000
+    },
+    "SumoDog": {
+      "name": "Bulldosu",
+      "combiRank": 1190,
+      "dup": 119000
+    },
+    "Suzaku": {
+      "name": "Suzaku",
+      "combiRank": 1200,
+      "dup": 120000
+    },
+    "SkyDragon": {
+      "name": "Quivern",
+      "combiRank": 1210,
+      "dup": 121000
+    },
+    "BlueDragon_Ice": {
+      "name": "Azurobe Cryst",
+      "combiRank": 1220,
+      "dup": 578
+    },
+    "GhostRabbit": {
+      "name": "Nitemary",
+      "combiRank": 1230,
+      "dup": 123000
+    },
+    "TropicalOstrich": {
+      "name": "Palumba",
+      "combiRank": 1240,
+      "dup": 124000
+    },
+    "BadCatgirl": {
+      "name": "Nyafia",
+      "combiRank": 1250,
+      "dup": 125000
+    },
+    "IceWitch": {
+      "name": "Icelyn",
+      "combiRank": 1260,
+      "dup": 126000
+    },
+    "Manticore_Dark": {
+      "name": "Blazehowl Noct",
+      "combiRank": 1270,
+      "dup": 127000
+    },
+    "HerculesBeetle": {
+      "name": "Warsect",
+      "combiRank": 1280,
+      "dup": 128000
+    },
+    "Werewolf_Ice": {
+      "name": "Loupmoon Cryst",
+      "combiRank": 1290,
+      "dup": 129000
+    },
+    "SkyDragon_Grass": {
+      "name": "Quivern Botan",
+      "combiRank": 1300,
+      "dup": 130000
+    },
+    "Baphomet_Dark": {
+      "name": "Incineram Noct",
+      "combiRank": 1310,
+      "dup": 131000
+    },
+    "GhostRabbit_Grass": {
+      "name": "Nitemary Botan",
+      "combiRank": 1320,
+      "dup": 132000
+    },
+    "TentacleTurtle_Ground": {
+      "name": "Turtacle Terra",
+      "combiRank": 1330,
+      "dup": 577
+    },
+    "GrassMammoth": {
+      "name": "Mammorest",
+      "combiRank": 1340,
+      "dup": 134000
+    },
+    "RedFlowerBird": {
+      "name": "Tropicaw",
+      "combiRank": 1350,
+      "dup": 135000
+    },
+    "Manticore": {
+      "name": "Blazehowl",
+      "combiRank": 1360,
+      "dup": 136000
+    },
+    "KingSunfish": {
+      "name": "Solmora",
+      "combiRank": 1370,
+      "dup": 137000
+    },
+    "SakuraSaurus": {
+      "name": "Broncherry",
+      "combiRank": 1380,
+      "dup": 138000
+    },
+    "BlueberryFairy": {
+      "name": "Prunelia",
+      "combiRank": 1390,
+      "dup": 139000
+    },
+    "ThunderFluffyBird": {
+      "name": "Dynamoff",
+      "combiRank": 1400,
+      "dup": 140000
+    },
+    "PandaGirl": {
+      "name": "Leafan",
+      "combiRank": 1410,
+      "dup": 141000
+    },
+    "SwordCutlassfish": {
+      "name": "Skutlass",
+      "combiRank": 1420,
+      "dup": 142000
+    },
+    "BirdDragon_Ice": {
+      "name": "Vanwyrm Cryst",
+      "combiRank": 1430,
+      "dup": 143000
+    },
+    "GrassPanda_Electric": {
+      "name": "Mossanda Lux",
+      "combiRank": 1440,
+      "dup": 144000
+    },
+    "MushroomDragon_Dark": {
+      "name": "Shroomer Noct",
+      "combiRank": 1450,
+      "dup": 145000
+    },
+    "SifuDog": {
+      "name": "Dogen",
+      "combiRank": 1460,
+      "dup": 146000
+    },
+    "Baphomet": {
+      "name": "Incineram",
+      "combiRank": 1470,
+      "dup": 147000
+    },
+    "VioletFairy": {
+      "name": "Vaelet",
+      "combiRank": 1480,
+      "dup": 148000
+    },
+    "FoxMage_Dark": {
+      "name": "Wixen Noct",
+      "combiRank": 1490,
+      "dup": 149000
+    },
+    "ElecSnail_Ground": {
+      "name": "Snock Lux",
+      "combiRank": 1500,
+      "dup": 150000
+    },
+    "ScorpionMan": {
+      "name": "Prixter",
+      "combiRank": 1510,
+      "dup": 151000
+    },
+    "MushroomDragon": {
+      "name": "Shroomer",
+      "combiRank": 1520,
+      "dup": 152000
+    },
+    "KingAlpaca_Ice": {
+      "name": "Kingpaca Cryst",
+      "combiRank": 1530,
+      "dup": 153000
+    },
+    "OniGhostGirl": {
+      "name": "Bakemi",
+      "combiRank": 1540,
+      "dup": 154000
+    },
+    "DrillGame": {
+      "name": "Digtoise",
+      "combiRank": 1550,
+      "dup": 155000
+    },
+    "Ronin": {
+      "name": "Bushi",
+      "combiRank": 1560,
+      "dup": 156000
+    },
+    "CatVampire": {
+      "name": "Felbat",
+      "combiRank": 1570,
+      "dup": 157000
+    },
+    "CactusDoll_Dark": {
+      "name": "Needoll Noct",
+      "combiRank": 1580,
+      "dup": 158000
+    },
+    "SwordCutlassfish_Fire": {
+      "name": "Skutlass Ignis",
+      "combiRank": 1590,
+      "dup": 159000
+    },
+    "ThunderDog_Ice": {
+      "name": "Rayhound Cryst",
+      "combiRank": 1600,
+      "dup": 160000
+    },
+    "BlackPuppy_Ice": {
+      "name": "Smokie Cryst",
+      "combiRank": 1610,
+      "dup": 161000
+    },
+    "LazyCatfish_Gold": {
+      "name": "Dumud Gild",
+      "combiRank": 1620,
+      "dup": 576
+    },
+    "OctopusGirl_Neutral": {
+      "name": "Gloopie Primo",
+      "combiRank": 1630,
+      "dup": 163000
+    },
+    "FairyDragon_Water": {
+      "name": "Elphidran Aqua",
+      "combiRank": 1640,
+      "dup": 164000
+    },
+    "BirdDragon": {
+      "name": "Vanwyrm",
+      "combiRank": 1650,
+      "dup": 165000
+    },
+    "IceSeal": {
+      "name": "Polapup",
+      "combiRank": 1660,
+      "dup": 166000
+    },
+    "AmaterasuWolf": {
+      "name": "Kitsun",
+      "combiRank": 1670,
+      "dup": 167000
+    },
+    "BrownRabbit": {
+      "name": "Lapiron",
+      "combiRank": 1680,
+      "dup": 168000
+    },
+    "ThunderBird": {
+      "name": "Beakon",
+      "combiRank": 1690,
+      "dup": 169000
+    },
+    "VenusFlytrap": {
+      "name": "Carnibora",
+      "combiRank": 1700,
+      "dup": 170000
+    },
+    "GhostBeast": {
+      "name": "Maraith",
+      "combiRank": 1710,
+      "dup": 171000
+    },
+    "FlowerDoll": {
+      "name": "Petallia",
+      "combiRank": 1720,
+      "dup": 172000
+    },
+    "PurpleSpider": {
+      "name": "Tarantriss",
+      "combiRank": 1730,
+      "dup": 173000
+    },
+    "MimicDog": {
+      "name": "Mimog",
+      "combiRank": 1740,
+      "dup": 174000
+    },
+    "ElecLizard": {
+      "name": "Slowatt",
+      "combiRank": 1750,
+      "dup": 175000
+    },
+    "BlackPuppy": {
+      "name": "Smokie",
+      "combiRank": 1760,
+      "dup": 176000
+    },
+    "HoodGhost": {
+      "name": "Hoodle",
+      "combiRank": 1770,
+      "dup": 177000
+    },
+    "ElecSnail": {
+      "name": "Snock",
+      "combiRank": 1780,
+      "dup": 178000
+    },
+    "QueenBee": {
+      "name": "Elizabee",
+      "combiRank": 1790,
+      "dup": 179000
+    },
+    "CatMage_Fire": {
+      "name": "Katress Ignis",
+      "combiRank": 1800,
+      "dup": 180000
+    },
+    "WhiteMoth": {
+      "name": "Sibelyx",
+      "combiRank": 1810,
+      "dup": 181000
+    },
+    "DarkAlien": {
+      "name": "Xenovader",
+      "combiRank": 1820,
+      "dup": 182000
+    },
+    "BlueDragon": {
+      "name": "Azurobe",
+      "combiRank": 1830,
+      "dup": 183000
+    },
+    "Serpent_Ground": {
+      "name": "Surfent Terra",
+      "combiRank": 1840,
+      "dup": 184000
+    },
+    "CaptainPenguin_Black": {
+      "name": "Penking Lux",
+      "combiRank": 1850,
+      "dup": 573
+    },
+    "KendoFrog_Dark": {
+      "name": "Croajiro Noct",
+      "combiRank": 1860,
+      "dup": 186000
+    },
+    "FireKirin_Dark": {
+      "name": "Pyrin Noct",
+      "combiRank": 1870,
+      "dup": 187000
+    },
+    "Gorilla_Ground": {
+      "name": "Gorirat Terra",
+      "combiRank": 1880,
+      "dup": 188000
+    },
+    "FlowerDinosaur_Electric": {
+      "name": "Dinossom Lux",
+      "combiRank": 1890,
+      "dup": 189000
+    },
+    "LongCat": {
+      "name": "Valentail",
+      "combiRank": 1900,
+      "dup": 190000
+    },
+    "RaijinDaughter_Water": {
+      "name": "Dazzi Noct",
+      "combiRank": 1910,
+      "dup": 191000
+    },
+    "ThunderDog": {
+      "name": "Rayhound",
+      "combiRank": 1920,
+      "dup": 192000
+    },
+    "IceDeer": {
+      "name": "Reindrix",
+      "combiRank": 1930,
+      "dup": 193000
+    },
+    "BerryGoat_Dark": {
+      "name": "Caprity Noct",
+      "combiRank": 1940,
+      "dup": 194000
+    },
+    "WeaselDragon_Fire": {
+      "name": "Chillet Ignis",
+      "combiRank": 1950,
+      "dup": 195000
+    },
+    "FengyunDeeper": {
+      "name": "Fenglope",
+      "combiRank": 1960,
+      "dup": 196000
+    },
+    "IceFox": {
+      "name": "Foxcicle",
+      "combiRank": 1970,
+      "dup": 197000
+    },
+    "FireKirin": {
+      "name": "Pyrin",
+      "combiRank": 1980,
+      "dup": 198000
+    },
+    "LeafPrincess": {
+      "name": "Lullu",
+      "combiRank": 1990,
+      "dup": 199000
+    },
+    "DandelionGirl": {
+      "name": "Souffline",
+      "combiRank": 2000,
+      "dup": 200000
+    },
+    "Mutant": {
+      "name": "Lunaris",
+      "combiRank": 2010,
+      "dup": 201000
+    },
+    "GrassMinotaur": {
+      "name": "Elgrove",
+      "combiRank": 2020,
+      "dup": 202000
+    },
+    "SweetsSheep_Ground": {
+      "name": "Woolipop Terra",
+      "combiRank": 2030,
+      "dup": 203000
+    },
+    "CatMage": {
+      "name": "Katress",
+      "combiRank": 2040,
+      "dup": 204000
+    },
+    "RobinHood_Ground": {
+      "name": "Robinquill Terra",
+      "combiRank": 2050,
+      "dup": 205000
+    },
+    "GrassPanda": {
+      "name": "Mossanda",
+      "combiRank": 2060,
+      "dup": 206000
+    },
+    "CaptainPenguin": {
+      "name": "Penking",
+      "combiRank": 2070,
+      "dup": 207000
+    },
+    "FoxMage": {
+      "name": "Wixen",
+      "combiRank": 2080,
+      "dup": 208000
+    },
+    "PinkLizard": {
+      "name": "Lovander",
+      "combiRank": 2090,
+      "dup": 209000
+    },
+    "FlowerDinosaur": {
+      "name": "Dinossom",
+      "combiRank": 2100,
+      "dup": 210000
+    },
+    "Werewolf": {
+      "name": "Loupmoon",
+      "combiRank": 2110,
+      "dup": 211000
+    },
+    "NaughtyCat": {
+      "name": "Grintale",
+      "combiRank": 2120,
+      "dup": 212000
+    },
+    "IceCrocodile": {
+      "name": "Munchill",
+      "combiRank": 2130,
+      "dup": 213000
+    },
+    "Gorilla": {
+      "name": "Gorirat",
+      "combiRank": 2140,
+      "dup": 214000
+    },
+    "MopKing": {
+      "name": "Sweepa",
+      "combiRank": 2150,
+      "dup": 215000
+    },
+    "FeatherOstrich": {
+      "name": "Dazemu",
+      "combiRank": 2210,
+      "dup": 221000
+    },
+    "KingAlpaca": {
+      "name": "Kingpaca",
+      "combiRank": 2220,
+      "dup": 222000
+    },
+    "GuardianDog": {
+      "name": "Yakumo",
+      "combiRank": 2230,
+      "dup": 223000
+    },
+    "StuffedShark_Fire": {
+      "name": "Finsider Ignis",
+      "combiRank": 2240,
+      "dup": 581
+    },
+    "GhostBlackCat": {
+      "name": "Wispaw",
+      "combiRank": 2250,
+      "dup": 225000
+    },
+    "RobinHood": {
+      "name": "Robinquill",
+      "combiRank": 2260,
+      "dup": 226000
+    },
+    "Kirin": {
+      "name": "Univolt",
+      "combiRank": 2270,
+      "dup": 227000
+    },
+    "FairyDragon": {
+      "name": "Elphidran",
+      "combiRank": 2280,
+      "dup": 228000
+    },
+    "LazyCatfish": {
+      "name": "Dumud",
+      "combiRank": 2290,
+      "dup": 229000
+    },
+    "BluePlatypus_Fire": {
+      "name": "Fuack Ignis",
+      "combiRank": 2300,
+      "dup": 575
+    },
+    "SmallArmadillo": {
+      "name": "Kikit",
+      "combiRank": 2310,
+      "dup": 231000
+    },
+    "FlameBuffalo": {
+      "name": "Arsox",
+      "combiRank": 2320,
+      "dup": 232000
+    },
+    "WeaselDragon": {
+      "name": "Chillet",
+      "combiRank": 2330,
+      "dup": 233000
+    },
+    "CatBat": {
+      "name": "Tombat",
+      "combiRank": 2340,
+      "dup": 234000
+    },
+    "SoldierBee": {
+      "name": "Beegarde",
+      "combiRank": 2350,
+      "dup": 235000
+    },
+    "ElecPomeranian": {
+      "name": "Puffolt",
+      "combiRank": 2360,
+      "dup": 236000
+    },
+    "DarkCrow": {
+      "name": "Cawgnito",
+      "combiRank": 2370,
+      "dup": 237000
+    },
+    "FlyingManta_Thunder": {
+      "name": "Celaray Lux",
+      "combiRank": 2380,
+      "dup": 574
+    },
+    "SmallYeti": {
+      "name": "Snugloo",
+      "combiRank": 2390,
+      "dup": 239000
+    },
+    "RaijinDaughter": {
+      "name": "Dazzi",
+      "combiRank": 2400,
+      "dup": 240000
+    },
+    "TentacleTurtle": {
+      "name": "Turtacle",
+      "combiRank": 2410,
+      "dup": 241000
+    },
+    "CactusDoll": {
+      "name": "Needoll",
+      "combiRank": 2420,
+      "dup": 242000
+    },
+    "SharkKid_Fire": {
+      "name": "Gobfin Ignis",
+      "combiRank": 2430,
+      "dup": 243000
+    },
+    "Serpent": {
+      "name": "Surfent",
+      "combiRank": 2440,
+      "dup": 244000
+    },
+    "StuffedShark": {
+      "name": "Finsider",
+      "combiRank": 2450,
+      "dup": 245000
+    },
+    "PinkRabbit_Grass": {
+      "name": "Ribbuny Botan",
+      "combiRank": 2460,
+      "dup": 246000
+    },
+    "Kelpie_Fire": {
+      "name": "Kelpsea Ignis",
+      "combiRank": 2470,
+      "dup": 247000
+    },
+    "FluffyBird": {
+      "name": "Muffly",
+      "combiRank": 2480,
+      "dup": 248000
+    },
+    "Penguin_Electric": {
+      "name": "Pengullet Lux",
+      "combiRank": 2490,
+      "dup": 572
+    },
+    "Kitsunebi_Ice": {
+      "name": "Foxparks Cryst",
+      "combiRank": 2500,
+      "dup": 250000
+    },
+    "WindChimes_Ice": {
+      "name": "Hangyu Cryst",
+      "combiRank": 2510,
+      "dup": 251000
+    },
+    "ClioneTwins": {
+      "name": "Amione",
+      "combiRank": 2520,
+      "dup": 252000
+    },
+    "OctopusGirl": {
+      "name": "Gloopie",
+      "combiRank": 2530,
+      "dup": 253000
+    },
+    "NegativeOctopus_Neutral": {
+      "name": "Killamari Primo",
+      "combiRank": 2540,
+      "dup": 571
+    },
+    "SharkKid": {
+      "name": "Gobfin",
+      "combiRank": 2550,
+      "dup": 255000
+    },
+    "HawkBird": {
+      "name": "Nitewing",
+      "combiRank": 2560,
+      "dup": 256000
+    },
+    "Eagle": {
+      "name": "Galeclaw",
+      "combiRank": 2570,
+      "dup": 257000
+    },
+    "Deer_Ground": {
+      "name": "Eikthyrdeer Terra",
+      "combiRank": 2580,
+      "dup": 258000
+    },
+    "JellyfishGhost": {
+      "name": "Jellroy",
+      "combiRank": 2590,
+      "dup": 259000
+    },
+    "KendoFrog": {
+      "name": "Croajiro",
+      "combiRank": 2600,
+      "dup": 260000
+    },
+    "BerryGoat": {
+      "name": "Caprity",
+      "combiRank": 2610,
+      "dup": 261000
+    },
+    "CuteButterfly": {
+      "name": "Cinnamoth",
+      "combiRank": 2620,
+      "dup": 262000
+    },
+    "LeafMomonga": {
+      "name": "Herbil",
+      "combiRank": 2630,
+      "dup": 263000
+    },
+    "LizardMan_Fire": {
+      "name": "Leezpunk Ignis",
+      "combiRank": 2640,
+      "dup": 264000
+    },
+    "JellyfishFairy": {
+      "name": "Jelliette",
+      "combiRank": 2650,
+      "dup": 265000
+    },
+    "FlowerRabbit": {
+      "name": "Flopie",
+      "combiRank": 2660,
+      "dup": 266000
+    },
+    "LizardMan": {
+      "name": "Leezpunk",
+      "combiRank": 2670,
+      "dup": 267000
+    },
+    "Garm": {
+      "name": "Direhowl",
+      "combiRank": 2680,
+      "dup": 268000
+    },
+    "LittleBriarRose": {
+      "name": "Bristla",
+      "combiRank": 2690,
+      "dup": 269000
+    },
+    "LavaGirl": {
+      "name": "Flambelle",
+      "combiRank": 2700,
+      "dup": 270000
+    },
+    "Deer": {
+      "name": "Eikthyrdeer",
+      "combiRank": 2710,
+      "dup": 271000
+    },
+    "Alpaca": {
+      "name": "Melpaca",
+      "combiRank": 2720,
+      "dup": 272000
+    },
+    "ColorfulBird": {
+      "name": "Tocotoco",
+      "combiRank": 2730,
+      "dup": 273000
+    },
+    "FlyingManta": {
+      "name": "Celaray",
+      "combiRank": 2740,
+      "dup": 274000
+    },
+    "Bastet_Ice": {
+      "name": "Mau Cryst",
+      "combiRank": 2750,
+      "dup": 275000
+    },
+    "PinkCat": {
+      "name": "Cattiva",
+      "combiRank": 2760,
+      "dup": 276000
+    },
+    "NegativeOctopus": {
+      "name": "Killamari",
+      "combiRank": 2770,
+      "dup": 277000
+    },
+    "WindChimes": {
+      "name": "Hangyu",
+      "combiRank": 2780,
+      "dup": 278000
+    },
+    "CuteMole": {
+      "name": "Fuddler",
+      "combiRank": 2790,
+      "dup": 279000
+    },
+    "CowPal": {
+      "name": "Mozzarina",
+      "combiRank": 2800,
+      "dup": 280000
+    },
+    "Kelpie": {
+      "name": "Kelpsea",
+      "combiRank": 2810,
+      "dup": 281000
+    },
+    "SweetsSheep": {
+      "name": "Woolipop",
+      "combiRank": 2820,
+      "dup": 282000
+    },
+    "Monkey_Fire": {
+      "name": "Tanzee Ignis",
+      "combiRank": 2830,
+      "dup": 283000
+    },
+    "MopBaby": {
+      "name": "Swee",
+      "combiRank": 2840,
+      "dup": 284000
+    },
+    "Hedgehog_Ice": {
+      "name": "Jolthog Cryst",
+      "combiRank": 2850,
+      "dup": 285000
+    },
+    "PinkRabbit": {
+      "name": "Ribbuny",
+      "combiRank": 2860,
+      "dup": 286000
+    },
+    "FlameBambi": {
+      "name": "Rooby",
+      "combiRank": 2870,
+      "dup": 287000
+    },
+    "Boar": {
+      "name": "Rushoar",
+      "combiRank": 2880,
+      "dup": 288000
+    },
+    "WoolFox": {
+      "name": "Cremis",
+      "combiRank": 2890,
+      "dup": 289000
+    },
+    "Monkey": {
+      "name": "Tanzee",
+      "combiRank": 2900,
+      "dup": 290000
+    },
+    "DreamDemon": {
+      "name": "Daedream",
+      "combiRank": 2910,
+      "dup": 291000
+    },
+    "NightFox": {
+      "name": "Nox",
+      "combiRank": 2920,
+      "dup": 292000
+    },
+    "SamuraiDog": {
+      "name": "Pupperai",
+      "combiRank": 2930,
+      "dup": 293000
+    },
+    "WizardOwl": {
+      "name": "Hoocrates",
+      "combiRank": 2940,
+      "dup": 294000
+    },
+    "PlantSlime": {
+      "name": "Gumoss",
+      "combiRank": 2950,
+      "dup": 295000
+    },
+    "Penguin": {
+      "name": "Pengullet",
+      "combiRank": 2960,
+      "dup": 296000
+    },
+    "CloverFairy": {
+      "name": "Clovee",
+      "combiRank": 2970,
+      "dup": 297000
+    },
+    "BluePlatypus": {
+      "name": "Fuack",
+      "combiRank": 2980,
+      "dup": 298000
+    },
+    "Kitsunebi": {
+      "name": "Foxparks",
+      "combiRank": 2990,
+      "dup": 299000
+    },
+    "NegativeKoala": {
+      "name": "Depresso",
+      "combiRank": 3000,
+      "dup": 300000
+    },
+    "ElecCat": {
+      "name": "Sparkit",
+      "combiRank": 3010,
+      "dup": 301000
+    },
+    "Carbunclo": {
+      "name": "Lifmunk",
+      "combiRank": 3020,
+      "dup": 302000
+    },
+    "Hedgehog": {
+      "name": "Jolthog",
+      "combiRank": 3030,
+      "dup": 303000
+    },
+    "Bastet": {
+      "name": "Mau",
+      "combiRank": 3040,
+      "dup": 304000
+    },
+    "SheepBall": {
+      "name": "Lamball",
+      "combiRank": 3050,
+      "dup": 305000
+    },
+    "CuteFox": {
+      "name": "Vixy",
+      "combiRank": 3060,
+      "dup": 306000
+    },
+    "Ganesha": {
+      "name": "Teafant",
+      "combiRank": 3070,
+      "dup": 307000
+    },
+    "ChickenPal": {
+      "name": "Chikipi",
+      "combiRank": 3080,
+      "dup": 308000
+    },
+    "YakushimaBoss001": {
+      "name": "Eye of Cthulhu",
+      "combiRank": 3100,
+      "dup": 310000
+    },
+    "YakushimaBoss001_Small": {
+      "name": "Demon Eye",
+      "combiRank": 3100,
+      "dup": 310000
+    },
+    "YakushimaMonster001": {
+      "name": "Green Slime",
+      "combiRank": 3100,
+      "dup": 310000
+    },
+    "YakushimaMonster001_Blue": {
+      "name": "Blue Slime",
+      "combiRank": 3100,
+      "dup": 310000
+    },
+    "YakushimaMonster001_Pink": {
+      "name": "Illuminant Slime",
+      "combiRank": 3100,
+      "dup": 310000
+    },
+    "YakushimaMonster001_Purple": {
+      "name": "Purple Slime",
+      "combiRank": 3100,
+      "dup": 310000
+    },
+    "YakushimaMonster001_Rainbow": {
+      "name": "Rainbow Slime",
+      "combiRank": 3100,
+      "dup": 310000
+    },
+    "YakushimaMonster001_Red": {
+      "name": "Red Slime",
+      "combiRank": 3100,
+      "dup": 310000
+    },
+    "YakushimaMonster002": {
+      "name": "Enchanted Sword",
+      "combiRank": 3100,
+      "dup": 310000
+    },
+    "YakushimaMonster003": {
+      "name": "Cave Bat",
+      "combiRank": 3100,
+      "dup": 310000
+    },
+    "YakushimaMonster003_Purple": {
+      "name": "Illuminant Bat",
+      "combiRank": 3100,
+      "dup": 310000
+    }
+  },
+  "pool": [
+    "DomeArmorDragon",
+    "BlueSkyDragon",
+    "LotusDragon",
+    "WingGolem",
+    "MonochromeQueen",
+    "KabukiMan",
+    "GhostDragon",
+    "FoxExorcist",
+    "KingBahamut",
+    "BlueThunderHorse",
+    "Anubis",
+    "BlackMetalDragon",
+    "GrassGolem",
+    "ClownRabbit",
+    "ThiefBird",
+    "WhiteShieldDragon",
+    "Umihebi",
+    "Yeti_Grass",
+    "IceNarwhal",
+    "GoldenHorse",
+    "VolcanoDragon",
+    "MushroomLady",
+    "GrimGirl",
+    "CubeTurtle",
+    "SleeveRabbit",
+    "Yeti",
+    "SnowPeafowl",
+    "Sekhmet",
+    "GhostAnglerfish",
+    "LanternButler",
+    "SnakeGirl",
+    "CandleGhost",
+    "DarkFlameFox",
+    "Plesiosaur",
+    "WhiteTiger",
+    "RedArmorBird",
+    "VolcanicMonster",
+    "LazyDragon",
+    "RockBeast",
+    "DarkScorpion",
+    "HadesBird",
+    "MysteryMask",
+    "NightBlueHorse",
+    "GrassRabbitMan",
+    "MummyPal",
+    "MoonChild",
+    "SumoDog",
+    "Suzaku",
+    "SkyDragon",
+    "GhostRabbit",
+    "TropicalOstrich",
+    "BadCatgirl",
+    "IceWitch",
+    "HerculesBeetle",
+    "GrassMammoth",
+    "RedFlowerBird",
+    "Manticore",
+    "KingSunfish",
+    "SakuraSaurus",
+    "BlueberryFairy",
+    "ThunderFluffyBird",
+    "PandaGirl",
+    "SwordCutlassfish",
+    "MushroomDragon_Dark",
+    "SifuDog",
+    "Baphomet",
+    "VioletFairy",
+    "ScorpionMan",
+    "MushroomDragon",
+    "OniGhostGirl",
+    "DrillGame",
+    "Ronin",
+    "CatVampire",
+    "BirdDragon",
+    "IceSeal",
+    "AmaterasuWolf",
+    "BrownRabbit",
+    "ThunderBird",
+    "VenusFlytrap",
+    "GhostBeast",
+    "FlowerDoll",
+    "PurpleSpider",
+    "ElecLizard",
+    "BlackPuppy",
+    "HoodGhost",
+    "ElecSnail",
+    "QueenBee",
+    "WhiteMoth",
+    "BlueDragon",
+    "LongCat",
+    "ThunderDog",
+    "IceDeer",
+    "FengyunDeeper",
+    "IceFox",
+    "FireKirin",
+    "LeafPrincess",
+    "DandelionGirl",
+    "Mutant",
+    "GrassMinotaur",
+    "CatMage",
+    "GrassPanda",
+    "CaptainPenguin",
+    "FoxMage",
+    "PinkLizard",
+    "FlowerDinosaur",
+    "Werewolf",
+    "NaughtyCat",
+    "IceCrocodile",
+    "Gorilla",
+    "MopKing",
+    "FeatherOstrich",
+    "KingAlpaca",
+    "GuardianDog",
+    "GhostBlackCat",
+    "RobinHood",
+    "Kirin",
+    "FairyDragon",
+    "LazyCatfish",
+    "SmallArmadillo",
+    "FlameBuffalo",
+    "WeaselDragon",
+    "CatBat",
+    "SoldierBee",
+    "ElecPomeranian",
+    "DarkCrow",
+    "SmallYeti",
+    "RaijinDaughter",
+    "TentacleTurtle",
+    "CactusDoll",
+    "Serpent",
+    "StuffedShark",
+    "Kelpie_Fire",
+    "FluffyBird",
+    "ClioneTwins",
+    "OctopusGirl",
+    "SharkKid",
+    "HawkBird",
+    "Eagle",
+    "JellyfishGhost",
+    "KendoFrog",
+    "BerryGoat",
+    "CuteButterfly",
+    "LeafMomonga",
+    "JellyfishFairy",
+    "FlowerRabbit",
+    "LizardMan",
+    "Garm",
+    "LittleBriarRose",
+    "LavaGirl",
+    "Deer",
+    "Alpaca",
+    "ColorfulBird",
+    "FlyingManta",
+    "PinkCat",
+    "NegativeOctopus",
+    "WindChimes",
+    "CuteMole",
+    "CowPal",
+    "Kelpie",
+    "SweetsSheep",
+    "MopBaby",
+    "PinkRabbit",
+    "FlameBambi",
+    "Boar",
+    "WoolFox",
+    "Monkey",
+    "DreamDemon",
+    "NightFox",
+    "SamuraiDog",
+    "WizardOwl",
+    "PlantSlime",
+    "Penguin",
+    "CloverFairy",
+    "BluePlatypus",
+    "Kitsunebi",
+    "NegativeKoala",
+    "ElecCat",
+    "Carbunclo",
+    "Hedgehog",
+    "Bastet",
+    "SheepBall",
+    "CuteFox",
+    "Ganesha",
+    "ChickenPal",
+    "YakushimaMonster001_Rainbow"
+  ],
+  "unique": [
+    [
+      "AmaterasuWolf",
+      "BadCatgirl",
+      "AmaterasuWolf_Dark"
+    ],
+    [
+      "AmaterasuWolf_Dark",
+      "AmaterasuWolf_Dark",
+      "AmaterasuWolf_Dark"
+    ],
+    [
+      "AmaterasuWolf_Dark",
+      "WhiteDeer",
+      "WhiteDeer_Dark"
+    ],
+    [
+      "Baphomet",
+      "GhostBeast",
+      "Baphomet_Dark"
+    ],
+    [
+      "Baphomet_Dark",
+      "Baphomet_Dark",
+      "Baphomet_Dark"
+    ],
+    [
+      "Bastet",
+      "Penguin",
+      "Bastet_Ice"
+    ],
+    [
+      "Bastet_Ice",
+      "Bastet_Ice",
+      "Bastet_Ice"
+    ],
+    [
+      "BerryGoat",
+      "PurpleSpider",
+      "BerryGoat_Dark"
+    ],
+    [
+      "BerryGoat_Dark",
+      "BerryGoat_Dark",
+      "BerryGoat_Dark"
+    ],
+    [
+      "BirdDragon",
+      "IceFox",
+      "BirdDragon_Ice"
+    ],
+    [
+      "BirdDragon_Ice",
+      "BirdDragon_Ice",
+      "BirdDragon_Ice"
+    ],
+    [
+      "BlackCentaur",
+      "BlackCentaur",
+      "BlackCentaur"
+    ],
+    [
+      "BlackCentaur",
+      "BlueSkyDragon",
+      "DomeArmorDragon"
+    ],
+    [
+      "BlackCentaur",
+      "DomeArmorDragon",
+      "DomeArmorDragon"
+    ],
+    [
+      "BlackCentaur",
+      "FlowerPrince",
+      "DomeArmorDragon"
+    ],
+    [
+      "BlackCentaur",
+      "JetDragon",
+      "LotusDragon"
+    ],
+    [
+      "BlackCentaur",
+      "SnowTigerBeastman",
+      "DomeArmorDragon"
+    ],
+    [
+      "BlackGriffon",
+      "BlackGriffon",
+      "BlackGriffon"
+    ],
+    [
+      "BlackPuppy",
+      "IceCrocodile",
+      "BlackPuppy_Ice"
+    ],
+    [
+      "BlackPuppy_Ice",
+      "BlackPuppy_Ice",
+      "BlackPuppy_Ice"
+    ],
+    [
+      "BlueberryFairy",
+      "CactusDoll",
+      "CactusDoll_Dark"
+    ],
+    [
+      "BlueDragon",
+      "SnowPeafowl",
+      "BlueDragon_Ice"
+    ],
+    [
+      "BlueDragon_Ice",
+      "BlueDragon_Ice",
+      "BlueDragon_Ice"
+    ],
+    [
+      "BluePlatypus",
+      "LavaGirl",
+      "BluePlatypus_Fire"
+    ],
+    [
+      "BluePlatypus",
+      "SakuraSaurus",
+      "SakuraSaurus_Water"
+    ],
+    [
+      "BluePlatypus_Fire",
+      "BluePlatypus_Fire",
+      "BluePlatypus_Fire"
+    ],
+    [
+      "BlueSkyDragon",
+      "CubeTurtle_Neutral",
+      "DomeArmorDragon"
+    ],
+    [
+      "BlueSkyDragon",
+      "DomeArmorDragon",
+      "DomeArmorDragon"
+    ],
+    [
+      "BlueSkyDragon",
+      "FlowerPrince",
+      "DomeArmorDragon"
+    ],
+    [
+      "BlueSkyDragon",
+      "GhostDragon_Fire",
+      "DomeArmorDragon"
+    ],
+    [
+      "BlueSkyDragon",
+      "IceHorse",
+      "DomeArmorDragon"
+    ],
+    [
+      "BlueSkyDragon",
+      "IceHorse_Dark",
+      "DomeArmorDragon"
+    ],
+    [
+      "BlueSkyDragon",
+      "JetDragon",
+      "DomeArmorDragon"
+    ],
+    [
+      "BlueSkyDragon",
+      "KingBahamut_Dragon",
+      "DomeArmorDragon"
+    ],
+    [
+      "BlueSkyDragon",
+      "LegendDeer",
+      "DomeArmorDragon"
+    ],
+    [
+      "BlueSkyDragon",
+      "LilyQueen_Dark",
+      "LotusDragon"
+    ],
+    [
+      "BlueSkyDragon",
+      "Mothman",
+      "DomeArmorDragon"
+    ],
+    [
+      "BlueSkyDragon",
+      "NightLady_Dark",
+      "DomeArmorDragon"
+    ],
+    [
+      "BlueSkyDragon",
+      "PoseidonOrca",
+      "DomeArmorDragon"
+    ],
+    [
+      "BlueSkyDragon",
+      "SaintCentaur",
+      "DomeArmorDragon"
+    ],
+    [
+      "BlueSkyDragon",
+      "SnowTigerBeastman",
+      "DomeArmorDragon"
+    ],
+    [
+      "BlueSkyDragon",
+      "ThunderDragonMan",
+      "DomeArmorDragon"
+    ],
+    [
+      "BlueSkyDragon",
+      "Umihebi_Fire",
+      "DomeArmorDragon"
+    ],
+    [
+      "BlueSkyDragon",
+      "WingGolem_Fire",
+      "DomeArmorDragon"
+    ],
+    [
+      "BlueThunderHorse",
+      "FengyunDeeper",
+      "FengyunDeeper_Electric"
+    ],
+    [
+      "CactusDoll_Dark",
+      "CactusDoll_Dark",
+      "CactusDoll_Dark"
+    ],
+    [
+      "CandleGhost",
+      "GhostAnglerfish",
+      "GhostAnglerfish_Fire"
+    ],
+    [
+      "CandleGhost",
+      "GrassGolem",
+      "GrassGolem_Dark"
+    ],
+    [
+      "CandleGhost",
+      "Ronin",
+      "Ronin_Dark"
+    ],
+    [
+      "CaptainPenguin",
+      "ThunderDog",
+      "CaptainPenguin_Black"
+    ],
+    [
+      "CaptainPenguin_Black",
+      "CaptainPenguin_Black",
+      "CaptainPenguin_Black"
+    ],
+    [
+      "CatMage",
+      "FireKirin",
+      "FireKirin_Dark"
+    ],
+    [
+      "CatMage",
+      "FoxMage",
+      "FoxMage_Dark"
+    ],
+    [
+      "CatMage_Fire",
+      "CatMage_Fire",
+      "CatMage_Fire"
+    ],
+    [
+      "CatVampire",
+      "Manticore",
+      "Manticore_Dark"
+    ],
+    [
+      "ChickenPal",
+      "YakushimaBoss001",
+      "ChickenPal"
+    ],
+    [
+      "ChickenPal",
+      "YakushimaBoss001_Small",
+      "ChickenPal"
+    ],
+    [
+      "ChickenPal",
+      "YakushimaMonster001",
+      "ChickenPal"
+    ],
+    [
+      "ChickenPal",
+      "YakushimaMonster001_Blue",
+      "ChickenPal"
+    ],
+    [
+      "ChickenPal",
+      "YakushimaMonster001_Pink",
+      "ChickenPal"
+    ],
+    [
+      "ChickenPal",
+      "YakushimaMonster001_Purple",
+      "ChickenPal"
+    ],
+    [
+      "ChickenPal",
+      "YakushimaMonster001_Rainbow",
+      "ChickenPal"
+    ],
+    [
+      "ChickenPal",
+      "YakushimaMonster001_Red",
+      "ChickenPal"
+    ],
+    [
+      "ChickenPal",
+      "YakushimaMonster002",
+      "ChickenPal"
+    ],
+    [
+      "ChickenPal",
+      "YakushimaMonster003",
+      "ChickenPal"
+    ],
+    [
+      "ChickenPal",
+      "YakushimaMonster003_Purple",
+      "ChickenPal"
+    ],
+    [
+      "CubeTurtle",
+      "WhiteDeer",
+      "CubeTurtle_Neutral"
+    ],
+    [
+      "CubeTurtle_Neutral",
+      "CubeTurtle_Neutral",
+      "CubeTurtle_Neutral"
+    ],
+    [
+      "CubeTurtle_Neutral",
+      "DomeArmorDragon",
+      "DomeArmorDragon"
+    ],
+    [
+      "CubeTurtle_Neutral",
+      "FlowerPrince",
+      "LotusDragon"
+    ],
+    [
+      "CubeTurtle_Neutral",
+      "SnowTigerBeastman",
+      "DomeArmorDragon"
+    ],
+    [
+      "CuteMole",
+      "RobinHood",
+      "RobinHood_Ground"
+    ],
+    [
+      "DarkAlien",
+      "DarkAlien",
+      "DarkAlien"
+    ],
+    [
+      "DarkMechaDragon",
+      "DarkMechaDragon",
+      "DarkMechaDragon"
+    ],
+    [
+      "DarkScorpion",
+      "LilyQueen",
+      "LilyQueen_Dark"
+    ],
+    [
+      "DarkScorpion",
+      "WingGolem",
+      "DarkScorpion_Ground"
+    ],
+    [
+      "DarkScorpion_Ground",
+      "DarkScorpion_Ground",
+      "DarkScorpion_Ground"
+    ],
+    [
+      "Deer",
+      "WindChimes",
+      "Deer_Ground"
+    ],
+    [
+      "Deer_Ground",
+      "Deer_Ground",
+      "Deer_Ground"
+    ],
+    [
+      "Deer_Ground",
+      "GoldenHorse",
+      "WhiteDeer"
+    ],
+    [
+      "Deer_Ground",
+      "LazyCatfish",
+      "LazyCatfish_Gold"
+    ],
+    [
+      "DomeArmorDragon",
+      "FlowerPrince",
+      "DomeArmorDragon"
+    ],
+    [
+      "DomeArmorDragon",
+      "GhostDragon_Fire",
+      "DomeArmorDragon"
+    ],
+    [
+      "DomeArmorDragon",
+      "IceHorse",
+      "DomeArmorDragon"
+    ],
+    [
+      "DomeArmorDragon",
+      "IceHorse_Dark",
+      "DomeArmorDragon"
+    ],
+    [
+      "DomeArmorDragon",
+      "JetDragon",
+      "DomeArmorDragon"
+    ],
+    [
+      "DomeArmorDragon",
+      "KingBahamut_Dragon",
+      "DomeArmorDragon"
+    ],
+    [
+      "DomeArmorDragon",
+      "LegendDeer",
+      "DomeArmorDragon"
+    ],
+    [
+      "DomeArmorDragon",
+      "LilyQueen_Dark",
+      "DomeArmorDragon"
+    ],
+    [
+      "DomeArmorDragon",
+      "LotusDragon",
+      "LotusDragon"
+    ],
+    [
+      "DomeArmorDragon",
+      "Mothman",
+      "DomeArmorDragon"
+    ],
+    [
+      "DomeArmorDragon",
+      "NightLady_Dark",
+      "DomeArmorDragon"
+    ],
+    [
+      "DomeArmorDragon",
+      "PoseidonOrca",
+      "DomeArmorDragon"
+    ],
+    [
+      "DomeArmorDragon",
+      "SaintCentaur",
+      "DomeArmorDragon"
+    ],
+    [
+      "DomeArmorDragon",
+      "SnowTigerBeastman",
+      "DomeArmorDragon"
+    ],
+    [
+      "DomeArmorDragon",
+      "ThunderDragonMan",
+      "DomeArmorDragon"
+    ],
+    [
+      "DomeArmorDragon",
+      "Umihebi_Fire",
+      "DomeArmorDragon"
+    ],
+    [
+      "DomeArmorDragon",
+      "WingGolem_Fire",
+      "DomeArmorDragon"
+    ],
+    [
+      "DrillGame",
+      "HerculesBeetle",
+      "HerculesBeetle_Ground"
+    ],
+    [
+      "DrillGame",
+      "TentacleTurtle",
+      "TentacleTurtle_Ground"
+    ],
+    [
+      "ElecCat",
+      "LazyDragon",
+      "LazyDragon_Electric"
+    ],
+    [
+      "ElecCat",
+      "Penguin",
+      "Penguin_Electric"
+    ],
+    [
+      "ElecLizard",
+      "KingSunfish",
+      "KingSunfish_Thunder"
+    ],
+    [
+      "ElecPanda",
+      "ElecPanda",
+      "ElecPanda"
+    ],
+    [
+      "ElecPanda",
+      "GrassPanda",
+      "GrassPanda_Electric"
+    ],
+    [
+      "ElecSnail",
+      "TentacleTurtle_Ground",
+      "ElecSnail_Ground"
+    ],
+    [
+      "ElecSnail_Ground",
+      "ElecSnail_Ground",
+      "ElecSnail_Ground"
+    ],
+    [
+      "FairyDragon",
+      "Serpent",
+      "FairyDragon_Water"
+    ],
+    [
+      "FairyDragon_Water",
+      "FairyDragon_Water",
+      "FairyDragon_Water"
+    ],
+    [
+      "FeatherOstrich",
+      "WhiteTiger",
+      "WhiteTiger_Ground"
+    ],
+    [
+      "FengyunDeeper_Electric",
+      "FengyunDeeper_Electric",
+      "FengyunDeeper_Electric"
+    ],
+    [
+      "FireKirin_Dark",
+      "FireKirin_Dark",
+      "FireKirin_Dark"
+    ],
+    [
+      "FlameBambi",
+      "SharkKid",
+      "SharkKid_Fire"
+    ],
+    [
+      "FlameBuffalo",
+      "WeaselDragon",
+      "WeaselDragon_Fire"
+    ],
+    [
+      "FlowerDinosaur",
+      "ThunderDog",
+      "FlowerDinosaur_Electric"
+    ],
+    [
+      "FlowerDinosaur_Electric",
+      "FlowerDinosaur_Electric",
+      "FlowerDinosaur_Electric"
+    ],
+    [
+      "FlowerDoll",
+      "GhostRabbit",
+      "GhostRabbit_Grass"
+    ],
+    [
+      "FlowerDoll",
+      "Ronin",
+      "FlowerDoll_Fire"
+    ],
+    [
+      "FlowerDoll_Fire",
+      "FlowerDoll_Fire",
+      "FlowerDoll_Fire"
+    ],
+    [
+      "FlowerPrince",
+      "FlowerPrince",
+      "FlowerPrince"
+    ],
+    [
+      "FlowerPrince",
+      "GhostDragon_Fire",
+      "DomeArmorDragon"
+    ],
+    [
+      "FlowerPrince",
+      "IceHorse",
+      "DomeArmorDragon"
+    ],
+    [
+      "FlowerPrince",
+      "IceHorse_Dark",
+      "DomeArmorDragon"
+    ],
+    [
+      "FlowerPrince",
+      "JetDragon",
+      "DomeArmorDragon"
+    ],
+    [
+      "FlowerPrince",
+      "KingBahamut_Dragon",
+      "DomeArmorDragon"
+    ],
+    [
+      "FlowerPrince",
+      "LegendDeer",
+      "DomeArmorDragon"
+    ],
+    [
+      "FlowerPrince",
+      "Mothman",
+      "DomeArmorDragon"
+    ],
+    [
+      "FlowerPrince",
+      "NightLady_Dark",
+      "DomeArmorDragon"
+    ],
+    [
+      "FlowerPrince",
+      "PoseidonOrca",
+      "DomeArmorDragon"
+    ],
+    [
+      "FlowerPrince",
+      "SaintCentaur",
+      "DomeArmorDragon"
+    ],
+    [
+      "FlowerPrince",
+      "SnowTigerBeastman",
+      "DomeArmorDragon"
+    ],
+    [
+      "FlowerPrince",
+      "ThunderDragonMan",
+      "DomeArmorDragon"
+    ],
+    [
+      "FlowerPrince",
+      "Umihebi_Fire",
+      "DomeArmorDragon"
+    ],
+    [
+      "FlyingManta",
+      "Kirin",
+      "FlyingManta_Thunder"
+    ],
+    [
+      "FlyingManta_Thunder",
+      "FlyingManta_Thunder",
+      "FlyingManta_Thunder"
+    ],
+    [
+      "FoxMage_Dark",
+      "FoxMage_Dark",
+      "FoxMage_Dark"
+    ],
+    [
+      "GhostAnglerfish_Fire",
+      "GhostAnglerfish_Fire",
+      "GhostAnglerfish_Fire"
+    ],
+    [
+      "GhostDragon",
+      "Suzaku",
+      "GhostDragon_Fire"
+    ],
+    [
+      "GhostDragon_Fire",
+      "GhostDragon_Fire",
+      "GhostDragon_Fire"
+    ],
+    [
+      "GhostDragon_Fire",
+      "IceHorse_Dark",
+      "DomeArmorDragon"
+    ],
+    [
+      "GhostDragon_Fire",
+      "JetDragon",
+      "DomeArmorDragon"
+    ],
+    [
+      "GhostDragon_Fire",
+      "KingBahamut_Dragon",
+      "DomeArmorDragon"
+    ],
+    [
+      "GhostDragon_Fire",
+      "LegendDeer",
+      "DomeArmorDragon"
+    ],
+    [
+      "GhostDragon_Fire",
+      "Mothman",
+      "DomeArmorDragon"
+    ],
+    [
+      "GhostDragon_Fire",
+      "SnowTigerBeastman",
+      "DomeArmorDragon"
+    ],
+    [
+      "GhostDragon_Fire",
+      "ThunderDragonMan",
+      "LotusDragon"
+    ],
+    [
+      "GhostRabbit_Grass",
+      "GhostRabbit_Grass",
+      "GhostRabbit_Grass"
+    ],
+    [
+      "Gorilla",
+      "SmallArmadillo",
+      "Gorilla_Ground"
+    ],
+    [
+      "Gorilla_Ground",
+      "Gorilla_Ground",
+      "Gorilla_Ground"
+    ],
+    [
+      "GrassGolem_Dark",
+      "GrassGolem_Dark",
+      "GrassGolem_Dark"
+    ],
+    [
+      "GrassMammoth",
+      "Yeti",
+      "GrassMammoth_Ice"
+    ],
+    [
+      "GrassMammoth_Ice",
+      "GrassMammoth_Ice",
+      "GrassMammoth_Ice"
+    ],
+    [
+      "GrassMinotaur",
+      "RockBeast_Ice",
+      "GrassMinotaur_Ice"
+    ],
+    [
+      "GrassMinotaur_Ice",
+      "GrassMinotaur_Ice",
+      "GrassMinotaur_Ice"
+    ],
+    [
+      "GrassPanda_Electric",
+      "GrassPanda_Electric",
+      "GrassPanda_Electric"
+    ],
+    [
+      "HadesBird",
+      "IceHorse",
+      "IceHorse_Dark"
+    ],
+    [
+      "HadesBird",
+      "ThunderBird",
+      "HadesBird_Electric"
+    ],
+    [
+      "HadesBird_Electric",
+      "HadesBird_Electric",
+      "HadesBird_Electric"
+    ],
+    [
+      "HadesBird_Electric",
+      "ScorpionMan",
+      "ScorpionMan_Electric"
+    ],
+    [
+      "Hedgehog",
+      "Penguin",
+      "Hedgehog_Ice"
+    ],
+    [
+      "Hedgehog_Ice",
+      "Hedgehog_Ice",
+      "Hedgehog_Ice"
+    ],
+    [
+      "HerculesBeetle_Ground",
+      "HerculesBeetle_Ground",
+      "HerculesBeetle_Ground"
+    ],
+    [
+      "Horus",
+      "Horus",
+      "Horus"
+    ],
+    [
+      "Horus",
+      "Umihebi",
+      "Horus_Water"
+    ],
+    [
+      "Horus_Water",
+      "Horus_Water",
+      "Horus_Water"
+    ],
+    [
+      "IceDeer",
+      "KingAlpaca",
+      "KingAlpaca_Ice"
+    ],
+    [
+      "IceFox",
+      "Kitsunebi",
+      "Kitsunebi_Ice"
+    ],
+    [
+      "IceFox",
+      "ThunderDog",
+      "ThunderDog_Ice"
+    ],
+    [
+      "IceFox",
+      "VolcanicMonster",
+      "VolcanicMonster_Ice"
+    ],
+    [
+      "IceHorse",
+      "IceHorse",
+      "IceHorse"
+    ],
+    [
+      "IceHorse",
+      "IceHorse_Dark",
+      "LotusDragon"
+    ],
+    [
+      "IceHorse",
+      "JetDragon",
+      "DomeArmorDragon"
+    ],
+    [
+      "IceHorse",
+      "KingBahamut_Dragon",
+      "DomeArmorDragon"
+    ],
+    [
+      "IceHorse",
+      "LegendDeer",
+      "DomeArmorDragon"
+    ],
+    [
+      "IceHorse",
+      "Mothman",
+      "DomeArmorDragon"
+    ],
+    [
+      "IceHorse",
+      "SnowTigerBeastman",
+      "DomeArmorDragon"
+    ],
+    [
+      "IceHorse_Dark",
+      "IceHorse_Dark",
+      "IceHorse_Dark"
+    ],
+    [
+      "IceHorse_Dark",
+      "JetDragon",
+      "DomeArmorDragon"
+    ],
+    [
+      "IceHorse_Dark",
+      "KingBahamut_Dragon",
+      "DomeArmorDragon"
+    ],
+    [
+      "IceHorse_Dark",
+      "LegendDeer",
+      "DomeArmorDragon"
+    ],
+    [
+      "IceHorse_Dark",
+      "Mothman",
+      "DomeArmorDragon"
+    ],
+    [
+      "IceHorse_Dark",
+      "NightLady_Dark",
+      "DomeArmorDragon"
+    ],
+    [
+      "IceHorse_Dark",
+      "SnowTigerBeastman",
+      "DomeArmorDragon"
+    ],
+    [
+      "IceHorse_Dark",
+      "ThunderDragonMan",
+      "DomeArmorDragon"
+    ],
+    [
+      "IceNarwhal",
+      "WeaselDragon_Fire",
+      "IceNarwhal_Fire"
+    ],
+    [
+      "IceNarwhal_Fire",
+      "IceNarwhal_Fire",
+      "IceNarwhal_Fire"
+    ],
+    [
+      "IceSeal",
+      "Serpent_Ground",
+      "IceSeal_Ground"
+    ],
+    [
+      "IceSeal_Ground",
+      "IceSeal_Ground",
+      "IceSeal_Ground"
+    ],
+    [
+      "JetDragon",
+      "JetDragon",
+      "JetDragon"
+    ],
+    [
+      "JetDragon",
+      "KingBahamut_Dragon",
+      "DomeArmorDragon"
+    ],
+    [
+      "JetDragon",
+      "LegendDeer",
+      "DomeArmorDragon"
+    ],
+    [
+      "JetDragon",
+      "Mothman",
+      "DomeArmorDragon"
+    ],
+    [
+      "JetDragon",
+      "NightLady_Dark",
+      "DomeArmorDragon"
+    ],
+    [
+      "JetDragon",
+      "PoseidonOrca",
+      "DomeArmorDragon"
+    ],
+    [
+      "JetDragon",
+      "SaintCentaur",
+      "DomeArmorDragon"
+    ],
+    [
+      "JetDragon",
+      "SnowTigerBeastman",
+      "DomeArmorDragon"
+    ],
+    [
+      "JetDragon",
+      "ThunderDragonMan",
+      "DomeArmorDragon"
+    ],
+    [
+      "JetDragon",
+      "Umihebi_Fire",
+      "DomeArmorDragon"
+    ],
+    [
+      "KendoFrog",
+      "Ronin_Dark",
+      "KendoFrog_Dark"
+    ],
+    [
+      "KendoFrog_Dark",
+      "KendoFrog_Dark",
+      "KendoFrog_Dark"
+    ],
+    [
+      "KingAlpaca_Ice",
+      "KingAlpaca_Ice",
+      "KingAlpaca_Ice"
+    ],
+    [
+      "KingBahamut_Dragon",
+      "KingBahamut_Dragon",
+      "KingBahamut_Dragon"
+    ],
+    [
+      "KingBahamut_Dragon",
+      "LegendDeer",
+      "DomeArmorDragon"
+    ],
+    [
+      "KingBahamut_Dragon",
+      "Mothman",
+      "DomeArmorDragon"
+    ],
+    [
+      "KingBahamut_Dragon",
+      "NightLady_Dark",
+      "DomeArmorDragon"
+    ],
+    [
+      "KingBahamut_Dragon",
+      "PoseidonOrca",
+      "LotusDragon"
+    ],
+    [
+      "KingBahamut_Dragon",
+      "SnowTigerBeastman",
+      "DomeArmorDragon"
+    ],
+    [
+      "KingBahamut_Dragon",
+      "ThunderDragonMan",
+      "DomeArmorDragon"
+    ],
+    [
+      "KingSunfish_Thunder",
+      "KingSunfish_Thunder",
+      "KingSunfish_Thunder"
+    ],
+    [
+      "Kirin",
+      "SnowPeafowl",
+      "Kirin_Ice"
+    ],
+    [
+      "Kirin_Ice",
+      "Kirin_Ice",
+      "Kirin_Ice"
+    ],
+    [
+      "Kitsunebi_Ice",
+      "Kitsunebi_Ice",
+      "Kitsunebi_Ice"
+    ],
+    [
+      "LavaGirl",
+      "LizardMan",
+      "LizardMan_Fire"
+    ],
+    [
+      "LavaGirl",
+      "Monkey",
+      "Monkey_Fire"
+    ],
+    [
+      "LazyCatfish",
+      "Serpent",
+      "Serpent_Ground"
+    ],
+    [
+      "LazyCatfish_Gold",
+      "LazyCatfish_Gold",
+      "LazyCatfish_Gold"
+    ],
+    [
+      "LazyDragon_Electric",
+      "LazyDragon_Electric",
+      "LazyDragon_Electric"
+    ],
+    [
+      "LeafPrincess",
+      "SkyDragon",
+      "SkyDragon_Grass"
+    ],
+    [
+      "LegendDeer",
+      "LegendDeer",
+      "LegendDeer"
+    ],
+    [
+      "LegendDeer",
+      "Mothman",
+      "DomeArmorDragon"
+    ],
+    [
+      "LegendDeer",
+      "NightLady_Dark",
+      "DomeArmorDragon"
+    ],
+    [
+      "LegendDeer",
+      "PoseidonOrca",
+      "DomeArmorDragon"
+    ],
+    [
+      "LegendDeer",
+      "SnowTigerBeastman",
+      "DomeArmorDragon"
+    ],
+    [
+      "LegendDeer",
+      "ThunderDragonMan",
+      "DomeArmorDragon"
+    ],
+    [
+      "LegendDeer",
+      "Umihebi_Fire",
+      "LotusDragon"
+    ],
+    [
+      "LilyQueen",
+      "LilyQueen",
+      "LilyQueen"
+    ],
+    [
+      "LilyQueen_Dark",
+      "LilyQueen_Dark",
+      "LilyQueen_Dark"
+    ],
+    [
+      "LittleBriarRose",
+      "PinkRabbit",
+      "PinkRabbit_Grass"
+    ],
+    [
+      "LizardMan_Fire",
+      "LizardMan_Fire",
+      "LizardMan_Fire"
+    ],
+    [
+      "LongCat",
+      "OctopusGirl",
+      "OctopusGirl_Neutral"
+    ],
+    [
+      "Manticore",
+      "Umihebi",
+      "Umihebi_Fire"
+    ],
+    [
+      "Manticore_Dark",
+      "Manticore_Dark",
+      "Manticore_Dark"
+    ],
+    [
+      "MimicDog",
+      "MimicDog",
+      "MimicDog"
+    ],
+    [
+      "Monkey_Fire",
+      "Monkey_Fire",
+      "Monkey_Fire"
+    ],
+    [
+      "MoonQueen",
+      "MoonQueen",
+      "MoonQueen"
+    ],
+    [
+      "MopBaby",
+      "WindChimes",
+      "WindChimes_Ice"
+    ],
+    [
+      "MopKing",
+      "Werewolf",
+      "Werewolf_Ice"
+    ],
+    [
+      "Mothman",
+      "Mothman",
+      "Mothman"
+    ],
+    [
+      "Mothman",
+      "NightLady_Dark",
+      "DomeArmorDragon"
+    ],
+    [
+      "Mothman",
+      "PoseidonOrca",
+      "DomeArmorDragon"
+    ],
+    [
+      "Mothman",
+      "SaintCentaur",
+      "LotusDragon"
+    ],
+    [
+      "Mothman",
+      "SnowTigerBeastman",
+      "DomeArmorDragon"
+    ],
+    [
+      "Mothman",
+      "ThunderDragonMan",
+      "DomeArmorDragon"
+    ],
+    [
+      "Mothman",
+      "Umihebi_Fire",
+      "DomeArmorDragon"
+    ],
+    [
+      "MysteryMask",
+      "RaijinDaughter",
+      "RaijinDaughter_Water"
+    ],
+    [
+      "NegativeOctopus",
+      "PinkRabbit",
+      "NegativeOctopus_Neutral"
+    ],
+    [
+      "NegativeOctopus_Neutral",
+      "NegativeOctopus_Neutral",
+      "NegativeOctopus_Neutral"
+    ],
+    [
+      "NightBlueHorse",
+      "WhiteDeer",
+      "NightBlueHorse_Neutral"
+    ],
+    [
+      "NightBlueHorse_Neutral",
+      "NightBlueHorse_Neutral",
+      "NightBlueHorse_Neutral"
+    ],
+    [
+      "NightLady",
+      "NightLady",
+      "NightLady"
+    ],
+    [
+      "NightLady",
+      "NightLady_Dark",
+      "NightLady"
+    ],
+    [
+      "NightLady_Dark",
+      "NightLady_Dark",
+      "NightLady_Dark"
+    ],
+    [
+      "NightLady_Dark",
+      "SnowTigerBeastman",
+      "DomeArmorDragon"
+    ],
+    [
+      "NightLady_Dark",
+      "ThunderDragonMan",
+      "DomeArmorDragon"
+    ],
+    [
+      "OctopusGirl_Neutral",
+      "OctopusGirl_Neutral",
+      "OctopusGirl_Neutral"
+    ],
+    [
+      "Penguin_Electric",
+      "Penguin_Electric",
+      "Penguin_Electric"
+    ],
+    [
+      "PinkRabbit_Grass",
+      "PinkRabbit_Grass",
+      "PinkRabbit_Grass"
+    ],
+    [
+      "PoseidonOrca",
+      "PoseidonOrca",
+      "PoseidonOrca"
+    ],
+    [
+      "PoseidonOrca",
+      "SnowTigerBeastman",
+      "DomeArmorDragon"
+    ],
+    [
+      "RaijinDaughter_Water",
+      "RaijinDaughter_Water",
+      "RaijinDaughter_Water"
+    ],
+    [
+      "RedArmorBird",
+      "WingGolem",
+      "WingGolem_Fire"
+    ],
+    [
+      "RobinHood_Ground",
+      "RobinHood_Ground",
+      "RobinHood_Ground"
+    ],
+    [
+      "RockBeast",
+      "Yeti",
+      "RockBeast_Ice"
+    ],
+    [
+      "RockBeast_Ice",
+      "RockBeast_Ice",
+      "RockBeast_Ice"
+    ],
+    [
+      "Ronin_Dark",
+      "Ronin_Dark",
+      "Ronin_Dark"
+    ],
+    [
+      "SaintCentaur",
+      "SaintCentaur",
+      "SaintCentaur"
+    ],
+    [
+      "SaintCentaur",
+      "SnowTigerBeastman",
+      "DomeArmorDragon"
+    ],
+    [
+      "SakuraSaurus_Water",
+      "SakuraSaurus_Water",
+      "SakuraSaurus_Water"
+    ],
+    [
+      "ScorpionMan_Electric",
+      "ScorpionMan_Electric",
+      "ScorpionMan_Electric"
+    ],
+    [
+      "Serpent_Ground",
+      "Serpent_Ground",
+      "Serpent_Ground"
+    ],
+    [
+      "SharkKid_Fire",
+      "SharkKid_Fire",
+      "SharkKid_Fire"
+    ],
+    [
+      "SharkKid_Fire",
+      "StuffedShark",
+      "StuffedShark_Fire"
+    ],
+    [
+      "SharkKid_Fire",
+      "SwordCutlassfish",
+      "SwordCutlassfish_Fire"
+    ],
+    [
+      "SkyDragon_Grass",
+      "SkyDragon_Grass",
+      "SkyDragon_Grass"
+    ],
+    [
+      "SleeveRabbit",
+      "WhiteMoth",
+      "WhiteMoth_Neutral"
+    ],
+    [
+      "SmallArmadillo",
+      "SweetsSheep",
+      "SweetsSheep_Ground"
+    ],
+    [
+      "SnowPeafowl",
+      "ThunderBird",
+      "ThunderBird_Ice"
+    ],
+    [
+      "SnowTigerBeastman",
+      "SnowTigerBeastman",
+      "SnowTigerBeastman"
+    ],
+    [
+      "SnowTigerBeastman",
+      "ThunderDragonMan",
+      "DomeArmorDragon"
+    ],
+    [
+      "SnowTigerBeastman",
+      "Umihebi_Fire",
+      "DomeArmorDragon"
+    ],
+    [
+      "SnowTigerBeastman",
+      "WingGolem_Fire",
+      "LotusDragon"
+    ],
+    [
+      "StuffedShark_Fire",
+      "StuffedShark_Fire",
+      "StuffedShark_Fire"
+    ],
+    [
+      "Suzaku",
+      "Umihebi",
+      "Suzaku_Water"
+    ],
+    [
+      "Suzaku_Water",
+      "Suzaku_Water",
+      "Suzaku_Water"
+    ],
+    [
+      "SweetsSheep_Ground",
+      "SweetsSheep_Ground",
+      "SweetsSheep_Ground"
+    ],
+    [
+      "SwordCutlassfish_Fire",
+      "SwordCutlassfish_Fire",
+      "SwordCutlassfish_Fire"
+    ],
+    [
+      "TentacleTurtle_Ground",
+      "TentacleTurtle_Ground",
+      "TentacleTurtle_Ground"
+    ],
+    [
+      "ThunderBird_Ice",
+      "ThunderBird_Ice",
+      "ThunderBird_Ice"
+    ],
+    [
+      "ThunderDog_Ice",
+      "ThunderDog_Ice",
+      "ThunderDog_Ice"
+    ],
+    [
+      "ThunderDragonMan",
+      "ThunderDragonMan",
+      "ThunderDragonMan"
+    ],
+    [
+      "Umihebi_Fire",
+      "Umihebi_Fire",
+      "Umihebi_Fire"
+    ],
+    [
+      "VolcanicMonster_Ice",
+      "VolcanicMonster_Ice",
+      "VolcanicMonster_Ice"
+    ],
+    [
+      "VolcanicMonster_Ice",
+      "VolcanoDragon",
+      "VolcanoDragon_Ice"
+    ],
+    [
+      "VolcanoDragon_Ice",
+      "VolcanoDragon_Ice",
+      "VolcanoDragon_Ice"
+    ],
+    [
+      "WeaselDragon_Fire",
+      "WeaselDragon_Fire",
+      "WeaselDragon_Fire"
+    ],
+    [
+      "Werewolf_Ice",
+      "Werewolf_Ice",
+      "Werewolf_Ice"
+    ],
+    [
+      "WhiteAlienDragon",
+      "WhiteAlienDragon",
+      "WhiteAlienDragon"
+    ],
+    [
+      "WhiteDeer",
+      "WhiteDeer",
+      "WhiteDeer"
+    ],
+    [
+      "WhiteDeer_Dark",
+      "WhiteDeer_Dark",
+      "WhiteDeer_Dark"
+    ],
+    [
+      "WhiteMoth_Neutral",
+      "WhiteMoth_Neutral",
+      "WhiteMoth_Neutral"
+    ],
+    [
+      "WhiteTiger_Ground",
+      "WhiteTiger_Ground",
+      "WhiteTiger_Ground"
+    ],
+    [
+      "WindChimes_Ice",
+      "WindChimes_Ice",
+      "WindChimes_Ice"
+    ],
+    [
+      "WingGolem_Fire",
+      "WingGolem_Fire",
+      "WingGolem_Fire"
+    ],
+    [
+      "YakushimaBoss001",
+      "YakushimaBoss001",
+      "YakushimaBoss001"
+    ],
+    [
+      "YakushimaBoss001",
+      "YakushimaBoss001_Small",
+      "YakushimaBoss001"
+    ],
+    [
+      "YakushimaBoss001",
+      "YakushimaMonster001",
+      "YakushimaBoss001"
+    ],
+    [
+      "YakushimaBoss001",
+      "YakushimaMonster001_Blue",
+      "YakushimaBoss001"
+    ],
+    [
+      "YakushimaBoss001",
+      "YakushimaMonster001_Pink",
+      "YakushimaBoss001"
+    ],
+    [
+      "YakushimaBoss001",
+      "YakushimaMonster001_Purple",
+      "YakushimaBoss001"
+    ],
+    [
+      "YakushimaBoss001",
+      "YakushimaMonster001_Rainbow",
+      "YakushimaBoss001"
+    ],
+    [
+      "YakushimaBoss001",
+      "YakushimaMonster001_Red",
+      "YakushimaBoss001"
+    ],
+    [
+      "YakushimaBoss001",
+      "YakushimaMonster002",
+      "YakushimaBoss001"
+    ],
+    [
+      "YakushimaBoss001",
+      "YakushimaMonster003",
+      "YakushimaBoss001"
+    ],
+    [
+      "YakushimaBoss001",
+      "YakushimaMonster003_Purple",
+      "YakushimaBoss001"
+    ],
+    [
+      "YakushimaBoss001_Small",
+      "YakushimaBoss001_Small",
+      "YakushimaBoss001_Small"
+    ],
+    [
+      "YakushimaBoss001_Small",
+      "YakushimaMonster001",
+      "YakushimaBoss001_Small"
+    ],
+    [
+      "YakushimaBoss001_Small",
+      "YakushimaMonster001_Blue",
+      "YakushimaBoss001_Small"
+    ],
+    [
+      "YakushimaBoss001_Small",
+      "YakushimaMonster001_Pink",
+      "YakushimaBoss001_Small"
+    ],
+    [
+      "YakushimaBoss001_Small",
+      "YakushimaMonster001_Purple",
+      "YakushimaBoss001_Small"
+    ],
+    [
+      "YakushimaBoss001_Small",
+      "YakushimaMonster001_Rainbow",
+      "YakushimaBoss001_Small"
+    ],
+    [
+      "YakushimaBoss001_Small",
+      "YakushimaMonster001_Red",
+      "YakushimaBoss001_Small"
+    ],
+    [
+      "YakushimaBoss001_Small",
+      "YakushimaMonster002",
+      "YakushimaBoss001_Small"
+    ],
+    [
+      "YakushimaBoss001_Small",
+      "YakushimaMonster003",
+      "YakushimaBoss001_Small"
+    ],
+    [
+      "YakushimaBoss001_Small",
+      "YakushimaMonster003_Purple",
+      "YakushimaBoss001_Small"
+    ],
+    [
+      "YakushimaMonster001",
+      "YakushimaMonster001",
+      "YakushimaMonster001"
+    ],
+    [
+      "YakushimaMonster001",
+      "YakushimaMonster001_Blue",
+      "YakushimaMonster001_Blue"
+    ],
+    [
+      "YakushimaMonster001",
+      "YakushimaMonster001_Pink",
+      "YakushimaMonster001_Pink"
+    ],
+    [
+      "YakushimaMonster001",
+      "YakushimaMonster001_Purple",
+      "YakushimaMonster001_Purple"
+    ],
+    [
+      "YakushimaMonster001",
+      "YakushimaMonster001_Red",
+      "YakushimaMonster001_Red"
+    ],
+    [
+      "YakushimaMonster001",
+      "YakushimaMonster002",
+      "YakushimaMonster002"
+    ],
+    [
+      "YakushimaMonster001_Blue",
+      "YakushimaMonster001_Blue",
+      "YakushimaMonster001_Blue"
+    ],
+    [
+      "YakushimaMonster001_Blue",
+      "YakushimaMonster001_Pink",
+      "YakushimaMonster001_Pink"
+    ],
+    [
+      "YakushimaMonster001_Blue",
+      "YakushimaMonster001_Purple",
+      "YakushimaMonster001_Purple"
+    ],
+    [
+      "YakushimaMonster001_Blue",
+      "YakushimaMonster001_Red",
+      "YakushimaMonster001_Purple"
+    ],
+    [
+      "YakushimaMonster001_Blue",
+      "YakushimaMonster002",
+      "YakushimaMonster002"
+    ],
+    [
+      "YakushimaMonster001_Pink",
+      "YakushimaMonster001_Pink",
+      "YakushimaMonster001_Pink"
+    ],
+    [
+      "YakushimaMonster001_Pink",
+      "YakushimaMonster001_Purple",
+      "YakushimaMonster001_Pink"
+    ],
+    [
+      "YakushimaMonster001_Pink",
+      "YakushimaMonster001_Red",
+      "YakushimaMonster001_Pink"
+    ],
+    [
+      "YakushimaMonster001_Pink",
+      "YakushimaMonster002",
+      "YakushimaMonster002"
+    ],
+    [
+      "YakushimaMonster001_Purple",
+      "YakushimaMonster001_Purple",
+      "YakushimaMonster001_Purple"
+    ],
+    [
+      "YakushimaMonster001_Purple",
+      "YakushimaMonster001_Red",
+      "YakushimaMonster001_Purple"
+    ],
+    [
+      "YakushimaMonster001_Purple",
+      "YakushimaMonster002",
+      "YakushimaMonster002"
+    ],
+    [
+      "YakushimaMonster001_Purple",
+      "YakushimaMonster003",
+      "YakushimaMonster003_Purple"
+    ],
+    [
+      "YakushimaMonster001_Purple",
+      "YakushimaMonster003_Purple",
+      "YakushimaMonster003_Purple"
+    ],
+    [
+      "YakushimaMonster001_Red",
+      "YakushimaMonster001_Red",
+      "YakushimaMonster001_Red"
+    ],
+    [
+      "YakushimaMonster001_Red",
+      "YakushimaMonster002",
+      "YakushimaMonster002"
+    ],
+    [
+      "YakushimaMonster002",
+      "YakushimaMonster002",
+      "YakushimaMonster002"
+    ],
+    [
+      "YakushimaMonster002",
+      "YakushimaMonster003",
+      "YakushimaMonster002"
+    ],
+    [
+      "YakushimaMonster002",
+      "YakushimaMonster003_Purple",
+      "YakushimaMonster002"
+    ],
+    [
+      "YakushimaMonster003",
+      "YakushimaMonster003",
+      "YakushimaMonster003"
+    ],
+    [
+      "YakushimaMonster003",
+      "YakushimaMonster003_Purple",
+      "YakushimaMonster003_Purple"
+    ],
+    [
+      "YakushimaMonster003_Purple",
+      "YakushimaMonster003_Purple",
+      "YakushimaMonster003_Purple"
+    ]
+  ]
+}
