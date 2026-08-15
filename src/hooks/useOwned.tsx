@@ -30,6 +30,8 @@ export interface OwnedPal {
   level: number;
   /** Real IVs, present only for save-imported pals. */
   ivs?: OwnedIVs;
+  /** Condenser stars, 0–4 (from the save's Rank). */
+  stars?: number;
   /** Player-given name from the save, if any. */
   nickname?: string;
   /** "Male" / "Female" from the save, if known. */
@@ -41,6 +43,7 @@ export interface ImportPal {
   species: string;
   level: number;
   ivs?: OwnedIVs;
+  stars?: number;
   nickname?: string;
   gender?: string;
   /** Skill ids to seed as learned + equipped (from EquipWaza). */
@@ -48,6 +51,9 @@ export interface ImportPal {
   /** Passive skill ids to seed. */
   passives?: string[];
 }
+
+/** Palworld condenser cap. */
+export const MAX_STARS = 4;
 
 function newId(): string {
   return crypto.randomUUID?.() ?? Math.random().toString(36).slice(2, 10);
@@ -100,6 +106,7 @@ interface OwnedApi {
   addInstance: (name: string, level?: number) => void;
   removeInstance: (id: string) => void;
   setLevel: (id: string, level: number) => void;
+  setStars: (id: string, stars: number) => void;
   setNickname: (id: string, nickname: string) => void;
   setGender: (id: string, gender: string) => void;
   /** Replace all obtained instances (used by save import); returns the new instances. */
@@ -153,6 +160,7 @@ export function OwnedProvider({ children }: { children: ReactNode }) {
       species: p.species,
       level: clampLevel(p.level),
       ...(p.ivs ? { ivs: p.ivs } : {}),
+      ...(p.stars ? { stars: Math.min(MAX_STARS, Math.max(0, Math.round(p.stars))) } : {}),
       ...(p.nickname ? { nickname: p.nickname } : {}),
       ...(p.gender ? { gender: p.gender } : {}),
     }));
@@ -163,6 +171,13 @@ export function OwnedProvider({ children }: { children: ReactNode }) {
   const setLevel = useCallback((id: string, level: number) => {
     setInstances((prev) =>
       prev.map((i) => (i.id === id ? { ...i, level: clampLevel(level) } : i)),
+    );
+  }, []);
+
+  const setStars = useCallback((id: string, stars: number) => {
+    const n = Math.min(MAX_STARS, Math.max(0, Math.round(stars)));
+    setInstances((prev) =>
+      prev.map((i) => (i.id === id ? { ...i, stars: n || undefined } : i)),
     );
   }, []);
 
@@ -224,6 +239,7 @@ export function OwnedProvider({ children }: { children: ReactNode }) {
       addInstance,
       removeInstance,
       setLevel,
+      setStars,
       setNickname,
       setGender,
       importInstances,
@@ -232,7 +248,7 @@ export function OwnedProvider({ children }: { children: ReactNode }) {
       toggleWish,
       wishCount: wished.size,
     }),
-    [owned, instances, wished, toggle, addInstance, removeInstance, setLevel, setNickname, setGender, importInstances, toggleWish],
+    [owned, instances, wished, toggle, addInstance, removeInstance, setLevel, setStars, setNickname, setGender, importInstances, toggleWish],
   );
 
   return <OwnedContext.Provider value={value}>{children}</OwnedContext.Provider>;

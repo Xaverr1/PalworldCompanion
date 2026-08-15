@@ -78,10 +78,13 @@ export function summarizeSavePals(pals: SavePal[]): ImportSummary {
     // EquipWaza holds the equipped moves, so import them as learned + equipped.
     const abilities = knownIds(p.abilities, (id) => SKILL_BY_ID.has(id), EQUIP_LIMIT);
     const passives = knownIds(p.passives, (id) => PASSIVE_BY_ID.has(id), PASSIVE_LIMIT);
+    // Save Rank is 1–5; condenser stars are 0–4.
+    const stars = Math.min(4, Math.max(0, (p.rank ?? 1) - 1));
     instances.push({
       species,
       level: p.level,
       ...(p.ivs ? { ivs: p.ivs } : {}),
+      ...(stars ? { stars } : {}),
       ...(p.nickname ? { nickname: p.nickname } : {}),
       ...(p.gender ? { gender: p.gender } : {}),
       ...(abilities.length ? { abilities } : {}),
