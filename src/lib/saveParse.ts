@@ -105,6 +105,10 @@ function readByte(r: Reader): number | string {
   r.optionalGuid();
   return enumType === "None" ? r.byte() : r.fstring();
 }
+function readStr(r: Reader): string {
+  r.optionalGuid();
+  return r.fstring();
+}
 function readName(r: Reader): string {
   r.optionalGuid();
   return r.fstring();
@@ -171,6 +175,9 @@ function readSaveParameter(r: Reader): ParsedPal {
         return true;
       case "Gender":
         out.gender = String(last(readEnum(r)));
+        return true;
+      case "NickName":
+        out.nickname = readStr(r);
         return true;
       case "Talent_HP":
         out.ivs!.hp = Number(readByte(r)) || 0;
@@ -277,6 +284,7 @@ export function extractPals(gvasBytes: Uint8Array): {
             level: p.level,
             rank: p.rank,
             gender: p.gender,
+            nickname: p.nickname,
             ivs: p.ivs,
             abilities: p.abilities,
             passives: p.passives,

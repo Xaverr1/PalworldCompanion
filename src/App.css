@@ -2527,3 +2527,93 @@
   border-color: var(--accent);
   color: var(--accent);
 }
+
+/* ===== Palbox ===== */
+.pbx__bar {
+  position: sticky;
+  top: 0;
+  z-index: 5;
+  background: var(--bg);
+  padding-bottom: 14px;
+  margin-bottom: 6px;
+}
+.pbx__barhead {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+.pbx__title {
+  margin: 0;
+  font-size: 22px;
+}
+.pbx__count {
+  font-size: 14px;
+  font-weight: 400;
+  color: var(--text);
+  margin-left: 6px;
+}
+.pbx__grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(170px, 1fr));
+  gap: 12px;
+  margin-top: 4px;
+}
+.pbx__card {
+  cursor: pointer;
+}
+.pbx__species {
+  font-size: 12px;
+  color: var(--text);
+  margin-top: -4px;
+}
+.pbx__gender {
+  font-weight: 700;
+  font-size: 14px;
+  line-height: 1;
+}
+.pbx__gender.is-male {
+  color: #4f8cff;
+}
+.pbx__gender.is-female {
+  color: #ff6fae;
+}
+.pbx__abils {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: center;
+  margin-top: 2px;
+  min-height: 18px;
+}
+.pbx__passives {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 4px;
+  justify-content: center;
+  margin-top: 2px;
+}
+/* Instance editor modal */
+.pbx__nick {
+  margin: 2px 0 6px;
+  font-size: 18px;
+  max-width: 260px;
+}
+.pbx__editrow {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin: 8px 0 12px;
+}
+.pbx__genderpick {
+  display: flex;
+  gap: 6px;
+  margin-left: auto;
+}
+.pbx__detailfoot {
+  margin-top: 16px;
+  display: flex;
+  justify-content: flex-end;
+}

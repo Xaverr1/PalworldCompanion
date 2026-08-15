@@ -30,13 +30,23 @@ export interface OwnedPal {
   level: number;
   /** Real IVs, present only for save-imported pals. */
   ivs?: OwnedIVs;
+  /** Player-given name from the save, if any. */
+  nickname?: string;
+  /** "Male" / "Female" from the save, if known. */
+  gender?: string;
 }
 
-/** A pal to import from a save: species name + level (+ optional IVs). */
+/** A pal to import from a save: species name + level, plus optional metadata. */
 export interface ImportPal {
   species: string;
   level: number;
   ivs?: OwnedIVs;
+  nickname?: string;
+  gender?: string;
+  /** Skill ids to seed as learned + equipped (from EquipWaza). */
+  abilities?: string[];
+  /** Passive skill ids to seed. */
+  passives?: string[];
 }
 
 function newId(): string {
@@ -90,8 +100,10 @@ interface OwnedApi {
   addInstance: (name: string, level?: number) => void;
   removeInstance: (id: string) => void;
   setLevel: (id: string, level: number) => void;
-  /** Replace all obtained instances (used by save import). */
-  importInstances: (pals: ImportPal[]) => void;
+  setNickname: (id: string, nickname: string) => void;
+  setGender: (id: string, gender: string) => void;
+  /** Replace all obtained instances (used by save import); returns the new instances. */
+  importInstances: (pals: ImportPal[]) => OwnedPal[];
   // Wishlist.
   wished: Set<string>;
   isWished: (name: string) => boolean;
@@ -135,20 +147,39 @@ export function OwnedProvider({ children }: { children: ReactNode }) {
     setInstances((prev) => prev.filter((i) => i.id !== id));
   }, []);
 
-  const importInstances = useCallback((pals: ImportPal[]) => {
-    setInstances(
-      pals.map((p) => ({
-        id: newId(),
-        species: p.species,
-        level: clampLevel(p.level),
-        ...(p.ivs ? { ivs: p.ivs } : {}),
-      })),
-    );
+  const importInstances = useCallback((pals: ImportPal[]): OwnedPal[] => {
+    const created = pals.map((p) => ({
+      id: newId(),
+      species: p.species,
+      level: clampLevel(p.level),
+      ...(p.ivs ? { ivs: p.ivs } : {}),
+      ...(p.nickname ? { nickname: p.nickname } : {}),
+      ...(p.gender ? { gender: p.gender } : {}),
+    }));
+    setInstances(created);
+    return created;
   }, []);
 
   const setLevel = useCallback((id: string, level: number) => {
     setInstances((prev) =>
       prev.map((i) => (i.id === id ? { ...i, level: clampLevel(level) } : i)),
+    );
+  }, []);
+
+  const setNickname = useCallback((id: string, nickname: string) => {
+    const name = nickname.trim();
+    setInstances((prev) =>
+      prev.map((i) =>
+        i.id === id ? { ...i, nickname: name || undefined } : i,
+      ),
+    );
+  }, []);
+
+  const setGender = useCallback((id: string, gender: string) => {
+    setInstances((prev) =>
+      prev.map((i) =>
+        i.id === id ? { ...i, gender: gender || undefined } : i,
+      ),
     );
   }, []);
 
@@ -193,13 +224,15 @@ export function OwnedProvider({ children }: { children: ReactNode }) {
       addInstance,
       removeInstance,
       setLevel,
+      setNickname,
+      setGender,
       importInstances,
       wished,
       isWished: (n) => wished.has(n),
       toggleWish,
       wishCount: wished.size,
     }),
-    [owned, instances, wished, toggle, addInstance, removeInstance, setLevel, importInstances, toggleWish],
+    [owned, instances, wished, toggle, addInstance, removeInstance, setLevel, setNickname, setGender, importInstances, toggleWish],
   );
 
   return <OwnedContext.Provider value={value}>{children}</OwnedContext.Provider>;

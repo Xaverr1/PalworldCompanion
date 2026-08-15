@@ -1,14 +1,16 @@
 import { useRef, useState } from "react";
 import { Browser } from "./components/Browser";
 import { Planner } from "./components/Planner";
+import { Palbox } from "./components/Palbox";
 import { UpgradePlanner } from "./components/UpgradePlanner";
 import { BuildQueue } from "./components/BuildQueue";
 import { downloadBackup, importData } from "./lib/backup";
 import { readSaveFile } from "./lib/saveImport";
 import { useOwned } from "./hooks/useOwned";
+import { useLoadouts } from "./hooks/useLoadouts";
 import "./App.css";
 
-type View = "browse" | "planner" | "upgrades" | "build";
+type View = "browse" | "planner" | "palbox" | "upgrades" | "build";
 
 function App() {
   const [view, setView] = useState<View>("browse");
@@ -16,6 +18,7 @@ function App() {
   const fileRef = useRef<HTMLInputElement>(null);
   const saveRef = useRef<HTMLInputElement>(null);
   const { importInstances } = useOwned();
+  const { importLoadouts } = useLoadouts();
 
   function handleImport(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
@@ -44,16 +47,35 @@ function App() {
         window.alert("No pals in that file matched a known species.");
         return;
       }
+      const withSkills = instances.filter(
+        (p) => p.abilities?.length || p.passives?.length,
+      ).length;
       const ok = window.confirm(
-        `Import ${matched} pals from your save? This replaces your current ` +
-          `obtained list (wishlist is kept).`,
+        `Import ${matched} pals from your save? Active & passive skills come ` +
+          `across too. This replaces your current obtained list and their ` +
+          `loadouts (wishlist is kept).`,
       );
       if (!ok) return;
-      importInstances(instances);
+      const created = importInstances(instances);
+      // Seed each new instance's loadout from the save (matched by order).
+      importLoadouts(
+        created.map((inst, i) => {
+          const src = instances[i];
+          const moves = src?.abilities ?? [];
+          return {
+            id: inst.id,
+            learned: moves,
+            equipped: moves,
+            passives: src?.passives ?? [],
+          };
+        }),
+      );
+      const parts = [`Imported ${matched} pals`];
+      if (withSkills) parts.push(`${withSkills} with skills pre-filled`);
       const note = skipped.length
         ? `\n${skipped.length} entries skipped (caught humans / unknown).`
         : "";
-      window.alert(`Imported ${matched} pals.${note}`);
+      window.alert(`${parts.join(", ")}.${note}`);
     } catch (err) {
       window.alert(`Import failed: ${(err as Error).message}`);
     } finally {
@@ -79,6 +101,12 @@ function App() {
             onClick={() => setView("planner")}
           >
             Planner
+          </button>
+          <button
+            className={`tab ${view === "palbox" ? "is-active" : ""}`}
+            onClick={() => setView("palbox")}
+          >
+            Palbox
           </button>
           <button
             className={`tab ${view === "upgrades" ? "is-active" : ""}`}
@@ -131,6 +159,7 @@ function App() {
 
       {view === "browse" && <Browser />}
       {view === "planner" && <Planner />}
+      {view === "palbox" && <Palbox />}
       {view === "upgrades" && <UpgradePlanner />}
       {view === "build" && <BuildQueue />}
     </>

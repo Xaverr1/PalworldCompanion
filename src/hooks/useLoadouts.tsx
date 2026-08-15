@@ -46,11 +46,18 @@ function load(): Store {
   }
 }
 
+/** One instance's loadout to seed on import, keyed by owned-instance id. */
+export interface LoadoutSeed extends Loadout {
+  id: string;
+}
+
 interface LoadoutsApi {
   getLoadout: (instanceId: string) => Loadout;
   toggleLearned: (instanceId: string, skillId: string) => void;
   toggleEquipped: (instanceId: string, skillId: string) => void;
   togglePassive: (instanceId: string, passiveId: string) => void;
+  /** Replace the whole store (used by save import). */
+  importLoadouts: (seeds: LoadoutSeed[]) => void;
 }
 
 const LoadoutsContext = createContext<LoadoutsApi | null>(null);
@@ -124,14 +131,29 @@ export function LoadoutProvider({ children }: { children: ReactNode }) {
     [patch],
   );
 
+  const importLoadouts = useCallback((seeds: LoadoutSeed[]) => {
+    const next: Store = {};
+    for (const s of seeds) {
+      if (s.learned.length || s.equipped.length || s.passives.length) {
+        next[s.id] = {
+          learned: s.learned,
+          equipped: s.equipped,
+          passives: s.passives,
+        };
+      }
+    }
+    setStore(next);
+  }, []);
+
   const value = useMemo<LoadoutsApi>(
     () => ({
       getLoadout: (instanceId) => normalize(store[instanceId]),
       toggleLearned,
       toggleEquipped,
       togglePassive,
+      importLoadouts,
     }),
-    [store, toggleLearned, toggleEquipped, togglePassive],
+    [store, toggleLearned, toggleEquipped, togglePassive, importLoadouts],
   );
 
   return <LoadoutsContext.Provider value={value}>{children}</LoadoutsContext.Provider>;

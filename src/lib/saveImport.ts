@@ -1,4 +1,7 @@
 import { PALS } from "../data/pals";
+import { SKILL_BY_ID } from "../data/skills";
+import { PASSIVE_BY_ID } from "../data/passives";
+import { EQUIP_LIMIT, PASSIVE_LIMIT } from "../hooks/useLoadouts";
 import type { ImportPal } from "../hooks/useOwned";
 import { decompressSave } from "./saveDecompress";
 import { extractPals } from "./saveParse";
@@ -9,6 +12,7 @@ export interface SavePal {
   level: number;
   rank?: number;
   gender?: string;
+  nickname?: string;
   ivs?: { hp: number; shot: number; defense: number };
   abilities?: string[];
   passives?: string[];
@@ -46,6 +50,21 @@ export function resolveSpecies(code: string): string | null {
   );
 }
 
+/** Dedupe while keeping only ids known to `has`, capped at `limit`. */
+function knownIds(
+  raw: string[] | undefined,
+  has: (id: string) => boolean,
+  limit: number,
+): string[] {
+  if (!raw) return [];
+  const out: string[] = [];
+  for (const id of raw) {
+    if (has(id) && !out.includes(id)) out.push(id);
+    if (out.length >= limit) break;
+  }
+  return out;
+}
+
 /** Map save pals to importable instances, dropping unknown species. */
 export function summarizeSavePals(pals: SavePal[]): ImportSummary {
   const instances: ImportPal[] = [];
@@ -56,10 +75,17 @@ export function summarizeSavePals(pals: SavePal[]): ImportSummary {
       skipped.push(p.code);
       continue;
     }
+    // EquipWaza holds the equipped moves, so import them as learned + equipped.
+    const abilities = knownIds(p.abilities, (id) => SKILL_BY_ID.has(id), EQUIP_LIMIT);
+    const passives = knownIds(p.passives, (id) => PASSIVE_BY_ID.has(id), PASSIVE_LIMIT);
     instances.push({
       species,
       level: p.level,
       ...(p.ivs ? { ivs: p.ivs } : {}),
+      ...(p.nickname ? { nickname: p.nickname } : {}),
+      ...(p.gender ? { gender: p.gender } : {}),
+      ...(abilities.length ? { abilities } : {}),
+      ...(passives.length ? { passives } : {}),
     });
   }
   return { instances, matched: instances.length, skipped };
