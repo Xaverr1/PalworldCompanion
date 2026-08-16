@@ -8,16 +8,43 @@
 
 const ascii = new TextDecoder("ascii");
 
-/** zlib-inflate (RFC 1950), matching Python's zlib.decompress. */
-async function inflate(
-  data: Uint8Array<ArrayBuffer>,
-): Promise<Uint8Array<ArrayBuffer>> {
-  const ds = new DecompressionStream("deflate");
-  const out = new Response(ds.readable).arrayBuffer();
-  const writer = ds.writable.getWriter();
-  await writer.write(data);
-  await writer.close();
-  return new Uint8Array(await out);
+/**
+ * zlib-inflate matching Python's `zlib.decompress` — tolerant of both the
+ * single stream Steam writes and the *concatenated* zlib members Xbox/WGS saves
+ * use (Palworld chunks the compressed data ~128 KB at a time; native
+ * DecompressionStream stops at the first member and rejects the rest). pako
+ * reports bytes consumed per member, so we loop until the input is exhausted.
+ * Loaded on demand so it only ships when someone actually imports a save.
+ */
+async function inflate(data: Uint8Array): Promise<Uint8Array> {
+  const pako = await import("pako");
+  const parts: Uint8Array[] = [];
+  let off = 0;
+  let total = 0;
+  while (off < data.length) {
+    while (off < data.length && data[off] === 0) off++; // inter-chunk padding
+    if (off >= data.length) break;
+    const inf = new pako.Inflate();
+    inf.push(data.subarray(off));
+    if (inf.err) {
+      if (parts.length) break; // trailing junk after real members — keep them
+      throw new Error(`Couldn't decompress the save (zlib: ${inf.msg}).`);
+    }
+    const res = inf.result as Uint8Array;
+    if (!res || res.length === 0) break;
+    parts.push(res);
+    total += res.length;
+    const consumed = (inf as unknown as { strm: { total_in: number } }).strm.total_in;
+    if (consumed <= 0) break;
+    off += consumed;
+  }
+  const out = new Uint8Array(total);
+  let o = 0;
+  for (const p of parts) {
+    out.set(p, o);
+    o += p.length;
+  }
+  return out;
 }
 
 export async function decompressSave(

@@ -5,6 +5,7 @@ import { EQUIP_LIMIT, PASSIVE_LIMIT } from "../hooks/useLoadouts";
 import type { ImportPal } from "../hooks/useOwned";
 import { decompressSave } from "./saveDecompress";
 import { extractPals } from "./saveParse";
+import { parseContainersIndex, xboxLevelSaves, type XboxSaveOption } from "./xboxSave";
 
 /** One pal as written by scripts/extract-pals.py. */
 export interface SavePal {
@@ -120,8 +121,67 @@ export async function readSaveFile(file: File): Promise<ImportSummary> {
   const isJson = file.name.toLowerCase().endsWith(".json") || buf[0] === 0x7b;
   if (isJson) return parseSaveExport(new TextDecoder().decode(buf));
 
-  const gvas = await decompressSave(buf);
-  const { pals } = extractPals(gvas);
-  if (pals.length === 0) throw new Error("No pals found in that save file.");
+  return summarizeGvas(await decompressSave(buf));
+}
+
+/** Decompress-and-parse a raw `.sav` byte buffer into an import summary. */
+async function summarizeGvas(gvas: Uint8Array): Promise<ImportSummary> {
+  const { pals, failed } = extractPals(gvas);
+  if (pals.length === 0) {
+    if (failed > 0) {
+      throw new Error(
+        `Couldn't parse any of the ${failed} pal entries — your save may be ` +
+          `from a newer Palworld version than this importer supports.`,
+      );
+    }
+    throw new Error("No pals found in that save file.");
+  }
   return summarizeSavePals(pals);
+}
+
+// ---- Xbox / Microsoft Store (WGS folder) import ----------------------------
+export type { XboxSaveOption };
+
+const relPath = (f: File) =>
+  (f as File & { webkitRelativePath?: string }).webkitRelativePath || f.name;
+
+/**
+ * Read the world-level saves from a picked Xbox `wgs` folder (the files from a
+ * `webkitdirectory` input). Returns the choosable level saves — live first,
+ * newest first — without decompressing anything yet.
+ */
+export async function readXboxSaves(files: File[]): Promise<XboxSaveOption[]> {
+  const index = files.find((f) => /(^|\/)containers\.index$/i.test(relPath(f)));
+  if (!index) {
+    throw new Error(
+      "No containers.index found — pick the Xbox save folder named 'wgs' " +
+        "(or the world folder inside it).",
+    );
+  }
+  const containers = parseContainersIndex(new Uint8Array(await index.arrayBuffer()));
+  const saves = xboxLevelSaves(containers);
+  if (saves.length === 0) throw new Error("No world saves found in that folder.");
+  return saves;
+}
+
+/** Decompress + parse the blob for a chosen Xbox world save. */
+export async function importXboxSave(
+  files: File[],
+  option: XboxSaveOption,
+): Promise<ImportSummary> {
+  // The container folder holds one `container.N` index plus its blob file(s);
+  // the blob is the biggest non-`container.N` file under that folder GUID.
+  const candidates = files.filter((f) => {
+    const parts = relPath(f).split("/");
+    const parent = parts[parts.length - 2] ?? "";
+    const name = parts[parts.length - 1] ?? "";
+    return (
+      parent.toUpperCase() === option.folder &&
+      !/^container\.\d+$/i.test(name) &&
+      name.toLowerCase() !== "containers.index"
+    );
+  });
+  const blob = candidates.sort((a, b) => b.size - a.size)[0];
+  if (!blob) throw new Error("Couldn't find the save data for that world.");
+  return summarizeGvas(await decompressSave(new Uint8Array(await blob.arrayBuffer())));
 }

@@ -6,7 +6,14 @@ import { Breeding } from "./components/Breeding";
 import { UpgradePlanner } from "./components/UpgradePlanner";
 import { BuildQueue } from "./components/BuildQueue";
 import { downloadBackup, importData } from "./lib/backup";
-import { readSaveFile } from "./lib/saveImport";
+import {
+  readSaveFile,
+  readXboxSaves,
+  importXboxSave,
+  type XboxSaveOption,
+} from "./lib/saveImport";
+import type { ImportSummary } from "./lib/saveImport";
+import { XboxSavePicker } from "./components/XboxSavePicker";
 import { useOwned } from "./hooks/useOwned";
 import { useLoadouts } from "./hooks/useLoadouts";
 import "./App.css";
@@ -18,8 +25,80 @@ function App() {
   const [importing, setImporting] = useState(false);
   const fileRef = useRef<HTMLInputElement>(null);
   const saveRef = useRef<HTMLInputElement>(null);
+  const xboxRef = useRef<HTMLInputElement>(null);
+  const [xbox, setXbox] = useState<{ files: File[]; options: XboxSaveOption[] } | null>(null);
   const { importInstances } = useOwned();
   const { importLoadouts } = useLoadouts();
+
+  /** Shared confirm + apply for any parsed save (Steam or Xbox). */
+  function commitImport({ instances, matched, skipped }: ImportSummary): boolean {
+    if (matched === 0) {
+      window.alert("No pals in that save matched a known species.");
+      return false;
+    }
+    const withSkills = instances.filter(
+      (p) => p.abilities?.length || p.passives?.length,
+    ).length;
+    const ok = window.confirm(
+      `Import ${matched} pals from your save? Active & passive skills come ` +
+        `across too. This replaces your current obtained list and their ` +
+        `loadouts (wishlist is kept).`,
+    );
+    if (!ok) return false;
+    const created = importInstances(instances);
+    importLoadouts(
+      created.map((inst, i) => {
+        const moves = instances[i]?.abilities ?? [];
+        return {
+          id: inst.id,
+          learned: moves,
+          equipped: moves,
+          passives: instances[i]?.passives ?? [],
+        };
+      }),
+    );
+    const parts = [`Imported ${matched} pals`];
+    if (withSkills) parts.push(`${withSkills} with skills pre-filled`);
+    const note = skipped.length
+      ? `\n${skipped.length} entries skipped (caught humans / unknown).`
+      : "";
+    window.alert(`${parts.join(", ")}.${note}`);
+    return true;
+  }
+
+  async function handleXboxFolder(e: React.ChangeEvent<HTMLInputElement>) {
+    const files = Array.from(e.target.files ?? []);
+    e.target.value = "";
+    if (files.length === 0) return;
+    setImporting(true);
+    try {
+      const options = await readXboxSaves(files);
+      // One world → import straight away; several → let them choose.
+      if (options.length === 1) {
+        commitImport(await importXboxSave(files, options[0]));
+      } else {
+        setXbox({ files, options });
+      }
+    } catch (err) {
+      window.alert(`Import failed: ${(err as Error).message}`);
+    } finally {
+      setImporting(false);
+    }
+  }
+
+  async function chooseXboxSave(option: XboxSaveOption) {
+    if (!xbox) return;
+    const files = xbox.files;
+    setXbox(null);
+    setImporting(true);
+    try {
+      commitImport(await importXboxSave(files, option));
+    } catch (err) {
+      window.alert(`Import failed: ${(err as Error).message}`);
+    } finally {
+      setImporting(false);
+    }
+  }
 
   function handleImport(e: React.ChangeEvent<HTMLInputElement>) {
     const file = e.target.files?.[0];
@@ -43,40 +122,7 @@ function App() {
     if (!file) return;
     setImporting(true);
     try {
-      const { instances, matched, skipped } = await readSaveFile(file);
-      if (matched === 0) {
-        window.alert("No pals in that file matched a known species.");
-        return;
-      }
-      const withSkills = instances.filter(
-        (p) => p.abilities?.length || p.passives?.length,
-      ).length;
-      const ok = window.confirm(
-        `Import ${matched} pals from your save? Active & passive skills come ` +
-          `across too. This replaces your current obtained list and their ` +
-          `loadouts (wishlist is kept).`,
-      );
-      if (!ok) return;
-      const created = importInstances(instances);
-      // Seed each new instance's loadout from the save (matched by order).
-      importLoadouts(
-        created.map((inst, i) => {
-          const src = instances[i];
-          const moves = src?.abilities ?? [];
-          return {
-            id: inst.id,
-            learned: moves,
-            equipped: moves,
-            passives: src?.passives ?? [],
-          };
-        }),
-      );
-      const parts = [`Imported ${matched} pals`];
-      if (withSkills) parts.push(`${withSkills} with skills pre-filled`);
-      const note = skipped.length
-        ? `\n${skipped.length} entries skipped (caught humans / unknown).`
-        : "";
-      window.alert(`${parts.join(", ")}.${note}`);
+      commitImport(await readSaveFile(file));
     } catch (err) {
       window.alert(`Import failed: ${(err as Error).message}`);
     } finally {
@@ -133,9 +179,17 @@ function App() {
             className="datactl__btn datactl__btn--accent"
             onClick={() => saveRef.current?.click()}
             disabled={importing}
-            title="Populate obtained pals directly from a Palworld Level.sav (parsed in your browser)"
+            title="Steam: pick your Level.sav (parsed in your browser)"
           >
             {importing ? "Reading save…" : "Import Pals"}
+          </button>
+          <button
+            className="datactl__btn"
+            onClick={() => xboxRef.current?.click()}
+            disabled={importing}
+            title="Xbox / Game Pass: pick your 'wgs' save folder (parsed in your browser)"
+          >
+            Import Xbox
           </button>
           <button className="datactl__btn" onClick={downloadBackup} title="Download a companion backup">
             Export
@@ -161,6 +215,14 @@ function App() {
             hidden
             onChange={handleSaveImport}
           />
+          <input
+            ref={xboxRef}
+            type="file"
+            hidden
+            // Xbox saves are a folder of files; let the user pick the directory.
+            {...({ webkitdirectory: "", directory: "" } as Record<string, string>)}
+            onChange={handleXboxFolder}
+          />
         </div>
       </header>
 
@@ -170,6 +232,14 @@ function App() {
       {view === "breeding" && <Breeding />}
       {view === "upgrades" && <UpgradePlanner />}
       {view === "build" && <BuildQueue />}
+
+      {xbox && (
+        <XboxSavePicker
+          options={xbox.options}
+          onPick={chooseXboxSave}
+          onClose={() => setXbox(null)}
+        />
+      )}
     </>
   );
 }

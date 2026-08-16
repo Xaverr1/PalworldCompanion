@@ -19,35 +19,49 @@ class Reader {
   eof() {
     return this.p >= this.b.length;
   }
+  /** Guard a read of `n` bytes, throwing with position context on overflow. */
+  private need(n: number) {
+    if (this.p < 0 || this.p + n > this.b.length) {
+      throw new RangeError(
+        `read of ${n} at ${this.p} exceeds buffer length ${this.b.length}`,
+      );
+    }
+  }
   skip(n: number) {
     this.p += n;
   }
   read(n: number): Uint8Array {
+    this.need(n);
     const s = this.b.subarray(this.p, this.p + n);
     this.p += n;
     return s;
   }
   u16() {
+    this.need(2);
     const x = this.v.getUint16(this.p, true);
     this.p += 2;
     return x;
   }
   i32() {
+    this.need(4);
     const x = this.v.getInt32(this.p, true);
     this.p += 4;
     return x;
   }
   u32() {
+    this.need(4);
     const x = this.v.getUint32(this.p, true);
     this.p += 4;
     return x;
   }
   u64() {
+    this.need(8);
     const x = this.v.getBigUint64(this.p, true);
     this.p += 8;
     return Number(x); // property/array sizes are small
   }
   byte() {
+    this.need(1);
     return this.b[this.p++];
   }
   optionalGuid() {
@@ -66,7 +80,9 @@ class Reader {
   }
 }
 
-type Handler = (name: string, type: string, size: number) => boolean;
+// true = handler consumed the value; false = skip it by size and continue;
+// "stop" = handler consumed the value, now end this property walk immediately.
+type Handler = (name: string, type: string, size: number) => boolean | "stop";
 
 /** Read a property type's preamble, then skip its `size`-counted value region. */
 function skipBody(r: Reader, type: string, size: number) {
@@ -140,7 +156,9 @@ function eachProperty(r: Reader, handle: Handler) {
     if (name === "None") return;
     const type = r.fstring();
     const size = r.u64();
-    if (!handle(name, type, size)) skipBody(r, type, size);
+    const res = handle(name, type, size);
+    if (res === "stop") return;
+    if (!res) skipBody(r, type, size);
   }
 }
 
@@ -245,11 +263,14 @@ function skipGvasHeader(r: Reader) {
 export function extractPals(gvasBytes: Uint8Array): {
   pals: SavePal[];
   players: number;
+  /** Character blobs that couldn't be decoded (e.g. a newer struct layout). */
+  failed: number;
 } {
   const r = new Reader(gvasBytes);
   skipGvasHeader(r);
   const pals: SavePal[] = [];
   let players = 0;
+  let failed = 0;
 
   eachProperty(r, (name, type) => {
     if (name !== "worldSaveData" || type !== "StructProperty") return false;
@@ -274,7 +295,15 @@ export function extractPals(gvasBytes: Uint8Array): {
           return false;
         });
         if (!held.blob) continue;
-        const p = decodeCharacter(held.blob);
+        // A single blob in a newer/unexpected struct layout must not abort the
+        // whole import — isolate it, count it, and keep reading the map.
+        let p: ParsedPal | null = null;
+        try {
+          p = decodeCharacter(held.blob);
+        } catch {
+          failed++;
+          continue;
+        }
         if (!p) continue;
         if (p.isPlayer) {
           players++;
@@ -291,10 +320,13 @@ export function extractPals(gvasBytes: Uint8Array): {
           });
         }
       }
-      return true;
+      // We have every pal now. Stop before skipping the rest of worldSaveData
+      // (map objects, foliage, dungeon data, …) — those newer/heavier blocks
+      // are irrelevant here and any size drift in them derails the walk.
+      return "stop";
     });
-    return true;
+    return "stop"; // worldSaveData is the only top-level property we need.
   });
 
-  return { pals, players };
+  return { pals, players, failed };
 }

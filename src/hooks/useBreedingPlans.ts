@@ -1,6 +1,9 @@
 import { useCallback, useEffect, useState } from "react";
+import type { SourceRef } from "../lib/breedingPath";
 
 const STORAGE_KEY = "pwc.breeding.v1";
+
+export type { SourceRef };
 
 /**
  * A parents-first trait-consolidation plan. Breeding is worked bottom-up as a
@@ -13,8 +16,11 @@ export interface BreedPlan {
   name: string;
   /** Optional goal: species code + the passive ids you want on the final pal. */
   target?: { code: string; passives: string[] };
-  /** Ordered owned-instance ids; the chain crosses them left to right. */
-  sources: string[];
+  /**
+   * Ordered chain parents, crossed left to right. Each is either an owned
+   * instance or an unowned-species placeholder (a to-be-obtained step).
+   */
+  sources: SourceRef[];
   /** carry[i] = chosen passive ids (≤4) for the result after sources[i+1]. */
   carry: (string[] | null)[];
   createdAt: number;
@@ -23,6 +29,19 @@ export interface BreedPlan {
 
 function newId(): string {
   return crypto.randomUUID?.() ?? Math.random().toString(36).slice(2, 10);
+}
+
+/** Coerce a stored source to a SourceRef, migrating the old bare-id shape. */
+function normalizeSource(x: unknown): SourceRef | null {
+  if (typeof x === "string") return { kind: "owned", instanceId: x }; // v1 shape
+  if (x && typeof x === "object") {
+    const o = x as Record<string, unknown>;
+    if (o.kind === "owned" && typeof o.instanceId === "string")
+      return { kind: "owned", instanceId: o.instanceId };
+    if (o.kind === "species" && typeof o.code === "string")
+      return { kind: "species", code: o.code };
+  }
+  return null;
 }
 
 /** Coerce a stored value to a valid plan, tolerating older/partial shapes. */
@@ -39,7 +58,9 @@ function normalize(p: unknown): BreedPlan | null {
       t && typeof t.code === "string"
         ? { code: t.code, passives: Array.isArray(t.passives) ? (t.passives as string[]) : [] }
         : undefined,
-    sources: Array.isArray(o.sources) ? (o.sources as unknown[]).filter((x): x is string => typeof x === "string") : [],
+    sources: Array.isArray(o.sources)
+      ? (o.sources as unknown[]).map(normalizeSource).filter((s): s is SourceRef => s !== null)
+      : [],
     carry: Array.isArray(o.carry) ? (o.carry as (string[] | null)[]) : [],
     createdAt: typeof o.createdAt === "number" ? o.createdAt : now,
     updatedAt: typeof o.updatedAt === "number" ? o.updatedAt : now,
@@ -103,20 +124,27 @@ export function useBreedingPlans() {
     [patch],
   );
 
-  /** Append a parent to the chain. */
+  /** Append a parent (owned instance or unowned species) to the chain. */
   const addSource = useCallback(
-    (id: string, instanceId: string) =>
-      patch(id, (p) => ({ ...p, sources: [...p.sources, instanceId] })),
+    (id: string, source: SourceRef) =>
+      patch(id, (p) => ({ ...p, sources: [...p.sources, source] })),
     [patch],
   );
 
   /** Replace the parent at `index`. */
   const setSource = useCallback(
-    (id: string, index: number, instanceId: string) =>
+    (id: string, index: number, source: SourceRef) =>
       patch(id, (p) => ({
         ...p,
-        sources: p.sources.map((s, i) => (i === index ? instanceId : s)),
+        sources: p.sources.map((s, i) => (i === index ? source : s)),
       })),
+    [patch],
+  );
+
+  /** Replace the whole chain at once (used by the auto-solver). */
+  const setChain = useCallback(
+    (id: string, sources: SourceRef[], carry: (string[] | null)[] = []) =>
+      patch(id, (p) => ({ ...p, sources, carry })),
     [patch],
   );
 
@@ -150,6 +178,7 @@ export function useBreedingPlans() {
     setTarget,
     addSource,
     setSource,
+    setChain,
     removeSource,
     setCarry,
   };
