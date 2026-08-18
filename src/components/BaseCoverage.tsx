@@ -125,11 +125,22 @@ function FitRow({
         {label}
       </span>
       {pal ? (
-        <button className="suggest__btn" onClick={() => onAdd(pal.name)}>
-          <img src={pal.icon} alt="" loading="lazy" />
-          {pal.name}
-          <b>Lv {pal.works[work]}</b>
-        </button>
+        owned ? (
+          <button className="suggest__btn" onClick={() => onAdd(pal.name)}>
+            <img src={pal.icon} alt="" loading="lazy" />
+            {pal.name}
+            <b>Lv {pal.works[work]}</b>
+          </button>
+        ) : (
+          <span
+            className="suggest__btn suggest__btn--static"
+            title="Not in your Palbox yet — obtain one to add it"
+          >
+            <img src={pal.icon} alt="" loading="lazy" />
+            {pal.name}
+            <b>Lv {pal.works[work]}</b>
+          </span>
+        )
       ) : (
         <span className="fit__none">{owned ? "none obtained" : "—"}</span>
       )}

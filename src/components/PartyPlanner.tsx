@@ -8,14 +8,24 @@ import {
   type Pal,
   type WorkType,
 } from "../data/pals";
+import { PASSIVE_BY_ID } from "../data/passives";
 import { ELEMENT_COLOR, TIER_COLOR } from "../lib/elements";
 import { scaledStats } from "../lib/stats";
 import { condenserStatBonus } from "../lib/upgrades";
-import { partySummary, bestCounter } from "../lib/sets";
-import { partyMatchup } from "../lib/typechart";
+import { partySummary } from "../lib/sets";
+import { partyMatchup, WEAK_TO } from "../lib/typechart";
 import { useOwned, type OwnedPal } from "../hooks/useOwned";
+import { useLoadouts } from "../hooks/useLoadouts";
 import { useParties, PARTY_LIMIT } from "../hooks/useParties";
 import { PalInstanceDetail } from "./PalInstanceDetail";
+
+/** Passive tier colour, mirrored from PalInstanceDetail. */
+function passiveColor(rank: number): string {
+  if (rank < 0) return "#e0533a"; // negative
+  if (rank >= 4) return "#14b8a6"; // top tier — teal
+  if (rank >= 3) return "#f0b429"; // 2nd tier — gold
+  return "#9ca3af"; // 3rd tier — gray
+}
 
 const PAL_BY_NAME = new Map(PALS.map((p) => [p.name, p]));
 
@@ -138,10 +148,8 @@ export function PartyPlanner() {
             setActiveId(null);
           }}
         />
-        <div className="pp__top">
-          <PartyCards members={members} onRemove={toggle} />
-          <PartyInfo members={members} />
-        </div>
+        <PartyCards members={members} onRemove={toggle} />
+        <PartyDetails members={members} owned={entries} inParty={memberIds} />
         <CatalogFilters
           query={query}
           setQuery={setQuery}
@@ -252,13 +260,24 @@ function PartyCards({
   members: OwnedEntry[];
   onRemove: (instanceId: string) => void;
 }) {
+  const { getLoadout } = useLoadouts();
   const slots = PARTY_LIMIT - members.length;
   return (
     <div className="pp__cards">
       {members.map((e) => {
         const s = stats(e);
+        const passives = getLoadout(e.inst.id)
+          .passives.map((id) => PASSIVE_BY_ID.get(id))
+          .filter((p): p is NonNullable<typeof p> => p !== undefined);
         return (
           <div key={e.inst.id} className="pmc">
+            <span
+              className="pmc__tier"
+              style={{ background: TIER_COLOR[e.pal.tier] }}
+              title={`Combat tier ${e.pal.tier}`}
+            >
+              {e.pal.tier}
+            </span>
             <button
               className="pmc__remove"
               aria-label={`Remove ${e.pal.name}`}
@@ -267,31 +286,50 @@ function PartyCards({
               ×
             </button>
             <img className="pmc__icon" src={e.pal.icon} alt="" loading="lazy" />
-            <div className="pmc__name">
-              {e.pal.name}
-              {e.ordinal > 0 && <span className="pmc__ord">#{e.ordinal}</span>}
-            </div>
-            <div className="pmc__lv">
-              Lv {e.inst.level}
-              {(e.inst.stars ?? 0) > 0 && (
-                <span className="pbx__stars">{"★".repeat(e.inst.stars!)}</span>
+            <div className="pmc__body">
+              <div className="pmc__title">
+                <span className="pmc__lv">
+                  Lv {e.inst.level}
+                  {(e.inst.stars ?? 0) > 0 && (
+                    <span className="pbx__stars">{"★".repeat(e.inst.stars!)}</span>
+                  )}
+                </span>
+                <span className="pmc__name">
+                  {e.pal.name}
+                  {e.ordinal > 0 && <span className="pmc__ord">#{e.ordinal}</span>}
+                </span>
+                <span className="pmc__els">
+                  {e.pal.elements.map((el) => (
+                    <span
+                      key={el}
+                      className="pmc__el"
+                      style={{ background: ELEMENT_COLOR[el] }}
+                      title={el}
+                    />
+                  ))}
+                </span>
+              </div>
+              <dl className="pmc__stats">
+                <div><dt>HP</dt><dd>{s.hp.toLocaleString()}</dd></div>
+                <div><dt>ATK</dt><dd>{s.atk.toLocaleString()}</dd></div>
+                <div><dt>DEF</dt><dd>{s.def.toLocaleString()}</dd></div>
+              </dl>
+              {passives.length > 0 && (
+                <div className="pmc__passives">
+                  {passives.map((p) => (
+                    <span
+                      key={p.id}
+                      className="pmc__passive"
+                      style={{ borderColor: passiveColor(p.rank) }}
+                      title={p.description}
+                    >
+                      <i style={{ background: passiveColor(p.rank) }} />
+                      <span className="pmc__passive-name">{p.name}</span>
+                    </span>
+                  ))}
+                </div>
               )}
             </div>
-            <div className="pmc__els">
-              {e.pal.elements.map((el) => (
-                <span
-                  key={el}
-                  className="pmc__el"
-                  style={{ background: ELEMENT_COLOR[el] }}
-                  title={el}
-                />
-              ))}
-            </div>
-            <dl className="pmc__stats">
-              <div><dt>HP</dt><dd>{s.hp.toLocaleString()}</dd></div>
-              <div><dt>ATK</dt><dd>{s.atk.toLocaleString()}</dd></div>
-              <div><dt>DEF</dt><dd>{s.def.toLocaleString()}</dd></div>
-            </dl>
           </div>
         );
       })}
@@ -304,31 +342,51 @@ function PartyCards({
   );
 }
 
-// --- Party info (right) ------------------------------------------------------
-function PartyInfo({ members }: { members: OwnedEntry[] }) {
+// --- Party details (own row, collapsible) -----------------------------------
+/** Up to 3 owned pals that counter `threat`, ranked by level then combat tier. */
+function ownedCounters(
+  threat: Element,
+  owned: OwnedEntry[],
+  inParty: Set<string>,
+): OwnedEntry[] {
+  const counterEls = new Set(WEAK_TO[threat]);
+  return owned
+    .filter(
+      (e) =>
+        !inParty.has(e.inst.id) &&
+        e.pal.elements.some((el) => counterEls.has(el)),
+    )
+    .sort(
+      (a, b) =>
+        b.inst.level - a.inst.level ||
+        TIER_RANK[a.pal.tier] - TIER_RANK[b.pal.tier],
+    )
+    .slice(0, 3);
+}
+
+function PartyDetails({
+  members,
+  owned,
+  inParty,
+}: {
+  members: OwnedEntry[];
+  owned: OwnedEntry[];
+  inParty: Set<string>;
+}) {
+  const [open, setOpen] = useState(false);
   const pals = members.map((m) => m.pal);
   const totals = members.reduce(
     (acc, e) => {
-      const s = stats(e);
-      acc.hp += s.hp;
-      acc.atk += s.atk;
-      acc.def += s.def;
+      const st = stats(e);
+      acc.hp += st.hp;
+      acc.atk += st.atk;
+      acc.def += st.def;
       return acc;
     },
     { hp: 0, atk: 0, def: 0 },
   );
   const s = partySummary(pals);
   const matchup = partyMatchup(pals);
-  const missing = ELEMENTS.filter((e) => !s.elements.includes(e));
-  const topThreat = matchup.weakTo[0] ?? null;
-  const counter =
-    topThreat && members.length < PARTY_LIMIT
-      ? bestCounter(
-          topThreat.element,
-          matchup.cantCounter,
-          new Set(pals.map((p) => p.name)),
-        )
-      : null;
 
   if (members.length === 0) {
     return (
@@ -341,14 +399,18 @@ function PartyInfo({ members }: { members: OwnedEntry[] }) {
   }
 
   return (
-    <div className="pp__info">
-      <div className="pp__totals">
-        <Stat label="Party HP" value={totals.hp} />
-        <Stat label="Party ATK" value={totals.atk} />
-        <Stat label="Party DEF" value={totals.def} />
+    <div className="pp__info pp__details">
+      <div className="pp__details-head">
+        <h4 className="coverage__minihead pp__details-cov">Element coverage</h4>
+        <button
+          className="pp__details-toggle"
+          aria-expanded={open}
+          onClick={() => setOpen((o) => !o)}
+        >
+          {open ? "▾" : "▸"} {open ? "Hide details" : "Details"}
+        </button>
       </div>
 
-      <h4 className="coverage__minihead">Element coverage</h4>
       <div className="party__elements">
         {ELEMENTS.map((el) => {
           const on = s.elements.includes(el);
@@ -363,60 +425,67 @@ function PartyInfo({ members }: { members: OwnedEntry[] }) {
           );
         })}
       </div>
-      {missing.length > 0 && (
-        <p className="coverage__note">Missing: {missing.join(", ")}.</p>
-      )}
 
-      <h4 className="coverage__minihead">Weak to</h4>
-      {matchup.weakTo.length === 0 ? (
-        <p className="matchup__ok">No shared elemental weakness.</p>
-      ) : (
-        <ul className="matchup__weak">
-          {matchup.weakTo.map(({ element, count }) => (
-            <li key={element}>
-              <span
-                className="chip chip--element"
-                style={{ background: ELEMENT_COLOR[element] }}
-              >
-                {element}
-              </span>
-              <span className="matchup__bar">
-                <span
-                  className="matchup__bar-fill"
-                  style={{
-                    width: `${(count / members.length) * 100}%`,
-                    background: ELEMENT_COLOR[element],
-                  }}
-                />
-              </span>
-              <b>
-                {count}/{members.length}
-              </b>
-            </li>
-          ))}
-        </ul>
-      )}
+      {open && (
+        <>
+          <div className="pp__totals">
+            <Stat label="Party HP" value={totals.hp} />
+            <Stat label="Party ATK" value={totals.atk} />
+            <Stat label="Party DEF" value={totals.def} />
+          </div>
 
-      {counter && (
-        <p className="coverage__note">
-          Weak to{" "}
-          <strong style={{ color: ELEMENT_COLOR[topThreat!.element] }}>
-            {topThreat!.element}
-          </strong>{" "}
-          — a strong counter you could add:{" "}
-          <strong>{counter.pal.name}</strong> (Tier {counter.pal.tier}).
-        </p>
+          <h4 className="coverage__minihead">Weaknesses</h4>
+          {matchup.weakTo.length === 0 ? (
+            <p className="matchup__ok">No shared elemental weakness.</p>
+          ) : (
+            <ul className="weakness">
+              {matchup.weakTo.map(({ element }) => {
+                const picks = ownedCounters(element, owned, inParty);
+                return (
+                  <li key={element} className="weakness__row">
+                    <span
+                      className="weakness__el"
+                      style={{ color: ELEMENT_COLOR[element] }}
+                    >
+                      {element}
+                    </span>
+                    <span className="weakness__counter">
+                      <span className="weakness__label">counter with:</span>
+                      {WEAK_TO[element].map((ce) => (
+                        <span
+                          key={ce}
+                          className="weakness__dot"
+                          style={{ background: ELEMENT_COLOR[ce] }}
+                          title={ce}
+                        />
+                      ))}
+                      {picks.length === 0 ? (
+                        <span className="weakness__none">
+                          no {WEAK_TO[element].join("/")} pal owned
+                        </span>
+                      ) : (
+                        picks.map((e) => (
+                          <span
+                            key={e.inst.id}
+                            className="weakness__pal"
+                            title={`${e.pal.name} · Lv ${e.inst.level} · Tier ${e.pal.tier}`}
+                          >
+                            <img src={e.pal.icon} alt="" loading="lazy" />
+                            {e.pal.name}
+                            {e.ordinal > 0 && (
+                              <span className="weakness__ord">#{e.ordinal}</span>
+                            )}
+                          </span>
+                        ))
+                      )}
+                    </span>
+                  </li>
+                );
+              })}
+            </ul>
+          )}
+        </>
       )}
-
-      <h4 className="coverage__minihead">Tier spread</h4>
-      <div className="party__tiers">
-        {TIERS.map((t) => (
-          <span key={t} className="party__tier">
-            <b style={{ color: TIER_COLOR[t] }}>{t}</b>
-            <span>{s.tierCounts[t]}</span>
-          </span>
-        ))}
-      </div>
     </div>
   );
 }

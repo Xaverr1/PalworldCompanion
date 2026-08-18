@@ -1,13 +1,46 @@
-import { useState } from "react";
-import type { Pal, WorkType } from "../data/pals";
+import { useEffect, useMemo, useRef, useState } from "react";
+import { PALS, type Pal, type WorkType } from "../data/pals";
 import { useSavedSets } from "../hooks/useSavedSets";
-import { SET_LIMIT, resolveMembers, type PalSet } from "../lib/sets";
+import { useOwned, type OwnedPal } from "../hooks/useOwned";
+import { SET_LIMIT, type PalSet } from "../lib/sets";
 import { BaseCoverage } from "./BaseCoverage";
 import { PartySummary } from "./PartySummary";
 import { PartyPlanner } from "./PartyPlanner";
 import { PalPicker } from "./PalPicker";
 import { PalDetail } from "./PalDetail";
 import { HumanAddSelect, HumanTile, HumanEditor } from "./HumanWorkers";
+
+const PAL_BY_NAME = new Map(PALS.map((p) => [p.name, p]));
+
+/** A base member (owned instance) paired with its species + per-species ordinal. */
+interface BaseEntry {
+  inst: OwnedPal;
+  pal: Pal;
+  /** 1-based index among same-species members (0 if this species is unique here). */
+  ordinal: number;
+}
+
+/** Resolve a base set's member instance-ids to owned entries, numbering duplicates. */
+function resolveEntries(memberIds: string[], instances: OwnedPal[]): BaseEntry[] {
+  const byId = new Map(instances.map((i) => [i.id, i]));
+  const total = new Map<string, number>();
+  for (const id of memberIds) {
+    const i = byId.get(id);
+    if (i) total.set(i.species, (total.get(i.species) ?? 0) + 1);
+  }
+  const seen = new Map<string, number>();
+  const out: BaseEntry[] = [];
+  for (const id of memberIds) {
+    const inst = byId.get(id);
+    if (!inst) continue;
+    const pal = PAL_BY_NAME.get(inst.species);
+    if (!pal) continue;
+    const n = (seen.get(inst.species) ?? 0) + 1;
+    seen.set(inst.species, n);
+    out.push({ inst, pal, ordinal: total.get(inst.species)! > 1 ? n : 0 });
+  }
+  return out;
+}
 
 export function Planner() {
   const [mode, setMode] = useState<"party" | "base">("party");
@@ -44,17 +77,65 @@ function BasePlanner() {
     renameSet,
     addMember,
     removeMember,
+    replaceMembers,
     addHuman,
     removeHuman,
     setHumanLevel,
     setHumanWork,
   } = useSavedSets();
+  const { instances } = useOwned();
   const baseSets = sets.filter((s) => s.kind === "base");
   const [activeId, setActiveId] = useState<string | null>(baseSets[0]?.id ?? null);
   const [pickerOpen, setPickerOpen] = useState(false);
   const [detailPal, setDetailPal] = useState<Pal | null>(null);
 
   const active = baseSets.find((s) => s.id === activeId) ?? null;
+  const entries = useMemo(
+    () => (active ? resolveEntries(active.members, instances) : []),
+    [active, instances],
+  );
+
+  // One-time migration: older bases stored species names; rewrite each to an
+  // owned instance-id (best-level of that species), dropping unowned species.
+  const didMigrate = useRef(false);
+  useEffect(() => {
+    if (didMigrate.current || instances.length === 0) return;
+    didMigrate.current = true;
+    const validIds = new Set(instances.map((i) => i.id));
+    for (const s of baseSets) {
+      const legacy = s.members.some(
+        (m) => !validIds.has(m) && PAL_BY_NAME.has(m),
+      );
+      if (!legacy) continue;
+      const used = new Set<string>();
+      const migrated: string[] = [];
+      for (const m of s.members) {
+        if (validIds.has(m)) {
+          migrated.push(m);
+          used.add(m);
+        } else if (PAL_BY_NAME.has(m)) {
+          const inst = instances
+            .filter((i) => i.species === m && !used.has(i.id))
+            .sort((a, b) => b.level - a.level)[0];
+          if (inst) {
+            migrated.push(inst.id);
+            used.add(inst.id);
+          }
+        }
+      }
+      replaceMembers(s.id, migrated);
+    }
+  }, [instances, baseSets, replaceMembers]);
+
+  /** Add a suggestion by species: the best-level owned instance not yet placed. */
+  function addBySpecies(name: string) {
+    if (!active) return;
+    const placed = new Set(active.members);
+    const inst = instances
+      .filter((i) => i.species === name && !placed.has(i.id))
+      .sort((a, b) => b.level - a.level)[0];
+    if (inst) addMember(active.id, inst.id);
+  }
 
   function handleNew(kind: PalSet["kind"]) {
     const label = kind === "base" ? "Base" : "Party";
@@ -109,11 +190,12 @@ function BasePlanner() {
           <ActiveSet
             key={active.id}
             set={active}
+            entries={entries}
             onRename={(name) => renameSet(active.id, name)}
             onDelete={() => handleDelete(active.id)}
             onOpenPicker={() => setPickerOpen(true)}
-            onAddMember={(name) => addMember(active.id, name)}
-            onRemoveMember={(name) => removeMember(active.id, name)}
+            onAddMember={addBySpecies}
+            onRemoveMember={(instanceId) => removeMember(active.id, instanceId)}
             onSelectPal={setDetailPal}
             onAddHuman={(typeId) => addHuman(active.id, typeId)}
             onRemoveHuman={(hid) => removeHuman(active.id, hid)}
@@ -126,8 +208,8 @@ function BasePlanner() {
       {active && pickerOpen && (
         <PalPicker
           set={active}
-          onAdd={(name) => addMember(active.id, name)}
-          onRemove={(name) => removeMember(active.id, name)}
+          onAdd={(instanceId) => addMember(active.id, instanceId)}
+          onRemove={(instanceId) => removeMember(active.id, instanceId)}
           onClose={() => setPickerOpen(false)}
         />
       )}
@@ -141,6 +223,7 @@ function BasePlanner() {
 
 function ActiveSet({
   set,
+  entries,
   onRename,
   onDelete,
   onOpenPicker,
@@ -153,18 +236,19 @@ function ActiveSet({
   onSetHumanWork,
 }: {
   set: PalSet;
+  entries: BaseEntry[];
   onRename: (name: string) => void;
   onDelete: () => void;
   onOpenPicker: () => void;
   onAddMember: (name: string) => void;
-  onRemoveMember: (name: string) => void;
+  onRemoveMember: (instanceId: string) => void;
   onSelectPal: (pal: Pal) => void;
   onAddHuman: (typeId: string) => void;
   onRemoveHuman: (id: string) => void;
   onSetHumanLevel: (id: string, level: number) => void;
   onSetHumanWork: (id: string, work: WorkType, level: number) => void;
 }) {
-  const pals = resolveMembers(set);
+  const pals = entries.map((e) => e.pal);
   const humans = set.humans ?? [];
   const limit = SET_LIMIT[set.kind];
   const full = set.members.length >= limit;
@@ -192,33 +276,42 @@ function ActiveSet({
       <div className="setedit__body">
         <div className="roster">
           <div className="roster__grid">
-            {pals.map((p) => (
+            {entries.map((e) => (
               <div
-                key={p.name}
+                key={e.inst.id}
                 className="roster__pal"
                 role="button"
                 tabIndex={0}
-                title={`Edit ${p.name}`}
-                onClick={() => onSelectPal(p)}
-                onKeyDown={(e) => {
-                  if (e.key === "Enter" || e.key === " ") {
-                    e.preventDefault();
-                    onSelectPal(p);
+                title={`Edit ${e.pal.name}`}
+                onClick={() => onSelectPal(e.pal)}
+                onKeyDown={(ev) => {
+                  if (ev.key === "Enter" || ev.key === " ") {
+                    ev.preventDefault();
+                    onSelectPal(e.pal);
                   }
                 }}
               >
                 <button
                   className="roster__remove"
-                  aria-label={`Remove ${p.name}`}
-                  onClick={(e) => {
-                    e.stopPropagation();
-                    onRemoveMember(p.name);
+                  aria-label={`Remove ${e.pal.name}`}
+                  onClick={(ev) => {
+                    ev.stopPropagation();
+                    onRemoveMember(e.inst.id);
                   }}
                 >
                   ×
                 </button>
-                <img src={p.icon} alt="" loading="lazy" />
-                <span>{p.name}</span>
+                <img src={e.pal.icon} alt="" loading="lazy" />
+                <span>
+                  {e.inst.nickname || e.pal.name}
+                  {e.ordinal > 0 && <span className="roster__ord">#{e.ordinal}</span>}
+                </span>
+                <span className="roster__lv">
+                  Lv {e.inst.level}
+                  {(e.inst.stars ?? 0) > 0 && (
+                    <span className="pbx__stars">{"★".repeat(e.inst.stars!)}</span>
+                  )}
+                </span>
               </div>
             ))}
 

@@ -75,6 +75,17 @@ export function useSavedSets() {
     [patch],
   );
 
+  /** Overwrite a set's whole member list (used to migrate legacy rosters). */
+  const replaceMembers = useCallback(
+    (id: string, memberIds: string[]) =>
+      patch(id, (s) => ({
+        ...s,
+        members: memberIds.slice(0, SET_LIMIT[s.kind]),
+        updatedAt: Date.now(),
+      })),
+    [patch],
+  );
+
   const patchHumans = useCallback(
     (id: string, fn: (humans: HumanWorker[]) => HumanWorker[]) =>
       patch(id, (s) => ({
@@ -139,6 +150,7 @@ export function useSavedSets() {
     renameSet,
     addMember,
     removeMember,
+    replaceMembers,
     addHuman,
     removeHuman,
     setHumanLevel,
