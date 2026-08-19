@@ -112,6 +112,17 @@
   padding: 3px 9px;
   font-size: 11px;
 }
+/* In-game element type icon (replaces the colour-coded name pills). The source
+   is a wide status bar with the element symbol on its left third, so crop to
+   that square with object-fit/position. */
+.element-icon {
+  width: 22px;
+  height: 22px;
+  object-fit: cover;
+  object-position: left center;
+  border-radius: 5px;
+  flex: none;
+}
 
 /* ---- Grid ---- */
 .grid {
@@ -431,6 +442,55 @@
 .worklist b {
   text-align: right;
   font-family: var(--mono);
+}
+
+/* ---- Base work coverage (icon grid, stacked below the roster) ---- */
+.basecov {
+  border: 1px solid var(--border);
+  border-radius: 14px;
+  padding: 18px;
+}
+.basecov__grid {
+  list-style: none;
+  margin: 10px 0 4px;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(56px, 1fr));
+  gap: 14px 10px;
+}
+.basecov__cell {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 5px;
+}
+.basecov__cell.is-gap .workicon img {
+  opacity: 0.4;
+}
+.basecov__cell.is-gap .workicon__lvl {
+  color: #e0533a;
+  border-color: #e0533a;
+}
+.basecov__count {
+  font-family: var(--mono);
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--text-h);
+}
+.basecov__cell.is-gap .basecov__count {
+  color: #e0533a;
+}
+.basecov__rec {
+  margin-top: 14px;
+}
+.basecov__rec-head {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.basecov__rec-head .coverage__minihead {
+  margin: 6px 0 8px;
 }
 
 /* Compact work-suitability badges (pal detail). */
@@ -764,6 +824,15 @@
   .setedit__body {
     grid-template-columns: 1fr;
   }
+}
+/* Base layout: roster full-width, work coverage stacked below it. */
+.setedit__body--stack {
+  grid-template-columns: 1fr;
+}
+/* Human tiles + add controls row, sitting below the member cards. */
+.roster__grid--controls {
+  margin-top: 12px;
+  grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
 }
 
 /* ---- Roster ---- */
@@ -1100,8 +1169,14 @@
   gap: 8px;
 }
 .suggest__work {
-  font-size: 12px;
-  color: var(--text);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.suggest__work img {
+  width: 26px;
+  height: 26px;
+  object-fit: contain;
 }
 .suggest__btn {
   display: flex;
@@ -1139,6 +1214,36 @@
   font-family: var(--mono);
   font-size: 12px;
   color: var(--accent);
+}
+
+/* Rich recommendation row: name · work icons · passives · target level. */
+.recrow {
+  flex-wrap: wrap;
+  gap: 6px 10px;
+}
+.recrow__name {
+  font-weight: 600;
+  color: var(--text-h);
+  flex: 0 0 auto;
+}
+.recrow__works {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 7px 6px;
+}
+.recrow__works .workicon img {
+  width: 22px;
+  height: 22px;
+}
+.recrow__passives {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 4px 6px;
+}
+.recrow__passives .pmc__passive {
+  cursor: pointer;
 }
 
 /* ---- Party matchup ---- */
@@ -1284,9 +1389,9 @@
 /* ---- Best-fit Have vs Ideal ---- */
 .suggest__gap {
   display: grid;
-  grid-template-columns: 96px 1fr;
-  align-items: start;
-  gap: 8px;
+  grid-template-columns: 34px 1fr;
+  align-items: center;
+  gap: 10px;
   padding: 4px 0;
 }
 .suggest__gap + .suggest__gap {
@@ -2537,6 +2642,93 @@
   color: var(--text-h);
 }
 
+/* ---- Base member cards (clone of .pmc with a work/food row) ---- */
+.bmc-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(224px, 1fr));
+  gap: 10px;
+}
+.bmc {
+  position: relative;
+  min-height: 118px;
+  border: 1px solid var(--border);
+  border-radius: 12px;
+  padding: 9px 9px 9px 8px;
+  background: var(--bg);
+  display: flex;
+  flex-direction: row;
+  align-items: flex-start;
+  gap: 8px;
+  cursor: pointer;
+  transition: border-color 0.12s ease;
+}
+.bmc:hover {
+  border-color: var(--accent-border);
+}
+.bmc:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+.bmc__works {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 9px 8px;
+  margin: 3px 0 1px;
+}
+.bmc__food {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+  margin-left: auto;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--text-h);
+  white-space: nowrap;
+}
+.bmc__nowork {
+  font-size: 11px;
+  font-style: italic;
+  color: var(--text);
+}
+/* Human worker card: a face in place of the pal icon, no tier/food. */
+.bmc__face {
+  width: 44px;
+  height: 44px;
+  flex: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 32px;
+  line-height: 1;
+}
+.bmc--human .pmc__body {
+  padding-top: 2px;
+}
+.bmc__face--lg {
+  width: auto;
+  height: auto;
+  font-size: 34px;
+}
+
+/* Human worker editor modal */
+.humandetail {
+  width: min(560px, 96vw);
+}
+.humandetail__head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 2px 0 18px;
+}
+.humandetail__head .setedit__name {
+  flex: 1;
+  min-width: 0;
+}
+.humandetail .human-card__works {
+  margin-bottom: 20px;
+}
+
 .pp__totals {
   display: flex;
   gap: 18px;
@@ -2991,6 +3183,24 @@
   gap: 6px;
   flex-wrap: wrap;
   margin-bottom: 10px;
+}
+/* Static species name in the Browse preview (non-editable variant of pid__name). */
+.pid__name--static {
+  cursor: default;
+}
+.pid__name--static:hover {
+  border-color: transparent;
+}
+/* Level slider + entry row in the Browse preview. */
+.pid__level {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin: 0 0 12px;
+  max-width: 340px;
+}
+.pid__level .owninst__slider {
+  flex: 1;
 }
 .pid__stats {
   display: flex;
@@ -3621,6 +3831,15 @@
   color: var(--text-h);
   font-weight: 600;
   white-space: nowrap;
+}
+/* Work-suitability strip on the instance rows of the base pal picker. */
+.picker__works {
+  display: flex;
+  flex: 1;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px 7px;
+  margin: 0 4px;
 }
 
 /* Xbox save picker rows */

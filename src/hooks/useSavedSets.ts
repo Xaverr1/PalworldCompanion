@@ -1,6 +1,5 @@
 import { useCallback, useEffect, useState } from "react";
 import type { WorkType } from "../data/pals";
-import { HUMAN_TYPE_BY_ID } from "../data/humans";
 import {
   SET_LIMIT,
   createSet,
@@ -59,7 +58,8 @@ export function useSavedSets() {
     (id: string, palName: string) =>
       patch(id, (s) => {
         if (s.members.includes(palName)) return s;
-        if (s.members.length >= SET_LIMIT[s.kind]) return s;
+        const workers = s.members.length + (s.humans?.length ?? 0);
+        if (workers >= SET_LIMIT[s.kind]) return s;
         return { ...s, members: [...s.members, palName], updatedAt: Date.now() };
       }),
     [patch],
@@ -97,21 +97,27 @@ export function useSavedSets() {
   );
 
   const addHuman = useCallback(
-    (id: string, typeId: string) =>
-      patchHumans(id, (humans) => {
-        const type = HUMAN_TYPE_BY_ID.get(typeId);
-        return [
-          ...humans,
-          {
-            id: newId(),
-            level: 1,
-            works: { ...(type?.works ?? {}) },
-            typeId,
-            name: type?.name,
-            merchant: type?.merchant,
-          },
-        ];
+    (id: string) =>
+      patch(id, (s) => {
+        const workers = s.members.length + (s.humans?.length ?? 0);
+        if (workers >= SET_LIMIT[s.kind]) return s;
+        return {
+          ...s,
+          humans: [
+            ...(s.humans ?? []),
+            { id: newId(), level: 1, works: {}, name: "Human Worker" },
+          ],
+          updatedAt: Date.now(),
+        };
       }),
+    [patch],
+  );
+
+  const setHumanName = useCallback(
+    (id: string, humanId: string, name: string) =>
+      patchHumans(id, (humans) =>
+        humans.map((h) => (h.id === humanId ? { ...h, name } : h)),
+      ),
     [patchHumans],
   );
 
@@ -152,6 +158,7 @@ export function useSavedSets() {
     removeMember,
     replaceMembers,
     addHuman,
+    setHumanName,
     removeHuman,
     setHumanLevel,
     setHumanWork,

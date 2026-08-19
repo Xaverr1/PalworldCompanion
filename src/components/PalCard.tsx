@@ -1,7 +1,8 @@
 import type { Pal, WorkType } from "../data/pals";
-import { ELEMENT_COLOR, TIER_COLOR } from "../lib/elements";
+import { TIER_COLOR } from "../lib/elements";
 import { WORK_ICON } from "../lib/work";
 import { useOwned } from "../hooks/useOwned";
+import { ElementBadges } from "./ElementBadges";
 
 /** A pal's work suitabilities, highest level first. */
 function sortedWorks(pal: Pal): [WorkType, number][] {
@@ -71,15 +72,7 @@ export function PalCard({ pal, onSelect }: { pal: Pal; onSelect: () => void }) {
       <h2 className="pal-card__name">{pal.name}</h2>
 
       <div className="pal-card__elements">
-        {pal.elements.map((el) => (
-          <span
-            key={el}
-            className="chip chip--element"
-            style={{ background: ELEMENT_COLOR[el] }}
-          >
-            {el}
-          </span>
-        ))}
+        <ElementBadges elements={pal.elements} />
       </div>
 
       <dl className="pal-card__stats">

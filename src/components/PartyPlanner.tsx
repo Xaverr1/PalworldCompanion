@@ -18,6 +18,7 @@ import { useOwned, type OwnedPal } from "../hooks/useOwned";
 import { useLoadouts } from "../hooks/useLoadouts";
 import { useParties, PARTY_LIMIT } from "../hooks/useParties";
 import { PalInstanceDetail } from "./PalInstanceDetail";
+import { ElementBadges } from "./ElementBadges";
 
 /** Passive tier colour, mirrored from PalInstanceDetail. */
 function passiveColor(rank: number): string {
@@ -647,15 +648,7 @@ function InstanceCard({
         )}
       </div>
       <div className="icard__els">
-        {entry.pal.elements.map((el) => (
-          <span
-            key={el}
-            className="chip chip--element"
-            style={{ background: ELEMENT_COLOR[el] }}
-          >
-            {el}
-          </span>
-        ))}
+        <ElementBadges elements={entry.pal.elements} />
       </div>
       <dl className="icard__stats">
         <div><dt>HP</dt><dd>{s.hp.toLocaleString()}</dd></div>

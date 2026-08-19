@@ -11,6 +11,7 @@ import { useLoadouts } from "../hooks/useLoadouts";
 import { AbilitiesEditor } from "./AbilitiesEditor";
 import { PassivesEditor } from "./PassivesEditor";
 import { Habitat } from "./PalDetail";
+import { ElementBadges } from "./ElementBadges";
 
 /** Passive tier colour, mirrored from PassivesEditor. */
 function passiveColor(rank: number): string {
@@ -150,15 +151,7 @@ export function PalInstanceDetail({
             {instance.nickname && <div className="pid__species">{pal.name}</div>}
 
             <div className="pid__elements">
-              {pal.elements.map((el) => (
-                <span
-                  key={el}
-                  className="chip chip--element"
-                  style={{ background: ELEMENT_COLOR[el] }}
-                >
-                  {el}
-                </span>
-              ))}
+              <ElementBadges elements={pal.elements} />
             </div>
 
             <dl className="pid__stats">
@@ -275,7 +268,7 @@ export function PalInstanceDetail({
 }
 
 /** Compact work-suitability pills (less padding than the Browse card). */
-function WorkPillsSlim({ pal }: { pal: Pal }) {
+export function WorkPillsSlim({ pal }: { pal: Pal }) {
   const works = WORK_TYPES.map((w) => [w, pal.works[w] ?? 0] as const)
     .filter(([, lvl]) => lvl > 0)
     .sort((a, b) => b[1] - a[1]);

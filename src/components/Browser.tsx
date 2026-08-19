@@ -11,7 +11,7 @@ import {
 import { ELEMENT_COLOR } from "../lib/elements";
 import { useOwned } from "../hooks/useOwned";
 import { PalCard } from "./PalCard";
-import { PalDetail } from "./PalDetail";
+import { PalPreview } from "./PalPreview";
 
 type SortKey = "paldex" | "name" | "hp" | "atk" | "def" | "tier";
 
@@ -159,7 +159,7 @@ export function Browser() {
         {results.length === 0 && <p className="empty">No pals match those filters.</p>}
       </main>
 
-      {selected && <PalDetail pal={selected} onClose={() => setSelected(null)} />}
+      {selected && <PalPreview pal={selected} onClose={() => setSelected(null)} />}
     </>
   );
 }

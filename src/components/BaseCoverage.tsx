@@ -1,11 +1,38 @@
+import { useMemo, useState } from "react";
 import type { Pal, WorkType } from "../data/pals";
+import { PASSIVE_BY_ID, type Passive } from "../data/passives";
+import { WORK_ICON } from "../lib/work";
 import { baseCoverage, bestForWork, type HumanWorker } from "../lib/sets";
 import { useOwned } from "../hooks/useOwned";
+import { useLoadouts } from "../hooks/useLoadouts";
 
+/** Passive tier colour, mirrored from the pal cards. */
+function passiveColor(rank: number): string {
+  if (rank < 0) return "#e0533a"; // negative
+  if (rank >= 4) return "#14b8a6"; // top tier — teal
+  if (rank >= 3) return "#f0b429"; // 2nd tier — gold
+  return "#9ca3af"; // 3rd tier — gray
+}
+
+/** A pal's work suitabilities, highest level first. */
+function sortedWorks(pal: Pal): [WorkType, number][] {
+  return (Object.entries(pal.works) as [WorkType, number][]).sort(
+    (a, b) => b[1] - a[1],
+  );
+}
+
+/** An owned pal that fills a 0-coverage work gap. */
 interface GapFit {
   work: WorkType;
-  have: Pal | null;
-  ideal: Pal | null;
+  pal: Pal | null;
+  passives: Passive[];
+}
+
+/** An owned pal that beats the base's current best at a work type. */
+interface Upgrade {
+  work: WorkType;
+  pal: Pal;
+  passives: Passive[];
 }
 
 export function BaseCoverage({
@@ -19,131 +46,200 @@ export function BaseCoverage({
   onAdd: (name: string) => void;
   full: boolean;
 }) {
-  const { owned } = useOwned();
+  const { owned, instances } = useOwned();
+  const { getLoadout } = useLoadouts();
+  const [showUpgrades, setShowUpgrades] = useState(false);
   const coverage = baseCoverage(pals, humans);
   const gaps = coverage.filter((c) => c.maxLevel === 0);
-  const exclude = new Set(pals.map((p) => p.name));
+  const exclude = useMemo(() => new Set(pals.map((p) => p.name)), [pals]);
 
-  const fits: GapFit[] = gaps.map((g) => ({
-    work: g.work,
-    have: bestForWork(g.work, exclude, owned),
-    ideal: bestForWork(g.work, exclude),
-  }));
+  // Passives of the specific instance a recommendation would add: the best-level
+  // owned pal of that species (mirrors addBySpecies in the planner).
+  const passivesFor = useMemo(() => {
+    return (species: string): Passive[] => {
+      const inst = instances
+        .filter((i) => i.species === species)
+        .sort((a, b) => b.level - a.level)[0];
+      if (!inst) return [];
+      return getLoadout(inst.id)
+        .passives.map((id) => PASSIVE_BY_ID.get(id))
+        .filter((p): p is Passive => p !== undefined);
+    };
+  }, [instances, getLoadout]);
+
+  // Owned-only picks for the 0-coverage gaps (always shown).
+  const gapFits: GapFit[] = useMemo(
+    () =>
+      gaps.map((g) => {
+        const pal = bestForWork(g.work, exclude, owned);
+        return {
+          work: g.work,
+          pal,
+          passives: pal ? passivesFor(pal.name) : [],
+        };
+      }),
+    [gaps, exclude, owned, passivesFor],
+  );
+
+  // Owned pals that would raise a work type already covered (revealed on expand).
+  const upgrades: Upgrade[] = useMemo(
+    () =>
+      coverage
+        .filter((c) => c.maxLevel > 0)
+        .map((c) => {
+          const pal = bestForWork(c.work, exclude, owned);
+          const to = pal?.works[c.work] ?? 0;
+          return pal && to > c.maxLevel
+            ? { work: c.work, pal, passives: passivesFor(pal.name) }
+            : null;
+        })
+        .filter((u): u is Upgrade => u !== null),
+    [coverage, exclude, owned, passivesFor],
+  );
 
   return (
-    <div className="coverage">
+    <div className="basecov">
       <div className="coverage__head">
         <h3 className="detail__sub">Work Coverage</h3>
-        {(pals.length > 0 || humans.length > 0) && (
-          <span className={`coverage__flag ${gaps.length ? "is-gap" : "is-ok"}`}>
-            {gaps.length
-              ? `${gaps.length} gap${gaps.length > 1 ? "s" : ""}`
-              : "All work covered"}
-          </span>
-        )}
       </div>
 
-      <ul className="worklist">
+      <ul className="basecov__grid">
         {coverage.map((c) => (
-          <li key={c.work} className={c.maxLevel ? "" : "worklist__off worklist__gap"}>
-            <span>{c.work}</span>
-            <span className="worklist__bar">
-              <span
-                className="worklist__fill"
-                style={{ width: `${(c.maxLevel / 10) * 100}%` }}
-              />
+          <li
+            key={c.work}
+            className={`basecov__cell ${c.maxLevel ? "" : "is-gap"}`}
+          >
+            <span
+              className="workicon"
+              title={`${c.work} · best Lv ${c.maxLevel || 0} · ${c.contributors} pal${
+                c.contributors === 1 ? "" : "s"
+              }`}
+            >
+              <img src={WORK_ICON[c.work]} alt={c.work} loading="lazy" />
+              <span className="workicon__lvl">{c.maxLevel || "—"}</span>
             </span>
-            <b title={`${c.contributors} pal${c.contributors === 1 ? "" : "s"}`}>
-              {c.maxLevel || "—"}
-              {c.contributors > 1 && <small> ×{c.contributors}</small>}
-            </b>
+            <span className="basecov__count">
+              {c.contributors ? `×${c.contributors}` : "0"}
+            </span>
           </li>
         ))}
       </ul>
 
-      {gaps.length > 0 && (
-        <div className="suggest">
-          <h4 className="coverage__minihead">Best fit for gaps</h4>
-          {full ? (
-            <p className="coverage__note">Roster full — remove a pal to add suggestions.</p>
-          ) : (
-            <ul className="suggest__list">
-              {fits.map(({ work, have, ideal }) => {
-                const sameAsHave = have && ideal && have.name === ideal.name;
-                return (
-                  <li key={work} className="suggest__gap">
-                    <span className="suggest__work">{work}</span>
-                    <div className="suggest__fits">
-                      <FitRow
-                        label="Have"
-                        pal={have}
-                        work={work}
-                        owned
-                        onAdd={onAdd}
-                      />
-                      {!sameAsHave && (
-                        <FitRow label="Ideal" pal={ideal} work={work} onAdd={onAdd} />
-                      )}
-                    </div>
-                  </li>
-                );
-              })}
-            </ul>
-          )}
-          {owned.size === 0 && (
-            <p className="coverage__note">
-              Mark pals as obtained (☆ on their cards) to see what you can build now.
-            </p>
+      <div className="basecov__rec">
+        <div className="basecov__rec-head">
+          <h4 className="coverage__minihead">Fill the gaps</h4>
+          {upgrades.length > 0 && (
+            <button
+              className="pp__details-toggle"
+              aria-expanded={showUpgrades}
+              onClick={() => setShowUpgrades((o) => !o)}
+            >
+              {showUpgrades ? "▾ Hide upgrades" : "▸ Upgrades"}
+            </button>
           )}
         </div>
-      )}
+
+        {owned.size === 0 ? (
+          <p className="coverage__note">
+            Mark pals as obtained (☆ on their cards) or import a save to see what
+            you can build now.
+          </p>
+        ) : gaps.length === 0 ? (
+          <p className="coverage__note">
+            Every work type is covered by this base.
+          </p>
+        ) : full ? (
+          <p className="coverage__note">Roster full — remove a pal to add suggestions.</p>
+        ) : (
+          <ul className="suggest__list">
+            {gapFits.map(({ work, pal, passives }) => (
+              <li key={work} className="suggest__gap">
+                <span className="suggest__work" title={work}>
+                  <img src={WORK_ICON[work]} alt={work} loading="lazy" />
+                </span>
+                <RecRow pal={pal} passives={passives} onAdd={onAdd} />
+              </li>
+            ))}
+          </ul>
+        )}
+
+        {showUpgrades && upgrades.length > 0 && (
+          <>
+            <h4 className="coverage__minihead">Owned upgrades</h4>
+            <ul className="suggest__list">
+              {upgrades.map(({ work, pal, passives }) => (
+                <li key={work} className="suggest__gap">
+                  <span className="suggest__work" title={work}>
+                    <img src={WORK_ICON[work]} alt={work} loading="lazy" />
+                  </span>
+                  <RecRow
+                    pal={pal}
+                    passives={passives}
+                    onAdd={onAdd}
+                    disabled={full}
+                  />
+                </li>
+              ))}
+            </ul>
+          </>
+        )}
+      </div>
 
       <p className="coverage__note">
-        Bar shows the highest suitability level in the base; ×N marks how many pals
-        can do that job.
+        Best level shown per job; ×N marks how many pals (and humans) can do it.
+        Suggestions only ever recommend pals you own.
       </p>
     </div>
   );
 }
 
-function FitRow({
-  label,
+/** One owned recommendation: a click-to-add button, or an empty note. */
+function RecRow({
   pal,
-  work,
-  owned,
+  passives,
   onAdd,
+  disabled,
 }: {
-  label: string;
   pal: Pal | null;
-  work: WorkType;
-  owned?: boolean;
+  passives: Passive[];
   onAdd: (name: string) => void;
+  disabled?: boolean;
 }) {
+  if (!pal) {
+    return <span className="fit__none">no owned pal for this job</span>;
+  }
   return (
-    <div className="fit">
-      <span className={`fit__label ${owned ? "fit__label--have" : "fit__label--ideal"}`}>
-        {label}
-      </span>
-      {pal ? (
-        owned ? (
-          <button className="suggest__btn" onClick={() => onAdd(pal.name)}>
-            <img src={pal.icon} alt="" loading="lazy" />
-            {pal.name}
-            <b>Lv {pal.works[work]}</b>
-          </button>
-        ) : (
-          <span
-            className="suggest__btn suggest__btn--static"
-            title="Not in your Palbox yet — obtain one to add it"
-          >
-            <img src={pal.icon} alt="" loading="lazy" />
-            {pal.name}
-            <b>Lv {pal.works[work]}</b>
+    <button
+      className="suggest__btn recrow"
+      disabled={disabled}
+      title={disabled ? "Roster full" : `Add ${pal.name}`}
+      onClick={() => onAdd(pal.name)}
+    >
+      <img src={pal.icon} alt="" loading="lazy" />
+      <span className="recrow__name">{pal.name}</span>
+      <span className="recrow__works">
+        {sortedWorks(pal).map(([w, lvl]) => (
+          <span key={w} className="workicon" title={`${w} · Lv ${lvl}`}>
+            <img src={WORK_ICON[w]} alt={w} loading="lazy" />
+            <span className="workicon__lvl">{lvl}</span>
           </span>
-        )
-      ) : (
-        <span className="fit__none">{owned ? "none obtained" : "—"}</span>
+        ))}
+      </span>
+      {passives.length > 0 && (
+        <span className="recrow__passives">
+          {passives.map((p) => (
+            <span
+              key={p.id}
+              className="pmc__passive"
+              style={{ borderColor: passiveColor(p.rank) }}
+              title={p.description}
+            >
+              <i style={{ background: passiveColor(p.rank) }} />
+              <span className="pmc__passive-name">{p.name}</span>
+            </span>
+          ))}
+        </span>
       )}
-    </div>
+    </button>
   );
 }

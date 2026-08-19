@@ -9,6 +9,7 @@ import { LOCATION_BY_SLUG, type RegionSpot } from "../data/locations";
 import { scaledStats } from "../lib/stats";
 import { AbilitiesEditor } from "./AbilitiesEditor";
 import { PassivesEditor } from "./PassivesEditor";
+import { ElementBadges } from "./ElementBadges";
 
 export function PalDetail({ pal, onClose }: { pal: Pal; onClose: () => void }) {
   const {
@@ -51,15 +52,7 @@ export function PalDetail({ pal, onClose }: { pal: Pal; onClose: () => void }) {
             </span>
             <h2 className="detail__name">{pal.name}</h2>
             <div className="detail__elements">
-              {pal.elements.map((el) => (
-                <span
-                  key={el}
-                  className="chip chip--element"
-                  style={{ background: ELEMENT_COLOR[el] }}
-                >
-                  {el}
-                </span>
-              ))}
+              <ElementBadges elements={pal.elements} />
               <span
                 className="chip chip--element"
                 style={{ background: TIER_COLOR[pal.tier] }}

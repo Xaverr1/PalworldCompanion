@@ -18,20 +18,20 @@ export const SET_LIMIT: Record<SetKind, number> = {
 };
 
 /**
- * A caught human assigned to a base. Added from a preset archetype (see
- * src/data/humans.ts) that pre-fills its work suitabilities; work levels stay
- * editable afterward. `typeId`/`name`/`merchant` are optional for humans saved
- * before presets existed.
+ * A caught human assigned to a base. Created blank ("Human Worker") and
+ * customized in place: rename, per-work suitability levels, and passives
+ * (stored in the loadouts store keyed by this `id`). `typeId`/`merchant` are
+ * legacy fields kept so workers saved under the old preset model still load.
  */
 export interface HumanWorker {
   id: string;
   level: number;
   works: Partial<Record<WorkType, number>>;
-  /** Preset archetype key this worker was created from. */
-  typeId?: string;
-  /** Display label, e.g. "Pal Merchant". */
+  /** Display label; defaults to "Human Worker", user-editable. */
   name?: string;
-  /** Deployable as a base shop. */
+  /** Legacy preset key (unused by the current blank-worker model). */
+  typeId?: string;
+  /** Legacy merchant flag (unused by the current blank-worker model). */
   merchant?: boolean;
 }
 

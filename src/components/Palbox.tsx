@@ -16,6 +16,7 @@ import { condenserStatBonus } from "../lib/upgrades";
 import { useOwned, type OwnedPal } from "../hooks/useOwned";
 import { useLoadouts } from "../hooks/useLoadouts";
 import { PalInstanceDetail } from "./PalInstanceDetail";
+import { ElementBadges } from "./ElementBadges";
 
 const PAL_BY_NAME = new Map(PALS.map((p) => [p.name, p]));
 
@@ -331,15 +332,7 @@ function PalboxCard({ entry, onOpen }: { entry: Entry; onOpen: () => void }) {
         )}
       </div>
       <div className="icard__els">
-        {entry.pal.elements.map((el) => (
-          <span
-            key={el}
-            className="chip chip--element"
-            style={{ background: ELEMENT_COLOR[el] }}
-          >
-            {el}
-          </span>
-        ))}
+        <ElementBadges elements={entry.pal.elements} />
       </div>
       <dl className="icard__stats">
         <div><dt>HP</dt><dd>{s.hp.toLocaleString()}</dd></div>
